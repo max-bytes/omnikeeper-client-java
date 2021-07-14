@@ -31,7 +31,7 @@ import org.openapitools.client.model.ChangeDataCell;
 /**
  * SparseRow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-14T12:52:54.095879Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-14T12:56:15.136376Z[Etc/UTC]")
 public class SparseRow {
   public static final String SERIALIZED_NAME_CIID = "ciid";
   @SerializedName(SERIALIZED_NAME_CIID)

@@ -28,7 +28,7 @@ import org.openapitools.client.model.GridViewConfiguration;
 /**
  * AddContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-14T12:52:54.095879Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-14T12:56:15.136376Z[Etc/UTC]")
 public class AddContextRequest {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
