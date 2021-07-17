@@ -28,7 +28,7 @@ import org.openapitools.client.model.AttributeValueType;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-16T21:08:35.658933Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-17T07:50:36.765238Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)

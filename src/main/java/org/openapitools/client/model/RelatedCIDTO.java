@@ -28,7 +28,7 @@ import java.util.UUID;
 /**
  * RelatedCIDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-16T21:08:35.658933Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-17T07:50:36.765238Z[Etc/UTC]")
 public class RelatedCIDTO {
   public static final String SERIALIZED_NAME_FROM_C_I_I_D = "fromCIID";
   @SerializedName(SERIALIZED_NAME_FROM_C_I_I_D)
