@@ -30,7 +30,7 @@ import org.openapitools.client.model.FragmentDTO;
 /**
  * BulkCIAttributeLayerScopeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-07-17T07:50:36.765238Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-09T11:19:04.696672Z[Etc/UTC]")
 public class BulkCIAttributeLayerScopeDTO {
   public static final String SERIALIZED_NAME_NAME_PREFIX = "namePrefix";
   @SerializedName(SERIALIZED_NAME_NAME_PREFIX)
