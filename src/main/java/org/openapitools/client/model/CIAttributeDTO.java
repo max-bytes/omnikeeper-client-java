@@ -30,7 +30,7 @@ import org.openapitools.client.model.AttributeValueDTO;
 /**
  * CIAttributeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class CIAttributeDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -63,6 +63,7 @@ public class CIAttributeDTO {
    * Get id
    * @return id
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getId() {
@@ -85,6 +86,7 @@ public class CIAttributeDTO {
    * Get name
    * @return name
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public String getName() {
@@ -107,6 +109,7 @@ public class CIAttributeDTO {
    * Get value
    * @return value
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public AttributeValueDTO getValue() {
@@ -129,6 +132,7 @@ public class CIAttributeDTO {
    * Get ciid
    * @return ciid
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getCiid() {
@@ -151,6 +155,7 @@ public class CIAttributeDTO {
    * Get state
    * @return state
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public AttributeState getState() {

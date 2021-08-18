@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * AnsibleInventoryScanDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class AnsibleInventoryScanDTO {
   public static final String SERIALIZED_NAME_SETUP_FACTS = "setupFacts";
   @SerializedName(SERIALIZED_NAME_SETUP_FACTS)
@@ -64,6 +64,7 @@ public class AnsibleInventoryScanDTO {
    * Get setupFacts
    * @return setupFacts
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Map<String, Object> getSetupFacts() {
@@ -91,6 +92,7 @@ public class AnsibleInventoryScanDTO {
    * Get yumInstalled
    * @return yumInstalled
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Map<String, Object> getYumInstalled() {
@@ -118,6 +120,7 @@ public class AnsibleInventoryScanDTO {
    * Get yumRepos
    * @return yumRepos
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Map<String, Object> getYumRepos() {
@@ -145,6 +148,7 @@ public class AnsibleInventoryScanDTO {
    * Get yumUpdates
    * @return yumUpdates
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Map<String, Object> getYumUpdates() {

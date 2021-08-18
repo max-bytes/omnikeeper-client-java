@@ -29,7 +29,7 @@ import org.openapitools.client.model.AttributeValueDTO;
 /**
  * FragmentDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class FragmentDTO {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -54,6 +54,7 @@ public class FragmentDTO {
    * Get name
    * @return name
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public String getName() {
@@ -76,6 +77,7 @@ public class FragmentDTO {
    * Get value
    * @return value
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public AttributeValueDTO getValue() {
@@ -98,6 +100,7 @@ public class FragmentDTO {
    * Get ciid
    * @return ciid
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getCiid() {

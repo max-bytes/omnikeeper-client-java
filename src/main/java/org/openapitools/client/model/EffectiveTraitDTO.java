@@ -32,7 +32,7 @@ import org.openapitools.client.model.RelatedCIDTO;
 /**
  * EffectiveTraitDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class EffectiveTraitDTO {
   public static final String SERIALIZED_NAME_TRAIT_ATTRIBUTES = "traitAttributes";
   @SerializedName(SERIALIZED_NAME_TRAIT_ATTRIBUTES)
@@ -58,6 +58,7 @@ public class EffectiveTraitDTO {
    * Get traitAttributes
    * @return traitAttributes
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Map<String, CIAttributeDTO> getTraitAttributes() {
@@ -85,6 +86,7 @@ public class EffectiveTraitDTO {
    * Get traitRelations
    * @return traitRelations
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Map<String, List<RelatedCIDTO>> getTraitRelations() {

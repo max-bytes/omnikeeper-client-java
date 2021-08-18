@@ -28,7 +28,7 @@ import java.util.UUID;
 /**
  * RelatedCIDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class RelatedCIDTO {
   public static final String SERIALIZED_NAME_FROM_C_I_I_D = "fromCIID";
   @SerializedName(SERIALIZED_NAME_FROM_C_I_I_D)
@@ -53,6 +53,7 @@ public class RelatedCIDTO {
    * Get fromCIID
    * @return fromCIID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getFromCIID() {
@@ -75,6 +76,7 @@ public class RelatedCIDTO {
    * Get toCIID
    * @return toCIID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getToCIID() {
@@ -97,6 +99,7 @@ public class RelatedCIDTO {
    * Get predicateID
    * @return predicateID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public String getPredicateID() {

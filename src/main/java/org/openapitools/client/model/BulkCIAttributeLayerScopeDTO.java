@@ -30,7 +30,7 @@ import org.openapitools.client.model.FragmentDTO;
 /**
  * BulkCIAttributeLayerScopeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class BulkCIAttributeLayerScopeDTO {
   public static final String SERIALIZED_NAME_NAME_PREFIX = "namePrefix";
   @SerializedName(SERIALIZED_NAME_NAME_PREFIX)
@@ -55,6 +55,7 @@ public class BulkCIAttributeLayerScopeDTO {
    * Get namePrefix
    * @return namePrefix
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public String getNamePrefix() {
@@ -77,6 +78,7 @@ public class BulkCIAttributeLayerScopeDTO {
    * Get layerID
    * @return layerID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Long getLayerID() {
@@ -104,6 +106,7 @@ public class BulkCIAttributeLayerScopeDTO {
    * Get fragments
    * @return fragments
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public List<FragmentDTO> getFragments() {

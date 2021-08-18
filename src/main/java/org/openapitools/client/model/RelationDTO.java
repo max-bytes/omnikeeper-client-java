@@ -30,7 +30,7 @@ import org.openapitools.client.model.RelationState;
 /**
  * RelationDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class RelationDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -67,6 +67,7 @@ public class RelationDTO {
    * Get id
    * @return id
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getId() {
@@ -89,6 +90,7 @@ public class RelationDTO {
    * Get fromCIID
    * @return fromCIID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getFromCIID() {
@@ -111,6 +113,7 @@ public class RelationDTO {
    * Get toCIID
    * @return toCIID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public UUID getToCIID() {
@@ -127,6 +130,7 @@ public class RelationDTO {
    * Get predicateID
    * @return predicateID
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public String getPredicateID() {
@@ -146,6 +150,7 @@ public class RelationDTO {
    * Get predicate
    * @return predicate
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public PredicateDTO getPredicate() {
@@ -168,6 +173,7 @@ public class RelationDTO {
    * Get state
    * @return state
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public RelationState getState() {

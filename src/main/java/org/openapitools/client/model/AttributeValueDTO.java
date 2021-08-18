@@ -30,7 +30,7 @@ import org.openapitools.client.model.AttributeValueType;
 /**
  * AttributeValueDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-13T20:59:54.294670Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-18T15:40:50.354144Z[Etc/UTC]")
 public class AttributeValueDTO {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -55,6 +55,7 @@ public class AttributeValueDTO {
    * Get type
    * @return type
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public AttributeValueType getType() {
@@ -77,6 +78,7 @@ public class AttributeValueDTO {
    * Get isArray
    * @return isArray
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public Boolean getIsArray() {
@@ -104,6 +106,7 @@ public class AttributeValueDTO {
    * Get values
    * @return values
   **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
   public List<String> getValues() {
