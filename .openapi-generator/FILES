@@ -33,7 +33,6 @@ docs/ILoadConfig.md
 docs/LayerApi.md
 docs/LayerDTO.md
 docs/OkPluginGenericJsonIngestApi.md
-docs/PredicateDTO.md
 docs/ProblemDetails.md
 docs/RelatedCIDTO.md
 docs/RelationApi.md
@@ -102,7 +101,6 @@ src/main/java/org/openapitools/client/model/GridViewColumn.java
 src/main/java/org/openapitools/client/model/GridViewConfiguration.java
 src/main/java/org/openapitools/client/model/ILoadConfig.java
 src/main/java/org/openapitools/client/model/LayerDTO.java
-src/main/java/org/openapitools/client/model/PredicateDTO.java
 src/main/java/org/openapitools/client/model/ProblemDetails.java
 src/main/java/org/openapitools/client/model/RelatedCIDTO.java
 src/main/java/org/openapitools/client/model/RelationDTO.java

@@ -29,11 +29,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * AddContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class AddContextRequest {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
   public static final String SERIALIZED_NAME_SPEAKING_NAME = "speakingName";
   @SerializedName(SERIALIZED_NAME_SPEAKING_NAME)
@@ -48,26 +48,26 @@ public class AddContextRequest {
   private GridViewConfiguration _configuration;
 
 
-  public AddContextRequest name(String name) {
+  public AddContextRequest id(String id) {
     
-    this.name = name;
+    this.id = id;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get id
+   * @return id
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getName() {
-    return name;
+  public String getId() {
+    return id;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -149,7 +149,7 @@ public class AddContextRequest {
       return false;
     }
     AddContextRequest addContextRequest = (AddContextRequest) o;
-    return Objects.equals(this.name, addContextRequest.name) &&
+    return Objects.equals(this.id, addContextRequest.id) &&
         Objects.equals(this.speakingName, addContextRequest.speakingName) &&
         Objects.equals(this.description, addContextRequest.description) &&
         Objects.equals(this._configuration, addContextRequest._configuration);
@@ -161,7 +161,7 @@ public class AddContextRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, speakingName, description, _configuration);
+    return Objects.hash(id, speakingName, description, _configuration);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -177,7 +177,7 @@ public class AddContextRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddContextRequest {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    speakingName: ").append(toIndentedString(speakingName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    _configuration: ").append(toIndentedString(_configuration)).append("\n");

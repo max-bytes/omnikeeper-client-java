@@ -41,7 +41,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     RelationApi apiInstance = new RelationApi(defaultClient);
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -62,7 +62,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 
@@ -117,7 +117,7 @@ public class Example {
     UUID fromCIID = new UUID(); // UUID | 
     UUID toCIID = new UUID(); // UUID | 
     String predicateID = "predicateID_example"; // String | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
  **fromCIID** | [**UUID**](.md)|  |
  **toCIID** | [**UUID**](.md)|  |
  **predicateID** | **String**|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 
@@ -194,7 +194,7 @@ public class Example {
 
     RelationApi apiInstance = new RelationApi(defaultClient);
     UUID ciid = new UUID(); // UUID | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -216,7 +216,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ciid** | [**UUID**](.md)|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 
@@ -269,7 +269,7 @@ public class Example {
 
     RelationApi apiInstance = new RelationApi(defaultClient);
     UUID fromCIID = new UUID(); // UUID | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -291,7 +291,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fromCIID** | [**UUID**](.md)|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 
@@ -344,7 +344,7 @@ public class Example {
 
     RelationApi apiInstance = new RelationApi(defaultClient);
     String predicateID = "predicateID_example"; // String | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -366,7 +366,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **predicateID** | **String**|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 

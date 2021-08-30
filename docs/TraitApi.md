@@ -37,7 +37,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     TraitApi apiInstance = new TraitApi(defaultClient);
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String traitName = "traitName_example"; // String | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
@@ -59,7 +59,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **traitName** | **String**|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]

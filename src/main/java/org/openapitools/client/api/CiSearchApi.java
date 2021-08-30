@@ -71,7 +71,7 @@ public class CiSearchApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call searchCIsByTraitsCall(List<Long> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call searchCIsByTraitsCall(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -119,7 +119,7 @@ public class CiSearchApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call searchCIsByTraitsValidateBeforeCall(List<Long> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call searchCIsByTraitsValidateBeforeCall(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
@@ -163,7 +163,7 @@ public class CiSearchApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<CIDTO> searchCIsByTraits(List<Long> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime) throws ApiException {
+    public List<CIDTO> searchCIsByTraits(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<CIDTO>> localVarResp = searchCIsByTraitsWithHttpInfo(layerIDs, withTraits, withoutTraits, version, atTime);
         return localVarResp.getData();
     }
@@ -184,7 +184,7 @@ public class CiSearchApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CIDTO>> searchCIsByTraitsWithHttpInfo(List<Long> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<CIDTO>> searchCIsByTraitsWithHttpInfo(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = searchCIsByTraitsValidateBeforeCall(layerIDs, withTraits, withoutTraits, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -207,7 +207,7 @@ public class CiSearchApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call searchCIsByTraitsAsync(List<Long> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback<List<CIDTO>> _callback) throws ApiException {
+    public okhttp3.Call searchCIsByTraitsAsync(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback<List<CIDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = searchCIsByTraitsValidateBeforeCall(layerIDs, withTraits, withoutTraits, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();

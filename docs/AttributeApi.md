@@ -112,7 +112,7 @@ public class Example {
 
     AttributeApi apiInstance = new AttributeApi(defaultClient);
     String regex = "regex_example"; // String | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     List<UUID> ciids = Arrays.asList(); // List<UUID> | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
@@ -135,7 +135,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **regex** | **String**|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **ciids** | [**List&lt;UUID&gt;**](UUID.md)|  | [optional]
  **atTime** | **OffsetDateTime**|  | [optional]
@@ -190,7 +190,7 @@ public class Example {
     AttributeApi apiInstance = new AttributeApi(defaultClient);
     UUID ciid = new UUID(); // UUID | 
     String name = "name_example"; // String | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ciid** | [**UUID**](.md)|  |
  **name** | **String**|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 
@@ -266,7 +266,7 @@ public class Example {
 
     AttributeApi apiInstance = new AttributeApi(defaultClient);
     List<UUID> ciids = Arrays.asList(); // List<UUID> | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -288,7 +288,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ciids** | [**List&lt;UUID&gt;**](UUID.md)|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 
@@ -341,7 +341,7 @@ public class Example {
 
     AttributeApi apiInstance = new AttributeApi(defaultClient);
     String name = "name_example"; // String | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
@@ -363,7 +363,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
 

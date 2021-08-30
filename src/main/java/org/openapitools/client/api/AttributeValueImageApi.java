@@ -73,7 +73,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCall(UUID ciid, String attributeName, List<Long> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -125,7 +125,7 @@ public class AttributeValueImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getValidateBeforeCall(UUID ciid, String attributeName, List<Long> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getValidateBeforeCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciid' is set
         if (ciid == null) {
@@ -169,7 +169,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void get(UUID ciid, String attributeName, List<Long> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
+    public void get(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
         getWithHttpInfo(ciid, attributeName, layerIDs, version, index, atTime);
     }
 
@@ -190,7 +190,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getWithHttpInfo(UUID ciid, String attributeName, List<Long> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<Void> getWithHttpInfo(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getValidateBeforeCall(ciid, attributeName, layerIDs, version, index, atTime, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -213,7 +213,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAsync(UUID ciid, String attributeName, List<Long> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call getAsync(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getValidateBeforeCall(ciid, attributeName, layerIDs, version, index, atTime, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -236,7 +236,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postCall(UUID ciid, String attributeName, Long layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call postCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -288,7 +288,7 @@ public class AttributeValueImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call postValidateBeforeCall(UUID ciid, String attributeName, Long layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call postValidateBeforeCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciid' is set
         if (ciid == null) {
@@ -337,7 +337,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void post(UUID ciid, String attributeName, Long layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
+    public void post(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
         postWithHttpInfo(ciid, attributeName, layerID, version, files, forceArray);
     }
 
@@ -358,7 +358,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> postWithHttpInfo(UUID ciid, String attributeName, Long layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
+    public ApiResponse<Void> postWithHttpInfo(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
         okhttp3.Call localVarCall = postValidateBeforeCall(ciid, attributeName, layerID, version, files, forceArray, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -381,7 +381,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postAsync(UUID ciid, String attributeName, Long layerID, String version, List<File> files, Boolean forceArray, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call postAsync(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = postValidateBeforeCall(ciid, attributeName, layerID, version, files, forceArray, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);

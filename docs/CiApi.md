@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAllCIIDs"></a>
 # **getAllCIIDs**
-> List&lt;String&gt; getAllCIIDs(version)
+> List&lt;UUID&gt; getAllCIIDs(version)
 
 list of all CI-IDs
 
@@ -41,7 +41,7 @@ public class Example {
     CiApi apiInstance = new CiApi(defaultClient);
     String version = "version_example"; // String | 
     try {
-      List<String> result = apiInstance.getAllCIIDs(version);
+      List<UUID> result = apiInstance.getAllCIIDs(version);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling CiApi#getAllCIIDs");
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**List&lt;String&gt;**
+[**List&lt;UUID&gt;**](UUID.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     CiApi apiInstance = new CiApi(defaultClient);
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | Specifies which layers contribute to the result, and in which order
+    List<String> layerIDs = Arrays.asList(); // List<String> | Specifies which layers contribute to the result, and in which order
     UUID CIID = new UUID(); // UUID | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
@@ -130,7 +130,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)| Specifies which layers contribute to the result, and in which order |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order |
  **CIID** | [**UUID**](.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional]
@@ -183,7 +183,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     CiApi apiInstance = new CiApi(defaultClient);
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | Specifies which layers contribute to the result, and in which order
+    List<String> layerIDs = Arrays.asList(); // List<String> | Specifies which layers contribute to the result, and in which order
     List<UUID> ciIDs = Arrays.asList(); // List<UUID> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
@@ -205,7 +205,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)| Specifies which layers contribute to the result, and in which order |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order |
  **ciIDs** | [**List&lt;UUID&gt;**](UUID.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional]

@@ -69,7 +69,7 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestAnsibleInventoryScanCall(Long writeLayerID, List<Long> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ingestAnsibleInventoryScanCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = ansibleInventoryScanDTO;
 
         // create path and map variables
@@ -109,7 +109,7 @@ public class AnsibleInventoryScanIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ingestAnsibleInventoryScanValidateBeforeCall(Long writeLayerID, List<Long> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ingestAnsibleInventoryScanValidateBeforeCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'writeLayerID' is set
         if (writeLayerID == null) {
@@ -151,7 +151,7 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void ingestAnsibleInventoryScan(Long writeLayerID, List<Long> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
+    public void ingestAnsibleInventoryScan(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
         ingestAnsibleInventoryScanWithHttpInfo(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO);
     }
 
@@ -170,7 +170,7 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> ingestAnsibleInventoryScanWithHttpInfo(Long writeLayerID, List<Long> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
+    public ApiResponse<Void> ingestAnsibleInventoryScanWithHttpInfo(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
         okhttp3.Call localVarCall = ingestAnsibleInventoryScanValidateBeforeCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -191,7 +191,7 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestAnsibleInventoryScanAsync(Long writeLayerID, List<Long> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call ingestAnsibleInventoryScanAsync(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ingestAnsibleInventoryScanValidateBeforeCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);

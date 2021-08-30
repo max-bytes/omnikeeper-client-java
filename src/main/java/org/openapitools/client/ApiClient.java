@@ -142,7 +142,7 @@ public class ApiClient {
             this.basePath = basePath;
         }
 
-        String tokenUrl = "file:///protocol/openid-connect/token";
+        String tokenUrl = "https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token";
         if (!"".equals(tokenUrl) && !URI.create(tokenUrl).isAbsolute()) {
             URI uri = URI.create(getBasePath());
             tokenUrl = uri.getScheme() + ":" +

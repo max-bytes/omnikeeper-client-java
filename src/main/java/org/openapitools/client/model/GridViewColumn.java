@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -45,7 +45,7 @@ public class GridViewColumn {
 
   public static final String SERIALIZED_NAME_WRITE_LAYER = "writeLayer";
   @SerializedName(SERIALIZED_NAME_WRITE_LAYER)
-  private Long writeLayer;
+  private String writeLayer;
 
 
   public GridViewColumn sourceAttributeName(String sourceAttributeName) {
@@ -117,7 +117,7 @@ public class GridViewColumn {
   }
 
 
-  public GridViewColumn writeLayer(Long writeLayer) {
+  public GridViewColumn writeLayer(String writeLayer) {
     
     this.writeLayer = writeLayer;
     return this;
@@ -130,12 +130,12 @@ public class GridViewColumn {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getWriteLayer() {
+  public String getWriteLayer() {
     return writeLayer;
   }
 
 
-  public void setWriteLayer(Long writeLayer) {
+  public void setWriteLayer(String writeLayer) {
     this.writeLayer = writeLayer;
   }
 

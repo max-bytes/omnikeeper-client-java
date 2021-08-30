@@ -552,236 +552,6 @@ public class GridViewApi {
         return localVarCall;
     }
     /**
-     * Build call for getContext
-     * @param name  (required)
-     * @param version  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v{version}/GridView/context/{name}"
-            .replaceAll("\\{" + "name" + "\\}", localVarApiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'name' is set
-        if (name == null) {
-            throw new ApiException("Missing the required parameter 'name' when calling getContext(Async)");
-        }
-        
-        // verify the required parameter 'version' is set
-        if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getContext(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = getContextCall(name, version, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Returns a single context in full
-     * 
-     * @param name  (required)
-     * @param version  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
-     </table>
-     */
-    public void getContext(String name, String version) throws ApiException {
-        getContextWithHttpInfo(name, version);
-    }
-
-    /**
-     * Returns a single context in full
-     * 
-     * @param name  (required)
-     * @param version  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Void> getContextWithHttpInfo(String name, String version) throws ApiException {
-        okhttp3.Call localVarCall = getContextValidateBeforeCall(name, version, null);
-        return localVarApiClient.execute(localVarCall);
-    }
-
-    /**
-     * Returns a single context in full (asynchronously)
-     * 
-     * @param name  (required)
-     * @param version  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getContextAsync(String name, String version, final ApiCallback<Void> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getContextValidateBeforeCall(name, version, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getContexts
-     * @param version  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getContextsCall(String version, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v{version}/GridView/contexts"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'version' is set
-        if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getContexts(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = getContextsCall(version, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Returns a list of contexts for grid view.
-     * 
-     * @param version  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public void getContexts(String version) throws ApiException {
-        getContextsWithHttpInfo(version);
-    }
-
-    /**
-     * Returns a list of contexts for grid view.
-     * 
-     * @param version  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Void> getContextsWithHttpInfo(String version) throws ApiException {
-        okhttp3.Call localVarCall = getContextsValidateBeforeCall(version, null);
-        return localVarApiClient.execute(localVarCall);
-    }
-
-    /**
-     * Returns a list of contexts for grid view. (asynchronously)
-     * 
-     * @param version  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getContextsAsync(String version, final ApiCallback<Void> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getContextsValidateBeforeCall(version, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for getData
      * @param context  (required)
      * @param version  (required)
@@ -900,6 +670,236 @@ public class GridViewApi {
     public okhttp3.Call getDataAsync(String context, String version, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDataValidateBeforeCall(context, version, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getGridViewContext
+     * @param name  (required)
+     * @param version  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGridViewContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v{version}/GridView/context/{name}"
+            .replaceAll("\\{" + "name" + "\\}", localVarApiClient.escapeString(name.toString()))
+            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGridViewContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'name' is set
+        if (name == null) {
+            throw new ApiException("Missing the required parameter 'name' when calling getGridViewContext(Async)");
+        }
+        
+        // verify the required parameter 'version' is set
+        if (version == null) {
+            throw new ApiException("Missing the required parameter 'version' when calling getGridViewContext(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getGridViewContextCall(name, version, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Returns a single context in full
+     * 
+     * @param name  (required)
+     * @param version  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
+     </table>
+     */
+    public void getGridViewContext(String name, String version) throws ApiException {
+        getGridViewContextWithHttpInfo(name, version);
+    }
+
+    /**
+     * Returns a single context in full
+     * 
+     * @param name  (required)
+     * @param version  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> getGridViewContextWithHttpInfo(String name, String version) throws ApiException {
+        okhttp3.Call localVarCall = getGridViewContextValidateBeforeCall(name, version, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Returns a single context in full (asynchronously)
+     * 
+     * @param name  (required)
+     * @param version  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGridViewContextAsync(String name, String version, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGridViewContextValidateBeforeCall(name, version, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getGridViewContexts
+     * @param version  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGridViewContextsCall(String version, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v{version}/GridView/contexts"
+            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGridViewContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'version' is set
+        if (version == null) {
+            throw new ApiException("Missing the required parameter 'version' when calling getGridViewContexts(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getGridViewContextsCall(version, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Returns a list of contexts for grid view.
+     * 
+     * @param version  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public void getGridViewContexts(String version) throws ApiException {
+        getGridViewContextsWithHttpInfo(version);
+    }
+
+    /**
+     * Returns a list of contexts for grid view.
+     * 
+     * @param version  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> getGridViewContextsWithHttpInfo(String version) throws ApiException {
+        okhttp3.Call localVarCall = getGridViewContextsValidateBeforeCall(version, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Returns a list of contexts for grid view. (asynchronously)
+     * 
+     * @param version  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGridViewContextsAsync(String version, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGridViewContextsValidateBeforeCall(version, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

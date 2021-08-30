@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **namePrefix** | **String** |  | 
-**layerID** | **Long** |  | 
+**layerID** | **String** |  | 
 **fragments** | [**List&lt;FragmentDTO&gt;**](FragmentDTO.md) |  | 
 
 

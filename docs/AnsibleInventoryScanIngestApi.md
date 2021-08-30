@@ -37,8 +37,8 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     AnsibleInventoryScanIngestApi apiInstance = new AnsibleInventoryScanIngestApi(defaultClient);
-    Long writeLayerID = 56L; // Long | 
-    List<Long> searchLayerIDs = Arrays.asList(); // List<Long> | 
+    String writeLayerID = "writeLayerID_example"; // String | 
+    List<String> searchLayerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     AnsibleInventoryScanDTO ansibleInventoryScanDTO = new AnsibleInventoryScanDTO(); // AnsibleInventoryScanDTO | 
     try {
@@ -58,8 +58,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **writeLayerID** | **Long**|  |
- **searchLayerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **writeLayerID** | **String**|  |
+ **searchLayerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **ansibleInventoryScanDTO** | [**AnsibleInventoryScanDTO**](AnsibleInventoryScanDTO.md)|  |
 

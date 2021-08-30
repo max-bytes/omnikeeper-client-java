@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -39,11 +39,11 @@ public class GridViewConfiguration {
 
   public static final String SERIALIZED_NAME_WRITE_LAYER = "writeLayer";
   @SerializedName(SERIALIZED_NAME_WRITE_LAYER)
-  private Long writeLayer;
+  private String writeLayer;
 
   public static final String SERIALIZED_NAME_READ_LAYERSET = "readLayerset";
   @SerializedName(SERIALIZED_NAME_READ_LAYERSET)
-  private List<Long> readLayerset = null;
+  private List<String> readLayerset = null;
 
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
@@ -77,7 +77,7 @@ public class GridViewConfiguration {
   }
 
 
-  public GridViewConfiguration writeLayer(Long writeLayer) {
+  public GridViewConfiguration writeLayer(String writeLayer) {
     
     this.writeLayer = writeLayer;
     return this;
@@ -90,25 +90,25 @@ public class GridViewConfiguration {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getWriteLayer() {
+  public String getWriteLayer() {
     return writeLayer;
   }
 
 
-  public void setWriteLayer(Long writeLayer) {
+  public void setWriteLayer(String writeLayer) {
     this.writeLayer = writeLayer;
   }
 
 
-  public GridViewConfiguration readLayerset(List<Long> readLayerset) {
+  public GridViewConfiguration readLayerset(List<String> readLayerset) {
     
     this.readLayerset = readLayerset;
     return this;
   }
 
-  public GridViewConfiguration addReadLayersetItem(Long readLayersetItem) {
+  public GridViewConfiguration addReadLayersetItem(String readLayersetItem) {
     if (this.readLayerset == null) {
-      this.readLayerset = new ArrayList<Long>();
+      this.readLayerset = new ArrayList<String>();
     }
     this.readLayerset.add(readLayersetItem);
     return this;
@@ -121,12 +121,12 @@ public class GridViewConfiguration {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getReadLayerset() {
+  public List<String> getReadLayerset() {
     return readLayerset;
   }
 
 
-  public void setReadLayerset(List<Long> readLayerset) {
+  public void setReadLayerset(List<String> readLayerset) {
     this.readLayerset = readLayerset;
   }
 

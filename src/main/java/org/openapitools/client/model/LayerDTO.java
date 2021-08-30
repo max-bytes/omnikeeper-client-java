@@ -27,41 +27,18 @@ import java.io.IOException;
 /**
  * LayerDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class LayerDTO {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  private Long id;
+  private String id;
+
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
 
 
-  public LayerDTO name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  public LayerDTO id(Long id) {
+  public LayerDTO id(String id) {
     
     this.id = id;
     return this;
@@ -74,13 +51,36 @@ public class LayerDTO {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Long getId() {
+  public String getId() {
     return id;
   }
 
 
-  public void setId(Long id) {
+  public void setId(String id) {
     this.id = id;
+  }
+
+
+  public LayerDTO description(String description) {
+    
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getDescription() {
+    return description;
+  }
+
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -93,21 +93,21 @@ public class LayerDTO {
       return false;
     }
     LayerDTO layerDTO = (LayerDTO) o;
-    return Objects.equals(this.name, layerDTO.name) &&
-        Objects.equals(this.id, layerDTO.id);
+    return Objects.equals(this.id, layerDTO.id) &&
+        Objects.equals(this.description, layerDTO.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id);
+    return Objects.hash(id, description);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LayerDTO {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
   }

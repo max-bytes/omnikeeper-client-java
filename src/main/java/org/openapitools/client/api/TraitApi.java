@@ -70,7 +70,7 @@ public class TraitApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEffectiveTraitsForTraitNameCall(List<Long> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEffectiveTraitsForTraitNameCall(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -114,7 +114,7 @@ public class TraitApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEffectiveTraitsForTraitNameValidateBeforeCall(List<Long> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEffectiveTraitsForTraitNameValidateBeforeCall(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
@@ -152,7 +152,7 @@ public class TraitApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public Map<String, EffectiveTraitDTO> getEffectiveTraitsForTraitName(List<Long> layerIDs, String traitName, String version, OffsetDateTime atTime) throws ApiException {
+    public Map<String, EffectiveTraitDTO> getEffectiveTraitsForTraitName(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<Map<String, EffectiveTraitDTO>> localVarResp = getEffectiveTraitsForTraitNameWithHttpInfo(layerIDs, traitName, version, atTime);
         return localVarResp.getData();
     }
@@ -172,7 +172,7 @@ public class TraitApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Map<String, EffectiveTraitDTO>> getEffectiveTraitsForTraitNameWithHttpInfo(List<Long> layerIDs, String traitName, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<Map<String, EffectiveTraitDTO>> getEffectiveTraitsForTraitNameWithHttpInfo(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getEffectiveTraitsForTraitNameValidateBeforeCall(layerIDs, traitName, version, atTime, null);
         Type localVarReturnType = new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -194,7 +194,7 @@ public class TraitApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEffectiveTraitsForTraitNameAsync(List<Long> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback<Map<String, EffectiveTraitDTO>> _callback) throws ApiException {
+    public okhttp3.Call getEffectiveTraitsForTraitNameAsync(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback<Map<String, EffectiveTraitDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getEffectiveTraitsForTraitNameValidateBeforeCall(layerIDs, traitName, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType();

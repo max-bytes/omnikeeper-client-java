@@ -70,7 +70,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllMergedRelationsCall(List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAllMergedRelationsCall(List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -110,7 +110,7 @@ public class RelationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAllMergedRelationsValidateBeforeCall(List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAllMergedRelationsValidateBeforeCall(List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
@@ -142,7 +142,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<RelationDTO> getAllMergedRelations(List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<RelationDTO> getAllMergedRelations(List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<RelationDTO>> localVarResp = getAllMergedRelationsWithHttpInfo(layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -161,7 +161,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<RelationDTO>> getAllMergedRelationsWithHttpInfo(List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<RelationDTO>> getAllMergedRelationsWithHttpInfo(List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getAllMergedRelationsValidateBeforeCall(layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -182,7 +182,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllMergedRelationsAsync(List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
+    public okhttp3.Call getAllMergedRelationsAsync(List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAllMergedRelationsValidateBeforeCall(layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
@@ -206,7 +206,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationCall(UUID fromCIID, UUID toCIID, String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationCall(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -258,7 +258,7 @@ public class RelationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedRelationValidateBeforeCall(UUID fromCIID, UUID toCIID, String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedRelationValidateBeforeCall(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'fromCIID' is set
         if (fromCIID == null) {
@@ -308,7 +308,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public RelationDTO getMergedRelation(UUID fromCIID, UUID toCIID, String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public RelationDTO getMergedRelation(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<RelationDTO> localVarResp = getMergedRelationWithHttpInfo(fromCIID, toCIID, predicateID, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -330,7 +330,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RelationDTO> getMergedRelationWithHttpInfo(UUID fromCIID, UUID toCIID, String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<RelationDTO> getMergedRelationWithHttpInfo(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationValidateBeforeCall(fromCIID, toCIID, predicateID, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<RelationDTO>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -354,7 +354,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationAsync(UUID fromCIID, UUID toCIID, String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<RelationDTO> _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationAsync(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<RelationDTO> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedRelationValidateBeforeCall(fromCIID, toCIID, predicateID, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<RelationDTO>(){}.getType();
@@ -376,7 +376,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationsFromOrToCICall(UUID ciid, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationsFromOrToCICall(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -420,7 +420,7 @@ public class RelationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedRelationsFromOrToCIValidateBeforeCall(UUID ciid, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedRelationsFromOrToCIValidateBeforeCall(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciid' is set
         if (ciid == null) {
@@ -458,7 +458,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<RelationDTO> getMergedRelationsFromOrToCI(UUID ciid, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<RelationDTO> getMergedRelationsFromOrToCI(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<RelationDTO>> localVarResp = getMergedRelationsFromOrToCIWithHttpInfo(ciid, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -478,7 +478,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<RelationDTO>> getMergedRelationsFromOrToCIWithHttpInfo(UUID ciid, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<RelationDTO>> getMergedRelationsFromOrToCIWithHttpInfo(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationsFromOrToCIValidateBeforeCall(ciid, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -500,7 +500,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationsFromOrToCIAsync(UUID ciid, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationsFromOrToCIAsync(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedRelationsFromOrToCIValidateBeforeCall(ciid, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
@@ -522,7 +522,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationsOutgoingFromCICall(UUID fromCIID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationsOutgoingFromCICall(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -566,7 +566,7 @@ public class RelationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedRelationsOutgoingFromCIValidateBeforeCall(UUID fromCIID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedRelationsOutgoingFromCIValidateBeforeCall(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'fromCIID' is set
         if (fromCIID == null) {
@@ -604,7 +604,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<RelationDTO> getMergedRelationsOutgoingFromCI(UUID fromCIID, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<RelationDTO> getMergedRelationsOutgoingFromCI(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<RelationDTO>> localVarResp = getMergedRelationsOutgoingFromCIWithHttpInfo(fromCIID, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -624,7 +624,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<RelationDTO>> getMergedRelationsOutgoingFromCIWithHttpInfo(UUID fromCIID, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<RelationDTO>> getMergedRelationsOutgoingFromCIWithHttpInfo(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationsOutgoingFromCIValidateBeforeCall(fromCIID, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -646,7 +646,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationsOutgoingFromCIAsync(UUID fromCIID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationsOutgoingFromCIAsync(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedRelationsOutgoingFromCIValidateBeforeCall(fromCIID, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
@@ -668,7 +668,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationsWithPredicateCall(String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationsWithPredicateCall(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -712,7 +712,7 @@ public class RelationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedRelationsWithPredicateValidateBeforeCall(String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedRelationsWithPredicateValidateBeforeCall(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'predicateID' is set
         if (predicateID == null) {
@@ -750,7 +750,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<RelationDTO> getMergedRelationsWithPredicate(String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<RelationDTO> getMergedRelationsWithPredicate(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<RelationDTO>> localVarResp = getMergedRelationsWithPredicateWithHttpInfo(predicateID, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -770,7 +770,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<RelationDTO>> getMergedRelationsWithPredicateWithHttpInfo(String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<RelationDTO>> getMergedRelationsWithPredicateWithHttpInfo(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationsWithPredicateValidateBeforeCall(predicateID, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -792,7 +792,7 @@ public class RelationApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedRelationsWithPredicateAsync(String predicateID, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
+    public okhttp3.Call getMergedRelationsWithPredicateAsync(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<RelationDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedRelationsWithPredicateValidateBeforeCall(predicateID, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();

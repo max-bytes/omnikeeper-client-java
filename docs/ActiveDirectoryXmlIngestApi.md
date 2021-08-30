@@ -38,8 +38,8 @@ public class Example {
 
     ActiveDirectoryXmlIngestApi apiInstance = new ActiveDirectoryXmlIngestApi(defaultClient);
     String version = "version_example"; // String | 
-    Long writeLayerID = 56L; // Long | 
-    List<Long> searchLayerIDs = 56L; // List<Long> | 
+    String writeLayerID = "writeLayerID_example"; // String | 
+    List<String> searchLayerIDs = "searchLayerIDs_example"; // List<String> | 
     List<File> files = new File("/path/to/file"); // List<File> | 
     try {
       apiInstance.ingestXML(version, writeLayerID, searchLayerIDs, files);
@@ -59,8 +59,8 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **version** | **String**|  |
- **writeLayerID** | **Long**|  |
- **searchLayerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **writeLayerID** | **String**|  |
+ **searchLayerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **files** | **List&lt;File&gt;**|  |
 
 ### Return type

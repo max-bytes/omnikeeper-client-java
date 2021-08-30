@@ -40,7 +40,7 @@ public class Example {
     AttributeValueImageApi apiInstance = new AttributeValueImageApi(defaultClient);
     UUID ciid = new UUID(); // UUID | 
     String attributeName = "attributeName_example"; // String | 
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     Integer index = 0; // Integer | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ciid** | [**UUID**](.md)|  |
  **attributeName** | **String**|  |
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **index** | **Integer**|  | [optional] [default to 0]
  **atTime** | **OffsetDateTime**|  | [optional]
@@ -118,7 +118,7 @@ public class Example {
     AttributeValueImageApi apiInstance = new AttributeValueImageApi(defaultClient);
     UUID ciid = new UUID(); // UUID | 
     String attributeName = "attributeName_example"; // String | 
-    Long layerID = 56L; // Long | 
+    String layerID = "layerID_example"; // String | 
     String version = "version_example"; // String | 
     List<File> files = new File("/path/to/file"); // List<File> | 
     Boolean forceArray = false; // Boolean | 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ciid** | [**UUID**](.md)|  |
  **attributeName** | **String**|  |
- **layerID** | **Long**|  |
+ **layerID** | **String**|  |
  **version** | **String**|  |
  **files** | **List&lt;File&gt;**|  |
  **forceArray** | **Boolean**|  | [optional] [default to false]

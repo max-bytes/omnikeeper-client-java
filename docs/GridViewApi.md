@@ -8,9 +8,9 @@ Method | HTTP request | Description
 [**changeData**](GridViewApi.md#changeData) | **POST** /api/v{version}/GridView/contexts/{context}/change | Saves grid view row changes and returns change results
 [**deleteContext**](GridViewApi.md#deleteContext) | **DELETE** /api/v{version}/GridView/context/{name} | Deletes specific context
 [**editContext**](GridViewApi.md#editContext) | **PUT** /api/v{version}/GridView/context/{name} | Edits specific context
-[**getContext**](GridViewApi.md#getContext) | **GET** /api/v{version}/GridView/context/{name} | Returns a single context in full
-[**getContexts**](GridViewApi.md#getContexts) | **GET** /api/v{version}/GridView/contexts | Returns a list of contexts for grid view.
 [**getData**](GridViewApi.md#getData) | **GET** /api/v{version}/GridView/contexts/{context}/data | Returns grid view data for specific context
+[**getGridViewContext**](GridViewApi.md#getGridViewContext) | **GET** /api/v{version}/GridView/context/{name} | Returns a single context in full
+[**getGridViewContexts**](GridViewApi.md#getGridViewContexts) | **GET** /api/v{version}/GridView/contexts | Returns a list of contexts for grid view.
 [**getSchema**](GridViewApi.md#getSchema) | **GET** /api/v{version}/GridView/contexts/{context}/schema | Returns grid view schema for specific context
 
 
@@ -303,145 +303,6 @@ null (empty response body)
 **200** | If request is successful |  -  |
 **400** | If editing the context fails |  -  |
 
-<a name="getContext"></a>
-# **getContext**
-> getContext(name, version)
-
-Returns a single context in full
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.GridViewApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-    
-    // Configure OAuth2 access token for authorization: oauth2
-    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-    oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-    // Configure OAuth2 access token for authorization: oauth2
-    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-    oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-    GridViewApi apiInstance = new GridViewApi(defaultClient);
-    String name = "name_example"; // String | 
-    String version = "version_example"; // String | 
-    try {
-      apiInstance.getContext(name, version);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#getContext");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **String**|  |
- **version** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2), [oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | If the name was not found or any other error occurred |  -  |
-
-<a name="getContexts"></a>
-# **getContexts**
-> getContexts(version)
-
-Returns a list of contexts for grid view.
-
-### Example
-```java
-// Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.GridViewApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-    
-    // Configure OAuth2 access token for authorization: oauth2
-    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-    oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-    // Configure OAuth2 access token for authorization: oauth2
-    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-    oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-    GridViewApi apiInstance = new GridViewApi(defaultClient);
-    String version = "version_example"; // String | 
-    try {
-      apiInstance.getContexts(version);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#getContexts");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2), [oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-
 <a name="getData"></a>
 # **getData**
 > getData(context, version)
@@ -512,6 +373,145 @@ null (empty response body)
 |-------------|-------------|------------------|
 **200** | If request is successful |  -  |
 **400** | If trait is not found |  -  |
+
+<a name="getGridViewContext"></a>
+# **getGridViewContext**
+> getGridViewContext(name, version)
+
+Returns a single context in full
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.GridViewApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure OAuth2 access token for authorization: oauth2
+    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+    oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+    // Configure OAuth2 access token for authorization: oauth2
+    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+    oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+    GridViewApi apiInstance = new GridViewApi(defaultClient);
+    String name = "name_example"; // String | 
+    String version = "version_example"; // String | 
+    try {
+      apiInstance.getGridViewContext(name, version);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GridViewApi#getGridViewContext");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  |
+ **version** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | If the name was not found or any other error occurred |  -  |
+
+<a name="getGridViewContexts"></a>
+# **getGridViewContexts**
+> getGridViewContexts(version)
+
+Returns a list of contexts for grid view.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.GridViewApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+    
+    // Configure OAuth2 access token for authorization: oauth2
+    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+    oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+    // Configure OAuth2 access token for authorization: oauth2
+    OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+    oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+    GridViewApi apiInstance = new GridViewApi(defaultClient);
+    String version = "version_example"; // String | 
+    try {
+      apiInstance.getGridViewContexts(version);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GridViewApi#getGridViewContexts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **version** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
 
 <a name="getSchema"></a>
 # **getSchema**

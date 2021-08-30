@@ -37,7 +37,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     CiSearchApi apiInstance = new CiSearchApi(defaultClient);
-    List<Long> layerIDs = Arrays.asList(); // List<Long> | 
+    List<String> layerIDs = Arrays.asList(); // List<String> | 
     List<String> withTraits = Arrays.asList(); // List<String> | 
     List<String> withoutTraits = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
@@ -60,7 +60,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;Long&gt;**](Long.md)|  |
+ **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **withTraits** | [**List&lt;String&gt;**](String.md)|  |
  **withoutTraits** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |

@@ -24,13 +24,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
-import org.openapitools.client.model.PredicateDTO;
 import org.openapitools.client.model.RelationState;
 
 /**
  * RelationDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class RelationDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -47,10 +46,6 @@ public class RelationDTO {
   public static final String SERIALIZED_NAME_PREDICATE_I_D = "predicateID";
   @SerializedName(SERIALIZED_NAME_PREDICATE_I_D)
   private String predicateID;
-
-  public static final String SERIALIZED_NAME_PREDICATE = "predicate";
-  @SerializedName(SERIALIZED_NAME_PREDICATE)
-  private PredicateDTO predicate;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
@@ -126,6 +121,12 @@ public class RelationDTO {
   }
 
 
+  public RelationDTO predicateID(String predicateID) {
+    
+    this.predicateID = predicateID;
+    return this;
+  }
+
    /**
    * Get predicateID
    * @return predicateID
@@ -138,28 +139,8 @@ public class RelationDTO {
   }
 
 
-
-
-  public RelationDTO predicate(PredicateDTO predicate) {
-    
-    this.predicate = predicate;
-    return this;
-  }
-
-   /**
-   * Get predicate
-   * @return predicate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public PredicateDTO getPredicate() {
-    return predicate;
-  }
-
-
-  public void setPredicate(PredicateDTO predicate) {
-    this.predicate = predicate;
+  public void setPredicateID(String predicateID) {
+    this.predicateID = predicateID;
   }
 
 
@@ -199,13 +180,12 @@ public class RelationDTO {
         Objects.equals(this.fromCIID, relationDTO.fromCIID) &&
         Objects.equals(this.toCIID, relationDTO.toCIID) &&
         Objects.equals(this.predicateID, relationDTO.predicateID) &&
-        Objects.equals(this.predicate, relationDTO.predicate) &&
         Objects.equals(this.state, relationDTO.state);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, fromCIID, toCIID, predicateID, predicate, state);
+    return Objects.hash(id, fromCIID, toCIID, predicateID, state);
   }
 
   @Override
@@ -216,7 +196,6 @@ public class RelationDTO {
     sb.append("    fromCIID: ").append(toIndentedString(fromCIID)).append("\n");
     sb.append("    toCIID: ").append(toIndentedString(toCIID)).append("\n");
     sb.append("    predicateID: ").append(toIndentedString(predicateID)).append("\n");
-    sb.append("    predicate: ").append(toIndentedString(predicate)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
     return sb.toString();

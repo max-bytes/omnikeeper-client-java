@@ -30,12 +30,10 @@ paths:
             schema:
               properties:
                 writeLayerID:
-                  format: int64
-                  type: integer
+                  type: string
                 searchLayerIDs:
                   items:
-                    format: int64
-                    type: integer
+                    type: string
                   type: array
                 files:
                   items:
@@ -65,8 +63,7 @@ paths:
         name: writeLayerID
         required: true
         schema:
-          format: int64
-          type: integer
+          type: string
         style: form
       - explode: true
         in: query
@@ -74,8 +71,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: false
@@ -165,8 +161,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -175,7 +170,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -294,8 +288,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -304,7 +297,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -428,8 +420,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -438,7 +429,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -524,7 +514,6 @@ paths:
           items:
             format: uuid
             type: string
-          nullable: true
           type: array
         style: form
       - explode: true
@@ -533,8 +522,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -543,7 +531,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -742,8 +729,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -761,7 +747,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -802,8 +787,7 @@ paths:
         name: layerID
         required: true
         schema:
-          format: int64
-          type: integer
+          type: string
         style: form
       - explode: true
         in: query
@@ -863,81 +847,97 @@ paths:
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=minimal;odata.streaming=false:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=minimal:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=full;odata.streaming=true:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=full;odata.streaming=false:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=full:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=none;odata.streaming=true:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=none;odata.streaming=false:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.metadata=none:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.streaming=true:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json;odata.streaming=false:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/json:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/xml:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             application/odata:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             text/plain:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
             text/json:
               schema:
                 items:
+                  format: uuid
                   type: string
                 type: array
           description: Success
@@ -958,11 +958,8 @@ paths:
         name: layerIDs
         required: true
         schema:
-          description: Specifies which layers contribute to the result, and in which
-            order
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -980,10 +977,7 @@ paths:
         name: atTime
         required: false
         schema:
-          description: Specify datetime, for which point in time to get the data;
-            leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -1062,11 +1056,8 @@ paths:
         name: layerIDs
         required: true
         schema:
-          description: Specifies which layers contribute to the result, and in which
-            order
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -1086,10 +1077,7 @@ paths:
         name: atTime
         required: false
         schema:
-          description: Specify datetime, for which point in time to get the data;
-            leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -1200,8 +1188,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -1228,7 +1215,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -1459,7 +1445,7 @@ paths:
       x-accepts: application/json
   /api/v{version}/GridView/contexts:
     get:
-      operationId: GetContexts
+      operationId: GetGridViewContexts
       parameters:
       - explode: false
         in: path
@@ -1486,7 +1472,6 @@ paths:
         name: name
         required: true
         schema:
-          nullable: true
           type: string
         style: simple
       - explode: false
@@ -1557,14 +1542,13 @@ paths:
       - GridView
       x-accepts: application/json
     get:
-      operationId: GetContext
+      operationId: GetGridViewContext
       parameters:
       - explode: false
         in: path
         name: name
         required: true
         schema:
-          nullable: true
           type: string
         style: simple
       - explode: false
@@ -1593,7 +1577,6 @@ paths:
         name: name
         required: true
         schema:
-          nullable: true
           type: string
         style: simple
       - explode: false
@@ -1851,7 +1834,6 @@ paths:
         name: context
         required: true
         schema:
-          nullable: true
           type: string
         style: simple
       - explode: false
@@ -1878,7 +1860,6 @@ paths:
         name: context
         required: true
         schema:
-          nullable: true
           type: string
         style: simple
       - explode: false
@@ -1908,7 +1889,6 @@ paths:
         name: context
         required: true
         schema:
-          nullable: true
           type: string
         style: simple
       - explode: false
@@ -2378,6 +2358,87 @@ paths:
         style: simple
       responses:
         "200":
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=minimal:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=full:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.metadata=none:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.streaming=true:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json;odata.streaming=false:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/xml:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/odata:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
           description: Success
       security:
       - oauth2: []
@@ -2385,7 +2446,7 @@ paths:
       - OKPluginGenericJSONIngest
       x-accepts: application/json
     post:
-      operationId: AddNewContext
+      operationId: UpsertContext
       parameters:
       - explode: false
         in: path
@@ -2450,6 +2511,55 @@ paths:
         required: true
       responses:
         "200":
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/odata:
+              schema:
+                $ref: '#/components/schemas/Context'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Context'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Context'
           description: Success
       security:
       - oauth2: []
@@ -2457,13 +2567,13 @@ paths:
       - OKPluginGenericJSONIngest
       x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
-  /api/v{version}/ingest/genericJSON/manage/context/{name}:
+  /api/v{version}/ingest/genericJSON/manage/context/{id}:
     delete:
       operationId: RemoveContext
       parameters:
       - explode: false
         in: path
-        name: name
+        name: id
         required: true
         schema:
           type: string
@@ -2477,6 +2587,55 @@ paths:
         style: simple
       responses:
         "200":
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/odata:
+              schema:
+                $ref: '#/components/schemas/Context'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Context'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Context'
           description: Success
       security:
       - oauth2: []
@@ -2484,11 +2643,11 @@ paths:
       - OKPluginGenericJSONIngest
       x-accepts: application/json
     get:
-      operationId: GetContextByName
+      operationId: GetContext
       parameters:
       - explode: false
         in: path
-        name: name
+        name: id
         required: true
         schema:
           type: string
@@ -2502,6 +2661,55 @@ paths:
         style: simple
       responses:
         "200":
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/odata:
+              schema:
+                $ref: '#/components/schemas/Context'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Context'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Context'
           description: Success
       security:
       - oauth2: []
@@ -2541,8 +2749,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -2551,7 +2758,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -2635,8 +2841,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -2645,7 +2850,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -2754,8 +2958,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -2764,7 +2967,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -2881,8 +3083,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -2891,7 +3092,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -3008,8 +3208,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -3018,7 +3217,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -3127,8 +3325,7 @@ paths:
         required: true
         schema:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         style: form
       - explode: true
@@ -3144,7 +3341,6 @@ paths:
         required: false
         schema:
           format: date-time
-          nullable: true
           type: string
         style: form
       - explode: false
@@ -3261,32 +3457,62 @@ components:
           schema:
             $ref: '#/components/schemas/inline_object_2'
   schemas:
+    AddContextRequest:
+      additionalProperties: false
+      example:
+        configuration:
+          writeLayer: writeLayer
+          columns:
+          - writeLayer: writeLayer
+            sourceAttributeName: sourceAttributeName
+            columnDescription: columnDescription
+          - writeLayer: writeLayer
+            sourceAttributeName: sourceAttributeName
+            columnDescription: columnDescription
+          trait: trait
+          showCIIDColumn: true
+          readLayerset:
+          - readLayerset
+          - readLayerset
+        description: description
+        id: id
+        speakingName: speakingName
+      properties:
+        id:
+          nullable: true
+          type: string
+        speakingName:
+          nullable: true
+          type: string
+        description:
+          nullable: true
+          type: string
+        configuration:
+          $ref: '#/components/schemas/GridViewConfiguration'
+      type: object
     AnsibleInventoryScanDTO:
+      additionalProperties: false
       example:
         yumUpdates:
-          key: '{}'
+          key: ""
         yumInstalled:
-          key: '{}'
+          key: ""
         yumRepos:
-          key: '{}'
+          key: ""
         setupFacts:
-          key: '{}'
+          key: ""
       properties:
         setupFacts:
-          additionalProperties:
-            type: object
+          additionalProperties: {}
           type: object
         yumInstalled:
-          additionalProperties:
-            type: object
+          additionalProperties: {}
           type: object
         yumRepos:
-          additionalProperties:
-            type: object
+          additionalProperties: {}
           type: object
         yumUpdates:
-          additionalProperties:
-            type: object
+          additionalProperties: {}
           type: object
       required:
       - setupFacts
@@ -3294,16 +3520,15 @@ components:
       - yumRepos
       - yumUpdates
       type: object
-    AttributeValueType:
+    AttributeState:
       enum:
-      - Text
-      - MultilineText
-      - Integer
-      - JSON
-      - YAML
-      - Image
+      - New
+      - Changed
+      - Removed
+      - Renewed
       type: string
     AttributeValueDTO:
+      additionalProperties: false
       example:
         values:
         - values
@@ -3323,68 +3548,19 @@ components:
       - type
       - values
       type: object
-    AttributeState:
+    AttributeValueType:
       enum:
-      - New
-      - Changed
-      - Removed
-      - Renewed
+      - Text
+      - MultilineText
+      - Integer
+      - JSON
+      - YAML
+      - Image
       type: string
-    CIAttributeDTO:
-      example:
-        name: name
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        value:
-          values:
-          - values
-          - values
-          isArray: true
-        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        id:
-          format: uuid
-          type: string
-        name:
-          type: string
-        value:
-          $ref: '#/components/schemas/AttributeValueDTO'
-        ciid:
-          format: uuid
-          type: string
-        state:
-          $ref: '#/components/schemas/AttributeState'
-      required:
-      - ciid
-      - id
-      - name
-      - state
-      - value
-      type: object
-    FragmentDTO:
-      example:
-        name: name
-        value:
-          values:
-          - values
-          - values
-          isArray: true
-        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        name:
-          type: string
-        value:
-          $ref: '#/components/schemas/AttributeValueDTO'
-        ciid:
-          format: uuid
-          type: string
-      required:
-      - ciid
-      - name
-      - value
-      type: object
     BulkCIAttributeLayerScopeDTO:
+      additionalProperties: false
       example:
-        layerID: 0
+        layerID: layerID
         namePrefix: namePrefix
         fragments:
         - name: name
@@ -3405,8 +3581,7 @@ components:
         namePrefix:
           type: string
         layerID:
-          format: int64
-          type: integer
+          type: string
         fragments:
           items:
             $ref: '#/components/schemas/FragmentDTO'
@@ -3416,192 +3591,8 @@ components:
       - layerID
       - namePrefix
       type: object
-    CIDTO:
-      example:
-        attributes:
-          key:
-            name: name
-            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            value:
-              values:
-              - values
-              - values
-              isArray: true
-            ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        id:
-          format: uuid
-          type: string
-        attributes:
-          additionalProperties:
-            $ref: '#/components/schemas/CIAttributeDTO'
-          type: object
-      required:
-      - attributes
-      - id
-      type: object
-    GraphQLQuery:
-      example:
-        variables: '{}'
-        query: query
-        operationName: operationName
-        namedQuery: namedQuery
-      properties:
-        operationName:
-          nullable: true
-          type: string
-        namedQuery:
-          nullable: true
-          type: string
-        query:
-          nullable: true
-          type: string
-        variables:
-          nullable: true
-          type: object
-      type: object
-    GridViewColumn:
-      example:
-        writeLayer: 1
-        sourceAttributeName: sourceAttributeName
-        columnDescription: columnDescription
-      properties:
-        sourceAttributeName:
-          nullable: true
-          type: string
-        columnDescription:
-          nullable: true
-          type: string
-        valueType:
-          $ref: '#/components/schemas/AttributeValueType'
-        writeLayer:
-          format: int64
-          nullable: true
-          type: integer
-      type: object
-    GridViewConfiguration:
-      example:
-        writeLayer: 0
-        columns:
-        - writeLayer: 1
-          sourceAttributeName: sourceAttributeName
-          columnDescription: columnDescription
-        - writeLayer: 1
-          sourceAttributeName: sourceAttributeName
-          columnDescription: columnDescription
-        trait: trait
-        showCIIDColumn: true
-        readLayerset:
-        - 6
-        - 6
-      properties:
-        showCIIDColumn:
-          type: boolean
-        writeLayer:
-          format: int64
-          type: integer
-        readLayerset:
-          items:
-            format: int64
-            type: integer
-          nullable: true
-          type: array
-        columns:
-          items:
-            $ref: '#/components/schemas/GridViewColumn'
-          nullable: true
-          type: array
-        trait:
-          nullable: true
-          type: string
-      type: object
-    EditContextRequest:
-      example:
-        configuration:
-          writeLayer: 0
-          columns:
-          - writeLayer: 1
-            sourceAttributeName: sourceAttributeName
-            columnDescription: columnDescription
-          - writeLayer: 1
-            sourceAttributeName: sourceAttributeName
-            columnDescription: columnDescription
-          trait: trait
-          showCIIDColumn: true
-          readLayerset:
-          - 6
-          - 6
-        description: description
-        speakingName: speakingName
-      properties:
-        speakingName:
-          nullable: true
-          type: string
-        description:
-          nullable: true
-          type: string
-        configuration:
-          $ref: '#/components/schemas/GridViewConfiguration'
-      type: object
-    ProblemDetails:
-      properties:
-        type:
-          nullable: true
-          type: string
-        title:
-          nullable: true
-          type: string
-        status:
-          format: int32
-          nullable: true
-          type: integer
-        detail:
-          nullable: true
-          type: string
-        instance:
-          nullable: true
-          type: string
-        extensions:
-          additionalProperties:
-            type: object
-          nullable: true
-          readOnly: true
-          type: object
-      type: object
-    AddContextRequest:
-      example:
-        configuration:
-          writeLayer: 0
-          columns:
-          - writeLayer: 1
-            sourceAttributeName: sourceAttributeName
-            columnDescription: columnDescription
-          - writeLayer: 1
-            sourceAttributeName: sourceAttributeName
-            columnDescription: columnDescription
-          trait: trait
-          showCIIDColumn: true
-          readLayerset:
-          - 6
-          - 6
-        name: name
-        description: description
-        speakingName: speakingName
-      properties:
-        name:
-          nullable: true
-          type: string
-        speakingName:
-          nullable: true
-          type: string
-        description:
-          nullable: true
-          type: string
-        configuration:
-          $ref: '#/components/schemas/GridViewConfiguration'
-      type: object
     ChangeDataCell:
+      additionalProperties: false
       example:
         name: name
         changeable: true
@@ -3619,35 +3610,8 @@ components:
         changeable:
           type: boolean
       type: object
-    SparseRow:
-      example:
-        cells:
-        - name: name
-          changeable: true
-          value:
-            values:
-            - values
-            - values
-            isArray: true
-        - name: name
-          changeable: true
-          value:
-            values:
-            - values
-            - values
-            isArray: true
-        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        ciid:
-          format: uuid
-          type: string
-        cells:
-          items:
-            $ref: '#/components/schemas/ChangeDataCell'
-          nullable: true
-          type: array
-      type: object
     ChangeDataRequest:
+      additionalProperties: false
       example:
         sparseRows:
         - cells:
@@ -3689,137 +3653,118 @@ components:
           nullable: true
           type: array
       type: object
-    LayerDTO:
+    CIAttributeDTO:
+      additionalProperties: false
       example:
         name: name
-        id: 0
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        value:
+          values:
+          - values
+          - values
+          isArray: true
+        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
+        id:
+          format: uuid
+          type: string
         name:
           type: string
-        id:
-          format: int64
-          type: integer
+        value:
+          $ref: '#/components/schemas/AttributeValueDTO'
+        ciid:
+          format: uuid
+          type: string
+        state:
+          $ref: '#/components/schemas/AttributeState'
       required:
+      - ciid
       - id
       - name
+      - state
+      - value
       type: object
-    IExtractConfig:
-      type: object
-    ITransformConfig:
-      type: object
-    ILoadConfig:
+    CIDTO:
+      additionalProperties: false
       example:
-        writeLayerID: 6
-        searchLayerIDs:
-        - 0
-        - 0
+        attributes:
+          key:
+            name: name
+            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            value:
+              values:
+              - values
+              - values
+              isArray: true
+            ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
-        searchLayerIDs:
-          items:
-            format: int64
-            type: integer
-          nullable: true
-          readOnly: true
-          type: array
-        writeLayerID:
-          format: int64
-          readOnly: true
-          type: integer
+        id:
+          format: uuid
+          type: string
+        attributes:
+          additionalProperties:
+            $ref: '#/components/schemas/CIAttributeDTO'
+          type: object
+      required:
+      - attributes
+      - id
       type: object
     Context:
+      additionalProperties: false
       example:
         extractConfig: '{}'
         loadConfig:
-          writeLayerID: 6
+          writeLayerID: writeLayerID
           searchLayerIDs:
-          - 0
-          - 0
-        name: name
+          - searchLayerIDs
+          - searchLayerIDs
         transformConfig: '{}'
+        id: id
       properties:
-        name:
+        id:
           nullable: true
           type: string
         extractConfig:
+          additionalProperties: false
           type: object
         transformConfig:
+          additionalProperties: false
           type: object
         loadConfig:
           $ref: '#/components/schemas/ILoadConfig'
       type: object
-    PredicateDTO:
+    EditContextRequest:
+      additionalProperties: false
       example:
-        wordingFrom: wordingFrom
-        id: id
-        wordingTo: wordingTo
+        configuration:
+          writeLayer: writeLayer
+          columns:
+          - writeLayer: writeLayer
+            sourceAttributeName: sourceAttributeName
+            columnDescription: columnDescription
+          - writeLayer: writeLayer
+            sourceAttributeName: sourceAttributeName
+            columnDescription: columnDescription
+          trait: trait
+          showCIIDColumn: true
+          readLayerset:
+          - readLayerset
+          - readLayerset
+        description: description
+        speakingName: speakingName
       properties:
-        id:
+        speakingName:
           nullable: true
           type: string
-        wordingFrom:
+        description:
           nullable: true
           type: string
-        wordingTo:
-          nullable: true
-          type: string
-      type: object
-    RelationState:
-      enum:
-      - New
-      - Removed
-      - Renewed
-      type: string
-    RelationDTO:
-      example:
-        toCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        predicateID: predicateID
-        predicate:
-          wordingFrom: wordingFrom
-          id: id
-          wordingTo: wordingTo
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        fromCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        id:
-          format: uuid
-          type: string
-        fromCIID:
-          format: uuid
-          type: string
-        toCIID:
-          format: uuid
-          type: string
-        predicateID:
-          readOnly: true
-          type: string
-        predicate:
-          $ref: '#/components/schemas/PredicateDTO'
-        state:
-          $ref: '#/components/schemas/RelationState'
-      required:
-      - fromCIID
-      - id
-      - predicate
-      - predicateID
-      - state
-      - toCIID
-      type: object
-    RelatedCIDTO:
-      properties:
-        fromCIID:
-          format: uuid
-          type: string
-        toCIID:
-          format: uuid
-          type: string
-        predicateID:
-          type: string
-      required:
-      - fromCIID
-      - predicateID
-      - toCIID
+        configuration:
+          $ref: '#/components/schemas/GridViewConfiguration'
       type: object
     EffectiveTraitDTO:
+      additionalProperties: false
       properties:
         traitAttributes:
           additionalProperties:
@@ -3835,15 +3780,249 @@ components:
       - traitAttributes
       - traitRelations
       type: object
+    FragmentDTO:
+      additionalProperties: false
+      example:
+        name: name
+        value:
+          values:
+          - values
+          - values
+          isArray: true
+        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        name:
+          type: string
+        value:
+          $ref: '#/components/schemas/AttributeValueDTO'
+        ciid:
+          format: uuid
+          type: string
+      required:
+      - ciid
+      - name
+      - value
+      type: object
+    GraphQLQuery:
+      additionalProperties: false
+      example:
+        variables: ""
+        query: query
+        operationName: operationName
+        namedQuery: namedQuery
+      properties:
+        operationName:
+          nullable: true
+          type: string
+        namedQuery:
+          nullable: true
+          type: string
+        query:
+          nullable: true
+          type: string
+        variables:
+          nullable: true
+      type: object
+    GridViewColumn:
+      additionalProperties: false
+      example:
+        writeLayer: writeLayer
+        sourceAttributeName: sourceAttributeName
+        columnDescription: columnDescription
+      properties:
+        sourceAttributeName:
+          nullable: true
+          type: string
+        columnDescription:
+          nullable: true
+          type: string
+        valueType:
+          $ref: '#/components/schemas/AttributeValueType'
+        writeLayer:
+          nullable: true
+          type: string
+      type: object
+    GridViewConfiguration:
+      additionalProperties: false
+      example:
+        writeLayer: writeLayer
+        columns:
+        - writeLayer: writeLayer
+          sourceAttributeName: sourceAttributeName
+          columnDescription: columnDescription
+        - writeLayer: writeLayer
+          sourceAttributeName: sourceAttributeName
+          columnDescription: columnDescription
+        trait: trait
+        showCIIDColumn: true
+        readLayerset:
+        - readLayerset
+        - readLayerset
+      properties:
+        showCIIDColumn:
+          type: boolean
+        writeLayer:
+          nullable: true
+          type: string
+        readLayerset:
+          items:
+            type: string
+          nullable: true
+          type: array
+        columns:
+          items:
+            $ref: '#/components/schemas/GridViewColumn'
+          nullable: true
+          type: array
+        trait:
+          nullable: true
+          type: string
+      type: object
+    IExtractConfig:
+      additionalProperties: false
+      type: object
+    ILoadConfig:
+      additionalProperties: false
+      example:
+        writeLayerID: writeLayerID
+        searchLayerIDs:
+        - searchLayerIDs
+        - searchLayerIDs
+      properties:
+        searchLayerIDs:
+          items:
+            type: string
+          nullable: true
+          readOnly: true
+          type: array
+        writeLayerID:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    ITransformConfig:
+      additionalProperties: false
+      type: object
+    LayerDTO:
+      additionalProperties: false
+      example:
+        description: description
+        id: id
+      properties:
+        id:
+          type: string
+        description:
+          type: string
+      required:
+      - description
+      - id
+      type: object
+    ProblemDetails:
+      additionalProperties: {}
+      properties:
+        type:
+          nullable: true
+          type: string
+        title:
+          nullable: true
+          type: string
+        status:
+          format: int32
+          nullable: true
+          type: integer
+        detail:
+          nullable: true
+          type: string
+        instance:
+          nullable: true
+          type: string
+      type: object
+    RelatedCIDTO:
+      additionalProperties: false
+      properties:
+        fromCIID:
+          format: uuid
+          type: string
+        toCIID:
+          format: uuid
+          type: string
+        predicateID:
+          type: string
+      required:
+      - fromCIID
+      - predicateID
+      - toCIID
+      type: object
+    RelationDTO:
+      additionalProperties: false
+      example:
+        toCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        predicateID: predicateID
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        fromCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        id:
+          format: uuid
+          type: string
+        fromCIID:
+          format: uuid
+          type: string
+        toCIID:
+          format: uuid
+          type: string
+        predicateID:
+          type: string
+        state:
+          $ref: '#/components/schemas/RelationState'
+      required:
+      - fromCIID
+      - id
+      - predicateID
+      - state
+      - toCIID
+      type: object
+    RelationState:
+      enum:
+      - New
+      - Removed
+      - Renewed
+      type: string
+    SparseRow:
+      additionalProperties: false
+      example:
+        cells:
+        - name: name
+          changeable: true
+          value:
+            values:
+            - values
+            - values
+            isArray: true
+        - name: name
+          changeable: true
+          value:
+            values:
+            - values
+            - values
+            isArray: true
+        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        ciid:
+          format: uuid
+          type: string
+        cells:
+          items:
+            $ref: '#/components/schemas/ChangeDataCell'
+          nullable: true
+          type: array
+      type: object
     inline_object:
       properties:
         writeLayerID:
-          format: int64
-          type: integer
+          type: string
         searchLayerIDs:
           items:
-            format: int64
-            type: integer
+            type: string
           type: array
         files:
           items:
@@ -3879,12 +4058,12 @@ components:
     oauth2:
       flows:
         authorizationCode:
-          authorizationUrl: file:///protocol/openid-connect/auth
-          refreshUrl: file:///protocol/openid-connect/token
+          authorizationUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/auth
+          refreshUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token
           scopes: {}
-          tokenUrl: file:///protocol/openid-connect/token
+          tokenUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token
         clientCredentials:
           scopes: {}
-          tokenUrl: file:///protocol/openid-connect/token
+          tokenUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token
       type: oauth2
 

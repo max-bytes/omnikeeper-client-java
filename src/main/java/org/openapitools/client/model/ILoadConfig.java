@@ -30,15 +30,15 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ILoadConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class ILoadConfig {
   public static final String SERIALIZED_NAME_SEARCH_LAYER_I_DS = "searchLayerIDs";
   @SerializedName(SERIALIZED_NAME_SEARCH_LAYER_I_DS)
-  private List<Long> searchLayerIDs = null;
+  private List<String> searchLayerIDs = null;
 
   public static final String SERIALIZED_NAME_WRITE_LAYER_I_D = "writeLayerID";
   @SerializedName(SERIALIZED_NAME_WRITE_LAYER_I_D)
-  private Long writeLayerID;
+  private String writeLayerID;
 
 
    /**
@@ -48,7 +48,7 @@ public class ILoadConfig {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Long> getSearchLayerIDs() {
+  public List<String> getSearchLayerIDs() {
     return searchLayerIDs;
   }
 
@@ -62,7 +62,7 @@ public class ILoadConfig {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Long getWriteLayerID() {
+  public String getWriteLayerID() {
     return writeLayerID;
   }
 

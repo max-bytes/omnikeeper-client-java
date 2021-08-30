@@ -117,7 +117,7 @@ public class CiApi {
      * list of all CI-IDs
      * 
      * @param version  (required)
-     * @return List&lt;String&gt;
+     * @return List&lt;UUID&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -125,8 +125,8 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<String> getAllCIIDs(String version) throws ApiException {
-        ApiResponse<List<String>> localVarResp = getAllCIIDsWithHttpInfo(version);
+    public List<UUID> getAllCIIDs(String version) throws ApiException {
+        ApiResponse<List<UUID>> localVarResp = getAllCIIDsWithHttpInfo(version);
         return localVarResp.getData();
     }
 
@@ -134,7 +134,7 @@ public class CiApi {
      * list of all CI-IDs
      * 
      * @param version  (required)
-     * @return ApiResponse&lt;List&lt;String&gt;&gt;
+     * @return ApiResponse&lt;List&lt;UUID&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -142,9 +142,9 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<String>> getAllCIIDsWithHttpInfo(String version) throws ApiException {
+    public ApiResponse<List<UUID>> getAllCIIDsWithHttpInfo(String version) throws ApiException {
         okhttp3.Call localVarCall = getAllCIIDsValidateBeforeCall(version, null);
-        Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UUID>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -161,10 +161,10 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllCIIDsAsync(String version, final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getAllCIIDsAsync(String version, final ApiCallback<List<UUID>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAllCIIDsValidateBeforeCall(version, _callback);
-        Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<UUID>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -183,7 +183,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCIByIDCall(List<Long> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCIByIDCall(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -227,7 +227,7 @@ public class CiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCIByIDValidateBeforeCall(List<Long> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCIByIDValidateBeforeCall(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
@@ -265,7 +265,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public CIDTO getCIByID(List<Long> layerIDs, UUID CIID, String version, OffsetDateTime atTime) throws ApiException {
+    public CIDTO getCIByID(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<CIDTO> localVarResp = getCIByIDWithHttpInfo(layerIDs, CIID, version, atTime);
         return localVarResp.getData();
     }
@@ -285,7 +285,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CIDTO> getCIByIDWithHttpInfo(List<Long> layerIDs, UUID CIID, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<CIDTO> getCIByIDWithHttpInfo(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getCIByIDValidateBeforeCall(layerIDs, CIID, version, atTime, null);
         Type localVarReturnType = new TypeToken<CIDTO>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -307,7 +307,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCIByIDAsync(List<Long> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback<CIDTO> _callback) throws ApiException {
+    public okhttp3.Call getCIByIDAsync(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback<CIDTO> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCIByIDValidateBeforeCall(layerIDs, CIID, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<CIDTO>(){}.getType();
@@ -329,7 +329,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCIsByIDCall(List<Long> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCIsByIDCall(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -373,7 +373,7 @@ public class CiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCIsByIDValidateBeforeCall(List<Long> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCIsByIDValidateBeforeCall(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
@@ -411,7 +411,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<CIDTO> getCIsByID(List<Long> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<CIDTO> getCIsByID(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<CIDTO>> localVarResp = getCIsByIDWithHttpInfo(layerIDs, ciIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -431,7 +431,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CIDTO>> getCIsByIDWithHttpInfo(List<Long> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<CIDTO>> getCIsByIDWithHttpInfo(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getCIsByIDValidateBeforeCall(layerIDs, ciIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -453,7 +453,7 @@ public class CiApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCIsByIDAsync(List<Long> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback<List<CIDTO>> _callback) throws ApiException {
+    public okhttp3.Call getCIsByIDAsync(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback<List<CIDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCIsByIDValidateBeforeCall(layerIDs, ciIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();

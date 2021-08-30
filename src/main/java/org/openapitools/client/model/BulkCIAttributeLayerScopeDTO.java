@@ -30,7 +30,7 @@ import org.openapitools.client.model.FragmentDTO;
 /**
  * BulkCIAttributeLayerScopeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class BulkCIAttributeLayerScopeDTO {
   public static final String SERIALIZED_NAME_NAME_PREFIX = "namePrefix";
   @SerializedName(SERIALIZED_NAME_NAME_PREFIX)
@@ -38,7 +38,7 @@ public class BulkCIAttributeLayerScopeDTO {
 
   public static final String SERIALIZED_NAME_LAYER_I_D = "layerID";
   @SerializedName(SERIALIZED_NAME_LAYER_I_D)
-  private Long layerID;
+  private String layerID;
 
   public static final String SERIALIZED_NAME_FRAGMENTS = "fragments";
   @SerializedName(SERIALIZED_NAME_FRAGMENTS)
@@ -68,7 +68,7 @@ public class BulkCIAttributeLayerScopeDTO {
   }
 
 
-  public BulkCIAttributeLayerScopeDTO layerID(Long layerID) {
+  public BulkCIAttributeLayerScopeDTO layerID(String layerID) {
     
     this.layerID = layerID;
     return this;
@@ -81,12 +81,12 @@ public class BulkCIAttributeLayerScopeDTO {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Long getLayerID() {
+  public String getLayerID() {
     return layerID;
   }
 
 
-  public void setLayerID(Long layerID) {
+  public void setLayerID(String layerID) {
     this.layerID = layerID;
   }
 

@@ -24,15 +24,14 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * ProblemDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
-public class ProblemDetails {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
+public class ProblemDetails extends HashMap<String, Object> {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
@@ -52,10 +51,6 @@ public class ProblemDetails {
   public static final String SERIALIZED_NAME_INSTANCE = "instance";
   @SerializedName(SERIALIZED_NAME_INSTANCE)
   private String instance;
-
-  public static final String SERIALIZED_NAME_EXTENSIONS = "extensions";
-  @SerializedName(SERIALIZED_NAME_EXTENSIONS)
-  private Map<String, Object> extensions = null;
 
 
   public ProblemDetails type(String type) {
@@ -173,20 +168,6 @@ public class ProblemDetails {
   }
 
 
-   /**
-   * Get extensions
-   * @return extensions
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Map<String, Object> getExtensions() {
-    return extensions;
-  }
-
-
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -201,7 +182,7 @@ public class ProblemDetails {
         Objects.equals(this.status, problemDetails.status) &&
         Objects.equals(this.detail, problemDetails.detail) &&
         Objects.equals(this.instance, problemDetails.instance) &&
-        Objects.equals(this.extensions, problemDetails.extensions);
+        super.equals(o);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -210,7 +191,7 @@ public class ProblemDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, title, status, detail, instance, extensions);
+    return Objects.hash(type, title, status, detail, instance, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -226,12 +207,12 @@ public class ProblemDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProblemDetails {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    detail: ").append(toIndentedString(detail)).append("\n");
     sb.append("    instance: ").append(toIndentedString(instance)).append("\n");
-    sb.append("    extensions: ").append(toIndentedString(extensions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

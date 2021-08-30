@@ -69,7 +69,7 @@ public class ActiveDirectoryXmlIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestXMLCall(String version, Long writeLayerID, List<Long> searchLayerIDs, List<File> files, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ingestXMLCall(String version, String writeLayerID, List<String> searchLayerIDs, List<File> files, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -113,7 +113,7 @@ public class ActiveDirectoryXmlIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ingestXMLValidateBeforeCall(String version, Long writeLayerID, List<Long> searchLayerIDs, List<File> files, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ingestXMLValidateBeforeCall(String version, String writeLayerID, List<String> searchLayerIDs, List<File> files, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'version' is set
         if (version == null) {
@@ -155,7 +155,7 @@ public class ActiveDirectoryXmlIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void ingestXML(String version, Long writeLayerID, List<Long> searchLayerIDs, List<File> files) throws ApiException {
+    public void ingestXML(String version, String writeLayerID, List<String> searchLayerIDs, List<File> files) throws ApiException {
         ingestXMLWithHttpInfo(version, writeLayerID, searchLayerIDs, files);
     }
 
@@ -174,7 +174,7 @@ public class ActiveDirectoryXmlIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> ingestXMLWithHttpInfo(String version, Long writeLayerID, List<Long> searchLayerIDs, List<File> files) throws ApiException {
+    public ApiResponse<Void> ingestXMLWithHttpInfo(String version, String writeLayerID, List<String> searchLayerIDs, List<File> files) throws ApiException {
         okhttp3.Call localVarCall = ingestXMLValidateBeforeCall(version, writeLayerID, searchLayerIDs, files, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -195,7 +195,7 @@ public class ActiveDirectoryXmlIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestXMLAsync(String version, Long writeLayerID, List<Long> searchLayerIDs, List<File> files, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call ingestXMLAsync(String version, String writeLayerID, List<String> searchLayerIDs, List<File> files, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ingestXMLValidateBeforeCall(version, writeLayerID, searchLayerIDs, files, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);

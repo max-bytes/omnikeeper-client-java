@@ -29,11 +29,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * Context
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-19T09:00:26.139003Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-08-30T10:56:28.912796Z[Etc/UTC]")
 public class Context {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
   public static final String SERIALIZED_NAME_EXTRACT_CONFIG = "extractConfig";
   @SerializedName(SERIALIZED_NAME_EXTRACT_CONFIG)
@@ -48,26 +48,26 @@ public class Context {
   private ILoadConfig loadConfig;
 
 
-  public Context name(String name) {
+  public Context id(String id) {
     
-    this.name = name;
+    this.id = id;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get id
+   * @return id
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getName() {
-    return name;
+  public String getId() {
+    return id;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -149,7 +149,7 @@ public class Context {
       return false;
     }
     Context context = (Context) o;
-    return Objects.equals(this.name, context.name) &&
+    return Objects.equals(this.id, context.id) &&
         Objects.equals(this.extractConfig, context.extractConfig) &&
         Objects.equals(this.transformConfig, context.transformConfig) &&
         Objects.equals(this.loadConfig, context.loadConfig);
@@ -161,7 +161,7 @@ public class Context {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, extractConfig, transformConfig, loadConfig);
+    return Objects.hash(id, extractConfig, transformConfig, loadConfig);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -177,7 +177,7 @@ public class Context {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Context {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    extractConfig: ").append(toIndentedString(extractConfig)).append("\n");
     sb.append("    transformConfig: ").append(toIndentedString(transformConfig)).append("\n");
     sb.append("    loadConfig: ").append(toIndentedString(loadConfig)).append("\n");

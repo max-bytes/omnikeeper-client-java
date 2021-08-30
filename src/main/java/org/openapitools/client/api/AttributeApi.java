@@ -190,7 +190,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call findMergedAttributesByNameCall(String regex, List<Long> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call findMergedAttributesByNameCall(String regex, List<String> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -238,7 +238,7 @@ public class AttributeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call findMergedAttributesByNameValidateBeforeCall(String regex, List<Long> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call findMergedAttributesByNameValidateBeforeCall(String regex, List<String> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'regex' is set
         if (regex == null) {
@@ -277,7 +277,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<CIAttributeDTO> findMergedAttributesByName(String regex, List<Long> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime) throws ApiException {
+    public List<CIAttributeDTO> findMergedAttributesByName(String regex, List<String> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<CIAttributeDTO>> localVarResp = findMergedAttributesByNameWithHttpInfo(regex, layerIDs, version, ciids, atTime);
         return localVarResp.getData();
     }
@@ -298,7 +298,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CIAttributeDTO>> findMergedAttributesByNameWithHttpInfo(String regex, List<Long> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<CIAttributeDTO>> findMergedAttributesByNameWithHttpInfo(String regex, List<String> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = findMergedAttributesByNameValidateBeforeCall(regex, layerIDs, version, ciids, atTime, null);
         Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -321,7 +321,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call findMergedAttributesByNameAsync(String regex, List<Long> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime, final ApiCallback<List<CIAttributeDTO>> _callback) throws ApiException {
+    public okhttp3.Call findMergedAttributesByNameAsync(String regex, List<String> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime, final ApiCallback<List<CIAttributeDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = findMergedAttributesByNameValidateBeforeCall(regex, layerIDs, version, ciids, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
@@ -344,7 +344,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedAttributeCall(UUID ciid, String name, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedAttributeCall(UUID ciid, String name, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -392,7 +392,7 @@ public class AttributeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedAttributeValidateBeforeCall(UUID ciid, String name, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedAttributeValidateBeforeCall(UUID ciid, String name, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciid' is set
         if (ciid == null) {
@@ -436,7 +436,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public CIAttributeDTO getMergedAttribute(UUID ciid, String name, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public CIAttributeDTO getMergedAttribute(UUID ciid, String name, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<CIAttributeDTO> localVarResp = getMergedAttributeWithHttpInfo(ciid, name, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -457,7 +457,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CIAttributeDTO> getMergedAttributeWithHttpInfo(UUID ciid, String name, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<CIAttributeDTO> getMergedAttributeWithHttpInfo(UUID ciid, String name, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedAttributeValidateBeforeCall(ciid, name, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<CIAttributeDTO>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -480,7 +480,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedAttributeAsync(UUID ciid, String name, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<CIAttributeDTO> _callback) throws ApiException {
+    public okhttp3.Call getMergedAttributeAsync(UUID ciid, String name, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<CIAttributeDTO> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedAttributeValidateBeforeCall(ciid, name, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<CIAttributeDTO>(){}.getType();
@@ -502,7 +502,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedAttributesCall(List<UUID> ciids, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedAttributesCall(List<UUID> ciids, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -546,7 +546,7 @@ public class AttributeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedAttributesValidateBeforeCall(List<UUID> ciids, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedAttributesValidateBeforeCall(List<UUID> ciids, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciids' is set
         if (ciids == null) {
@@ -584,7 +584,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<CIAttributeDTO> getMergedAttributes(List<UUID> ciids, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<CIAttributeDTO> getMergedAttributes(List<UUID> ciids, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<CIAttributeDTO>> localVarResp = getMergedAttributesWithHttpInfo(ciids, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -604,7 +604,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CIAttributeDTO>> getMergedAttributesWithHttpInfo(List<UUID> ciids, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<CIAttributeDTO>> getMergedAttributesWithHttpInfo(List<UUID> ciids, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedAttributesValidateBeforeCall(ciids, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -626,7 +626,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedAttributesAsync(List<UUID> ciids, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<CIAttributeDTO>> _callback) throws ApiException {
+    public okhttp3.Call getMergedAttributesAsync(List<UUID> ciids, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<CIAttributeDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedAttributesValidateBeforeCall(ciids, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
@@ -648,7 +648,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedAttributesWithNameCall(String name, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMergedAttributesWithNameCall(String name, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -692,7 +692,7 @@ public class AttributeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMergedAttributesWithNameValidateBeforeCall(String name, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMergedAttributesWithNameValidateBeforeCall(String name, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'name' is set
         if (name == null) {
@@ -730,7 +730,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<CIAttributeDTO> getMergedAttributesWithName(String name, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public List<CIAttributeDTO> getMergedAttributesWithName(String name, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         ApiResponse<List<CIAttributeDTO>> localVarResp = getMergedAttributesWithNameWithHttpInfo(name, layerIDs, version, atTime);
         return localVarResp.getData();
     }
@@ -750,7 +750,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CIAttributeDTO>> getMergedAttributesWithNameWithHttpInfo(String name, List<Long> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
+    public ApiResponse<List<CIAttributeDTO>> getMergedAttributesWithNameWithHttpInfo(String name, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedAttributesWithNameValidateBeforeCall(name, layerIDs, version, atTime, null);
         Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -772,7 +772,7 @@ public class AttributeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMergedAttributesWithNameAsync(String name, List<Long> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<CIAttributeDTO>> _callback) throws ApiException {
+    public okhttp3.Call getMergedAttributesWithNameAsync(String name, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback<List<CIAttributeDTO>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMergedAttributesWithNameValidateBeforeCall(name, layerIDs, version, atTime, _callback);
         Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();

@@ -7,8 +7,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**searchLayerIDs** | **List&lt;Long&gt;** |  |  [optional] [readonly]
-**writeLayerID** | **Long** |  |  [optional] [readonly]
+**searchLayerIDs** | **List&lt;String&gt;** |  |  [optional] [readonly]
+**writeLayerID** | **String** |  |  [optional] [readonly]
 
 
 

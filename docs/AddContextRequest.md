@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  |  [optional]
+**id** | **String** |  |  [optional]
 **speakingName** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
 **_configuration** | [**GridViewConfiguration**](GridViewConfiguration.md) |  |  [optional]
