@@ -188,7 +188,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     AttributeApi apiInstance = new AttributeApi(defaultClient);
-    UUID ciid = new UUID(); // UUID | 
+    UUID ciid = UUID.randomUUID(); // UUID | 
     String name = "name_example"; // String | 
     List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 

@@ -109,7 +109,7 @@ public class Example {
 
     CiApi apiInstance = new CiApi(defaultClient);
     List<String> layerIDs = Arrays.asList(); // List<String> | Specifies which layers contribute to the result, and in which order
-    UUID CIID = new UUID(); // UUID | 
+    UUID CIID = UUID.randomUUID(); // UUID | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
     try {

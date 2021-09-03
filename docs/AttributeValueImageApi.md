@@ -38,7 +38,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     AttributeValueImageApi apiInstance = new AttributeValueImageApi(defaultClient);
-    UUID ciid = new UUID(); // UUID | 
+    UUID ciid = UUID.randomUUID(); // UUID | 
     String attributeName = "attributeName_example"; // String | 
     List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
@@ -116,7 +116,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     AttributeValueImageApi apiInstance = new AttributeValueImageApi(defaultClient);
-    UUID ciid = new UUID(); // UUID | 
+    UUID ciid = UUID.randomUUID(); // UUID | 
     String attributeName = "attributeName_example"; // String | 
     String layerID = "layerID_example"; // String | 
     String version = "version_example"; // String | 

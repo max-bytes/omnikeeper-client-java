@@ -114,8 +114,8 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     RelationApi apiInstance = new RelationApi(defaultClient);
-    UUID fromCIID = new UUID(); // UUID | 
-    UUID toCIID = new UUID(); // UUID | 
+    UUID fromCIID = UUID.randomUUID(); // UUID | 
+    UUID toCIID = UUID.randomUUID(); // UUID | 
     String predicateID = "predicateID_example"; // String | 
     List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
@@ -193,7 +193,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     RelationApi apiInstance = new RelationApi(defaultClient);
-    UUID ciid = new UUID(); // UUID | 
+    UUID ciid = UUID.randomUUID(); // UUID | 
     List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
@@ -268,7 +268,7 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     RelationApi apiInstance = new RelationApi(defaultClient);
-    UUID fromCIID = new UUID(); // UUID | 
+    UUID fromCIID = UUID.randomUUID(); // UUID | 
     List<String> layerIDs = Arrays.asList(); // List<String> | 
     String version = "version_example"; // String | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
