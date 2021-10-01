@@ -183,7 +183,7 @@ public class Example {
     OkPluginGenericJsonIngestApi apiInstance = new OkPluginGenericJsonIngestApi(defaultClient);
     String context = "context_example"; // String | 
     String version = "version_example"; // String | 
-    List<File> files = new File("/path/to/file"); // List<File> | 
+    List<File> files = Arrays.asList(); // List<File> | 
     try {
       apiInstance.ingest(context, version, files);
     } catch (ApiException e) {

@@ -131,7 +131,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order |
- **CIID** | [**UUID**](.md)|  |
+ **CIID** | **UUID**|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional]
 

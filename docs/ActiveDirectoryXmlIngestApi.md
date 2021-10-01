@@ -39,8 +39,8 @@ public class Example {
     ActiveDirectoryXmlIngestApi apiInstance = new ActiveDirectoryXmlIngestApi(defaultClient);
     String version = "version_example"; // String | 
     String writeLayerID = "writeLayerID_example"; // String | 
-    List<String> searchLayerIDs = "searchLayerIDs_example"; // List<String> | 
-    List<File> files = new File("/path/to/file"); // List<File> | 
+    List<String> searchLayerIDs = Arrays.asList(); // List<String> | 
+    List<File> files = Arrays.asList(); // List<File> | 
     try {
       apiInstance.ingestXML(version, writeLayerID, searchLayerIDs, files);
     } catch (ApiException e) {

@@ -138,8 +138,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fromCIID** | [**UUID**](.md)|  |
- **toCIID** | [**UUID**](.md)|  |
+ **fromCIID** | **UUID**|  |
+ **toCIID** | **UUID**|  |
  **predicateID** | **String**|  |
  **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
@@ -215,7 +215,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ciid** | [**UUID**](.md)|  |
+ **ciid** | **UUID**|  |
  **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]
@@ -290,7 +290,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fromCIID** | [**UUID**](.md)|  |
+ **fromCIID** | **UUID**|  |
  **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
  **atTime** | **OffsetDateTime**|  | [optional]

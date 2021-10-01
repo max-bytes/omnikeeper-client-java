@@ -61,7 +61,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ciid** | [**UUID**](.md)|  |
+ **ciid** | **UUID**|  |
  **attributeName** | **String**|  |
  **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
  **version** | **String**|  |
@@ -120,7 +120,7 @@ public class Example {
     String attributeName = "attributeName_example"; // String | 
     String layerID = "layerID_example"; // String | 
     String version = "version_example"; // String | 
-    List<File> files = new File("/path/to/file"); // List<File> | 
+    List<File> files = Arrays.asList(); // List<File> | 
     Boolean forceArray = false; // Boolean | 
     try {
       apiInstance.post(ciid, attributeName, layerID, version, files, forceArray);
@@ -139,7 +139,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ciid** | [**UUID**](.md)|  |
+ **ciid** | **UUID**|  |
  **attributeName** | **String**|  |
  **layerID** | **String**|  |
  **version** | **String**|  |
