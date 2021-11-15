@@ -30,7 +30,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ProblemDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class ProblemDetails extends HashMap<String, Object> {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -52,6 +52,8 @@ public class ProblemDetails extends HashMap<String, Object> {
   @SerializedName(SERIALIZED_NAME_INSTANCE)
   private String instance;
 
+  public ProblemDetails() { 
+  }
 
   public ProblemDetails type(String type) {
     

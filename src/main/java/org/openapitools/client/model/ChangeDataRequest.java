@@ -31,12 +31,14 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
   private List<SparseRow> sparseRows = null;
 
+  public ChangeDataRequest() { 
+  }
 
   public ChangeDataRequest sparseRows(List<SparseRow> sparseRows) {
     

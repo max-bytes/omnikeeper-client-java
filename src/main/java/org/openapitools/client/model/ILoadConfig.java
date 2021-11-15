@@ -30,7 +30,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ILoadConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class ILoadConfig {
   public static final String SERIALIZED_NAME_SEARCH_LAYER_I_DS = "searchLayerIDs";
   @SerializedName(SERIALIZED_NAME_SEARCH_LAYER_I_DS)
@@ -40,6 +40,18 @@ public class ILoadConfig {
   @SerializedName(SERIALIZED_NAME_WRITE_LAYER_I_D)
   private String writeLayerID;
 
+  public ILoadConfig() { 
+  }
+
+  
+  public ILoadConfig(
+     List<String> searchLayerIDs, 
+     String writeLayerID
+  ) {
+    this();
+    this.searchLayerIDs = searchLayerIDs;
+    this.writeLayerID = writeLayerID;
+  }
 
    /**
    * Get searchLayerIDs

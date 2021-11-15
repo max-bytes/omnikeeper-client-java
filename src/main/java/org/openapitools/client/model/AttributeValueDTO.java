@@ -30,7 +30,7 @@ import org.openapitools.client.model.AttributeValueType;
 /**
  * AttributeValueDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class AttributeValueDTO {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -44,6 +44,8 @@ public class AttributeValueDTO {
   @SerializedName(SERIALIZED_NAME_VALUES)
   private List<String> values = new ArrayList<String>();
 
+  public AttributeValueDTO() { 
+  }
 
   public AttributeValueDTO type(AttributeValueType type) {
     

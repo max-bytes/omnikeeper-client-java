@@ -32,7 +32,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * SparseRow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class SparseRow {
   public static final String SERIALIZED_NAME_CIID = "ciid";
   @SerializedName(SERIALIZED_NAME_CIID)
@@ -42,6 +42,8 @@ public class SparseRow {
   @SerializedName(SERIALIZED_NAME_CELLS)
   private List<ChangeDataCell> cells = null;
 
+  public SparseRow() { 
+  }
 
   public SparseRow ciid(UUID ciid) {
     

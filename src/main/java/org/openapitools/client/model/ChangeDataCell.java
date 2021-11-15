@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ChangeDataCell
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class ChangeDataCell {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -43,6 +43,8 @@ public class ChangeDataCell {
   @SerializedName(SERIALIZED_NAME_CHANGEABLE)
   private Boolean changeable;
 
+  public ChangeDataCell() { 
+  }
 
   public ChangeDataCell name(String name) {
     

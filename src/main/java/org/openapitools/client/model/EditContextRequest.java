@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * EditContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class EditContextRequest {
   public static final String SERIALIZED_NAME_SPEAKING_NAME = "speakingName";
   @SerializedName(SERIALIZED_NAME_SPEAKING_NAME)
@@ -43,6 +43,8 @@ public class EditContextRequest {
   @SerializedName(SERIALIZED_NAME_CONFIGURATION)
   private GridViewConfiguration _configuration;
 
+  public EditContextRequest() { 
+  }
 
   public EditContextRequest speakingName(String speakingName) {
     

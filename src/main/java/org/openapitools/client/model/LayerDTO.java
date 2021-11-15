@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LayerDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class LayerDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -37,6 +37,8 @@ public class LayerDTO {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+  public LayerDTO() { 
+  }
 
   public LayerDTO id(String id) {
     

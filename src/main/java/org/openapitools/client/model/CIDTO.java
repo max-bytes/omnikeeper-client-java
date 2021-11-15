@@ -32,7 +32,7 @@ import org.openapitools.client.model.CIAttributeDTO;
 /**
  * CIDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-09T07:33:19.827397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-15T12:49:38.951234Z[Etc/UTC]")
 public class CIDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -42,6 +42,8 @@ public class CIDTO {
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
   private Map<String, CIAttributeDTO> attributes = new HashMap<String, CIAttributeDTO>();
 
+  public CIDTO() { 
+  }
 
   public CIDTO id(UUID id) {
     
