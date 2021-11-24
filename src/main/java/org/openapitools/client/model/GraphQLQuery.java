@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-24T08:27:14.909709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-24T08:30:48.199329Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
