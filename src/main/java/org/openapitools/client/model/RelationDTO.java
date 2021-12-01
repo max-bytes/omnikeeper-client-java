@@ -29,7 +29,7 @@ import org.openapitools.client.model.RelationState;
 /**
  * RelationDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-25T13:01:30.442193Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-01T07:57:56.191120Z[Etc/UTC]")
 public class RelationDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
