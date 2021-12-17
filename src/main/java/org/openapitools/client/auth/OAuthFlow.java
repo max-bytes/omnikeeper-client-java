@@ -13,7 +13,7 @@
 
 package org.openapitools.client.auth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T08:36:45.581999Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T11:05:02.178852Z[Etc/UTC]")
 public enum OAuthFlow {
     accessCode, //called authorizationCode  in OpenAPI 3.0
     implicit,
