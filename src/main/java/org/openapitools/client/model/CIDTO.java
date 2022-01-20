@@ -32,7 +32,7 @@ import org.openapitools.client.model.CIAttributeDTO;
 /**
  * CIDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-17T12:56:36.140146Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-20T11:52:19.759305Z[Etc/UTC]")
 public class CIDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
