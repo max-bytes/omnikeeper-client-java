@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T08:45:07.486776Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T08:58:16.280805Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
