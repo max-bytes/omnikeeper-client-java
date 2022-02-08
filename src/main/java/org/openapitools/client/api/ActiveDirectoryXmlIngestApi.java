@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ActiveDirectoryXmlIngestApi {
     private ApiClient localVarApiClient;
@@ -89,7 +90,6 @@ public class ActiveDirectoryXmlIngestApi {
      */
     public okhttp3.Call ingestXMLCall(String version, String writeLayerID, List<String> searchLayerIDs, List<File> files, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

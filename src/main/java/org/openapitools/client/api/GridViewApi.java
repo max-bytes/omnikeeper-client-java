@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class GridViewApi {
     private ApiClient localVarApiClient;
@@ -91,7 +92,6 @@ public class GridViewApi {
      */
     public okhttp3.Call addContextCall(String version, AddContextRequest addContextRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -225,7 +225,6 @@ public class GridViewApi {
      */
     public okhttp3.Call changeDataCall(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -369,7 +368,6 @@ public class GridViewApi {
      */
     public okhttp3.Call deleteContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -508,7 +506,6 @@ public class GridViewApi {
      */
     public okhttp3.Call editContextCall(String name, String version, EditContextRequest editContextRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -649,7 +646,6 @@ public class GridViewApi {
      */
     public okhttp3.Call getDataCall(String context, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -787,7 +783,6 @@ public class GridViewApi {
      */
     public okhttp3.Call getGridViewContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -923,7 +918,6 @@ public class GridViewApi {
      */
     public okhttp3.Call getGridViewContextsCall(String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1048,7 +1042,6 @@ public class GridViewApi {
      */
     public okhttp3.Call getSchemaCall(String context, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

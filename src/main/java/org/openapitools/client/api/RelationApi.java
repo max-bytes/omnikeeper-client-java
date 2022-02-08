@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class RelationApi {
     private ApiClient localVarApiClient;
@@ -90,7 +91,6 @@ public class RelationApi {
      */
     public okhttp3.Call getAllMergedRelationsCall(List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -197,8 +197,14 @@ public class RelationApi {
      */
     public ApiResponse<List<RelationDTO>> getAllMergedRelationsWithHttpInfo(List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getAllMergedRelationsValidateBeforeCall(layerIDs, version, atTime, null);
-        Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<RelationDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<RelationDTO>>(){});
+            throw e;
+        }
     }
 
     /**
@@ -242,7 +248,6 @@ public class RelationApi {
      */
     public okhttp3.Call getMergedRelationCall(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -382,8 +387,14 @@ public class RelationApi {
      */
     public ApiResponse<RelationDTO> getMergedRelationWithHttpInfo(UUID fromCIID, UUID toCIID, String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationValidateBeforeCall(fromCIID, toCIID, predicateID, layerIDs, version, atTime, null);
-        Type localVarReturnType = new TypeToken<RelationDTO>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<RelationDTO>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<RelationDTO>(){}.getType()));
+            e.setErrorObjectType(new GenericType<RelationDTO>(){});
+            throw e;
+        }
     }
 
     /**
@@ -428,7 +439,6 @@ public class RelationApi {
      */
     public okhttp3.Call getMergedRelationsFromOrToCICall(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -546,8 +556,14 @@ public class RelationApi {
      */
     public ApiResponse<List<RelationDTO>> getMergedRelationsFromOrToCIWithHttpInfo(UUID ciid, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationsFromOrToCIValidateBeforeCall(ciid, layerIDs, version, atTime, null);
-        Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<RelationDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<RelationDTO>>(){});
+            throw e;
+        }
     }
 
     /**
@@ -590,7 +606,6 @@ public class RelationApi {
      */
     public okhttp3.Call getMergedRelationsOutgoingFromCICall(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -708,8 +723,14 @@ public class RelationApi {
      */
     public ApiResponse<List<RelationDTO>> getMergedRelationsOutgoingFromCIWithHttpInfo(UUID fromCIID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationsOutgoingFromCIValidateBeforeCall(fromCIID, layerIDs, version, atTime, null);
-        Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<RelationDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<RelationDTO>>(){});
+            throw e;
+        }
     }
 
     /**
@@ -752,7 +773,6 @@ public class RelationApi {
      */
     public okhttp3.Call getMergedRelationsWithPredicateCall(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -870,8 +890,14 @@ public class RelationApi {
      */
     public ApiResponse<List<RelationDTO>> getMergedRelationsWithPredicateWithHttpInfo(String predicateID, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedRelationsWithPredicateValidateBeforeCall(predicateID, layerIDs, version, atTime, null);
-        Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<RelationDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<RelationDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<RelationDTO>>(){});
+            throw e;
+        }
     }
 
     /**

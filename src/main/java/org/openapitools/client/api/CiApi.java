@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class CiApi {
     private ApiClient localVarApiClient;
@@ -88,7 +89,6 @@ public class CiApi {
      */
     public okhttp3.Call getAllCIIDsCall(String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -178,8 +178,14 @@ public class CiApi {
      */
     public ApiResponse<List<UUID>> getAllCIIDsWithHttpInfo(String version) throws ApiException {
         okhttp3.Call localVarCall = getAllCIIDsValidateBeforeCall(version, null);
-        Type localVarReturnType = new TypeToken<List<UUID>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<UUID>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<UUID>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<UUID>>(){});
+            throw e;
+        }
     }
 
     /**
@@ -219,7 +225,6 @@ public class CiApi {
      */
     public okhttp3.Call getCIByIDCall(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -337,8 +342,14 @@ public class CiApi {
      */
     public ApiResponse<CIDTO> getCIByIDWithHttpInfo(List<String> layerIDs, UUID CIID, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getCIByIDValidateBeforeCall(layerIDs, CIID, version, atTime, null);
-        Type localVarReturnType = new TypeToken<CIDTO>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<CIDTO>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<CIDTO>(){}.getType()));
+            e.setErrorObjectType(new GenericType<CIDTO>(){});
+            throw e;
+        }
     }
 
     /**
@@ -381,7 +392,6 @@ public class CiApi {
      */
     public okhttp3.Call getCIsByIDCall(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -499,8 +509,14 @@ public class CiApi {
      */
     public ApiResponse<List<CIDTO>> getCIsByIDWithHttpInfo(List<String> layerIDs, List<UUID> ciIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getCIsByIDValidateBeforeCall(layerIDs, ciIDs, version, atTime, null);
-        Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<CIDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<CIDTO>>(){});
+            throw e;
+        }
     }
 
     /**

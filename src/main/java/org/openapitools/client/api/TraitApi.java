@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TraitApi {
     private ApiClient localVarApiClient;
@@ -90,7 +91,6 @@ public class TraitApi {
      */
     public okhttp3.Call getEffectiveTraitsForTraitNameCall(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -208,8 +208,14 @@ public class TraitApi {
      */
     public ApiResponse<Map<String, EffectiveTraitDTO>> getEffectiveTraitsForTraitNameWithHttpInfo(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getEffectiveTraitsForTraitNameValidateBeforeCall(layerIDs, traitName, version, atTime, null);
-        Type localVarReturnType = new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Map<String, EffectiveTraitDTO>>(){});
+            throw e;
+        }
     }
 
     /**

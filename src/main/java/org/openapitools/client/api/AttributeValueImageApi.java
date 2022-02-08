@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AttributeValueImageApi {
     private ApiClient localVarApiClient;
@@ -93,7 +94,6 @@ public class AttributeValueImageApi {
      */
     public okhttp3.Call getCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -272,7 +272,6 @@ public class AttributeValueImageApi {
      */
     public okhttp3.Call postCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class OkPluginGenericJsonIngestApi {
     private ApiClient localVarApiClient;
@@ -87,7 +88,6 @@ public class OkPluginGenericJsonIngestApi {
      */
     public okhttp3.Call getAllContextsCall(String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -177,8 +177,14 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<List<Context>> getAllContextsWithHttpInfo(String version) throws ApiException {
         okhttp3.Call localVarCall = getAllContextsValidateBeforeCall(version, null);
-        Type localVarReturnType = new TypeToken<List<Context>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<Context>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<Context>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<Context>>(){});
+            throw e;
+        }
     }
 
     /**
@@ -216,7 +222,6 @@ public class OkPluginGenericJsonIngestApi {
      */
     public okhttp3.Call getContextCall(String id, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -314,8 +319,14 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<Context> getContextWithHttpInfo(String id, String version) throws ApiException {
         okhttp3.Call localVarCall = getContextValidateBeforeCall(id, version, null);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<Context>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Context>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Context>(){});
+            throw e;
+        }
     }
 
     /**
@@ -355,7 +366,6 @@ public class OkPluginGenericJsonIngestApi {
      */
     public okhttp3.Call ingestCall(String context, String version, List<File> files, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -504,7 +514,6 @@ public class OkPluginGenericJsonIngestApi {
      */
     public okhttp3.Call removeContextCall(String id, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -602,8 +611,14 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<Context> removeContextWithHttpInfo(String id, String version) throws ApiException {
         okhttp3.Call localVarCall = removeContextValidateBeforeCall(id, version, null);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<Context>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Context>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Context>(){});
+            throw e;
+        }
     }
 
     /**
@@ -642,7 +657,6 @@ public class OkPluginGenericJsonIngestApi {
      */
     public okhttp3.Call upsertContextCall(String version, Context context, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -739,8 +753,14 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<Context> upsertContextWithHttpInfo(String version, Context context) throws ApiException {
         okhttp3.Call localVarCall = upsertContextValidateBeforeCall(version, context, null);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<Context>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Context>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Context>(){});
+            throw e;
+        }
     }
 
     /**

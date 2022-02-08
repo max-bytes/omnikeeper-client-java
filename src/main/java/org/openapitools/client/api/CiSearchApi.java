@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class CiSearchApi {
     private ApiClient localVarApiClient;
@@ -91,7 +92,6 @@ public class CiSearchApi {
      */
     public okhttp3.Call searchCIsByTraitsCall(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -220,8 +220,14 @@ public class CiSearchApi {
      */
     public ApiResponse<List<CIDTO>> searchCIsByTraitsWithHttpInfo(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = searchCIsByTraitsValidateBeforeCall(layerIDs, withTraits, withoutTraits, version, atTime, null);
-        Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<CIDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<CIDTO>>(){});
+            throw e;
+        }
     }
 
     /**

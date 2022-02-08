@@ -951,8 +951,8 @@ paths:
     get:
       operationId: GetCIByID
       parameters:
-      - description: Specifies which layers contribute to the result, and in which
-          order
+      - description: "Specifies which layers contribute to the result, and in which\
+          \ order"
         explode: true
         in: query
         name: layerIDs
@@ -970,8 +970,8 @@ paths:
           format: uuid
           type: string
         style: form
-      - description: Specify datetime, for which point in time to get the data; leave
-          empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
+      - description: "Specify datetime, for which point in time to get the data; leave\
+          \ empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)"
         explode: true
         in: query
         name: atTime
@@ -1049,8 +1049,8 @@ paths:
     get:
       operationId: GetCIsByID
       parameters:
-      - description: Specifies which layers contribute to the result, and in which
-          order
+      - description: "Specifies which layers contribute to the result, and in which\
+          \ order"
         explode: true
         in: query
         name: layerIDs
@@ -1070,8 +1070,8 @@ paths:
             type: string
           type: array
         style: form
-      - description: Specify datetime, for which point in time to get the data; leave
-          empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)
+      - description: "Specify datetime, for which point in time to get the data; leave\
+          \ empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)"
         explode: true
         in: query
         name: atTime
@@ -3465,9 +3465,11 @@ components:
           columns:
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
+            valueType: null
             columnDescription: columnDescription
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
+            valueType: null
             columnDescription: columnDescription
           trait: trait
           showCIIDColumn: true
@@ -3534,6 +3536,7 @@ components:
         - values
         - values
         isArray: true
+        type: null
       properties:
         type:
           $ref: '#/components/schemas/AttributeValueType'
@@ -3569,6 +3572,7 @@ components:
             - values
             - values
             isArray: true
+            type: null
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         - name: name
           value:
@@ -3576,6 +3580,7 @@ components:
             - values
             - values
             isArray: true
+            type: null
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         namePrefix:
@@ -3601,6 +3606,7 @@ components:
           - values
           - values
           isArray: true
+          type: null
       properties:
         name:
           nullable: true
@@ -3622,6 +3628,7 @@ components:
               - values
               - values
               isArray: true
+              type: null
           - name: name
             changeable: true
             value:
@@ -3629,6 +3636,7 @@ components:
               - values
               - values
               isArray: true
+              type: null
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         - cells:
           - name: name
@@ -3638,6 +3646,7 @@ components:
               - values
               - values
               isArray: true
+              type: null
           - name: name
             changeable: true
             value:
@@ -3645,6 +3654,7 @@ components:
               - values
               - values
               isArray: true
+              type: null
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         sparseRows:
@@ -3658,11 +3668,13 @@ components:
       example:
         name: name
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        state: null
         value:
           values:
           - values
           - values
           isArray: true
+          type: null
         ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         id:
@@ -3691,11 +3703,13 @@ components:
           key:
             name: name
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            state: null
             value:
               values:
               - values
               - values
               isArray: true
+              type: null
             ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
@@ -3713,13 +3727,13 @@ components:
     Context:
       additionalProperties: false
       example:
-        extractConfig: '{}'
+        extractConfig: "{}"
         loadConfig:
           writeLayerID: writeLayerID
           searchLayerIDs:
           - searchLayerIDs
           - searchLayerIDs
-        transformConfig: '{}'
+        transformConfig: "{}"
         id: id
       properties:
         id:
@@ -3742,9 +3756,11 @@ components:
           columns:
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
+            valueType: null
             columnDescription: columnDescription
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
+            valueType: null
             columnDescription: columnDescription
           trait: trait
           showCIIDColumn: true
@@ -3789,6 +3805,7 @@ components:
           - values
           - values
           isArray: true
+          type: null
         ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         name:
@@ -3828,6 +3845,7 @@ components:
       example:
         writeLayer: writeLayer
         sourceAttributeName: sourceAttributeName
+        valueType: null
         columnDescription: columnDescription
       properties:
         sourceAttributeName:
@@ -3849,9 +3867,11 @@ components:
         columns:
         - writeLayer: writeLayer
           sourceAttributeName: sourceAttributeName
+          valueType: null
           columnDescription: columnDescription
         - writeLayer: writeLayer
           sourceAttributeName: sourceAttributeName
+          valueType: null
           columnDescription: columnDescription
         trait: trait
         showCIIDColumn: true
@@ -3959,6 +3979,7 @@ components:
         toCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         predicateID: predicateID
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        state: null
         fromCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         id:
@@ -3998,6 +4019,7 @@ components:
             - values
             - values
             isArray: true
+            type: null
         - name: name
           changeable: true
           value:
@@ -4005,6 +4027,7 @@ components:
             - values
             - values
             isArray: true
+            type: null
         ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         ciid:

@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AnsibleInventoryScanIngestApi {
     private ApiClient localVarApiClient;
@@ -89,7 +90,6 @@ public class AnsibleInventoryScanIngestApi {
      */
     public okhttp3.Call ingestAnsibleInventoryScanCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

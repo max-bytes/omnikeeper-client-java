@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class LayerApi {
     private ApiClient localVarApiClient;
@@ -86,7 +87,6 @@ public class LayerApi {
      */
     public okhttp3.Call getAllLayersCall(String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -176,8 +176,14 @@ public class LayerApi {
      */
     public ApiResponse<List<LayerDTO>> getAllLayersWithHttpInfo(String version) throws ApiException {
         okhttp3.Call localVarCall = getAllLayersValidateBeforeCall(version, null);
-        Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<LayerDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<LayerDTO>>(){});
+            throw e;
+        }
     }
 
     /**
@@ -215,7 +221,6 @@ public class LayerApi {
      */
     public okhttp3.Call getLayerByNameCall(String layerName, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -316,8 +321,14 @@ public class LayerApi {
      */
     public ApiResponse<LayerDTO> getLayerByNameWithHttpInfo(String layerName, String version) throws ApiException {
         okhttp3.Call localVarCall = getLayerByNameValidateBeforeCall(layerName, version, null);
-        Type localVarReturnType = new TypeToken<LayerDTO>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<LayerDTO>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<LayerDTO>(){}.getType()));
+            e.setErrorObjectType(new GenericType<LayerDTO>(){});
+            throw e;
+        }
     }
 
     /**
@@ -356,7 +367,6 @@ public class LayerApi {
      */
     public okhttp3.Call getLayersByNameCall(List<String> layerNames, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -457,8 +467,14 @@ public class LayerApi {
      */
     public ApiResponse<List<LayerDTO>> getLayersByNameWithHttpInfo(List<String> layerNames, String version) throws ApiException {
         okhttp3.Call localVarCall = getLayersByNameValidateBeforeCall(layerNames, version, null);
-        Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<LayerDTO>>(){}.getType()));
+            e.setErrorObjectType(new GenericType<List<LayerDTO>>(){});
+            throw e;
+        }
     }
 
     /**
