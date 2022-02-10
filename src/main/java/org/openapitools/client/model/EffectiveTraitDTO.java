@@ -51,15 +51,15 @@ import org.openapitools.client.JSON;
 /**
  * EffectiveTraitDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T18:59:17.662244Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-10T13:50:24.041168Z[Etc/UTC]")
 public class EffectiveTraitDTO {
   public static final String SERIALIZED_NAME_TRAIT_ATTRIBUTES = "traitAttributes";
   @SerializedName(SERIALIZED_NAME_TRAIT_ATTRIBUTES)
-  private Map<String, CIAttributeDTO> traitAttributes = new HashMap<String, CIAttributeDTO>();
+  private Map<String, CIAttributeDTO> traitAttributes = new HashMap<>();
 
   public static final String SERIALIZED_NAME_TRAIT_RELATIONS = "traitRelations";
   @SerializedName(SERIALIZED_NAME_TRAIT_RELATIONS)
-  private Map<String, List<RelatedCIDTO>> traitRelations = new HashMap<String, List<RelatedCIDTO>>();
+  private Map<String, List<RelatedCIDTO>> traitRelations = new HashMap<>();
 
   public EffectiveTraitDTO() { 
   }

@@ -29,7 +29,7 @@ import java.io.IOException;
 
 import org.openapitools.client.model.BulkCIAttributeLayerScopeDTO;
 import org.openapitools.client.model.CIAttributeDTO;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 import java.lang.reflect.Type;

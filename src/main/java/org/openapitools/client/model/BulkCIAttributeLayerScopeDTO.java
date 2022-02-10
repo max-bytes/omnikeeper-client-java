@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * BulkCIAttributeLayerScopeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T18:59:17.662244Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-10T13:50:24.041168Z[Etc/UTC]")
 public class BulkCIAttributeLayerScopeDTO {
   public static final String SERIALIZED_NAME_NAME_PREFIX = "namePrefix";
   @SerializedName(SERIALIZED_NAME_NAME_PREFIX)
@@ -61,7 +61,7 @@ public class BulkCIAttributeLayerScopeDTO {
 
   public static final String SERIALIZED_NAME_FRAGMENTS = "fragments";
   @SerializedName(SERIALIZED_NAME_FRAGMENTS)
-  private List<FragmentDTO> fragments = new ArrayList<FragmentDTO>();
+  private List<FragmentDTO> fragments = new ArrayList<>();
 
   public BulkCIAttributeLayerScopeDTO() { 
   }

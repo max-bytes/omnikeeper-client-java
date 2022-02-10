@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * CIDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T18:59:17.662244Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-10T13:50:24.041168Z[Etc/UTC]")
 public class CIDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -59,7 +59,7 @@ public class CIDTO {
 
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
-  private Map<String, CIAttributeDTO> attributes = new HashMap<String, CIAttributeDTO>();
+  private Map<String, CIAttributeDTO> attributes = new HashMap<>();
 
   public CIDTO() { 
   }

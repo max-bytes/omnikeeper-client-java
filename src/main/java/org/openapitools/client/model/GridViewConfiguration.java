@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T18:59:17.662244Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-10T13:50:24.041168Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -129,7 +129,7 @@ public class GridViewConfiguration {
 
   public GridViewConfiguration addReadLayersetItem(String readLayersetItem) {
     if (this.readLayerset == null) {
-      this.readLayerset = new ArrayList<String>();
+      this.readLayerset = new ArrayList<>();
     }
     this.readLayerset.add(readLayersetItem);
     return this;
@@ -160,7 +160,7 @@ public class GridViewConfiguration {
 
   public GridViewConfiguration addColumnsItem(GridViewColumn columnsItem) {
     if (this.columns == null) {
-      this.columns = new ArrayList<GridViewColumn>();
+      this.columns = new ArrayList<>();
     }
     this.columns.add(columnsItem);
     return this;

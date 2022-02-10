@@ -49,23 +49,23 @@ import org.openapitools.client.JSON;
 /**
  * AnsibleInventoryScanDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T18:59:17.662244Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-10T13:50:24.041168Z[Etc/UTC]")
 public class AnsibleInventoryScanDTO {
   public static final String SERIALIZED_NAME_SETUP_FACTS = "setupFacts";
   @SerializedName(SERIALIZED_NAME_SETUP_FACTS)
-  private Map<String, Object> setupFacts = new HashMap<String, Object>();
+  private Map<String, Object> setupFacts = new HashMap<>();
 
   public static final String SERIALIZED_NAME_YUM_INSTALLED = "yumInstalled";
   @SerializedName(SERIALIZED_NAME_YUM_INSTALLED)
-  private Map<String, Object> yumInstalled = new HashMap<String, Object>();
+  private Map<String, Object> yumInstalled = new HashMap<>();
 
   public static final String SERIALIZED_NAME_YUM_REPOS = "yumRepos";
   @SerializedName(SERIALIZED_NAME_YUM_REPOS)
-  private Map<String, Object> yumRepos = new HashMap<String, Object>();
+  private Map<String, Object> yumRepos = new HashMap<>();
 
   public static final String SERIALIZED_NAME_YUM_UPDATES = "yumUpdates";
   @SerializedName(SERIALIZED_NAME_YUM_UPDATES)
-  private Map<String, Object> yumUpdates = new HashMap<String, Object>();
+  private Map<String, Object> yumUpdates = new HashMap<>();
 
   public AnsibleInventoryScanDTO() { 
   }
