@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * CIAttributeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T13:02:24.009865Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-03T07:15:09.408666Z[Etc/UTC]")
 public class CIAttributeDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -266,7 +266,7 @@ public class CIAttributeDTO {
       if (jsonObj == null) {
         if (CIAttributeDTO.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CIAttributeDTO is not found in the empty JSON string", CIAttributeDTO.openapiRequiredFields.toString()));
         }
       }
