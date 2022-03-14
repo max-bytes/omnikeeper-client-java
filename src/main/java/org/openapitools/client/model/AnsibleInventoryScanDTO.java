@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * AnsibleInventoryScanDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-14T10:07:46.632739Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-14T12:28:12.430259Z[Etc/UTC]")
 public class AnsibleInventoryScanDTO {
   public static final String SERIALIZED_NAME_SETUP_FACTS = "setupFacts";
   @SerializedName(SERIALIZED_NAME_SETUP_FACTS)
