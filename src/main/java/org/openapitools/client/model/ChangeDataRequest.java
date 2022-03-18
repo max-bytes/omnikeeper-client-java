@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-18T07:19:35.611502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-18T13:08:21.239782Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
