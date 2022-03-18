@@ -52,7 +52,7 @@ paths:
       - oauth2: []
       tags:
       - ActiveDirectoryXMLIngest
-      x-contentType: multipart/form-data
+      x-content-type: multipart/form-data
       x-accepts: application/json
   /api/v{version}/Ingest/AnsibleInventoryScan:
     post:
@@ -142,7 +142,7 @@ paths:
       - oauth2: []
       tags:
       - AnsibleInventoryScanIngest
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/Attribute/getMergedAttributesWithName:
     get:
@@ -721,7 +721,7 @@ paths:
       summary: bulk replace all attributes in specified layer
       tags:
       - Attribute
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/AttributeValueImage:
     get:
@@ -847,7 +847,7 @@ paths:
       - oauth2: []
       tags:
       - AttributeValueImage
-      x-contentType: multipart/form-data
+      x-content-type: multipart/form-data
       x-accepts: application/json
   /api/v{version}/CI/getAllCIIDs:
     get:
@@ -1397,7 +1397,7 @@ paths:
       - oauth2: []
       tags:
       - GraphQL
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /graphql-debug:
     post:
@@ -1462,7 +1462,7 @@ paths:
       - oauth2: []
       tags:
       - GraphQL
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/GridView/contexts:
     get:
@@ -1722,7 +1722,7 @@ paths:
       summary: Edits specific context
       tags:
       - GridView
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/GridView/context:
     post:
@@ -1848,7 +1848,7 @@ paths:
       summary: Adds new context
       tags:
       - GridView
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/GridView/contexts/{context}/schema:
     get:
@@ -2042,7 +2042,7 @@ paths:
       summary: Saves grid view row changes and returns change results
       tags:
       - GridView
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/Layer/getAllLayers:
     get:
@@ -2373,7 +2373,7 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-contentType: multipart/form-data
+      x-content-type: multipart/form-data
       x-accepts: application/json
   /api/v{version}/ingest/genericJSON/manage/context:
     get:
@@ -2595,7 +2595,7 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-contentType: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
       x-accepts: application/json
   /api/v{version}/ingest/genericJSON/manage/context/{id}:
     delete:
