@@ -2,9 +2,9 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ingestAnsibleInventoryScan**](AnsibleInventoryScanIngestApi.md#ingestAnsibleInventoryScan) | **POST** /api/v{version}/Ingest/AnsibleInventoryScan | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**ingestAnsibleInventoryScan**](AnsibleInventoryScanIngestApi.md#ingestAnsibleInventoryScan) | **POST** /api/v{version}/Ingest/AnsibleInventoryScan |  |
 
 
 <a name="ingestAnsibleInventoryScan"></a>
@@ -56,12 +56,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **writeLayerID** | **String**|  |
- **searchLayerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **ansibleInventoryScanDTO** | [**AnsibleInventoryScanDTO**](AnsibleInventoryScanDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **writeLayerID** | **String**|  | |
+| **searchLayerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **ansibleInventoryScanDTO** | [**AnsibleInventoryScanDTO**](AnsibleInventoryScanDTO.md)|  | |
 
 ### Return type
 
@@ -79,5 +79,5 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

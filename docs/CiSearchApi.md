@@ -2,9 +2,9 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**searchCIsByTraits**](CiSearchApi.md#searchCIsByTraits) | **GET** /api/v{version}/CISearch/searchCIsByTraits | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**searchCIsByTraits**](CiSearchApi.md#searchCIsByTraits) | **GET** /api/v{version}/CISearch/searchCIsByTraits |  |
 
 
 <a name="searchCIsByTraits"></a>
@@ -58,13 +58,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **withTraits** | [**List&lt;String&gt;**](String.md)|  |
- **withoutTraits** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **withTraits** | [**List&lt;String&gt;**](String.md)|  | |
+| **withoutTraits** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -82,5 +82,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

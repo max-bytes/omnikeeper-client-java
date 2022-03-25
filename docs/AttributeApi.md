@@ -2,13 +2,13 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**bulkReplaceAttributesInLayer**](AttributeApi.md#bulkReplaceAttributesInLayer) | **POST** /api/v{version}/Attribute/bulkReplaceAttributesInLayer | bulk replace all attributes in specified layer
-[**findMergedAttributesByName**](AttributeApi.md#findMergedAttributesByName) | **GET** /api/v{version}/Attribute/findMergedAttributesByName | 
-[**getMergedAttribute**](AttributeApi.md#getMergedAttribute) | **GET** /api/v{version}/Attribute/getMergedAttribute | 
-[**getMergedAttributes**](AttributeApi.md#getMergedAttributes) | **GET** /api/v{version}/Attribute/getMergedAttributes | 
-[**getMergedAttributesWithName**](AttributeApi.md#getMergedAttributesWithName) | **GET** /api/v{version}/Attribute/getMergedAttributesWithName | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**bulkReplaceAttributesInLayer**](AttributeApi.md#bulkReplaceAttributesInLayer) | **POST** /api/v{version}/Attribute/bulkReplaceAttributesInLayer | bulk replace all attributes in specified layer |
+| [**findMergedAttributesByName**](AttributeApi.md#findMergedAttributesByName) | **GET** /api/v{version}/Attribute/findMergedAttributesByName |  |
+| [**getMergedAttribute**](AttributeApi.md#getMergedAttribute) | **GET** /api/v{version}/Attribute/getMergedAttribute |  |
+| [**getMergedAttributes**](AttributeApi.md#getMergedAttributes) | **GET** /api/v{version}/Attribute/getMergedAttributes |  |
+| [**getMergedAttributesWithName**](AttributeApi.md#getMergedAttributesWithName) | **GET** /api/v{version}/Attribute/getMergedAttributesWithName |  |
 
 
 <a name="bulkReplaceAttributesInLayer"></a>
@@ -58,10 +58,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
- **bulkCIAttributeLayerScopeDTO** | [**BulkCIAttributeLayerScopeDTO**](BulkCIAttributeLayerScopeDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **version** | **String**|  | |
+| **bulkCIAttributeLayerScopeDTO** | [**BulkCIAttributeLayerScopeDTO**](BulkCIAttributeLayerScopeDTO.md)|  | |
 
 ### Return type
 
@@ -79,7 +79,7 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="findMergedAttributesByName"></a>
 # **findMergedAttributesByName**
@@ -132,13 +132,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **regex** | **String**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **ciids** | [**List&lt;UUID&gt;**](UUID.md)|  | [optional]
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **regex** | **String**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **ciids** | [**List&lt;UUID&gt;**](UUID.md)|  | [optional] |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedAttribute"></a>
 # **getMergedAttribute**
@@ -209,13 +209,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ciid** | **UUID**|  |
- **name** | **String**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ciid** | **UUID**|  | |
+| **name** | **String**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedAttributes"></a>
 # **getMergedAttributes**
@@ -285,12 +285,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ciids** | [**List&lt;UUID&gt;**](UUID.md)|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ciids** | [**List&lt;UUID&gt;**](UUID.md)|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedAttributesWithName"></a>
 # **getMergedAttributesWithName**
@@ -360,12 +360,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **String**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **String**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -383,5 +383,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

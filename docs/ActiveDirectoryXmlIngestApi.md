@@ -2,9 +2,9 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ingestXML**](ActiveDirectoryXmlIngestApi.md#ingestXML) | **POST** /api/v{version}/Ingest/AD-XML | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**ingestXML**](ActiveDirectoryXmlIngestApi.md#ingestXML) | **POST** /api/v{version}/Ingest/AD-XML |  |
 
 
 <a name="ingestXML"></a>
@@ -56,12 +56,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
- **writeLayerID** | **String**|  |
- **searchLayerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **files** | **List&lt;File&gt;**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **version** | **String**|  | |
+| **writeLayerID** | **String**|  | |
+| **searchLayerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **files** | **List&lt;File&gt;**|  | |
 
 ### Return type
 
@@ -79,5 +79,5 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

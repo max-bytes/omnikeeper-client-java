@@ -2,13 +2,13 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAllContexts**](OkPluginGenericJsonIngestApi.md#getAllContexts) | **GET** /api/v{version}/ingest/genericJSON/manage/context | 
-[**getContext**](OkPluginGenericJsonIngestApi.md#getContext) | **GET** /api/v{version}/ingest/genericJSON/manage/context/{id} | 
-[**ingest**](OkPluginGenericJsonIngestApi.md#ingest) | **POST** /api/v{version}/ingest/genericJSON/files | 
-[**removeContext**](OkPluginGenericJsonIngestApi.md#removeContext) | **DELETE** /api/v{version}/ingest/genericJSON/manage/context/{id} | 
-[**upsertContext**](OkPluginGenericJsonIngestApi.md#upsertContext) | **POST** /api/v{version}/ingest/genericJSON/manage/context | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAllContexts**](OkPluginGenericJsonIngestApi.md#getAllContexts) | **GET** /api/v{version}/ingest/genericJSON/manage/context |  |
+| [**getContext**](OkPluginGenericJsonIngestApi.md#getContext) | **GET** /api/v{version}/ingest/genericJSON/manage/context/{id} |  |
+| [**ingest**](OkPluginGenericJsonIngestApi.md#ingest) | **POST** /api/v{version}/ingest/genericJSON/files |  |
+| [**removeContext**](OkPluginGenericJsonIngestApi.md#removeContext) | **DELETE** /api/v{version}/ingest/genericJSON/manage/context/{id} |  |
+| [**upsertContext**](OkPluginGenericJsonIngestApi.md#upsertContext) | **POST** /api/v{version}/ingest/genericJSON/manage/context |  |
 
 
 <a name="getAllContexts"></a>
@@ -58,9 +58,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getContext"></a>
 # **getContext**
@@ -128,10 +128,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**|  | |
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="ingest"></a>
 # **ingest**
@@ -199,11 +199,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **context** | **String**|  |
- **version** | **String**|  |
- **files** | **List&lt;File&gt;**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **context** | **String**|  | |
+| **version** | **String**|  | |
+| **files** | **List&lt;File&gt;**|  | |
 
 ### Return type
 
@@ -221,7 +221,7 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="removeContext"></a>
 # **removeContext**
@@ -271,10 +271,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**|  | |
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="upsertContext"></a>
 # **upsertContext**
@@ -342,10 +342,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
- **context** | [**Context**](Context.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **version** | **String**|  | |
+| **context** | [**Context**](Context.md)|  | |
 
 ### Return type
 
@@ -363,5 +363,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

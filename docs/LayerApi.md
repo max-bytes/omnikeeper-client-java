@@ -2,11 +2,11 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAllLayers**](LayerApi.md#getAllLayers) | **GET** /api/v{version}/Layer/getAllLayers | list of all layers
-[**getLayerByName**](LayerApi.md#getLayerByName) | **GET** /api/v{version}/Layer/getLayerByName | get a layer by name
-[**getLayersByName**](LayerApi.md#getLayersByName) | **GET** /api/v{version}/Layer/getLayersByName | get layers by name
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAllLayers**](LayerApi.md#getAllLayers) | **GET** /api/v{version}/Layer/getAllLayers | list of all layers |
+| [**getLayerByName**](LayerApi.md#getLayerByName) | **GET** /api/v{version}/Layer/getLayerByName | get a layer by name |
+| [**getLayersByName**](LayerApi.md#getLayersByName) | **GET** /api/v{version}/Layer/getLayersByName | get layers by name |
 
 
 <a name="getAllLayers"></a>
@@ -56,9 +56,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getLayerByName"></a>
 # **getLayerByName**
@@ -126,10 +126,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerName** | **String**|  |
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerName** | **String**|  | |
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getLayersByName"></a>
 # **getLayersByName**
@@ -197,10 +197,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerNames** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerNames** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -218,5 +218,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

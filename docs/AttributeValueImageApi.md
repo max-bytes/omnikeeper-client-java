@@ -2,10 +2,10 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get**](AttributeValueImageApi.md#get) | **GET** /api/v{version}/AttributeValueImage | 
-[**post**](AttributeValueImageApi.md#post) | **POST** /api/v{version}/AttributeValueImage | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**get**](AttributeValueImageApi.md#get) | **GET** /api/v{version}/AttributeValueImage |  |
+| [**post**](AttributeValueImageApi.md#post) | **POST** /api/v{version}/AttributeValueImage |  |
 
 
 <a name="get"></a>
@@ -59,14 +59,14 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ciid** | **UUID**|  |
- **attributeName** | **String**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **index** | **Integer**|  | [optional] [default to 0]
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ciid** | **UUID**|  | |
+| **attributeName** | **String**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **index** | **Integer**|  | [optional] [default to 0] |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -84,7 +84,7 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="post"></a>
 # **post**
@@ -137,14 +137,14 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ciid** | **UUID**|  |
- **attributeName** | **String**|  |
- **layerID** | **String**|  |
- **version** | **String**|  |
- **files** | **List&lt;File&gt;**|  |
- **forceArray** | **Boolean**|  | [optional] [default to false]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ciid** | **UUID**|  | |
+| **attributeName** | **String**|  | |
+| **layerID** | **String**|  | |
+| **version** | **String**|  | |
+| **files** | **List&lt;File&gt;**|  | |
+| **forceArray** | **Boolean**|  | [optional] [default to false] |
 
 ### Return type
 
@@ -162,5 +162,5 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

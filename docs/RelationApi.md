@@ -2,13 +2,13 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAllMergedRelations**](RelationApi.md#getAllMergedRelations) | **GET** /api/v{version}/Relation/getAllMergedRelations | 
-[**getMergedRelation**](RelationApi.md#getMergedRelation) | **GET** /api/v{version}/Relation/getMergedRelation | 
-[**getMergedRelationsFromOrToCI**](RelationApi.md#getMergedRelationsFromOrToCI) | **GET** /api/v{version}/Relation/getMergedRelationsFromOrToCI | 
-[**getMergedRelationsOutgoingFromCI**](RelationApi.md#getMergedRelationsOutgoingFromCI) | **GET** /api/v{version}/Relation/getMergedRelationsOutgoingFromCI | 
-[**getMergedRelationsWithPredicate**](RelationApi.md#getMergedRelationsWithPredicate) | **GET** /api/v{version}/Relation/getMergedRelationsWithPredicate | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAllMergedRelations**](RelationApi.md#getAllMergedRelations) | **GET** /api/v{version}/Relation/getAllMergedRelations |  |
+| [**getMergedRelation**](RelationApi.md#getMergedRelation) | **GET** /api/v{version}/Relation/getMergedRelation |  |
+| [**getMergedRelationsFromOrToCI**](RelationApi.md#getMergedRelationsFromOrToCI) | **GET** /api/v{version}/Relation/getMergedRelationsFromOrToCI |  |
+| [**getMergedRelationsOutgoingFromCI**](RelationApi.md#getMergedRelationsOutgoingFromCI) | **GET** /api/v{version}/Relation/getMergedRelationsOutgoingFromCI |  |
+| [**getMergedRelationsWithPredicate**](RelationApi.md#getMergedRelationsWithPredicate) | **GET** /api/v{version}/Relation/getMergedRelationsWithPredicate |  |
 
 
 <a name="getAllMergedRelations"></a>
@@ -60,11 +60,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedRelation"></a>
 # **getMergedRelation**
@@ -136,14 +136,14 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fromCIID** | **UUID**|  |
- **toCIID** | **UUID**|  |
- **predicateID** | **String**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fromCIID** | **UUID**|  | |
+| **toCIID** | **UUID**|  | |
+| **predicateID** | **String**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedRelationsFromOrToCI"></a>
 # **getMergedRelationsFromOrToCI**
@@ -213,12 +213,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ciid** | **UUID**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ciid** | **UUID**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedRelationsOutgoingFromCI"></a>
 # **getMergedRelationsOutgoingFromCI**
@@ -288,12 +288,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fromCIID** | **UUID**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fromCIID** | **UUID**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getMergedRelationsWithPredicate"></a>
 # **getMergedRelationsWithPredicate**
@@ -363,12 +363,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **predicateID** | **String**|  |
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predicateID** | **String**|  | |
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -386,5 +386,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

@@ -2,10 +2,10 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**debug**](GraphQlApi.md#debug) | **POST** /graphql-debug | 
-[**index**](GraphQlApi.md#index) | **POST** /graphql | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**debug**](GraphQlApi.md#debug) | **POST** /graphql-debug |  |
+| [**index**](GraphQlApi.md#index) | **POST** /graphql |  |
 
 
 <a name="debug"></a>
@@ -54,9 +54,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **graphQLQuery** | [**GraphQLQuery**](GraphQLQuery.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **graphQLQuery** | [**GraphQLQuery**](GraphQLQuery.md)|  | [optional] |
 
 ### Return type
 
@@ -74,7 +74,7 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="index"></a>
 # **index**
@@ -122,9 +122,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **graphQLQuery** | [**GraphQLQuery**](GraphQLQuery.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **graphQLQuery** | [**GraphQLQuery**](GraphQLQuery.md)|  | [optional] |
 
 ### Return type
 
@@ -142,5 +142,5 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

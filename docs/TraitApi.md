@@ -2,9 +2,9 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getEffectiveTraitsForTraitName**](TraitApi.md#getEffectiveTraitsForTraitName) | **GET** /api/v{version}/Trait/getEffectiveTraitsForTraitName | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getEffectiveTraitsForTraitName**](TraitApi.md#getEffectiveTraitsForTraitName) | **GET** /api/v{version}/Trait/getEffectiveTraitsForTraitName |  |
 
 
 <a name="getEffectiveTraitsForTraitName"></a>
@@ -57,12 +57,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;String&gt;**](String.md)|  |
- **traitName** | **String**|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerIDs** | [**List&lt;String&gt;**](String.md)|  | |
+| **traitName** | **String**|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**|  | [optional] |
 
 ### Return type
 
@@ -80,5 +80,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 

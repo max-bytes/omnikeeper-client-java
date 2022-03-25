@@ -2,11 +2,11 @@
 
 All URIs are relative to *http://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAllCIIDs**](CiApi.md#getAllCIIDs) | **GET** /api/v{version}/CI/getAllCIIDs | list of all CI-IDs
-[**getCIByID**](CiApi.md#getCIByID) | **GET** /api/v{version}/CI/getCIByID | single CI by CI-ID
-[**getCIsByID**](CiApi.md#getCIsByID) | **GET** /api/v{version}/CI/getCIsByID | multiple CIs by CI-ID  !Watch out for the query URL getting too long because of a lot of CIIDs!  TODO: consider using POST
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAllCIIDs**](CiApi.md#getAllCIIDs) | **GET** /api/v{version}/CI/getAllCIIDs | list of all CI-IDs |
+| [**getCIByID**](CiApi.md#getCIByID) | **GET** /api/v{version}/CI/getCIByID | single CI by CI-ID |
+| [**getCIsByID**](CiApi.md#getCIsByID) | **GET** /api/v{version}/CI/getCIsByID | multiple CIs by CI-ID  !Watch out for the query URL getting too long because of a lot of CIIDs!  TODO: consider using POST |
 
 
 <a name="getAllCIIDs"></a>
@@ -56,9 +56,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **version** | **String**|  | |
 
 ### Return type
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getCIByID"></a>
 # **getCIByID**
@@ -128,12 +128,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order |
- **CIID** | **UUID**|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order | |
+| **CIID** | **UUID**|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional] |
 
 ### Return type
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
 <a name="getCIsByID"></a>
 # **getCIsByID**
@@ -203,12 +203,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order |
- **ciIDs** | [**List&lt;UUID&gt;**](UUID.md)|  |
- **version** | **String**|  |
- **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **layerIDs** | [**List&lt;String&gt;**](String.md)| Specifies which layers contribute to the result, and in which order | |
+| **ciIDs** | [**List&lt;UUID&gt;**](UUID.md)|  | |
+| **version** | **String**|  | |
+| **atTime** | **OffsetDateTime**| Specify datetime, for which point in time to get the data; leave empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm) | [optional] |
 
 ### Return type
 
@@ -226,5 +226,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+| **200** | Success |  -  |
 
