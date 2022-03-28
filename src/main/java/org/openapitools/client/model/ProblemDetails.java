@@ -23,8 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -39,6 +37,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,8 +48,8 @@ import org.openapitools.client.JSON;
 /**
  * ProblemDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-25T10:42:17.149786Z[Etc/UTC]")
-public class ProblemDetails extends HashMap<String, Object> {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-28T12:31:23.994363Z[Etc/UTC]")
+public class ProblemDetails {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
@@ -189,6 +188,7 @@ public class ProblemDetails extends HashMap<String, Object> {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -202,8 +202,7 @@ public class ProblemDetails extends HashMap<String, Object> {
         Objects.equals(this.title, problemDetails.title) &&
         Objects.equals(this.status, problemDetails.status) &&
         Objects.equals(this.detail, problemDetails.detail) &&
-        Objects.equals(this.instance, problemDetails.instance) &&
-        super.equals(o);
+        Objects.equals(this.instance, problemDetails.instance);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -212,7 +211,7 @@ public class ProblemDetails extends HashMap<String, Object> {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, title, status, detail, instance, super.hashCode());
+    return Objects.hash(type, title, status, detail, instance);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -226,7 +225,6 @@ public class ProblemDetails extends HashMap<String, Object> {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProblemDetails {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -278,6 +276,7 @@ public class ProblemDetails extends HashMap<String, Object> {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ProblemDetails is not found in the empty JSON string", ProblemDetails.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
