@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
@@ -253,6 +253,15 @@ public class GraphQLQuery {
         if (!GraphQLQuery.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GraphQLQuery` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("operationName") != null && !jsonObj.get("operationName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `operationName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operationName").toString()));
+      }
+      if (jsonObj.get("namedQuery") != null && !jsonObj.get("namedQuery").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `namedQuery` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namedQuery").toString()));
+      }
+      if (jsonObj.get("query") != null && !jsonObj.get("query").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `query` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query").toString()));
       }
   }
 

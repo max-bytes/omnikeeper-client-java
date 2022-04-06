@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * BulkCIAttributeLayerScopeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class BulkCIAttributeLayerScopeDTO {
   public static final String SERIALIZED_NAME_NAME_PREFIX = "namePrefix";
   @SerializedName(SERIALIZED_NAME_NAME_PREFIX)
@@ -230,9 +230,20 @@ public class BulkCIAttributeLayerScopeDTO {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("namePrefix") != null && !jsonObj.get("namePrefix").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `namePrefix` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namePrefix").toString()));
+      }
+      if (jsonObj.get("layerID") != null && !jsonObj.get("layerID").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `layerID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("layerID").toString()));
+      }
       JsonArray jsonArrayfragments = jsonObj.getAsJsonArray("fragments");
-      // validate the optional field `fragments` (array)
       if (jsonArrayfragments != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("fragments").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `fragments` to be an array in the JSON string but got `%s`", jsonObj.get("fragments").toString()));
+        }
+
+        // validate the optional field `fragments` (array)
         for (int i = 0; i < jsonArrayfragments.size(); i++) {
           FragmentDTO.validateJsonObject(jsonArrayfragments.get(i).getAsJsonObject());
         };

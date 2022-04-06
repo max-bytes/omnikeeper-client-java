@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
@@ -176,8 +176,13 @@ public class ChangeDataRequest {
         }
       }
       JsonArray jsonArraysparseRows = jsonObj.getAsJsonArray("sparseRows");
-      // validate the optional field `sparseRows` (array)
       if (jsonArraysparseRows != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("sparseRows").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `sparseRows` to be an array in the JSON string but got `%s`", jsonObj.get("sparseRows").toString()));
+        }
+
+        // validate the optional field `sparseRows` (array)
         for (int i = 0; i < jsonArraysparseRows.size(); i++) {
           SparseRow.validateJsonObject(jsonArraysparseRows.get(i).getAsJsonObject());
         };

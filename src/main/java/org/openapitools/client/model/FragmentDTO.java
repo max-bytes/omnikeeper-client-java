@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * FragmentDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class FragmentDTO {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -224,9 +224,15 @@ public class FragmentDTO {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
       // validate the optional field `value`
       if (jsonObj.getAsJsonObject("value") != null) {
         AttributeValueDTO.validateJsonObject(jsonObj.getAsJsonObject("value"));
+      }
+      if (jsonObj.get("ciid") != null && !jsonObj.get("ciid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ciid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ciid").toString()));
       }
   }
 

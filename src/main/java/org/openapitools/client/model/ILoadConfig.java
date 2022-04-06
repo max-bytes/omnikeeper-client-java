@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ILoadConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class ILoadConfig {
   public static final String SERIALIZED_NAME_SEARCH_LAYER_I_DS = "searchLayerIDs";
   @SerializedName(SERIALIZED_NAME_SEARCH_LAYER_I_DS)
@@ -187,6 +187,13 @@ public class ILoadConfig {
         if (!ILoadConfig.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ILoadConfig` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("searchLayerIDs") != null && !jsonObj.get("searchLayerIDs").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `searchLayerIDs` to be an array in the JSON string but got `%s`", jsonObj.get("searchLayerIDs").toString()));
+      }
+      if (jsonObj.get("writeLayerID") != null && !jsonObj.get("writeLayerID").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `writeLayerID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("writeLayerID").toString()));
       }
   }
 

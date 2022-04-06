@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * SparseRow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class SparseRow {
   public static final String SERIALIZED_NAME_CIID = "ciid";
   @SerializedName(SERIALIZED_NAME_CIID)
@@ -206,9 +206,17 @@ public class SparseRow {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SparseRow` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
+      if (jsonObj.get("ciid") != null && !jsonObj.get("ciid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ciid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ciid").toString()));
+      }
       JsonArray jsonArraycells = jsonObj.getAsJsonArray("cells");
-      // validate the optional field `cells` (array)
       if (jsonArraycells != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("cells").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `cells` to be an array in the JSON string but got `%s`", jsonObj.get("cells").toString()));
+        }
+
+        // validate the optional field `cells` (array)
         for (int i = 0; i < jsonArraycells.size(); i++) {
           ChangeDataCell.validateJsonObject(jsonArraycells.get(i).getAsJsonObject());
         };

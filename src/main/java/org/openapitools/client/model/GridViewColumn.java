@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T07:35:43.812998Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T08:22:58.385577Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -254,6 +254,15 @@ public class GridViewColumn {
         if (!GridViewColumn.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GridViewColumn` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sourceAttributeName") != null && !jsonObj.get("sourceAttributeName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sourceAttributeName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sourceAttributeName").toString()));
+      }
+      if (jsonObj.get("columnDescription") != null && !jsonObj.get("columnDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `columnDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("columnDescription").toString()));
+      }
+      if (jsonObj.get("writeLayer") != null && !jsonObj.get("writeLayer").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `writeLayer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("writeLayer").toString()));
       }
   }
 
