@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * AttributeValueDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T11:12:16.370871Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T11:19:07.404379Z[Etc/UTC]")
 public class AttributeValueDTO {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
