@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * AddContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-06T11:19:07.404379Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-07T09:18:26.604395Z[Etc/UTC]")
 public class AddContextRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
