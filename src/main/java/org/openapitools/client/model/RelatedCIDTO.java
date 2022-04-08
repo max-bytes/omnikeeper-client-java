@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * RelatedCIDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-07T09:18:26.604395Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-08T12:28:34.279768Z[Etc/UTC]")
 public class RelatedCIDTO {
   public static final String SERIALIZED_NAME_FROM_C_I_I_D = "fromCIID";
   @SerializedName(SERIALIZED_NAME_FROM_C_I_I_D)
