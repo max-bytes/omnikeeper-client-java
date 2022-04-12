@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * EffectiveTraitDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-12T15:09:14.757625Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-12T15:11:15.718645Z[Etc/UTC]")
 public class EffectiveTraitDTO {
   public static final String SERIALIZED_NAME_TRAIT_ATTRIBUTES = "traitAttributes";
   @SerializedName(SERIALIZED_NAME_TRAIT_ATTRIBUTES)
