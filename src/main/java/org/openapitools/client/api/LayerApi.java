@@ -176,14 +176,8 @@ public class LayerApi {
      */
     public ApiResponse<List<LayerDTO>> getAllLayersWithHttpInfo(String version) throws ApiException {
         okhttp3.Call localVarCall = getAllLayersValidateBeforeCall(version, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<LayerDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<LayerDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -321,14 +315,8 @@ public class LayerApi {
      */
     public ApiResponse<LayerDTO> getLayerByNameWithHttpInfo(String layerName, String version) throws ApiException {
         okhttp3.Call localVarCall = getLayerByNameValidateBeforeCall(layerName, version, null);
-        try {
-            Type localVarReturnType = new TypeToken<LayerDTO>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<LayerDTO>(){}.getType()));
-            e.setErrorObjectType(new GenericType<LayerDTO>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<LayerDTO>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -467,14 +455,8 @@ public class LayerApi {
      */
     public ApiResponse<List<LayerDTO>> getLayersByNameWithHttpInfo(List<String> layerNames, String version) throws ApiException {
         okhttp3.Call localVarCall = getLayersByNameValidateBeforeCall(layerNames, version, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<LayerDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<LayerDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<LayerDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

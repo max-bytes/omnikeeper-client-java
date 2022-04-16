@@ -349,14 +349,8 @@ public class AttributeApi {
      */
     public ApiResponse<List<CIAttributeDTO>> findMergedAttributesByNameWithHttpInfo(String regex, List<String> layerIDs, String version, List<UUID> ciids, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = findMergedAttributesByNameValidateBeforeCall(regex, layerIDs, version, ciids, atTime, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<CIAttributeDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<CIAttributeDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -529,14 +523,8 @@ public class AttributeApi {
      */
     public ApiResponse<CIAttributeDTO> getMergedAttributeWithHttpInfo(UUID ciid, String name, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedAttributeValidateBeforeCall(ciid, name, layerIDs, version, atTime, null);
-        try {
-            Type localVarReturnType = new TypeToken<CIAttributeDTO>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<CIAttributeDTO>(){}.getType()));
-            e.setErrorObjectType(new GenericType<CIAttributeDTO>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<CIAttributeDTO>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -697,14 +685,8 @@ public class AttributeApi {
      */
     public ApiResponse<List<CIAttributeDTO>> getMergedAttributesWithHttpInfo(List<UUID> ciids, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedAttributesValidateBeforeCall(ciids, layerIDs, version, atTime, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<CIAttributeDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<CIAttributeDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -864,14 +846,8 @@ public class AttributeApi {
      */
     public ApiResponse<List<CIAttributeDTO>> getMergedAttributesWithNameWithHttpInfo(String name, List<String> layerIDs, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getMergedAttributesWithNameValidateBeforeCall(name, layerIDs, version, atTime, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<CIAttributeDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<CIAttributeDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<CIAttributeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

@@ -220,14 +220,8 @@ public class CiSearchApi {
      */
     public ApiResponse<List<CIDTO>> searchCIsByTraitsWithHttpInfo(List<String> layerIDs, List<String> withTraits, List<String> withoutTraits, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = searchCIsByTraitsValidateBeforeCall(layerIDs, withTraits, withoutTraits, version, atTime, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<CIDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<CIDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<CIDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

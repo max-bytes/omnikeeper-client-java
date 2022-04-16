@@ -177,14 +177,8 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<List<Context>> getAllContextsWithHttpInfo(String version) throws ApiException {
         okhttp3.Call localVarCall = getAllContextsValidateBeforeCall(version, null);
-        try {
-            Type localVarReturnType = new TypeToken<List<Context>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<List<Context>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<List<Context>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<List<Context>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -319,14 +313,8 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<Context> getContextWithHttpInfo(String id, String version) throws ApiException {
         okhttp3.Call localVarCall = getContextValidateBeforeCall(id, version, null);
-        try {
-            Type localVarReturnType = new TypeToken<Context>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Context>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Context>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<Context>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -611,14 +599,8 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<Context> removeContextWithHttpInfo(String id, String version) throws ApiException {
         okhttp3.Call localVarCall = removeContextValidateBeforeCall(id, version, null);
-        try {
-            Type localVarReturnType = new TypeToken<Context>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Context>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Context>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<Context>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -753,14 +735,8 @@ public class OkPluginGenericJsonIngestApi {
      */
     public ApiResponse<Context> upsertContextWithHttpInfo(String version, Context context) throws ApiException {
         okhttp3.Call localVarCall = upsertContextValidateBeforeCall(version, context, null);
-        try {
-            Type localVarReturnType = new TypeToken<Context>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Context>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Context>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<Context>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

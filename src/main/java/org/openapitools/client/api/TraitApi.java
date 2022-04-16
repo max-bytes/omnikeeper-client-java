@@ -208,14 +208,8 @@ public class TraitApi {
      */
     public ApiResponse<Map<String, EffectiveTraitDTO>> getEffectiveTraitsForTraitNameWithHttpInfo(List<String> layerIDs, String traitName, String version, OffsetDateTime atTime) throws ApiException {
         okhttp3.Call localVarCall = getEffectiveTraitsForTraitNameValidateBeforeCall(layerIDs, traitName, version, atTime, null);
-        try {
-            Type localVarReturnType = new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Map<String, EffectiveTraitDTO>>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<Map<String, EffectiveTraitDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
