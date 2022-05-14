@@ -17,7 +17,6 @@ paths:
           type: string
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/inline_object'
         content:
           multipart/form-data:
             encoding:
@@ -28,23 +27,7 @@ paths:
               files:
                 style: form
             schema:
-              properties:
-                writeLayerID:
-                  type: string
-                searchLayerIDs:
-                  items:
-                    type: string
-                  type: array
-                files:
-                  items:
-                    format: binary
-                    type: string
-                  type: array
-              required:
-              - files
-              - searchLayerIDs
-              - writeLayerID
-              type: object
+              $ref: '#/components/schemas/IngestXML_request'
       responses:
         "200":
           description: Success
@@ -824,22 +807,13 @@ paths:
           type: string
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_1'
         content:
           multipart/form-data:
             encoding:
               files:
                 style: form
             schema:
-              properties:
-                files:
-                  items:
-                    format: binary
-                    type: string
-                  type: array
-              required:
-              - files
-              type: object
+              $ref: '#/components/schemas/Post_request'
       responses:
         "200":
           description: Success
@@ -2350,22 +2324,13 @@ paths:
           type: string
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_2'
         content:
           multipart/form-data:
             encoding:
               files:
                 style: form
             schema:
-              properties:
-                files:
-                  items:
-                    format: binary
-                    type: string
-                  type: array
-              required:
-              - files
-              type: object
+              $ref: '#/components/schemas/Post_request'
       responses:
         "200":
           description: Success
@@ -3491,22 +3456,6 @@ paths:
       - Trait
       x-accepts: application/json
 components:
-  requestBodies:
-    inline_object_1:
-      content:
-        multipart/form-data:
-          schema:
-            $ref: '#/components/schemas/inline_object_1'
-    inline_object:
-      content:
-        multipart/form-data:
-          schema:
-            $ref: '#/components/schemas/inline_object'
-    inline_object_2:
-      content:
-        multipart/form-data:
-          schema:
-            $ref: '#/components/schemas/inline_object_2'
   schemas:
     AddContextRequest:
       additionalProperties: false
@@ -4090,7 +4039,7 @@ components:
           nullable: true
           type: array
       type: object
-    inline_object:
+    IngestXML_request:
       properties:
         writeLayerID:
           type: string
@@ -4108,17 +4057,7 @@ components:
       - searchLayerIDs
       - writeLayerID
       type: object
-    inline_object_1:
-      properties:
-        files:
-          items:
-            format: binary
-            type: string
-          type: array
-      required:
-      - files
-      type: object
-    inline_object_2:
+    Post_request:
       properties:
         files:
           items:
