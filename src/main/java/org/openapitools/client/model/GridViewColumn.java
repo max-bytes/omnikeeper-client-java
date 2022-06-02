@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-02T11:29:47.515510Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-02T12:12:37.176725Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
