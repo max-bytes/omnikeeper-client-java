@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * CIAttributeDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-07T13:33:56.579404Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-07T19:07:24.817086Z[Etc/UTC]")
 public class CIAttributeDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
