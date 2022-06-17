@@ -87,34 +87,34 @@ public class JSON {
     }
 
     {
-        gson = createGson()
-            .registerTypeAdapter(Date.class, dateTypeAdapter)
-            .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-            .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-            .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-            .registerTypeAdapter(byte[].class, byteArrayAdapter)
-            .registerTypeAdapterFactory(new org.openapitools.client.model.AddContextRequest.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.AnsibleInventoryScanDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.AttributeValueDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.BulkCIAttributeLayerScopeDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.CIAttributeDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.CIDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.ChangeDataCell.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.ChangeDataRequest.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.Context.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.EditContextRequest.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.EffectiveTraitDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.FragmentDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.GraphQLQuery.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.GridViewColumn.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.GridViewConfiguration.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.ILoadConfig.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.LayerDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.ProblemDetails.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.RelatedCIDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.RelationDTO.CustomTypeAdapterFactory())
-            .registerTypeAdapterFactory(new org.openapitools.client.model.SparseRow.CustomTypeAdapterFactory())
-            .create();
+        GsonBuilder gsonBuilder = createGson();
+        gsonBuilder.registerTypeAdapter(Date.class, dateTypeAdapter);
+        gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
+        gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
+        gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
+        gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.AddContextRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.AnsibleInventoryScanDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.AttributeValueDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.BulkCIAttributeLayerScopeDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CIAttributeDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.CIDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.ChangeDataCell.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.ChangeDataRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.Context.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.EditContextRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.EffectiveTraitDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.FragmentDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.GraphQLQuery.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.GridViewColumn.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.GridViewConfiguration.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.ILoadConfig.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.LayerDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.ProblemDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.RelatedCIDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.RelationDTO.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.SparseRow.CustomTypeAdapterFactory());
+        gson = gsonBuilder.create();
     }
 
     /**
