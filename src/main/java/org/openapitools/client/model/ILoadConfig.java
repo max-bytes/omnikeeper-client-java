@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ILoadConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-17T13:39:46.381052Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T07:30:23.564571Z[Etc/UTC]")
 public class ILoadConfig {
   public static final String SERIALIZED_NAME_SEARCH_LAYER_I_DS = "searchLayerIDs";
   @SerializedName(SERIALIZED_NAME_SEARCH_LAYER_I_DS)
