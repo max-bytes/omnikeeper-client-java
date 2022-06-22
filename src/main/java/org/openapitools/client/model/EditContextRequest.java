@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * EditContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-22T11:33:10.610342Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-22T13:11:06.438680Z[Etc/UTC]")
 public class EditContextRequest {
   public static final String SERIALIZED_NAME_SPEAKING_NAME = "speakingName";
   @SerializedName(SERIALIZED_NAME_SPEAKING_NAME)
