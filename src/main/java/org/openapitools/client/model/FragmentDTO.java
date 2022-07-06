@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * FragmentDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-06T15:40:50.334686Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-06T16:20:28.907705Z[Etc/UTC]")
 public class FragmentDTO {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
