@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * ProblemDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-18T08:31:15.660490Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-18T12:51:29.670680Z[Etc/UTC]")
 public class ProblemDetails {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
