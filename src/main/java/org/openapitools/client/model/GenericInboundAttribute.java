@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundAttribute
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T08:02:40.009520Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T12:23:40.249491Z[Etc/UTC]")
 public class GenericInboundAttribute {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
