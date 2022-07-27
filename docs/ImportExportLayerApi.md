@@ -1,6 +1,6 @@
 # ImportExportLayerApi
 
-All URIs are relative to *https://localhost:44378*
+All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -27,7 +27,7 @@ import org.openapitools.client.api.ImportExportLayerApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://localhost:44378");
+    defaultClient.setBasePath("http://localhost");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -99,7 +99,7 @@ import org.openapitools.client.api.ImportExportLayerApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://localhost:44378");
+    defaultClient.setBasePath("http://localhost");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
