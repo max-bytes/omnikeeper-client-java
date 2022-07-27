@@ -5,6 +5,7 @@ README.md
 api/openapi.yaml
 build.gradle
 build.sbt
+docs/AbstractInboundIDMethod.md
 docs/AddContextRequest.md
 docs/AnsibleInventoryScanDTO.md
 docs/AnsibleInventoryScanIngestApi.md
@@ -44,7 +45,6 @@ docs/ImportExportLayerApi.md
 docs/InboundIDMethodByAttribute.md
 docs/InboundIDMethodByAttributeModifiers.md
 docs/InboundIDMethodByByUnion.md
-docs/InboundIDMethodByByUnionInnerInner.md
 docs/InboundIDMethodByData.md
 docs/InboundIDMethodByIntersect.md
 docs/InboundIDMethodByRelatedTempID.md
@@ -107,6 +107,7 @@ src/main/java/org/openapitools/client/auth/OAuth.java
 src/main/java/org/openapitools/client/auth/OAuthFlow.java
 src/main/java/org/openapitools/client/auth/OAuthOkHttpClient.java
 src/main/java/org/openapitools/client/auth/RetryingOAuth.java
+src/main/java/org/openapitools/client/model/AbstractInboundIDMethod.java
 src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/AddContextRequest.java
 src/main/java/org/openapitools/client/model/AnsibleInventoryScanDTO.java
@@ -139,7 +140,6 @@ src/main/java/org/openapitools/client/model/IEdmVocabularyAnnotation.java
 src/main/java/org/openapitools/client/model/InboundIDMethodByAttribute.java
 src/main/java/org/openapitools/client/model/InboundIDMethodByAttributeModifiers.java
 src/main/java/org/openapitools/client/model/InboundIDMethodByByUnion.java
-src/main/java/org/openapitools/client/model/InboundIDMethodByByUnionInnerInner.java
 src/main/java/org/openapitools/client/model/InboundIDMethodByData.java
 src/main/java/org/openapitools/client/model/InboundIDMethodByIntersect.java
 src/main/java/org/openapitools/client/model/InboundIDMethodByRelatedTempID.java
@@ -154,3 +154,4 @@ src/main/java/org/openapitools/client/model/ProblemDetails.java
 src/main/java/org/openapitools/client/model/SameTargetCIHandling.java
 src/main/java/org/openapitools/client/model/SameTempIDHandling.java
 src/main/java/org/openapitools/client/model/SparseRow.java
+src/test/java/org/openapitools/client/model/AbstractInboundIDMethodTest.java

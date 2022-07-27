@@ -58,6 +58,75 @@ public class JSON {
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
         GsonFireBuilder fireBuilder = new GsonFireBuilder()
+                .registerTypeSelector(org.openapitools.client.model.AbstractInboundIDMethod.class, new TypeSelector<org.openapitools.client.model.AbstractInboundIDMethod>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.AbstractInboundIDMethod> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByAttribute", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("InboundIDMethodByByUnion", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("InboundIDMethodByData", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("InboundIDMethodByIntersect", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("InboundIDMethodByRelatedTempID", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("InboundIDMethodByTemporaryCIID", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
+                        classByDiscriminatorValue.put("AbstractInboundIDMethod", org.openapitools.client.model.AbstractInboundIDMethod.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(org.openapitools.client.model.InboundIDMethodByAttribute.class, new TypeSelector<org.openapitools.client.model.InboundIDMethodByAttribute>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.InboundIDMethodByAttribute> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByAttribute", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(org.openapitools.client.model.InboundIDMethodByByUnion.class, new TypeSelector<org.openapitools.client.model.InboundIDMethodByByUnion>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.InboundIDMethodByByUnion> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByByUnion", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(org.openapitools.client.model.InboundIDMethodByData.class, new TypeSelector<org.openapitools.client.model.InboundIDMethodByData>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.InboundIDMethodByData> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByData", org.openapitools.client.model.InboundIDMethodByData.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(org.openapitools.client.model.InboundIDMethodByIntersect.class, new TypeSelector<org.openapitools.client.model.InboundIDMethodByIntersect>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.InboundIDMethodByIntersect> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByIntersect", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(org.openapitools.client.model.InboundIDMethodByRelatedTempID.class, new TypeSelector<org.openapitools.client.model.InboundIDMethodByRelatedTempID>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.InboundIDMethodByRelatedTempID> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByRelatedTempID", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class, new TypeSelector<org.openapitools.client.model.InboundIDMethodByTemporaryCIID>() {
+                    @Override
+                    public Class<? extends org.openapitools.client.model.InboundIDMethodByTemporaryCIID> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("InboundIDMethodByTemporaryCIID", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
         ;
         GsonBuilder builder = fireBuilder.createGsonBuilder();
         return builder;
@@ -119,7 +188,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByAttribute.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByAttributeModifiers.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByByUnion.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByByUnionInnerInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByIntersect.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.openapitools.client.model.InboundIDMethodByRelatedTempID.CustomTypeAdapterFactory());

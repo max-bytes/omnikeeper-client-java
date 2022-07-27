@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.client.model.AbstractInboundIDMethod;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -48,11 +49,11 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByRelatedTempID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:22:59.102484Z[Etc/UTC]")
-public class InboundIDMethodByRelatedTempID {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
+public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+  protected String type;
 
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -67,6 +68,7 @@ public class InboundIDMethodByRelatedTempID {
   private String predicateID;
 
   public InboundIDMethodByRelatedTempID() {
+    this.type = this.getClass().getSimpleName();
   }
 
   
@@ -173,7 +175,8 @@ public class InboundIDMethodByRelatedTempID {
     return Objects.equals(this.type, inboundIDMethodByRelatedTempID.type) &&
         Objects.equals(this.tempID, inboundIDMethodByRelatedTempID.tempID) &&
         Objects.equals(this.outgoingRelation, inboundIDMethodByRelatedTempID.outgoingRelation) &&
-        Objects.equals(this.predicateID, inboundIDMethodByRelatedTempID.predicateID);
+        Objects.equals(this.predicateID, inboundIDMethodByRelatedTempID.predicateID) &&
+        super.equals(o);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -182,7 +185,7 @@ public class InboundIDMethodByRelatedTempID {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, tempID, outgoingRelation, predicateID);
+    return Objects.hash(type, tempID, outgoingRelation, predicateID, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -196,6 +199,7 @@ public class InboundIDMethodByRelatedTempID {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByRelatedTempID {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    tempID: ").append(toIndentedString(tempID)).append("\n");
     sb.append("    outgoingRelation: ").append(toIndentedString(outgoingRelation)).append("\n");
@@ -223,12 +227,10 @@ public class InboundIDMethodByRelatedTempID {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
-    openapiFields.add("tempID");
-    openapiFields.add("outgoingRelation");
-    openapiFields.add("predicateID");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
   }
 
  /**
@@ -253,14 +255,12 @@ public class InboundIDMethodByRelatedTempID {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InboundIDMethodByRelatedTempID` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      if ((jsonObj.get("tempID") != null && !jsonObj.get("tempID").isJsonNull()) && !jsonObj.get("tempID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tempID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tempID").toString()));
-      }
-      if ((jsonObj.get("predicateID") != null && !jsonObj.get("predicateID").isJsonNull()) && !jsonObj.get("predicateID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `predicateID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("predicateID").toString()));
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : InboundIDMethodByRelatedTempID.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
       }
   }
 

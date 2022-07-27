@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.client.model.AbstractInboundIDMethod;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -48,17 +49,18 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByTemporaryCIID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:22:59.102484Z[Etc/UTC]")
-public class InboundIDMethodByTemporaryCIID {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
+public class InboundIDMethodByTemporaryCIID extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+  protected String type;
 
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
   private String tempID;
 
   public InboundIDMethodByTemporaryCIID() {
+    this.type = this.getClass().getSimpleName();
   }
 
   
@@ -117,7 +119,8 @@ public class InboundIDMethodByTemporaryCIID {
     }
     InboundIDMethodByTemporaryCIID inboundIDMethodByTemporaryCIID = (InboundIDMethodByTemporaryCIID) o;
     return Objects.equals(this.type, inboundIDMethodByTemporaryCIID.type) &&
-        Objects.equals(this.tempID, inboundIDMethodByTemporaryCIID.tempID);
+        Objects.equals(this.tempID, inboundIDMethodByTemporaryCIID.tempID) &&
+        super.equals(o);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -126,7 +129,7 @@ public class InboundIDMethodByTemporaryCIID {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, tempID);
+    return Objects.hash(type, tempID, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -140,6 +143,7 @@ public class InboundIDMethodByTemporaryCIID {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByTemporaryCIID {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    tempID: ").append(toIndentedString(tempID)).append("\n");
     sb.append("}");
@@ -165,10 +169,10 @@ public class InboundIDMethodByTemporaryCIID {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
-    openapiFields.add("tempID");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
   }
 
  /**
@@ -193,11 +197,12 @@ public class InboundIDMethodByTemporaryCIID {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InboundIDMethodByTemporaryCIID` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      if ((jsonObj.get("tempID") != null && !jsonObj.get("tempID").isJsonNull()) && !jsonObj.get("tempID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tempID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tempID").toString()));
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : InboundIDMethodByTemporaryCIID.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
       }
   }
 

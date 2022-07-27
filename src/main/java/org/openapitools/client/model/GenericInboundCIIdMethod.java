@@ -23,18 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.openapitools.client.model.GenericInboundAttribute;
 import org.openapitools.client.model.InboundIDMethodByAttribute;
 import org.openapitools.client.model.InboundIDMethodByAttributeModifiers;
 import org.openapitools.client.model.InboundIDMethodByByUnion;
-import org.openapitools.client.model.InboundIDMethodByByUnionInnerInner;
 import org.openapitools.client.model.InboundIDMethodByData;
 import org.openapitools.client.model.InboundIDMethodByIntersect;
 import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
 import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import javax.ws.rs.core.GenericType;
 
@@ -69,7 +64,7 @@ import com.google.gson.JsonParseException;
 
 import org.openapitools.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:22:59.102484Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
 public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(GenericInboundCIIdMethod.class.getName());
 

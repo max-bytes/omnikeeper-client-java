@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.client.model.AbstractInboundIDMethod;
 import org.openapitools.client.model.GenericInboundAttribute;
 import org.openapitools.client.model.InboundIDMethodByAttributeModifiers;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,11 +51,11 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByAttribute
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:22:59.102484Z[Etc/UTC]")
-public class InboundIDMethodByAttribute {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
+public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+  protected String type;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE = "attribute";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTE)
@@ -65,6 +66,7 @@ public class InboundIDMethodByAttribute {
   private InboundIDMethodByAttributeModifiers modifiers;
 
   public InboundIDMethodByAttribute() {
+    this.type = this.getClass().getSimpleName();
   }
 
   
@@ -147,7 +149,8 @@ public class InboundIDMethodByAttribute {
     InboundIDMethodByAttribute inboundIDMethodByAttribute = (InboundIDMethodByAttribute) o;
     return Objects.equals(this.type, inboundIDMethodByAttribute.type) &&
         Objects.equals(this.attribute, inboundIDMethodByAttribute.attribute) &&
-        Objects.equals(this.modifiers, inboundIDMethodByAttribute.modifiers);
+        Objects.equals(this.modifiers, inboundIDMethodByAttribute.modifiers) &&
+        super.equals(o);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -156,7 +159,7 @@ public class InboundIDMethodByAttribute {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, attribute, modifiers);
+    return Objects.hash(type, attribute, modifiers, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -170,6 +173,7 @@ public class InboundIDMethodByAttribute {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByAttribute {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    attribute: ").append(toIndentedString(attribute)).append("\n");
     sb.append("    modifiers: ").append(toIndentedString(modifiers)).append("\n");
@@ -196,11 +200,10 @@ public class InboundIDMethodByAttribute {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
-    openapiFields.add("attribute");
-    openapiFields.add("modifiers");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
   }
 
  /**
@@ -225,16 +228,12 @@ public class InboundIDMethodByAttribute {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InboundIDMethodByAttribute` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      // validate the optional field `attribute`
-      if (jsonObj.get("attribute") != null && !jsonObj.get("attribute").isJsonNull()) {
-        GenericInboundAttribute.validateJsonObject(jsonObj.getAsJsonObject("attribute"));
-      }
-      // validate the optional field `modifiers`
-      if (jsonObj.get("modifiers") != null && !jsonObj.get("modifiers").isJsonNull()) {
-        InboundIDMethodByAttributeModifiers.validateJsonObject(jsonObj.getAsJsonObject("modifiers"));
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : InboundIDMethodByAttribute.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
       }
   }
 

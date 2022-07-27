@@ -1,13 +1,12 @@
 
 
-# GenericInboundCIIdMethod
+# AbstractInboundIDMethod
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**caseInsensitive** | **Boolean** |  |  [optional] |
 |**type** | **String** |  |  [readonly] |
 
 

@@ -25,7 +25,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.client.model.InboundIDMethodByByUnionInnerInner;
+import org.openapitools.client.model.AbstractInboundIDMethod;
+import org.openapitools.client.model.InboundIDMethodByAttribute;
+import org.openapitools.client.model.InboundIDMethodByAttributeModifiers;
+import org.openapitools.client.model.InboundIDMethodByByUnion;
+import org.openapitools.client.model.InboundIDMethodByData;
+import org.openapitools.client.model.InboundIDMethodByIntersect;
+import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
+import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
+import org.openapitools.client.model.OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,17 +59,18 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByByUnion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:22:59.102484Z[Etc/UTC]")
-public class InboundIDMethodByByUnion {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
+public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+  protected String type;
 
   public static final String SERIALIZED_NAME_INNER = "inner";
   @SerializedName(SERIALIZED_NAME_INNER)
-  private List<InboundIDMethodByByUnionInnerInner> inner = null;
+  private List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner = null;
 
   public InboundIDMethodByByUnion() {
+    this.type = this.getClass().getSimpleName();
   }
 
   
@@ -86,13 +95,13 @@ public class InboundIDMethodByByUnion {
 
 
 
-  public InboundIDMethodByByUnion inner(List<InboundIDMethodByByUnionInnerInner> inner) {
+  public InboundIDMethodByByUnion inner(List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner) {
     
     this.inner = inner;
     return this;
   }
 
-  public InboundIDMethodByByUnion addInnerItem(InboundIDMethodByByUnionInnerInner innerItem) {
+  public InboundIDMethodByByUnion addInnerItem(OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect innerItem) {
     if (this.inner == null) {
       this.inner = new ArrayList<>();
     }
@@ -107,12 +116,12 @@ public class InboundIDMethodByByUnion {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<InboundIDMethodByByUnionInnerInner> getInner() {
+  public List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> getInner() {
     return inner;
   }
 
 
-  public void setInner(List<InboundIDMethodByByUnionInnerInner> inner) {
+  public void setInner(List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner) {
     this.inner = inner;
   }
 
@@ -128,7 +137,8 @@ public class InboundIDMethodByByUnion {
     }
     InboundIDMethodByByUnion inboundIDMethodByByUnion = (InboundIDMethodByByUnion) o;
     return Objects.equals(this.type, inboundIDMethodByByUnion.type) &&
-        Objects.equals(this.inner, inboundIDMethodByByUnion.inner);
+        Objects.equals(this.inner, inboundIDMethodByByUnion.inner) &&
+        super.equals(o);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -137,7 +147,7 @@ public class InboundIDMethodByByUnion {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, inner);
+    return Objects.hash(type, inner, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -151,6 +161,7 @@ public class InboundIDMethodByByUnion {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByByUnion {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    inner: ").append(toIndentedString(inner)).append("\n");
     sb.append("}");
@@ -176,10 +187,10 @@ public class InboundIDMethodByByUnion {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
-    openapiFields.add("inner");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
   }
 
  /**
@@ -204,20 +215,12 @@ public class InboundIDMethodByByUnion {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InboundIDMethodByByUnion` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      JsonArray jsonArrayinner = jsonObj.getAsJsonArray("inner");
-      if (jsonArrayinner != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("inner").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `inner` to be an array in the JSON string but got `%s`", jsonObj.get("inner").toString()));
-        }
 
-        // validate the optional field `inner` (array)
-        for (int i = 0; i < jsonArrayinner.size(); i++) {
-          InboundIDMethodByByUnionInnerInner.validateJsonObject(jsonArrayinner.get(i).getAsJsonObject());
-        };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : InboundIDMethodByByUnion.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
       }
   }
 
