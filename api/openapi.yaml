@@ -1893,7 +1893,6 @@ components:
       properties:
         type:
           nullable: true
-          readOnly: true
           type: string
       required:
       - type
@@ -2658,10 +2657,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
-        type:
-          nullable: true
-          readOnly: true
-          type: string
         attribute:
           $ref: '#/components/schemas/GenericInboundAttribute'
         modifiers:
@@ -2678,10 +2673,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
-        type:
-          nullable: true
-          readOnly: true
-          type: string
         inner:
           items:
             oneOf:
@@ -2700,10 +2691,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
-        type:
-          nullable: true
-          readOnly: true
-          type: string
         attributes:
           items:
             type: string
@@ -2715,10 +2702,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
-        type:
-          nullable: true
-          readOnly: true
-          type: string
         inner:
           items:
             oneOf:
@@ -2737,10 +2720,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
-        type:
-          nullable: true
-          readOnly: true
-          type: string
         tempID:
           nullable: true
           type: string
@@ -2755,10 +2734,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
-        type:
-          nullable: true
-          readOnly: true
-          type: string
         tempID:
           nullable: true
           type: string

@@ -57,12 +57,8 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:30:41.938404Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T14:12:08.211782Z[Etc/UTC]")
 public class InboundIDMethodByData extends AbstractInboundIDMethod {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  protected String type;
-
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
   private List<String> attributes = null;
@@ -70,28 +66,6 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
   public InboundIDMethodByData() {
     this.type = this.getClass().getSimpleName();
   }
-
-  
-  public InboundIDMethodByData(
-     String type
-  ) {
-    this();
-    this.type = type;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getType() {
-    return type;
-  }
-
-
-
 
   public InboundIDMethodByData attributes(List<String> attributes) {
     
@@ -134,8 +108,7 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
       return false;
     }
     InboundIDMethodByData inboundIDMethodByData = (InboundIDMethodByData) o;
-    return Objects.equals(this.type, inboundIDMethodByData.type) &&
-        Objects.equals(this.attributes, inboundIDMethodByData.attributes) &&
+    return Objects.equals(this.attributes, inboundIDMethodByData.attributes) &&
         super.equals(o);
   }
 
@@ -145,7 +118,7 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, attributes, super.hashCode());
+    return Objects.hash(attributes, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -160,7 +133,6 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByData {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    attributes: ").append(toIndentedString(attributes)).append("\n");
     sb.append("}");
     return sb.toString();

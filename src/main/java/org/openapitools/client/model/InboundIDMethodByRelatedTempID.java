@@ -55,12 +55,8 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByRelatedTempID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:30:41.938404Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T14:12:08.211782Z[Etc/UTC]")
 public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  protected String type;
-
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
   private String tempID;
@@ -76,28 +72,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   public InboundIDMethodByRelatedTempID() {
     this.type = this.getClass().getSimpleName();
   }
-
-  
-  public InboundIDMethodByRelatedTempID(
-     String type
-  ) {
-    this();
-    this.type = type;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getType() {
-    return type;
-  }
-
-
-
 
   public InboundIDMethodByRelatedTempID tempID(String tempID) {
     
@@ -178,8 +152,7 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
       return false;
     }
     InboundIDMethodByRelatedTempID inboundIDMethodByRelatedTempID = (InboundIDMethodByRelatedTempID) o;
-    return Objects.equals(this.type, inboundIDMethodByRelatedTempID.type) &&
-        Objects.equals(this.tempID, inboundIDMethodByRelatedTempID.tempID) &&
+    return Objects.equals(this.tempID, inboundIDMethodByRelatedTempID.tempID) &&
         Objects.equals(this.outgoingRelation, inboundIDMethodByRelatedTempID.outgoingRelation) &&
         Objects.equals(this.predicateID, inboundIDMethodByRelatedTempID.predicateID) &&
         super.equals(o);
@@ -191,7 +164,7 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, tempID, outgoingRelation, predicateID, super.hashCode());
+    return Objects.hash(tempID, outgoingRelation, predicateID, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -206,7 +179,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByRelatedTempID {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    tempID: ").append(toIndentedString(tempID)).append("\n");
     sb.append("    outgoingRelation: ").append(toIndentedString(outgoingRelation)).append("\n");
     sb.append("    predicateID: ").append(toIndentedString(predicateID)).append("\n");

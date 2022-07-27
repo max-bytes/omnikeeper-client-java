@@ -32,7 +32,6 @@ import org.openapitools.client.model.InboundIDMethodByData;
 import org.openapitools.client.model.InboundIDMethodByIntersect;
 import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
 import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,12 +56,8 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByAttribute
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:30:41.938404Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T14:12:08.211782Z[Etc/UTC]")
 public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  protected String type;
-
   public static final String SERIALIZED_NAME_ATTRIBUTE = "attribute";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTE)
   private GenericInboundAttribute attribute;
@@ -74,28 +69,6 @@ public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
   public InboundIDMethodByAttribute() {
     this.type = this.getClass().getSimpleName();
   }
-
-  
-  public InboundIDMethodByAttribute(
-     String type
-  ) {
-    this();
-    this.type = type;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getType() {
-    return type;
-  }
-
-
-
 
   public InboundIDMethodByAttribute attribute(GenericInboundAttribute attribute) {
     
@@ -153,26 +126,14 @@ public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
       return false;
     }
     InboundIDMethodByAttribute inboundIDMethodByAttribute = (InboundIDMethodByAttribute) o;
-    return Objects.equals(this.type, inboundIDMethodByAttribute.type) &&
-        Objects.equals(this.attribute, inboundIDMethodByAttribute.attribute) &&
+    return Objects.equals(this.attribute, inboundIDMethodByAttribute.attribute) &&
         Objects.equals(this.modifiers, inboundIDMethodByAttribute.modifiers) &&
         super.equals(o);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
-    return Objects.hash(type, attribute, modifiers, super.hashCode());
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(attribute, modifiers, super.hashCode());
   }
 
   @Override
@@ -180,7 +141,6 @@ public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByAttribute {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    attribute: ").append(toIndentedString(attribute)).append("\n");
     sb.append("    modifiers: ").append(toIndentedString(modifiers)).append("\n");
     sb.append("}");

@@ -59,12 +59,8 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByByUnion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:30:41.938404Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T14:12:08.211782Z[Etc/UTC]")
 public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  protected String type;
-
   public static final String SERIALIZED_NAME_INNER = "inner";
   @SerializedName(SERIALIZED_NAME_INNER)
   private List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner = null;
@@ -72,28 +68,6 @@ public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
   public InboundIDMethodByByUnion() {
     this.type = this.getClass().getSimpleName();
   }
-
-  
-  public InboundIDMethodByByUnion(
-     String type
-  ) {
-    this();
-    this.type = type;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getType() {
-    return type;
-  }
-
-
-
 
   public InboundIDMethodByByUnion inner(List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner) {
     
@@ -136,8 +110,7 @@ public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
       return false;
     }
     InboundIDMethodByByUnion inboundIDMethodByByUnion = (InboundIDMethodByByUnion) o;
-    return Objects.equals(this.type, inboundIDMethodByByUnion.type) &&
-        Objects.equals(this.inner, inboundIDMethodByByUnion.inner) &&
+    return Objects.equals(this.inner, inboundIDMethodByByUnion.inner) &&
         super.equals(o);
   }
 
@@ -147,7 +120,7 @@ public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, inner, super.hashCode());
+    return Objects.hash(inner, super.hashCode());
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -162,7 +135,6 @@ public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
     StringBuilder sb = new StringBuilder();
     sb.append("class InboundIDMethodByByUnion {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    inner: ").append(toIndentedString(inner)).append("\n");
     sb.append("}");
     return sb.toString();
