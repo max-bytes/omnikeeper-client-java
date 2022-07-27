@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-21T11:24:27.761008Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T07:53:07.954815Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -73,7 +73,7 @@ public class GridViewConfiguration {
   @SerializedName(SERIALIZED_NAME_TRAIT)
   private String trait;
 
-  public GridViewConfiguration() { 
+  public GridViewConfiguration() {
   }
 
   public GridViewConfiguration showCIIDColumn(Boolean showCIIDColumn) {
@@ -303,11 +303,11 @@ public class GridViewConfiguration {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GridViewConfiguration` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("writeLayer") != null && !jsonObj.get("writeLayer").isJsonPrimitive()) {
+      if ((jsonObj.get("writeLayer") != null && !jsonObj.get("writeLayer").isJsonNull()) && !jsonObj.get("writeLayer").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `writeLayer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("writeLayer").toString()));
       }
       // ensure the json data is an array
-      if (jsonObj.get("readLayerset") != null && !jsonObj.get("readLayerset").isJsonArray()) {
+      if ((jsonObj.get("readLayerset") != null && !jsonObj.get("readLayerset").isJsonNull()) && !jsonObj.get("readLayerset").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `readLayerset` to be an array in the JSON string but got `%s`", jsonObj.get("readLayerset").toString()));
       }
       JsonArray jsonArraycolumns = jsonObj.getAsJsonArray("columns");
@@ -322,7 +322,7 @@ public class GridViewConfiguration {
           GridViewColumn.validateJsonObject(jsonArraycolumns.get(i).getAsJsonObject());
         };
       }
-      if (jsonObj.get("trait") != null && !jsonObj.get("trait").isJsonPrimitive()) {
+      if ((jsonObj.get("trait") != null && !jsonObj.get("trait").isJsonNull()) && !jsonObj.get("trait").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `trait` to be a primitive type in the JSON string but got `%s`", jsonObj.get("trait").toString()));
       }
   }

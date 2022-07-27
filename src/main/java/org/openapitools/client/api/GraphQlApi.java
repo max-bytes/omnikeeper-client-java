@@ -74,7 +74,7 @@ public class GraphQlApi {
     }
 
     /**
-     * Build call for debug
+     * Build call for graphQLDebug
      * @param graphQLQuery  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -85,7 +85,7 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call debugCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call graphQLDebugCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -119,7 +119,7 @@ public class GraphQlApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -131,10 +131,10 @@ public class GraphQlApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call debugValidateBeforeCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call graphQLDebugValidateBeforeCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = debugCall(graphQLQuery, _callback);
+        okhttp3.Call localVarCall = graphQLDebugCall(graphQLQuery, _callback);
         return localVarCall;
 
     }
@@ -150,8 +150,8 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void debug(GraphQLQuery graphQLQuery) throws ApiException {
-        debugWithHttpInfo(graphQLQuery);
+    public void graphQLDebug(GraphQLQuery graphQLQuery) throws ApiException {
+        graphQLDebugWithHttpInfo(graphQLQuery);
     }
 
     /**
@@ -166,8 +166,8 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> debugWithHttpInfo(GraphQLQuery graphQLQuery) throws ApiException {
-        okhttp3.Call localVarCall = debugValidateBeforeCall(graphQLQuery, null);
+    public ApiResponse<Void> graphQLDebugWithHttpInfo(GraphQLQuery graphQLQuery) throws ApiException {
+        okhttp3.Call localVarCall = graphQLDebugValidateBeforeCall(graphQLQuery, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -184,14 +184,151 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call debugAsync(GraphQLQuery graphQLQuery, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call graphQLDebugAsync(GraphQLQuery graphQLQuery, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = debugValidateBeforeCall(graphQLQuery, _callback);
+        okhttp3.Call localVarCall = graphQLDebugValidateBeforeCall(graphQLQuery, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for index
+     * Build call for graphQLGet
+     * @param operationName  (optional)
+     * @param query  (optional)
+     * @param variables  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call graphQLGetCall(String operationName, String query, Map<String, Object> variables, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/graphql";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (operationName != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("operationName", operationName));
+        }
+
+        if (query != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("query", query));
+        }
+
+        if (variables != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("variables", variables));
+        }
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call graphQLGetValidateBeforeCall(String operationName, String query, Map<String, Object> variables, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = graphQLGetCall(operationName, query, variables, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param operationName  (optional)
+     * @param query  (optional)
+     * @param variables  (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public void graphQLGet(String operationName, String query, Map<String, Object> variables) throws ApiException {
+        graphQLGetWithHttpInfo(operationName, query, variables);
+    }
+
+    /**
+     * 
+     * 
+     * @param operationName  (optional)
+     * @param query  (optional)
+     * @param variables  (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> graphQLGetWithHttpInfo(String operationName, String query, Map<String, Object> variables) throws ApiException {
+        okhttp3.Call localVarCall = graphQLGetValidateBeforeCall(operationName, query, variables, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param operationName  (optional)
+     * @param query  (optional)
+     * @param variables  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call graphQLGetAsync(String operationName, String query, Map<String, Object> variables, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = graphQLGetValidateBeforeCall(operationName, query, variables, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for graphQLIndex
      * @param graphQLQuery  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -202,7 +339,7 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call indexCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call graphQLIndexCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -236,7 +373,7 @@ public class GraphQlApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -248,10 +385,10 @@ public class GraphQlApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call indexValidateBeforeCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call graphQLIndexValidateBeforeCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = indexCall(graphQLQuery, _callback);
+        okhttp3.Call localVarCall = graphQLIndexCall(graphQLQuery, _callback);
         return localVarCall;
 
     }
@@ -267,8 +404,8 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void index(GraphQLQuery graphQLQuery) throws ApiException {
-        indexWithHttpInfo(graphQLQuery);
+    public void graphQLIndex(GraphQLQuery graphQLQuery) throws ApiException {
+        graphQLIndexWithHttpInfo(graphQLQuery);
     }
 
     /**
@@ -283,8 +420,8 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> indexWithHttpInfo(GraphQLQuery graphQLQuery) throws ApiException {
-        okhttp3.Call localVarCall = indexValidateBeforeCall(graphQLQuery, null);
+    public ApiResponse<Void> graphQLIndexWithHttpInfo(GraphQLQuery graphQLQuery) throws ApiException {
+        okhttp3.Call localVarCall = graphQLIndexValidateBeforeCall(graphQLQuery, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -301,9 +438,9 @@ public class GraphQlApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call indexAsync(GraphQLQuery graphQLQuery, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call graphQLIndexAsync(GraphQLQuery graphQLQuery, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = indexValidateBeforeCall(graphQLQuery, _callback);
+        okhttp3.Call localVarCall = graphQLIndexValidateBeforeCall(graphQLQuery, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

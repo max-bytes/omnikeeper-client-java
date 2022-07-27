@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * AddContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-21T11:24:27.761008Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T07:53:07.954815Z[Etc/UTC]")
 public class AddContextRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -67,7 +67,7 @@ public class AddContextRequest {
   @SerializedName(SERIALIZED_NAME_CONFIGURATION)
   private GridViewConfiguration _configuration;
 
-  public AddContextRequest() { 
+  public AddContextRequest() {
   }
 
   public AddContextRequest id(String id) {
@@ -255,17 +255,17 @@ public class AddContextRequest {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddContextRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
-      if (jsonObj.get("speakingName") != null && !jsonObj.get("speakingName").isJsonPrimitive()) {
+      if ((jsonObj.get("speakingName") != null && !jsonObj.get("speakingName").isJsonNull()) && !jsonObj.get("speakingName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `speakingName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("speakingName").toString()));
       }
-      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       // validate the optional field `configuration`
-      if (jsonObj.getAsJsonObject("configuration") != null) {
+      if (jsonObj.get("configuration") != null && !jsonObj.get("configuration").isJsonNull()) {
         GridViewConfiguration.validateJsonObject(jsonObj.getAsJsonObject("configuration"));
       }
   }

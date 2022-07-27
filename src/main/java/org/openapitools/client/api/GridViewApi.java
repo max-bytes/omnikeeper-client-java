@@ -77,7 +77,7 @@ public class GridViewApi {
     }
 
     /**
-     * Build call for addContext
+     * Build call for gridViewAddContext
      * @param version  (required)
      * @param addContextRequest  (optional)
      * @param _callback Callback for upload/download progress
@@ -90,7 +90,7 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If creating context fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addContextCall(String version, AddContextRequest addContextRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewAddContextCall(String version, AddContextRequest addContextRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -117,7 +117,7 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -125,7 +125,7 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -137,15 +137,15 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addContextValidateBeforeCall(String version, AddContextRequest addContextRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewAddContextValidateBeforeCall(String version, AddContextRequest addContextRequest, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling addContext(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewAddContext(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addContextCall(version, addContextRequest, _callback);
+        okhttp3.Call localVarCall = gridViewAddContextCall(version, addContextRequest, _callback);
         return localVarCall;
 
     }
@@ -163,8 +163,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If creating context fails </td><td>  -  </td></tr>
      </table>
      */
-    public void addContext(String version, AddContextRequest addContextRequest) throws ApiException {
-        addContextWithHttpInfo(version, addContextRequest);
+    public void gridViewAddContext(String version, AddContextRequest addContextRequest) throws ApiException {
+        gridViewAddContextWithHttpInfo(version, addContextRequest);
     }
 
     /**
@@ -181,8 +181,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If creating context fails </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> addContextWithHttpInfo(String version, AddContextRequest addContextRequest) throws ApiException {
-        okhttp3.Call localVarCall = addContextValidateBeforeCall(version, addContextRequest, null);
+    public ApiResponse<Void> gridViewAddContextWithHttpInfo(String version, AddContextRequest addContextRequest) throws ApiException {
+        okhttp3.Call localVarCall = gridViewAddContextValidateBeforeCall(version, addContextRequest, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -201,14 +201,14 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If creating context fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addContextAsync(String version, AddContextRequest addContextRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewAddContextAsync(String version, AddContextRequest addContextRequest, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addContextValidateBeforeCall(version, addContextRequest, _callback);
+        okhttp3.Call localVarCall = gridViewAddContextValidateBeforeCall(version, addContextRequest, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for changeData
+     * Build call for gridViewChangeData
      * @param context  (required)
      * @param version  (required)
      * @param changeDataRequest  (optional)
@@ -223,7 +223,7 @@ public class GridViewApi {
         <tr><td> 404 </td><td> If saving changes fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call changeDataCall(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewChangeDataCall(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -251,7 +251,7 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -259,7 +259,7 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -271,20 +271,20 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call changeDataValidateBeforeCall(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewChangeDataValidateBeforeCall(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'context' is set
         if (context == null) {
-            throw new ApiException("Missing the required parameter 'context' when calling changeData(Async)");
+            throw new ApiException("Missing the required parameter 'context' when calling gridViewChangeData(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling changeData(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewChangeData(Async)");
         }
         
 
-        okhttp3.Call localVarCall = changeDataCall(context, version, changeDataRequest, _callback);
+        okhttp3.Call localVarCall = gridViewChangeDataCall(context, version, changeDataRequest, _callback);
         return localVarCall;
 
     }
@@ -304,8 +304,8 @@ public class GridViewApi {
         <tr><td> 404 </td><td> If saving changes fails </td><td>  -  </td></tr>
      </table>
      */
-    public void changeData(String context, String version, ChangeDataRequest changeDataRequest) throws ApiException {
-        changeDataWithHttpInfo(context, version, changeDataRequest);
+    public void gridViewChangeData(String context, String version, ChangeDataRequest changeDataRequest) throws ApiException {
+        gridViewChangeDataWithHttpInfo(context, version, changeDataRequest);
     }
 
     /**
@@ -324,8 +324,8 @@ public class GridViewApi {
         <tr><td> 404 </td><td> If saving changes fails </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> changeDataWithHttpInfo(String context, String version, ChangeDataRequest changeDataRequest) throws ApiException {
-        okhttp3.Call localVarCall = changeDataValidateBeforeCall(context, version, changeDataRequest, null);
+    public ApiResponse<Void> gridViewChangeDataWithHttpInfo(String context, String version, ChangeDataRequest changeDataRequest) throws ApiException {
+        okhttp3.Call localVarCall = gridViewChangeDataValidateBeforeCall(context, version, changeDataRequest, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -346,14 +346,14 @@ public class GridViewApi {
         <tr><td> 404 </td><td> If saving changes fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call changeDataAsync(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewChangeDataAsync(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = changeDataValidateBeforeCall(context, version, changeDataRequest, _callback);
+        okhttp3.Call localVarCall = gridViewChangeDataValidateBeforeCall(context, version, changeDataRequest, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for deleteContext
+     * Build call for gridViewDeleteContext
      * @param name  (required)
      * @param version  (required)
      * @param _callback Callback for upload/download progress
@@ -366,7 +366,7 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewDeleteContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -394,7 +394,7 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -414,20 +414,20 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewDeleteContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'name' is set
         if (name == null) {
-            throw new ApiException("Missing the required parameter 'name' when calling deleteContext(Async)");
+            throw new ApiException("Missing the required parameter 'name' when calling gridViewDeleteContext(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling deleteContext(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewDeleteContext(Async)");
         }
         
 
-        okhttp3.Call localVarCall = deleteContextCall(name, version, _callback);
+        okhttp3.Call localVarCall = gridViewDeleteContextCall(name, version, _callback);
         return localVarCall;
 
     }
@@ -445,8 +445,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public void deleteContext(String name, String version) throws ApiException {
-        deleteContextWithHttpInfo(name, version);
+    public void gridViewDeleteContext(String name, String version) throws ApiException {
+        gridViewDeleteContextWithHttpInfo(name, version);
     }
 
     /**
@@ -463,8 +463,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> deleteContextWithHttpInfo(String name, String version) throws ApiException {
-        okhttp3.Call localVarCall = deleteContextValidateBeforeCall(name, version, null);
+    public ApiResponse<Void> gridViewDeleteContextWithHttpInfo(String name, String version) throws ApiException {
+        okhttp3.Call localVarCall = gridViewDeleteContextValidateBeforeCall(name, version, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -483,14 +483,14 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteContextAsync(String name, String version, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewDeleteContextAsync(String name, String version, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = deleteContextValidateBeforeCall(name, version, _callback);
+        okhttp3.Call localVarCall = gridViewDeleteContextValidateBeforeCall(name, version, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for editContext
+     * Build call for gridViewEditContext
      * @param name  (required)
      * @param version  (required)
      * @param editContextRequest  (optional)
@@ -504,7 +504,7 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call editContextCall(String name, String version, EditContextRequest editContextRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewEditContextCall(String name, String version, EditContextRequest editContextRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -532,7 +532,7 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -540,7 +540,7 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -552,20 +552,20 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call editContextValidateBeforeCall(String name, String version, EditContextRequest editContextRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewEditContextValidateBeforeCall(String name, String version, EditContextRequest editContextRequest, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'name' is set
         if (name == null) {
-            throw new ApiException("Missing the required parameter 'name' when calling editContext(Async)");
+            throw new ApiException("Missing the required parameter 'name' when calling gridViewEditContext(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling editContext(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewEditContext(Async)");
         }
         
 
-        okhttp3.Call localVarCall = editContextCall(name, version, editContextRequest, _callback);
+        okhttp3.Call localVarCall = gridViewEditContextCall(name, version, editContextRequest, _callback);
         return localVarCall;
 
     }
@@ -584,8 +584,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public void editContext(String name, String version, EditContextRequest editContextRequest) throws ApiException {
-        editContextWithHttpInfo(name, version, editContextRequest);
+    public void gridViewEditContext(String name, String version, EditContextRequest editContextRequest) throws ApiException {
+        gridViewEditContextWithHttpInfo(name, version, editContextRequest);
     }
 
     /**
@@ -603,8 +603,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> editContextWithHttpInfo(String name, String version, EditContextRequest editContextRequest) throws ApiException {
-        okhttp3.Call localVarCall = editContextValidateBeforeCall(name, version, editContextRequest, null);
+    public ApiResponse<Void> gridViewEditContextWithHttpInfo(String name, String version, EditContextRequest editContextRequest) throws ApiException {
+        okhttp3.Call localVarCall = gridViewEditContextValidateBeforeCall(name, version, editContextRequest, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -624,14 +624,14 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If editing the context fails </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call editContextAsync(String name, String version, EditContextRequest editContextRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewEditContextAsync(String name, String version, EditContextRequest editContextRequest, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = editContextValidateBeforeCall(name, version, editContextRequest, _callback);
+        okhttp3.Call localVarCall = gridViewEditContextValidateBeforeCall(name, version, editContextRequest, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getData
+     * Build call for gridViewGetData
      * @param context  (required)
      * @param version  (required)
      * @param _callback Callback for upload/download progress
@@ -644,7 +644,7 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If trait is not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataCall(String context, String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewGetDataCall(String context, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -692,20 +692,20 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDataValidateBeforeCall(String context, String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewGetDataValidateBeforeCall(String context, String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'context' is set
         if (context == null) {
-            throw new ApiException("Missing the required parameter 'context' when calling getData(Async)");
+            throw new ApiException("Missing the required parameter 'context' when calling gridViewGetData(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getData(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewGetData(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getDataCall(context, version, _callback);
+        okhttp3.Call localVarCall = gridViewGetDataCall(context, version, _callback);
         return localVarCall;
 
     }
@@ -723,8 +723,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If trait is not found </td><td>  -  </td></tr>
      </table>
      */
-    public void getData(String context, String version) throws ApiException {
-        getDataWithHttpInfo(context, version);
+    public void gridViewGetData(String context, String version) throws ApiException {
+        gridViewGetDataWithHttpInfo(context, version);
     }
 
     /**
@@ -741,8 +741,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If trait is not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getDataWithHttpInfo(String context, String version) throws ApiException {
-        okhttp3.Call localVarCall = getDataValidateBeforeCall(context, version, null);
+    public ApiResponse<Void> gridViewGetDataWithHttpInfo(String context, String version) throws ApiException {
+        okhttp3.Call localVarCall = gridViewGetDataValidateBeforeCall(context, version, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -761,14 +761,14 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If trait is not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataAsync(String context, String version, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewGetDataAsync(String context, String version, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDataValidateBeforeCall(context, version, _callback);
+        okhttp3.Call localVarCall = gridViewGetDataValidateBeforeCall(context, version, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getGridViewContext
+     * Build call for gridViewGetGridViewContext
      * @param name  (required)
      * @param version  (required)
      * @param _callback Callback for upload/download progress
@@ -781,7 +781,7 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGridViewContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewGetGridViewContextCall(String name, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -829,20 +829,20 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGridViewContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewGetGridViewContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'name' is set
         if (name == null) {
-            throw new ApiException("Missing the required parameter 'name' when calling getGridViewContext(Async)");
+            throw new ApiException("Missing the required parameter 'name' when calling gridViewGetGridViewContext(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getGridViewContext(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewGetGridViewContext(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getGridViewContextCall(name, version, _callback);
+        okhttp3.Call localVarCall = gridViewGetGridViewContextCall(name, version, _callback);
         return localVarCall;
 
     }
@@ -860,8 +860,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
      </table>
      */
-    public void getGridViewContext(String name, String version) throws ApiException {
-        getGridViewContextWithHttpInfo(name, version);
+    public void gridViewGetGridViewContext(String name, String version) throws ApiException {
+        gridViewGetGridViewContextWithHttpInfo(name, version);
     }
 
     /**
@@ -878,8 +878,8 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getGridViewContextWithHttpInfo(String name, String version) throws ApiException {
-        okhttp3.Call localVarCall = getGridViewContextValidateBeforeCall(name, version, null);
+    public ApiResponse<Void> gridViewGetGridViewContextWithHttpInfo(String name, String version) throws ApiException {
+        okhttp3.Call localVarCall = gridViewGetGridViewContextValidateBeforeCall(name, version, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -898,14 +898,14 @@ public class GridViewApi {
         <tr><td> 400 </td><td> If the name was not found or any other error occurred </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGridViewContextAsync(String name, String version, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewGetGridViewContextAsync(String name, String version, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGridViewContextValidateBeforeCall(name, version, _callback);
+        okhttp3.Call localVarCall = gridViewGetGridViewContextValidateBeforeCall(name, version, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getGridViewContexts
+     * Build call for gridViewGetGridViewContexts
      * @param version  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -916,7 +916,7 @@ public class GridViewApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGridViewContextsCall(String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewGetGridViewContextsCall(String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -963,15 +963,15 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGridViewContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewGetGridViewContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getGridViewContexts(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewGetGridViewContexts(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getGridViewContextsCall(version, _callback);
+        okhttp3.Call localVarCall = gridViewGetGridViewContextsCall(version, _callback);
         return localVarCall;
 
     }
@@ -987,8 +987,8 @@ public class GridViewApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void getGridViewContexts(String version) throws ApiException {
-        getGridViewContextsWithHttpInfo(version);
+    public void gridViewGetGridViewContexts(String version) throws ApiException {
+        gridViewGetGridViewContextsWithHttpInfo(version);
     }
 
     /**
@@ -1003,8 +1003,8 @@ public class GridViewApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getGridViewContextsWithHttpInfo(String version) throws ApiException {
-        okhttp3.Call localVarCall = getGridViewContextsValidateBeforeCall(version, null);
+    public ApiResponse<Void> gridViewGetGridViewContextsWithHttpInfo(String version) throws ApiException {
+        okhttp3.Call localVarCall = gridViewGetGridViewContextsValidateBeforeCall(version, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -1021,14 +1021,14 @@ public class GridViewApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGridViewContextsAsync(String version, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewGetGridViewContextsAsync(String version, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGridViewContextsValidateBeforeCall(version, _callback);
+        okhttp3.Call localVarCall = gridViewGetGridViewContextsValidateBeforeCall(version, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getSchema
+     * Build call for gridViewGetSchema
      * @param context  (required)
      * @param version  (required)
      * @param _callback Callback for upload/download progress
@@ -1040,7 +1040,7 @@ public class GridViewApi {
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSchemaCall(String context, String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call gridViewGetSchemaCall(String context, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1088,20 +1088,20 @@ public class GridViewApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSchemaValidateBeforeCall(String context, String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call gridViewGetSchemaValidateBeforeCall(String context, String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'context' is set
         if (context == null) {
-            throw new ApiException("Missing the required parameter 'context' when calling getSchema(Async)");
+            throw new ApiException("Missing the required parameter 'context' when calling gridViewGetSchema(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getSchema(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling gridViewGetSchema(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getSchemaCall(context, version, _callback);
+        okhttp3.Call localVarCall = gridViewGetSchemaCall(context, version, _callback);
         return localVarCall;
 
     }
@@ -1118,8 +1118,8 @@ public class GridViewApi {
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public void getSchema(String context, String version) throws ApiException {
-        getSchemaWithHttpInfo(context, version);
+    public void gridViewGetSchema(String context, String version) throws ApiException {
+        gridViewGetSchemaWithHttpInfo(context, version);
     }
 
     /**
@@ -1135,8 +1135,8 @@ public class GridViewApi {
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getSchemaWithHttpInfo(String context, String version) throws ApiException {
-        okhttp3.Call localVarCall = getSchemaValidateBeforeCall(context, version, null);
+    public ApiResponse<Void> gridViewGetSchemaWithHttpInfo(String context, String version) throws ApiException {
+        okhttp3.Call localVarCall = gridViewGetSchemaValidateBeforeCall(context, version, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -1154,9 +1154,9 @@ public class GridViewApi {
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSchemaAsync(String context, String version, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call gridViewGetSchemaAsync(String context, String version, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getSchemaValidateBeforeCall(context, version, _callback);
+        okhttp3.Call localVarCall = gridViewGetSchemaValidateBeforeCall(context, version, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

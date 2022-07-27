@@ -74,7 +74,7 @@ public class AnsibleInventoryScanIngestApi {
     }
 
     /**
-     * Build call for ingestAnsibleInventoryScan
+     * Build call for ansibleInventoryScanIngestIngestAnsibleInventoryScan
      * @param writeLayerID  (required)
      * @param searchLayerIDs  (required)
      * @param version  (required)
@@ -88,7 +88,7 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestAnsibleInventoryScanCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ansibleInventoryScanIngestIngestAnsibleInventoryScanCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -131,7 +131,7 @@ public class AnsibleInventoryScanIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -143,30 +143,30 @@ public class AnsibleInventoryScanIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ingestAnsibleInventoryScanValidateBeforeCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ansibleInventoryScanIngestIngestAnsibleInventoryScanValidateBeforeCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'writeLayerID' is set
         if (writeLayerID == null) {
-            throw new ApiException("Missing the required parameter 'writeLayerID' when calling ingestAnsibleInventoryScan(Async)");
+            throw new ApiException("Missing the required parameter 'writeLayerID' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
         
         // verify the required parameter 'searchLayerIDs' is set
         if (searchLayerIDs == null) {
-            throw new ApiException("Missing the required parameter 'searchLayerIDs' when calling ingestAnsibleInventoryScan(Async)");
+            throw new ApiException("Missing the required parameter 'searchLayerIDs' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling ingestAnsibleInventoryScan(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
         
         // verify the required parameter 'ansibleInventoryScanDTO' is set
         if (ansibleInventoryScanDTO == null) {
-            throw new ApiException("Missing the required parameter 'ansibleInventoryScanDTO' when calling ingestAnsibleInventoryScan(Async)");
+            throw new ApiException("Missing the required parameter 'ansibleInventoryScanDTO' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
         
 
-        okhttp3.Call localVarCall = ingestAnsibleInventoryScanCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
+        okhttp3.Call localVarCall = ansibleInventoryScanIngestIngestAnsibleInventoryScanCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
         return localVarCall;
 
     }
@@ -185,8 +185,8 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void ingestAnsibleInventoryScan(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
-        ingestAnsibleInventoryScanWithHttpInfo(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO);
+    public void ansibleInventoryScanIngestIngestAnsibleInventoryScan(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
+        ansibleInventoryScanIngestIngestAnsibleInventoryScanWithHttpInfo(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO);
     }
 
     /**
@@ -204,8 +204,8 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> ingestAnsibleInventoryScanWithHttpInfo(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
-        okhttp3.Call localVarCall = ingestAnsibleInventoryScanValidateBeforeCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, null);
+    public ApiResponse<Void> ansibleInventoryScanIngestIngestAnsibleInventoryScanWithHttpInfo(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO) throws ApiException {
+        okhttp3.Call localVarCall = ansibleInventoryScanIngestIngestAnsibleInventoryScanValidateBeforeCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -225,9 +225,9 @@ public class AnsibleInventoryScanIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestAnsibleInventoryScanAsync(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call ansibleInventoryScanIngestIngestAnsibleInventoryScanAsync(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ingestAnsibleInventoryScanValidateBeforeCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
+        okhttp3.Call localVarCall = ansibleInventoryScanIngestIngestAnsibleInventoryScanValidateBeforeCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

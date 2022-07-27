@@ -17,5 +17,13 @@
 
 * `IMAGE` (value: `"Image"`)
 
+* `MASK` (value: `"Mask"`)
+
+* `DOUBLE` (value: `"Double"`)
+
+* `BOOLEAN` (value: `"Boolean"`)
+
+* `DATETIMEWITHOFFSET` (value: `"DateTimeWithOffset"`)
+
 
 

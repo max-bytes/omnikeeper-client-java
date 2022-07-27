@@ -49,11 +49,11 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataCell
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-21T11:24:27.761008Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T07:53:07.954815Z[Etc/UTC]")
 public class ChangeDataCell {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -63,29 +63,29 @@ public class ChangeDataCell {
   @SerializedName(SERIALIZED_NAME_CHANGEABLE)
   private Boolean changeable;
 
-  public ChangeDataCell() { 
+  public ChangeDataCell() {
   }
 
-  public ChangeDataCell name(String name) {
+  public ChangeDataCell id(String id) {
     
-    this.name = name;
+    this.id = id;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get id
+   * @return id
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getName() {
-    return name;
+  public String getId() {
+    return id;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -145,7 +145,7 @@ public class ChangeDataCell {
       return false;
     }
     ChangeDataCell changeDataCell = (ChangeDataCell) o;
-    return Objects.equals(this.name, changeDataCell.name) &&
+    return Objects.equals(this.id, changeDataCell.id) &&
         Objects.equals(this.value, changeDataCell.value) &&
         Objects.equals(this.changeable, changeDataCell.changeable);
   }
@@ -156,7 +156,7 @@ public class ChangeDataCell {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, value, changeable);
+    return Objects.hash(id, value, changeable);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -170,7 +170,7 @@ public class ChangeDataCell {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChangeDataCell {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    changeable: ").append(toIndentedString(changeable)).append("\n");
     sb.append("}");
@@ -195,7 +195,7 @@ public class ChangeDataCell {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("name");
+    openapiFields.add("id");
     openapiFields.add("value");
     openapiFields.add("changeable");
 
@@ -225,11 +225,11 @@ public class ChangeDataCell {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ChangeDataCell` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       // validate the optional field `value`
-      if (jsonObj.getAsJsonObject("value") != null) {
+      if (jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) {
         AttributeValueDTO.validateJsonObject(jsonObj.getAsJsonObject("value"));
       }
   }

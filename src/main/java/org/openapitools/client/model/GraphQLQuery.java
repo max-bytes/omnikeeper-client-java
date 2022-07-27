@@ -23,6 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -48,15 +50,11 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-21T11:24:27.761008Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T07:53:07.954815Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
   private String operationName;
-
-  public static final String SERIALIZED_NAME_NAMED_QUERY = "namedQuery";
-  @SerializedName(SERIALIZED_NAME_NAMED_QUERY)
-  private String namedQuery;
 
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
@@ -64,9 +62,9 @@ public class GraphQLQuery {
 
   public static final String SERIALIZED_NAME_VARIABLES = "variables";
   @SerializedName(SERIALIZED_NAME_VARIABLES)
-  private Object variables = null;
+  private Map<String, Object> variables = null;
 
-  public GraphQLQuery() { 
+  public GraphQLQuery() {
   }
 
   public GraphQLQuery operationName(String operationName) {
@@ -89,29 +87,6 @@ public class GraphQLQuery {
 
   public void setOperationName(String operationName) {
     this.operationName = operationName;
-  }
-
-
-  public GraphQLQuery namedQuery(String namedQuery) {
-    
-    this.namedQuery = namedQuery;
-    return this;
-  }
-
-   /**
-   * Get namedQuery
-   * @return namedQuery
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getNamedQuery() {
-    return namedQuery;
-  }
-
-
-  public void setNamedQuery(String namedQuery) {
-    this.namedQuery = namedQuery;
   }
 
 
@@ -138,9 +113,17 @@ public class GraphQLQuery {
   }
 
 
-  public GraphQLQuery variables(Object variables) {
+  public GraphQLQuery variables(Map<String, Object> variables) {
     
     this.variables = variables;
+    return this;
+  }
+
+  public GraphQLQuery putVariablesItem(String key, Object variablesItem) {
+    if (this.variables == null) {
+      this.variables = new HashMap<>();
+    }
+    this.variables.put(key, variablesItem);
     return this;
   }
 
@@ -151,12 +134,12 @@ public class GraphQLQuery {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getVariables() {
+  public Map<String, Object> getVariables() {
     return variables;
   }
 
 
-  public void setVariables(Object variables) {
+  public void setVariables(Map<String, Object> variables) {
     this.variables = variables;
   }
 
@@ -172,7 +155,6 @@ public class GraphQLQuery {
     }
     GraphQLQuery graphQLQuery = (GraphQLQuery) o;
     return Objects.equals(this.operationName, graphQLQuery.operationName) &&
-        Objects.equals(this.namedQuery, graphQLQuery.namedQuery) &&
         Objects.equals(this.query, graphQLQuery.query) &&
         Objects.equals(this.variables, graphQLQuery.variables);
   }
@@ -183,7 +165,7 @@ public class GraphQLQuery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(operationName, namedQuery, query, variables);
+    return Objects.hash(operationName, query, variables);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -198,7 +180,6 @@ public class GraphQLQuery {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphQLQuery {\n");
     sb.append("    operationName: ").append(toIndentedString(operationName)).append("\n");
-    sb.append("    namedQuery: ").append(toIndentedString(namedQuery)).append("\n");
     sb.append("    query: ").append(toIndentedString(query)).append("\n");
     sb.append("    variables: ").append(toIndentedString(variables)).append("\n");
     sb.append("}");
@@ -224,7 +205,6 @@ public class GraphQLQuery {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("operationName");
-    openapiFields.add("namedQuery");
     openapiFields.add("query");
     openapiFields.add("variables");
 
@@ -254,13 +234,10 @@ public class GraphQLQuery {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GraphQLQuery` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("operationName") != null && !jsonObj.get("operationName").isJsonPrimitive()) {
+      if ((jsonObj.get("operationName") != null && !jsonObj.get("operationName").isJsonNull()) && !jsonObj.get("operationName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `operationName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operationName").toString()));
       }
-      if (jsonObj.get("namedQuery") != null && !jsonObj.get("namedQuery").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `namedQuery` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namedQuery").toString()));
-      }
-      if (jsonObj.get("query") != null && !jsonObj.get("query").isJsonPrimitive()) {
+      if ((jsonObj.get("query") != null && !jsonObj.get("query").isJsonNull()) && !jsonObj.get("query").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `query` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query").toString()));
       }
   }

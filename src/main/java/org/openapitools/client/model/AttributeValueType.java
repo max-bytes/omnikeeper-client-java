@@ -39,7 +39,15 @@ public enum AttributeValueType {
   
   YAML("YAML"),
   
-  IMAGE("Image");
+  IMAGE("Image"),
+  
+  MASK("Mask"),
+  
+  DOUBLE("Double"),
+  
+  BOOLEAN("Boolean"),
+  
+  DATETIMEWITHOFFSET("DateTimeWithOffset");
 
   private String value;
 

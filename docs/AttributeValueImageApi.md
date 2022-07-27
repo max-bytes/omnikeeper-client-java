@@ -1,16 +1,16 @@
 # AttributeValueImageApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://localhost:44378*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**get**](AttributeValueImageApi.md#get) | **GET** /api/v{version}/AttributeValueImage |  |
-| [**post**](AttributeValueImageApi.md#post) | **POST** /api/v{version}/AttributeValueImage |  |
+| [**attributeValueImageGet**](AttributeValueImageApi.md#attributeValueImageGet) | **GET** /api/v{version}/AttributeValueImage |  |
+| [**attributeValueImagePost**](AttributeValueImageApi.md#attributeValueImagePost) | **POST** /api/v{version}/AttributeValueImage |  |
 
 
-<a name="get"></a>
-# **get**
-> get(ciid, attributeName, layerIDs, version, index, atTime)
+<a name="attributeValueImageGet"></a>
+# **attributeValueImageGet**
+> attributeValueImageGet(ciid, attributeName, layerIDs, version, index, atTime)
 
 
 
@@ -27,7 +27,7 @@ import org.openapitools.client.api.AttributeValueImageApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -45,9 +45,9 @@ public class Example {
     Integer index = 0; // Integer | 
     OffsetDateTime atTime = OffsetDateTime.now(); // OffsetDateTime | 
     try {
-      apiInstance.get(ciid, attributeName, layerIDs, version, index, atTime);
+      apiInstance.attributeValueImageGet(ciid, attributeName, layerIDs, version, index, atTime);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AttributeValueImageApi#get");
+      System.err.println("Exception when calling AttributeValueImageApi#attributeValueImageGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -86,9 +86,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="post"></a>
-# **post**
-> post(ciid, attributeName, layerID, version, files, forceArray)
+<a name="attributeValueImagePost"></a>
+# **attributeValueImagePost**
+> attributeValueImagePost(ciid, attributeName, layerID, version, files, forceArray)
 
 
 
@@ -105,7 +105,7 @@ import org.openapitools.client.api.AttributeValueImageApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -123,9 +123,9 @@ public class Example {
     List<File> files = Arrays.asList(); // List<File> | 
     Boolean forceArray = false; // Boolean | 
     try {
-      apiInstance.post(ciid, attributeName, layerID, version, files, forceArray);
+      apiInstance.attributeValueImagePost(ciid, attributeName, layerID, version, files, forceArray);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AttributeValueImageApi#post");
+      System.err.println("Exception when calling AttributeValueImageApi#attributeValueImagePost");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

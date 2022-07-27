@@ -3,43 +3,11 @@ info:
   title: Landscape omnikeeper REST API
   version: v1
 servers:
-- url: /
+- url: https://localhost:44378
 paths:
-  /api/v{version}/Ingest/AD-XML:
-    post:
-      operationId: IngestXML
-      parameters:
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      requestBody:
-        content:
-          multipart/form-data:
-            encoding:
-              writeLayerID:
-                style: form
-              searchLayerIDs:
-                style: form
-              files:
-                style: form
-            schema:
-              $ref: '#/components/schemas/IngestXML_request'
-      responses:
-        "200":
-          description: Success
-      security:
-      - oauth2: []
-      tags:
-      - ActiveDirectoryXMLIngest
-      x-content-type: multipart/form-data
-      x-accepts: application/json
   /api/v{version}/Ingest/AnsibleInventoryScan:
     post:
-      operationId: IngestAnsibleInventoryScan
+      operationId: AnsibleInventoryScanIngest_IngestAnsibleInventoryScan
       parameters:
       - explode: true
         in: query
@@ -66,6 +34,9 @@ paths:
         style: simple
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnsibleInventoryScanDTO'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/AnsibleInventoryScanDTO'
@@ -99,16 +70,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/AnsibleInventoryScanDTO'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AnsibleInventoryScanDTO'
           application/xml:
             schema:
               $ref: '#/components/schemas/AnsibleInventoryScanDTO'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/AnsibleInventoryScanDTO'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/AnsibleInventoryScanDTO'
           text/json:
@@ -125,590 +90,11 @@ paths:
       - oauth2: []
       tags:
       - AnsibleInventoryScanIngest
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
-      x-accepts: application/json
-  /api/v{version}/Attribute/getMergedAttributesWithName:
-    get:
-      operationId: GetMergedAttributesWithName
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: name
-        required: true
-        schema:
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Attribute
-      x-accepts: application/json
-  /api/v{version}/Attribute/getMergedAttributes:
-    get:
-      operationId: GetMergedAttributes
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: ciids
-        required: true
-        schema:
-          items:
-            format: uuid
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Attribute
-      x-accepts: application/json
-  /api/v{version}/Attribute/getMergedAttribute:
-    get:
-      operationId: GetMergedAttribute
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: ciid
-        required: true
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: name
-        required: true
-        schema:
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=minimal:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=full:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.metadata=none:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/CIAttributeDTO'
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Attribute
-      x-accepts: application/json
-  /api/v{version}/Attribute/findMergedAttributesByName:
-    get:
-      operationId: FindMergedAttributesByName
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: regex
-        required: true
-        schema:
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: ciids
-        required: false
-        schema:
-          items:
-            format: uuid
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIAttributeDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Attribute
-      x-accepts: application/json
-  /api/v{version}/Attribute/bulkReplaceAttributesInLayer:
-    post:
-      operationId: BulkReplaceAttributesInLayer
-      parameters:
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      requestBody:
-        content:
-          application/json;odata.metadata=minimal;odata.streaming=true:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=minimal;odata.streaming=false:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=minimal:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=full;odata.streaming=true:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=full;odata.streaming=false:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=full:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=none;odata.streaming=true:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=none;odata.streaming=false:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.metadata=none:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.streaming=true:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json;odata.streaming=false:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/json-patch+json:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          text/json:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-          application/*+json:
-            schema:
-              $ref: '#/components/schemas/BulkCIAttributeLayerScopeDTO'
-        description: ""
-        required: true
-      responses:
-        "200":
-          description: Success
-      security:
-      - oauth2: []
-      summary: bulk replace all attributes in specified layer
-      tags:
-      - Attribute
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
       x-accepts: application/json
   /api/v{version}/AttributeValueImage:
     get:
-      operationId: Get
+      operationId: AttributeValueImage_Get
       parameters:
       - explode: true
         in: query
@@ -767,7 +153,7 @@ paths:
       - AttributeValueImage
       x-accepts: application/json
     post:
-      operationId: Post
+      operationId: AttributeValueImage_Post
       parameters:
       - explode: true
         in: query
@@ -813,7 +199,7 @@ paths:
               files:
                 style: form
             schema:
-              $ref: '#/components/schemas/Post_request'
+              $ref: '#/components/schemas/AttributeValueImage_Post_request'
       responses:
         "200":
           description: Success
@@ -823,359 +209,20 @@ paths:
       - AttributeValueImage
       x-content-type: multipart/form-data
       x-accepts: application/json
-  /api/v{version}/CI/getAllCIIDs:
+  /.well-known/openid-configuration:
     get:
-      operationId: GetAllCIIDs
-      parameters:
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
+      operationId: AuthRedirect_Index
       responses:
         "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/json:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/xml:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            application/odata:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            text/plain:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
-            text/json:
-              schema:
-                items:
-                  format: uuid
-                  type: string
-                type: array
           description: Success
       security:
       - oauth2: []
-      summary: list of all CI-IDs
       tags:
-      - CI
+      - AuthRedirect
       x-accepts: application/json
-  /api/v{version}/CI/getCIByID:
+  /api/v{version}/Cytoscape/traitCentric:
     get:
-      operationId: GetCIByID
-      parameters:
-      - description: "Specifies which layers contribute to the result, and in which\
-          \ order"
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: CIID
-        required: true
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - description: "Specify datetime, for which point in time to get the data; leave\
-          \ empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)"
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=minimal:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=full:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.metadata=none:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/CIDTO'
-          description: Success
-      security:
-      - oauth2: []
-      summary: single CI by CI-ID
-      tags:
-      - CI
-      x-accepts: application/json
-  /api/v{version}/CI/getCIsByID:
-    get:
-      operationId: GetCIsByID
-      parameters:
-      - description: "Specifies which layers contribute to the result, and in which\
-          \ order"
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: CIIDs
-        required: true
-        schema:
-          items:
-            format: uuid
-            type: string
-          type: array
-        style: form
-      - description: "Specify datetime, for which point in time to get the data; leave\
-          \ empty to use current time (https://www.newtonsoft.com/json/help/html/DatesInJSON.htm)"
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: "multiple CIs by CI-ID\r\n!Watch out for the query URL getting too\
-        \ long because of a lot of CIIDs!\r\nTODO: consider using POST"
-      tags:
-      - CI
-      x-accepts: application/json
-  /api/v{version}/CISearch/searchCIsByTraits:
-    get:
-      operationId: SearchCIsByTraits
+      operationId: Cytoscape_TraitCentric
       parameters:
       - explode: true
         in: query
@@ -1188,28 +235,18 @@ paths:
         style: form
       - explode: true
         in: query
-        name: withTraits
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - explode: true
-        in: query
-        name: withoutTraits
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - explode: true
-        in: query
-        name: atTime
+        name: traitIDs
         required: false
         schema:
-          format: date-time
+          items:
+            type: string
+          type: array
+        style: form
+      - explode: true
+        in: query
+        name: traitIDsRegex
+        required: false
+        schema:
           type: string
         style: form
       - explode: false
@@ -1221,98 +258,54 @@ paths:
         style: simple
       responses:
         "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CIDTO'
-                type: array
           description: Success
       security:
       - oauth2: []
       tags:
-      - CISearch
+      - Cytoscape
       x-accepts: application/json
   /graphql:
+    get:
+      operationId: GraphQL_Get
+      parameters:
+      - explode: true
+        in: query
+        name: operationName
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: query
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: variables
+        required: false
+        schema:
+          additionalProperties:
+            nullable: true
+          type: object
+        style: form
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - GraphQL
+      x-accepts: application/json
     post:
-      operationId: Index
+      operationId: GraphQL_Index
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GraphQLQuery'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
@@ -1346,16 +339,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GraphQLQuery'
           application/xml:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/GraphQLQuery'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
           text/json:
@@ -1371,13 +358,16 @@ paths:
       - oauth2: []
       tags:
       - GraphQL
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
       x-accepts: application/json
   /graphql-debug:
     post:
-      operationId: Debug
+      operationId: GraphQL_Debug
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GraphQLQuery'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
@@ -1411,16 +401,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GraphQLQuery'
           application/xml:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/GraphQLQuery'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/GraphQLQuery'
           text/json:
@@ -1436,11 +420,99 @@ paths:
       - oauth2: []
       tags:
       - GraphQL
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
+      x-accepts: application/json
+  /api/v{version}/GraphvizDot/traitCentric:
+    get:
+      operationId: GraphvizDot_TraitCentric
+      parameters:
+      - explode: true
+        in: query
+        name: layerIDs
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - explode: true
+        in: query
+        name: traitIDs
+        required: false
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - explode: true
+        in: query
+        name: traitIDsRegex
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: path
+        name: version
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - GraphvizDot
+      x-accepts: application/json
+  /api/v{version}/GraphvizDot/layerCentric:
+    get:
+      operationId: GraphvizDot_LayerCentric
+      parameters:
+      - explode: true
+        in: query
+        name: layerIDs
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - explode: true
+        in: query
+        name: from
+        required: true
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: to
+        required: true
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: false
+        in: path
+        name: version
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - GraphvizDot
       x-accepts: application/json
   /api/v{version}/GridView/contexts:
     get:
-      operationId: GetGridViewContexts
+      operationId: GridView_GetGridViewContexts
       parameters:
       - explode: false
         in: path
@@ -1460,7 +532,7 @@ paths:
       x-accepts: application/json
   /api/v{version}/GridView/context/{name}:
     delete:
-      operationId: DeleteContext
+      operationId: GridView_DeleteContext
       parameters:
       - description: ""
         explode: false
@@ -1482,6 +554,12 @@ paths:
           description: If request is successful
         "400":
           content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
@@ -1515,16 +593,10 @@ paths:
             application/json;odata.streaming=false:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
             text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
             text/json:
@@ -1538,7 +610,7 @@ paths:
       - GridView
       x-accepts: application/json
     get:
-      operationId: GetGridViewContext
+      operationId: GridView_GetGridViewContext
       parameters:
       - explode: false
         in: path
@@ -1566,7 +638,7 @@ paths:
       - GridView
       x-accepts: application/json
     put:
-      operationId: EditContext
+      operationId: GridView_EditContext
       parameters:
       - description: ""
         explode: false
@@ -1585,6 +657,9 @@ paths:
         style: simple
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditContextRequest'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/EditContextRequest'
@@ -1618,16 +693,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/EditContextRequest'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/EditContextRequest'
           application/xml:
             schema:
               $ref: '#/components/schemas/EditContextRequest'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/EditContextRequest'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/EditContextRequest'
           text/json:
@@ -1642,6 +711,12 @@ paths:
           description: If request is successful
         "400":
           content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
@@ -1675,16 +750,10 @@ paths:
             application/json;odata.streaming=false:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
             text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
             text/json:
@@ -1696,11 +765,11 @@ paths:
       summary: Edits specific context
       tags:
       - GridView
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
       x-accepts: application/json
   /api/v{version}/GridView/context:
     post:
-      operationId: AddContext
+      operationId: GridView_AddContext
       parameters:
       - explode: false
         in: path
@@ -1711,6 +780,9 @@ paths:
         style: simple
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddContextRequest'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/AddContextRequest'
@@ -1744,16 +816,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/AddContextRequest'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AddContextRequest'
           application/xml:
             schema:
               $ref: '#/components/schemas/AddContextRequest'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/AddContextRequest'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/AddContextRequest'
           text/json:
@@ -1768,6 +834,12 @@ paths:
           description: Returns the newly created context
         "400":
           content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
@@ -1801,16 +873,10 @@ paths:
             application/json;odata.streaming=false:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
             text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
             text/json:
@@ -1822,11 +888,11 @@ paths:
       summary: Adds new context
       tags:
       - GridView
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
       x-accepts: application/json
   /api/v{version}/GridView/contexts/{context}/schema:
     get:
-      operationId: GetSchema
+      operationId: GridView_GetSchema
       parameters:
       - description: ""
         explode: false
@@ -1854,7 +920,7 @@ paths:
       x-accepts: application/json
   /api/v{version}/GridView/contexts/{context}/data:
     get:
-      operationId: GetData
+      operationId: GridView_GetData
       parameters:
       - description: ""
         explode: false
@@ -1884,7 +950,7 @@ paths:
       x-accepts: application/json
   /api/v{version}/GridView/contexts/{context}/change:
     post:
-      operationId: ChangeData
+      operationId: GridView_ChangeData
       parameters:
       - description: ""
         explode: false
@@ -1903,6 +969,9 @@ paths:
         style: simple
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangeDataRequest'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/ChangeDataRequest'
@@ -1936,16 +1005,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/ChangeDataRequest'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ChangeDataRequest'
           application/xml:
             schema:
               $ref: '#/components/schemas/ChangeDataRequest'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/ChangeDataRequest'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/ChangeDataRequest'
           text/json:
@@ -1960,6 +1023,12 @@ paths:
           description: If request is successful
         "400":
           content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
@@ -1993,16 +1062,10 @@ paths:
             application/json;odata.streaming=false:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/ProblemDetails'
             text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
             text/json:
@@ -2016,195 +1079,26 @@ paths:
       summary: Saves grid view row changes and returns change results
       tags:
       - GridView
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
       x-accepts: application/json
-  /api/v{version}/Layer/getAllLayers:
+  /api/v{version}/ImportExportLayer/exportLayer:
     get:
-      operationId: GetAllLayers
-      parameters:
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: list of all layers
-      tags:
-      - Layer
-      x-accepts: application/json
-  /api/v{version}/Layer/getLayerByName:
-    get:
-      operationId: GetLayerByName
+      operationId: ImportExportLayer_ExportLayer
       parameters:
       - explode: true
         in: query
-        name: layerName
+        name: layerID
         required: true
         schema:
           type: string
         style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=minimal:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=full:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.metadata=none:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/LayerDTO'
-          description: Success
-      security:
-      - oauth2: []
-      summary: get a layer by name
-      tags:
-      - Layer
-      x-accepts: application/json
-  /api/v{version}/Layer/getLayersByName:
-    get:
-      operationId: GetLayersByName
-      parameters:
       - explode: true
         in: query
-        name: layerNames
-        required: true
+        name: ciids
+        required: false
         schema:
           items:
+            format: uuid
             type: string
           type: array
         style: form
@@ -2217,97 +1111,273 @@ paths:
         style: simple
       responses:
         "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/LayerDTO'
-                type: array
           description: Success
       security:
       - oauth2: []
-      summary: get layers by name
       tags:
-      - Layer
+      - ImportExportLayer
+      x-accepts: application/json
+  /api/v{version}/ImportExportLayer/importLayer:
+    post:
+      operationId: ImportExportLayer_ImportLayer
+      parameters:
+      - explode: true
+        in: query
+        name: overwriteLayerID
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: path
+        name: version
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          multipart/form-data:
+            encoding:
+              files:
+                style: form
+            schema:
+              $ref: '#/components/schemas/AttributeValueImage_Post_request'
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - ImportExportLayer
+      x-content-type: multipart/form-data
+      x-accepts: application/json
+  /api/odata/{context}/$metadata:
+    get:
+      operationId: Metadata_GetMetadata
+      parameters:
+      - explode: false
+        in: path
+        name: context
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/IEdmModel'
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - Metadata
+      x-accepts: application/json
+  /api/odata/{context}:
+    get:
+      operationId: Metadata_GetServiceDocument
+      parameters:
+      - explode: false
+        in: path
+        name: context
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ODataServiceDocument'
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - Metadata
+      x-accepts: application/json
+  /api/v{version}/ingest/genericJSON/data:
+    post:
+      operationId: PassiveData_Ingest
+      parameters:
+      - explode: true
+        in: query
+        name: readLayerIDs
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - explode: true
+        in: query
+        name: writeLayerID
+        required: true
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: path
+        name: version
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=minimal;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=minimal;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=minimal:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=full;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=full;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=full:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=none;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=none;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.metadata=none:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/json;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          text/plain:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/GenericInboundData'
+        required: true
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - OKPluginGenericJSONIngest
+      x-content-type: application/json
       x-accepts: application/json
   /api/v{version}/ingest/genericJSON/files:
     post:
-      operationId: Ingest
+      operationId: PassiveFiles_Ingest
       parameters:
       - explode: true
         in: query
@@ -2330,7 +1400,7 @@ paths:
               files:
                 style: form
             schema:
-              $ref: '#/components/schemas/Post_request'
+              $ref: '#/components/schemas/AttributeValueImage_Post_request'
       responses:
         "200":
           description: Success
@@ -2342,7 +1412,7 @@ paths:
       x-accepts: application/json
   /api/v{version}/ingest/genericJSON/manage/context:
     get:
-      operationId: GetAllContexts
+      operationId: ManageContext_GetAllContexts
       parameters:
       - explode: false
         in: path
@@ -2354,6 +1424,16 @@ paths:
       responses:
         "200":
           content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/xml:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 items:
@@ -2409,22 +1489,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Context'
                 type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Context'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Context'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Context'
-                type: array
             text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Context'
+                type: array
+            application/octet-stream:
               schema:
                 items:
                   $ref: '#/components/schemas/Context'
@@ -2441,7 +1511,7 @@ paths:
       - OKPluginGenericJSONIngest
       x-accepts: application/json
     post:
-      operationId: UpsertContext
+      operationId: ManageContext_UpsertContext
       parameters:
       - explode: false
         in: path
@@ -2452,6 +1522,9 @@ paths:
         style: simple
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Context'
           application/json;odata.metadata=minimal;odata.streaming=true:
             schema:
               $ref: '#/components/schemas/Context'
@@ -2485,16 +1558,10 @@ paths:
           application/json;odata.streaming=false:
             schema:
               $ref: '#/components/schemas/Context'
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Context'
           application/xml:
             schema:
               $ref: '#/components/schemas/Context'
-          application/odata:
-            schema:
-              $ref: '#/components/schemas/Context'
-          application/json-patch+json:
+          text/plain:
             schema:
               $ref: '#/components/schemas/Context'
           text/json:
@@ -2507,6 +1574,12 @@ paths:
       responses:
         "200":
           content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Context'
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 $ref: '#/components/schemas/Context'
@@ -2540,16 +1613,10 @@ paths:
             application/json;odata.streaming=false:
               schema:
                 $ref: '#/components/schemas/Context'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/Context'
             text/plain:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/Context'
             text/json:
@@ -2560,11 +1627,11 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-content-type: application/json;odata.metadata=minimal;odata.streaming=true
+      x-content-type: application/json
       x-accepts: application/json
   /api/v{version}/ingest/genericJSON/manage/context/{id}:
     delete:
-      operationId: RemoveContext
+      operationId: ManageContext_RemoveContext
       parameters:
       - explode: false
         in: path
@@ -2583,54 +1650,54 @@ paths:
       responses:
         "200":
           content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=minimal:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=full:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.metadata=none:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/json;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/Context'
             application/json:
               schema:
-                $ref: '#/components/schemas/Context'
+                type: boolean
             application/xml:
               schema:
-                $ref: '#/components/schemas/Context'
-            application/odata:
+                type: boolean
+            application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
-                $ref: '#/components/schemas/Context'
+                type: boolean
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                type: boolean
+            application/json;odata.metadata=minimal:
+              schema:
+                type: boolean
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                type: boolean
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                type: boolean
+            application/json;odata.metadata=full:
+              schema:
+                type: boolean
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                type: boolean
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                type: boolean
+            application/json;odata.metadata=none:
+              schema:
+                type: boolean
+            application/json;odata.streaming=true:
+              schema:
+                type: boolean
+            application/json;odata.streaming=false:
+              schema:
+                type: boolean
             text/plain:
               schema:
-                $ref: '#/components/schemas/Context'
+                type: boolean
+            application/octet-stream:
+              schema:
+                type: boolean
             text/json:
               schema:
-                $ref: '#/components/schemas/Context'
+                type: boolean
           description: Success
       security:
       - oauth2: []
@@ -2638,7 +1705,7 @@ paths:
       - OKPluginGenericJSONIngest
       x-accepts: application/json
     get:
-      operationId: GetContext
+      operationId: ManageContext_GetContext
       parameters:
       - explode: false
         in: path
@@ -2657,6 +1724,12 @@ paths:
       responses:
         "200":
           content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Context'
             application/json;odata.metadata=minimal;odata.streaming=true:
               schema:
                 $ref: '#/components/schemas/Context'
@@ -2690,16 +1763,10 @@ paths:
             application/json;odata.streaming=false:
               schema:
                 $ref: '#/components/schemas/Context'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Context'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/Context'
             text/plain:
+              schema:
+                $ref: '#/components/schemas/Context'
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/Context'
             text/json:
@@ -2711,650 +1778,86 @@ paths:
       tags:
       - OKPluginGenericJSONIngest
       x-accepts: application/json
-  /api/v{version}/Relation/getMergedRelation:
-    get:
-      operationId: GetMergedRelation
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: fromCIID
-        required: true
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: toCIID
-        required: true
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: predicateID
-        required: true
-        schema:
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=minimal:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=full:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.metadata=none:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.streaming=true:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json;odata.streaming=false:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            application/odata:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/RelationDTO'
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Relation
-      x-accepts: application/json
-  /api/v{version}/Relation/getMergedRelationsWithPredicate:
-    get:
-      operationId: GetMergedRelationsWithPredicate
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: predicateID
-        required: true
-        schema:
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Relation
-      x-accepts: application/json
-  /api/v{version}/Relation/getAllMergedRelations:
-    get:
-      operationId: GetAllMergedRelations
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Relation
-      x-accepts: application/json
-  /api/v{version}/Relation/getMergedRelationsOutgoingFromCI:
-    get:
-      operationId: GetMergedRelationsOutgoingFromCI
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: fromCIID
-        required: true
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Relation
-      x-accepts: application/json
-  /api/v{version}/Relation/getMergedRelationsFromOrToCI:
-    get:
-      operationId: GetMergedRelationsFromOrToCI
-      parameters:
-      - description: ""
-        explode: true
-        in: query
-        name: ciid
-        required: true
-        schema:
-          format: uuid
-          type: string
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: layerIDs
-        required: true
-        schema:
-          items:
-            type: string
-          type: array
-        style: form
-      - description: ""
-        explode: true
-        in: query
-        name: atTime
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: false
-        in: path
-        name: version
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=minimal:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=full:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.metadata=none:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=true:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json;odata.streaming=false:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/xml:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            application/odata:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RelationDTO'
-                type: array
-          description: Success
-      security:
-      - oauth2: []
-      summary: ""
-      tags:
-      - Relation
-      x-accepts: application/json
-  /api/v{version}/Trait/getEffectiveTraitsForTraitName:
-    get:
-      operationId: GetEffectiveTraitsForTraitName
+  /api/v{version}/ingest/insight-discovery/file:
+    post:
+      operationId: IngestFile_Ingest
       parameters:
       - explode: true
         in: query
-        name: layerIDs
+        name: context
         required: true
         schema:
-          items:
-            type: string
-          type: array
+          type: string
         style: form
+      - explode: false
+        in: path
+        name: version
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          multipart/form-data:
+            encoding:
+              ContentType:
+                style: form
+              ContentDisposition:
+                style: form
+              Headers:
+                style: form
+              Length:
+                style: form
+              Name:
+                style: form
+              FileName:
+                style: form
+            schema:
+              $ref: '#/components/schemas/IngestFile_Ingest_request'
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - OKPluginInsightDiscoveryIngest
+      x-content-type: multipart/form-data
+      x-accepts: application/json
+  /api/v{version}/RestartApplication/restart:
+    get:
+      operationId: RestartApplication_Restart
+      parameters:
+      - explode: false
+        in: path
+        name: version
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: Success
+      security:
+      - oauth2: []
+      tags:
+      - RestartApplication
+      x-accepts: application/json
+  /api/v{version}/UsageStats/fetch:
+    get:
+      operationId: UsageStats_Fetch
+      parameters:
       - explode: true
         in: query
-        name: traitName
+        name: from
         required: true
         schema:
+          format: date-time
           type: string
         style: form
       - explode: true
         in: query
-        name: atTime
-        required: false
+        name: to
+        required: true
         schema:
           format: date-time
           type: string
@@ -3368,92 +1871,11 @@ paths:
         style: simple
       responses:
         "200":
-          content:
-            application/json;odata.metadata=minimal;odata.streaming=true:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=minimal;odata.streaming=false:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=minimal:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=full;odata.streaming=true:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=full;odata.streaming=false:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=full:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=none;odata.streaming=true:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=none;odata.streaming=false:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.metadata=none:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.streaming=true:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json;odata.streaming=false:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/json:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/xml:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            application/odata:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            text/plain:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
-            text/json:
-              schema:
-                additionalProperties:
-                  $ref: '#/components/schemas/EffectiveTraitDTO'
-                type: object
           description: Success
       security:
       - oauth2: []
       tags:
-      - Trait
+      - UsageStats
       x-accepts: application/json
 components:
   schemas:
@@ -3467,10 +1889,16 @@ components:
             sourceAttributeName: sourceAttributeName
             valueType: null
             columnDescription: columnDescription
+            sourceAttributePath:
+            - sourceAttributePath
+            - sourceAttributePath
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
             valueType: null
             columnDescription: columnDescription
+            sourceAttributePath:
+            - sourceAttributePath
+            - sourceAttributePath
           trait: trait
           showCIIDColumn: true
           readLayerset:
@@ -3496,25 +1924,29 @@ components:
       additionalProperties: false
       example:
         yumUpdates:
-          key: ""
+          key: yumUpdates
         yumInstalled:
-          key: ""
+          key: yumInstalled
         yumRepos:
-          key: ""
+          key: yumRepos
         setupFacts:
-          key: ""
+          key: setupFacts
       properties:
         setupFacts:
-          additionalProperties: {}
+          additionalProperties:
+            type: string
           type: object
         yumInstalled:
-          additionalProperties: {}
+          additionalProperties:
+            type: string
           type: object
         yumRepos:
-          additionalProperties: {}
+          additionalProperties:
+            type: string
           type: object
         yumUpdates:
-          additionalProperties: {}
+          additionalProperties:
+            type: string
           type: object
       required:
       - setupFacts
@@ -3522,13 +1954,6 @@ components:
       - yumRepos
       - yumUpdates
       type: object
-    AttributeState:
-      enum:
-      - New
-      - Changed
-      - Removed
-      - Renewed
-      type: string
     AttributeValueDTO:
       additionalProperties: false
       example:
@@ -3545,11 +1970,8 @@ components:
         values:
           items:
             type: string
+          nullable: true
           type: array
-      required:
-      - isArray
-      - type
-      - values
       type: object
     AttributeValueType:
       enum:
@@ -3559,48 +1981,16 @@ components:
       - JSON
       - YAML
       - Image
+      - Mask
+      - Double
+      - Boolean
+      - DateTimeWithOffset
       type: string
-    BulkCIAttributeLayerScopeDTO:
-      additionalProperties: false
-      example:
-        layerID: layerID
-        namePrefix: namePrefix
-        fragments:
-        - name: name
-          value:
-            values:
-            - values
-            - values
-            isArray: true
-            type: null
-          ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        - name: name
-          value:
-            values:
-            - values
-            - values
-            isArray: true
-            type: null
-          ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        namePrefix:
-          type: string
-        layerID:
-          type: string
-        fragments:
-          items:
-            $ref: '#/components/schemas/FragmentDTO'
-          type: array
-      required:
-      - fragments
-      - layerID
-      - namePrefix
-      type: object
     ChangeDataCell:
       additionalProperties: false
       example:
-        name: name
         changeable: true
+        id: id
         value:
           values:
           - values
@@ -3608,7 +1998,7 @@ components:
           isArray: true
           type: null
       properties:
-        name:
+        id:
           nullable: true
           type: string
         value:
@@ -3621,16 +2011,16 @@ components:
       example:
         sparseRows:
         - cells:
-          - name: name
-            changeable: true
+          - changeable: true
+            id: id
             value:
               values:
               - values
               - values
               isArray: true
               type: null
-          - name: name
-            changeable: true
+          - changeable: true
+            id: id
             value:
               values:
               - values
@@ -3639,16 +2029,16 @@ components:
               type: null
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         - cells:
-          - name: name
-            changeable: true
+          - changeable: true
+            id: id
             value:
               values:
               - values
               - values
               isArray: true
               type: null
-          - name: name
-            changeable: true
+          - changeable: true
+            id: id
             value:
               values:
               - values
@@ -3663,90 +2053,8 @@ components:
           nullable: true
           type: array
       type: object
-    CIAttributeDTO:
-      additionalProperties: false
-      example:
-        name: name
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        state: null
-        value:
-          values:
-          - values
-          - values
-          isArray: true
-          type: null
-        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        id:
-          format: uuid
-          type: string
-        name:
-          type: string
-        value:
-          $ref: '#/components/schemas/AttributeValueDTO'
-        ciid:
-          format: uuid
-          type: string
-        state:
-          $ref: '#/components/schemas/AttributeState'
-      required:
-      - ciid
-      - id
-      - name
-      - state
-      - value
-      type: object
-    CIDTO:
-      additionalProperties: false
-      example:
-        attributes:
-          key:
-            name: name
-            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            state: null
-            value:
-              values:
-              - values
-              - values
-              isArray: true
-              type: null
-            ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        id:
-          format: uuid
-          type: string
-        attributes:
-          additionalProperties:
-            $ref: '#/components/schemas/CIAttributeDTO'
-          type: object
-      required:
-      - attributes
-      - id
-      type: object
     Context:
       additionalProperties: false
-      example:
-        extractConfig: "{}"
-        loadConfig:
-          writeLayerID: writeLayerID
-          searchLayerIDs:
-          - searchLayerIDs
-          - searchLayerIDs
-        transformConfig: "{}"
-        id: id
-      properties:
-        id:
-          nullable: true
-          type: string
-        extractConfig:
-          additionalProperties: false
-          type: object
-        transformConfig:
-          additionalProperties: false
-          type: object
-        loadConfig:
-          $ref: '#/components/schemas/ILoadConfig'
       type: object
     EditContextRequest:
       additionalProperties: false
@@ -3758,10 +2066,16 @@ components:
             sourceAttributeName: sourceAttributeName
             valueType: null
             columnDescription: columnDescription
+            sourceAttributePath:
+            - sourceAttributePath
+            - sourceAttributePath
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
             valueType: null
             columnDescription: columnDescription
+            sourceAttributePath:
+            - sourceAttributePath
+            - sourceAttributePath
           trait: trait
           showCIIDColumn: true
           readLayerset:
@@ -3779,66 +2093,201 @@ components:
         configuration:
           $ref: '#/components/schemas/GridViewConfiguration'
       type: object
-    EffectiveTraitDTO:
-      additionalProperties: false
-      properties:
-        traitAttributes:
-          additionalProperties:
-            $ref: '#/components/schemas/CIAttributeDTO'
-          type: object
-        traitRelations:
-          additionalProperties:
-            items:
-              $ref: '#/components/schemas/RelatedCIDTO'
-            type: array
-          type: object
-      required:
-      - traitAttributes
-      - traitRelations
-      type: object
-    FragmentDTO:
+    EdmContainerElementKind:
+      enum:
+      - None
+      - EntitySet
+      - ActionImport
+      - FunctionImport
+      - Singleton
+      type: string
+    EdmExpressionKind:
+      enum:
+      - None
+      - BinaryConstant
+      - BooleanConstant
+      - DateTimeOffsetConstant
+      - DecimalConstant
+      - FloatingConstant
+      - GuidConstant
+      - IntegerConstant
+      - StringConstant
+      - DurationConstant
+      - "Null"
+      - Record
+      - Collection
+      - Path
+      - If
+      - Cast
+      - IsType
+      - FunctionApplication
+      - LabeledExpressionReference
+      - Labeled
+      - PropertyPath
+      - NavigationPropertyPath
+      - DateConstant
+      - TimeOfDayConstant
+      - EnumMember
+      - AnnotationPath
+      type: string
+    EdmSchemaElementKind:
+      enum:
+      - None
+      - TypeDefinition
+      - Term
+      - Action
+      - EntityContainer
+      - Function
+      type: string
+    EdmTypeKind:
+      enum:
+      - None
+      - Primitive
+      - Entity
+      - Complex
+      - Collection
+      - EntityReference
+      - Enum
+      - TypeDefinition
+      - Untyped
+      - Path
+      type: string
+    GenericInboundAttribute:
       additionalProperties: false
       example:
         name: name
         value:
-          values:
-          - values
-          - values
           isArray: true
           type: null
-        ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         name:
+          nullable: true
           type: string
         value:
-          $ref: '#/components/schemas/AttributeValueDTO'
-        ciid:
-          format: uuid
+          $ref: '#/components/schemas/IAttributeValue'
+      type: object
+    GenericInboundCI:
+      additionalProperties: false
+      example:
+        noFoundTargetCIHandling: null
+        idMethod: null
+        attributes:
+        - name: name
+          value:
+            isArray: true
+            type: null
+        - name: name
+          value:
+            isArray: true
+            type: null
+        tempID: tempID
+        sameTempIDHandling: null
+        sameTargetCIHandling: null
+      properties:
+        tempID:
+          nullable: true
           type: string
-      required:
-      - ciid
-      - name
-      - value
+        idMethod:
+          $ref: '#/components/schemas/GenericInboundCI_idMethod'
+        sameTempIDHandling:
+          $ref: '#/components/schemas/SameTempIDHandling'
+        sameTargetCIHandling:
+          $ref: '#/components/schemas/SameTargetCIHandling'
+        noFoundTargetCIHandling:
+          $ref: '#/components/schemas/NoFoundTargetCIHandling'
+        attributes:
+          items:
+            $ref: '#/components/schemas/GenericInboundAttribute'
+          nullable: true
+          type: array
+      type: object
+    GenericInboundData:
+      additionalProperties: false
+      example:
+        cis:
+        - noFoundTargetCIHandling: null
+          idMethod: null
+          attributes:
+          - name: name
+            value:
+              isArray: true
+              type: null
+          - name: name
+            value:
+              isArray: true
+              type: null
+          tempID: tempID
+          sameTempIDHandling: null
+          sameTargetCIHandling: null
+        - noFoundTargetCIHandling: null
+          idMethod: null
+          attributes:
+          - name: name
+            value:
+              isArray: true
+              type: null
+          - name: name
+            value:
+              isArray: true
+              type: null
+          tempID: tempID
+          sameTempIDHandling: null
+          sameTargetCIHandling: null
+        relations:
+        - predicate: predicate
+          from: from
+          to: to
+        - predicate: predicate
+          from: from
+          to: to
+      properties:
+        cis:
+          items:
+            $ref: '#/components/schemas/GenericInboundCI'
+          nullable: true
+          type: array
+        relations:
+          items:
+            $ref: '#/components/schemas/GenericInboundRelation'
+          nullable: true
+          type: array
+      type: object
+    GenericInboundRelation:
+      additionalProperties: false
+      example:
+        predicate: predicate
+        from: from
+        to: to
+      properties:
+        from:
+          nullable: true
+          type: string
+        predicate:
+          nullable: true
+          type: string
+        to:
+          nullable: true
+          type: string
       type: object
     GraphQLQuery:
       additionalProperties: false
       example:
-        variables: ""
+        variables:
+          key: ""
         query: query
         operationName: operationName
-        namedQuery: namedQuery
       properties:
         operationName:
-          nullable: true
-          type: string
-        namedQuery:
           nullable: true
           type: string
         query:
           nullable: true
           type: string
         variables:
+          additionalProperties:
+            nullable: true
           nullable: true
+          type: object
       type: object
     GridViewColumn:
       additionalProperties: false
@@ -3847,10 +2296,18 @@ components:
         sourceAttributeName: sourceAttributeName
         valueType: null
         columnDescription: columnDescription
+        sourceAttributePath:
+        - sourceAttributePath
+        - sourceAttributePath
       properties:
         sourceAttributeName:
           nullable: true
           type: string
+        sourceAttributePath:
+          items:
+            type: string
+          nullable: true
+          type: array
         columnDescription:
           nullable: true
           type: string
@@ -3869,10 +2326,16 @@ components:
           sourceAttributeName: sourceAttributeName
           valueType: null
           columnDescription: columnDescription
+          sourceAttributePath:
+          - sourceAttributePath
+          - sourceAttributePath
         - writeLayer: writeLayer
           sourceAttributeName: sourceAttributeName
           valueType: null
           columnDescription: columnDescription
+          sourceAttributePath:
+          - sourceAttributePath
+          - sourceAttributePath
         trait: trait
         showCIIDColumn: true
         readLayerset:
@@ -3898,44 +2361,492 @@ components:
           nullable: true
           type: string
       type: object
-    IExtractConfig:
-      additionalProperties: false
-      type: object
-    ILoadConfig:
+    IAttributeValue:
       additionalProperties: false
       example:
-        writeLayerID: writeLayerID
-        searchLayerIDs:
-        - searchLayerIDs
-        - searchLayerIDs
+        isArray: true
+        type: null
       properties:
-        searchLayerIDs:
+        type:
+          $ref: '#/components/schemas/AttributeValueType'
+        isArray:
+          readOnly: true
+          type: boolean
+      type: object
+    IEdmDirectValueAnnotationsManager:
+      additionalProperties: false
+      type: object
+    IEdmEntityContainer:
+      additionalProperties: false
+      example:
+        elements:
+        - container: null
+          containerElementKind: null
+          name: name
+        - container: null
+          containerElementKind: null
+          name: name
+        namespace: namespace
+        name: name
+        schemaElementKind: null
+      properties:
+        elements:
+          items:
+            $ref: '#/components/schemas/IEdmEntityContainerElement'
+          nullable: true
+          readOnly: true
+          type: array
+        schemaElementKind:
+          $ref: '#/components/schemas/EdmSchemaElementKind'
+        namespace:
+          nullable: true
+          readOnly: true
+          type: string
+        name:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    IEdmEntityContainerElement:
+      additionalProperties: false
+      example:
+        container: null
+        containerElementKind: null
+        name: name
+      properties:
+        containerElementKind:
+          $ref: '#/components/schemas/EdmContainerElementKind'
+        container:
+          $ref: '#/components/schemas/IEdmEntityContainer'
+        name:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    IEdmExpression:
+      additionalProperties: false
+      example:
+        expressionKind: null
+      properties:
+        expressionKind:
+          $ref: '#/components/schemas/EdmExpressionKind'
+      type: object
+    IEdmModel:
+      additionalProperties: false
+      example:
+        declaredNamespaces:
+        - declaredNamespaces
+        - declaredNamespaces
+        vocabularyAnnotations:
+        - qualifier: qualifier
+          term:
+            defaultValue: defaultValue
+            namespace: namespace
+            name: name
+            appliesTo: appliesTo
+            schemaElementKind: null
+            type:
+              isNullable: true
+              definition:
+                typeKind: null
+          value:
+            expressionKind: null
+          target: "{}"
+        - qualifier: qualifier
+          term:
+            defaultValue: defaultValue
+            namespace: namespace
+            name: name
+            appliesTo: appliesTo
+            schemaElementKind: null
+            type:
+              isNullable: true
+              definition:
+                typeKind: null
+          value:
+            expressionKind: null
+          target: "{}"
+        referencedModels:
+        - null
+        - null
+        directValueAnnotationsManager: "{}"
+        schemaElements:
+        - namespace: namespace
+          name: name
+          schemaElementKind: null
+        - namespace: namespace
+          name: name
+          schemaElementKind: null
+        entityContainer:
+          elements:
+          - container: null
+            containerElementKind: null
+            name: name
+          - container: null
+            containerElementKind: null
+            name: name
+          namespace: namespace
+          name: name
+          schemaElementKind: null
+      properties:
+        schemaElements:
+          items:
+            $ref: '#/components/schemas/IEdmSchemaElement'
+          nullable: true
+          readOnly: true
+          type: array
+        vocabularyAnnotations:
+          items:
+            $ref: '#/components/schemas/IEdmVocabularyAnnotation'
+          nullable: true
+          readOnly: true
+          type: array
+        referencedModels:
+          items:
+            $ref: '#/components/schemas/IEdmModel'
+          nullable: true
+          readOnly: true
+          type: array
+        declaredNamespaces:
           items:
             type: string
           nullable: true
           readOnly: true
           type: array
-        writeLayerID:
+        directValueAnnotationsManager:
+          additionalProperties: false
+          type: object
+        entityContainer:
+          $ref: '#/components/schemas/IEdmEntityContainer'
+      type: object
+    IEdmSchemaElement:
+      additionalProperties: false
+      example:
+        namespace: namespace
+        name: name
+        schemaElementKind: null
+      properties:
+        schemaElementKind:
+          $ref: '#/components/schemas/EdmSchemaElementKind'
+        namespace:
+          nullable: true
+          readOnly: true
+          type: string
+        name:
           nullable: true
           readOnly: true
           type: string
       type: object
-    ITransformConfig:
-      additionalProperties: false
-      type: object
-    LayerDTO:
+    IEdmTerm:
       additionalProperties: false
       example:
-        description: description
-        id: id
+        defaultValue: defaultValue
+        namespace: namespace
+        name: name
+        appliesTo: appliesTo
+        schemaElementKind: null
+        type:
+          isNullable: true
+          definition:
+            typeKind: null
       properties:
-        id:
+        type:
+          $ref: '#/components/schemas/IEdmTypeReference'
+        appliesTo:
+          nullable: true
+          readOnly: true
           type: string
-        description:
+        defaultValue:
+          nullable: true
+          readOnly: true
           type: string
-      required:
-      - description
-      - id
+        schemaElementKind:
+          $ref: '#/components/schemas/EdmSchemaElementKind'
+        namespace:
+          nullable: true
+          readOnly: true
+          type: string
+        name:
+          nullable: true
+          readOnly: true
+          type: string
+      type: object
+    IEdmType:
+      additionalProperties: false
+      example:
+        typeKind: null
+      properties:
+        typeKind:
+          $ref: '#/components/schemas/EdmTypeKind'
+      type: object
+    IEdmTypeReference:
+      additionalProperties: false
+      example:
+        isNullable: true
+        definition:
+          typeKind: null
+      properties:
+        isNullable:
+          readOnly: true
+          type: boolean
+        definition:
+          $ref: '#/components/schemas/IEdmType'
+      type: object
+    IEdmVocabularyAnnotatable:
+      additionalProperties: false
+      type: object
+    IEdmVocabularyAnnotation:
+      additionalProperties: false
+      example:
+        qualifier: qualifier
+        term:
+          defaultValue: defaultValue
+          namespace: namespace
+          name: name
+          appliesTo: appliesTo
+          schemaElementKind: null
+          type:
+            isNullable: true
+            definition:
+              typeKind: null
+        value:
+          expressionKind: null
+        target: "{}"
+      properties:
+        qualifier:
+          nullable: true
+          readOnly: true
+          type: string
+        term:
+          $ref: '#/components/schemas/IEdmTerm'
+        target:
+          additionalProperties: false
+          type: object
+        value:
+          $ref: '#/components/schemas/IEdmExpression'
+      type: object
+    InboundIDMethodByAttribute:
+      additionalProperties: false
+      properties:
+        type:
+          nullable: true
+          readOnly: true
+          type: string
+        attribute:
+          $ref: '#/components/schemas/GenericInboundAttribute'
+        modifiers:
+          $ref: '#/components/schemas/InboundIDMethodByAttributeModifiers'
+      type: object
+    InboundIDMethodByAttributeModifiers:
+      additionalProperties: false
+      properties:
+        caseInsensitive:
+          type: boolean
+      type: object
+    InboundIDMethodByByUnion:
+      additionalProperties: false
+      properties:
+        type:
+          nullable: true
+          readOnly: true
+          type: string
+        inner:
+          items:
+            $ref: '#/components/schemas/InboundIDMethodByByUnion_inner_inner'
+          nullable: true
+          type: array
+      type: object
+    InboundIDMethodByData:
+      additionalProperties: false
+      properties:
+        type:
+          nullable: true
+          readOnly: true
+          type: string
+        attributes:
+          items:
+            type: string
+          nullable: true
+          type: array
+      type: object
+    InboundIDMethodByIntersect:
+      additionalProperties: false
+      properties:
+        type:
+          nullable: true
+          readOnly: true
+          type: string
+        inner:
+          items:
+            $ref: '#/components/schemas/InboundIDMethodByByUnion_inner_inner'
+          nullable: true
+          type: array
+      type: object
+    InboundIDMethodByRelatedTempID:
+      additionalProperties: false
+      properties:
+        type:
+          nullable: true
+          readOnly: true
+          type: string
+        tempID:
+          nullable: true
+          type: string
+        outgoingRelation:
+          type: boolean
+        predicateID:
+          nullable: true
+          type: string
+      type: object
+    InboundIDMethodByTemporaryCIID:
+      additionalProperties: false
+      properties:
+        type:
+          nullable: true
+          readOnly: true
+          type: string
+        tempID:
+          nullable: true
+          type: string
+      type: object
+    NoFoundTargetCIHandling:
+      enum:
+      - CreateNew
+      - CreateNewAndWarn
+      - Drop
+      type: string
+    ODataEntitySetInfo:
+      additionalProperties: false
+      example:
+        name: name
+        typeAnnotation:
+          typeName: typeName
+        title: title
+        url: https://openapi-generator.tech
+      properties:
+        typeAnnotation:
+          $ref: '#/components/schemas/ODataTypeAnnotation'
+        url:
+          format: uri
+          nullable: true
+          type: string
+        name:
+          nullable: true
+          type: string
+        title:
+          nullable: true
+          type: string
+      type: object
+    ODataFunctionImportInfo:
+      additionalProperties: false
+      example:
+        name: name
+        typeAnnotation:
+          typeName: typeName
+        title: title
+        url: https://openapi-generator.tech
+      properties:
+        typeAnnotation:
+          $ref: '#/components/schemas/ODataTypeAnnotation'
+        url:
+          format: uri
+          nullable: true
+          type: string
+        name:
+          nullable: true
+          type: string
+        title:
+          nullable: true
+          type: string
+      type: object
+    ODataServiceDocument:
+      additionalProperties: false
+      example:
+        functionImports:
+        - name: name
+          typeAnnotation:
+            typeName: typeName
+          title: title
+          url: https://openapi-generator.tech
+        - name: name
+          typeAnnotation:
+            typeName: typeName
+          title: title
+          url: https://openapi-generator.tech
+        typeAnnotation:
+          typeName: typeName
+        singletons:
+        - name: name
+          typeAnnotation:
+            typeName: typeName
+          title: title
+          url: https://openapi-generator.tech
+        - name: name
+          typeAnnotation:
+            typeName: typeName
+          title: title
+          url: https://openapi-generator.tech
+        entitySets:
+        - name: name
+          typeAnnotation:
+            typeName: typeName
+          title: title
+          url: https://openapi-generator.tech
+        - name: name
+          typeAnnotation:
+            typeName: typeName
+          title: title
+          url: https://openapi-generator.tech
+      properties:
+        typeAnnotation:
+          $ref: '#/components/schemas/ODataTypeAnnotation'
+        entitySets:
+          items:
+            $ref: '#/components/schemas/ODataEntitySetInfo'
+          nullable: true
+          type: array
+        singletons:
+          items:
+            $ref: '#/components/schemas/ODataSingletonInfo'
+          nullable: true
+          type: array
+        functionImports:
+          items:
+            $ref: '#/components/schemas/ODataFunctionImportInfo'
+          nullable: true
+          type: array
+      type: object
+    ODataSingletonInfo:
+      additionalProperties: false
+      example:
+        name: name
+        typeAnnotation:
+          typeName: typeName
+        title: title
+        url: https://openapi-generator.tech
+      properties:
+        typeAnnotation:
+          $ref: '#/components/schemas/ODataTypeAnnotation'
+        url:
+          format: uri
+          nullable: true
+          type: string
+        name:
+          nullable: true
+          type: string
+        title:
+          nullable: true
+          type: string
+      type: object
+    ODataTypeAnnotation:
+      additionalProperties: false
+      example:
+        typeName: typeName
+      properties:
+        typeName:
+          nullable: true
+          readOnly: true
+          type: string
       type: object
     ProblemDetails:
       additionalProperties: {}
@@ -3957,71 +2868,34 @@ components:
           nullable: true
           type: string
       type: object
-    RelatedCIDTO:
-      additionalProperties: false
-      properties:
-        fromCIID:
-          format: uuid
-          type: string
-        toCIID:
-          format: uuid
-          type: string
-        predicateID:
-          type: string
-      required:
-      - fromCIID
-      - predicateID
-      - toCIID
-      type: object
-    RelationDTO:
-      additionalProperties: false
-      example:
-        toCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        predicateID: predicateID
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        state: null
-        fromCIID: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-      properties:
-        id:
-          format: uuid
-          type: string
-        fromCIID:
-          format: uuid
-          type: string
-        toCIID:
-          format: uuid
-          type: string
-        predicateID:
-          type: string
-        state:
-          $ref: '#/components/schemas/RelationState'
-      required:
-      - fromCIID
-      - id
-      - predicateID
-      - state
-      - toCIID
-      type: object
-    RelationState:
+    SameTargetCIHandling:
       enum:
-      - New
-      - Removed
-      - Renewed
+      - Error
+      - Drop
+      - DropAndWarn
+      - Evade
+      - EvadeAndWarn
+      - Merge
+      type: string
+    SameTempIDHandling:
+      enum:
+      - DropAndWarn
+      - Drop
       type: string
     SparseRow:
       additionalProperties: false
       example:
         cells:
-        - name: name
-          changeable: true
+        - changeable: true
+          id: id
           value:
             values:
             - values
             - values
             isArray: true
             type: null
-        - name: name
-          changeable: true
+        - changeable: true
+          id: id
           value:
             values:
             - values
@@ -4039,34 +2913,55 @@ components:
           nullable: true
           type: array
       type: object
-    IngestXML_request:
+    AttributeValueImage_Post_request:
       properties:
-        writeLayerID:
+        files:
+          items:
+            format: binary
+            type: string
+          type: array
+      required:
+      - files
+      type: object
+    IngestFile_Ingest_request:
+      properties:
+        ContentType:
           type: string
-        searchLayerIDs:
-          items:
-            type: string
-          type: array
-        files:
-          items:
-            format: binary
-            type: string
-          type: array
-      required:
-      - files
-      - searchLayerIDs
-      - writeLayerID
+        ContentDisposition:
+          type: string
+        Headers:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        Length:
+          format: int64
+          type: integer
+        Name:
+          type: string
+        FileName:
+          type: string
       type: object
-    Post_request:
-      properties:
-        files:
-          items:
-            format: binary
-            type: string
-          type: array
-      required:
-      - files
-      type: object
+    GenericInboundCI_idMethod:
+      nullable: true
+      oneOf:
+      - $ref: '#/components/schemas/InboundIDMethodByData'
+      - $ref: '#/components/schemas/InboundIDMethodByAttributeModifiers'
+      - $ref: '#/components/schemas/InboundIDMethodByAttribute'
+      - $ref: '#/components/schemas/InboundIDMethodByRelatedTempID'
+      - $ref: '#/components/schemas/InboundIDMethodByTemporaryCIID'
+      - $ref: '#/components/schemas/InboundIDMethodByByUnion'
+      - $ref: '#/components/schemas/InboundIDMethodByIntersect'
+    InboundIDMethodByByUnion_inner_inner:
+      oneOf:
+      - $ref: '#/components/schemas/InboundIDMethodByData'
+      - $ref: '#/components/schemas/InboundIDMethodByAttributeModifiers'
+      - $ref: '#/components/schemas/InboundIDMethodByAttribute'
+      - $ref: '#/components/schemas/InboundIDMethodByRelatedTempID'
+      - $ref: '#/components/schemas/InboundIDMethodByTemporaryCIID'
+      - $ref: '#/components/schemas/InboundIDMethodByByUnion'
+      - $ref: '#/components/schemas/InboundIDMethodByIntersect'
   securitySchemes:
     oauth2:
       flows:

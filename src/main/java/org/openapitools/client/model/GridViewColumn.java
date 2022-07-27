@@ -23,6 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.client.model.AttributeValueType;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -49,11 +51,15 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-21T11:24:27.761008Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T07:53:07.954815Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
   private String sourceAttributeName;
+
+  public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_PATH = "sourceAttributePath";
+  @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_PATH)
+  private List<String> sourceAttributePath = null;
 
   public static final String SERIALIZED_NAME_COLUMN_DESCRIPTION = "columnDescription";
   @SerializedName(SERIALIZED_NAME_COLUMN_DESCRIPTION)
@@ -67,7 +73,7 @@ public class GridViewColumn {
   @SerializedName(SERIALIZED_NAME_WRITE_LAYER)
   private String writeLayer;
 
-  public GridViewColumn() { 
+  public GridViewColumn() {
   }
 
   public GridViewColumn sourceAttributeName(String sourceAttributeName) {
@@ -90,6 +96,37 @@ public class GridViewColumn {
 
   public void setSourceAttributeName(String sourceAttributeName) {
     this.sourceAttributeName = sourceAttributeName;
+  }
+
+
+  public GridViewColumn sourceAttributePath(List<String> sourceAttributePath) {
+    
+    this.sourceAttributePath = sourceAttributePath;
+    return this;
+  }
+
+  public GridViewColumn addSourceAttributePathItem(String sourceAttributePathItem) {
+    if (this.sourceAttributePath == null) {
+      this.sourceAttributePath = new ArrayList<>();
+    }
+    this.sourceAttributePath.add(sourceAttributePathItem);
+    return this;
+  }
+
+   /**
+   * Get sourceAttributePath
+   * @return sourceAttributePath
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<String> getSourceAttributePath() {
+    return sourceAttributePath;
+  }
+
+
+  public void setSourceAttributePath(List<String> sourceAttributePath) {
+    this.sourceAttributePath = sourceAttributePath;
   }
 
 
@@ -173,6 +210,7 @@ public class GridViewColumn {
     }
     GridViewColumn gridViewColumn = (GridViewColumn) o;
     return Objects.equals(this.sourceAttributeName, gridViewColumn.sourceAttributeName) &&
+        Objects.equals(this.sourceAttributePath, gridViewColumn.sourceAttributePath) &&
         Objects.equals(this.columnDescription, gridViewColumn.columnDescription) &&
         Objects.equals(this.valueType, gridViewColumn.valueType) &&
         Objects.equals(this.writeLayer, gridViewColumn.writeLayer);
@@ -184,7 +222,7 @@ public class GridViewColumn {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceAttributeName, columnDescription, valueType, writeLayer);
+    return Objects.hash(sourceAttributeName, sourceAttributePath, columnDescription, valueType, writeLayer);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -199,6 +237,7 @@ public class GridViewColumn {
     StringBuilder sb = new StringBuilder();
     sb.append("class GridViewColumn {\n");
     sb.append("    sourceAttributeName: ").append(toIndentedString(sourceAttributeName)).append("\n");
+    sb.append("    sourceAttributePath: ").append(toIndentedString(sourceAttributePath)).append("\n");
     sb.append("    columnDescription: ").append(toIndentedString(columnDescription)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
     sb.append("    writeLayer: ").append(toIndentedString(writeLayer)).append("\n");
@@ -225,6 +264,7 @@ public class GridViewColumn {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("sourceAttributeName");
+    openapiFields.add("sourceAttributePath");
     openapiFields.add("columnDescription");
     openapiFields.add("valueType");
     openapiFields.add("writeLayer");
@@ -255,13 +295,17 @@ public class GridViewColumn {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GridViewColumn` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("sourceAttributeName") != null && !jsonObj.get("sourceAttributeName").isJsonPrimitive()) {
+      if ((jsonObj.get("sourceAttributeName") != null && !jsonObj.get("sourceAttributeName").isJsonNull()) && !jsonObj.get("sourceAttributeName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sourceAttributeName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sourceAttributeName").toString()));
       }
-      if (jsonObj.get("columnDescription") != null && !jsonObj.get("columnDescription").isJsonPrimitive()) {
+      // ensure the json data is an array
+      if ((jsonObj.get("sourceAttributePath") != null && !jsonObj.get("sourceAttributePath").isJsonNull()) && !jsonObj.get("sourceAttributePath").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sourceAttributePath` to be an array in the JSON string but got `%s`", jsonObj.get("sourceAttributePath").toString()));
+      }
+      if ((jsonObj.get("columnDescription") != null && !jsonObj.get("columnDescription").isJsonNull()) && !jsonObj.get("columnDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `columnDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("columnDescription").toString()));
       }
-      if (jsonObj.get("writeLayer") != null && !jsonObj.get("writeLayer").isJsonPrimitive()) {
+      if ((jsonObj.get("writeLayer") != null && !jsonObj.get("writeLayer").isJsonNull()) && !jsonObj.get("writeLayer").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `writeLayer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("writeLayer").toString()));
       }
   }

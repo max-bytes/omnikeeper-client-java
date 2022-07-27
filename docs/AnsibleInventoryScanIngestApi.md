@@ -1,15 +1,15 @@
 # AnsibleInventoryScanIngestApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://localhost:44378*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**ingestAnsibleInventoryScan**](AnsibleInventoryScanIngestApi.md#ingestAnsibleInventoryScan) | **POST** /api/v{version}/Ingest/AnsibleInventoryScan |  |
+| [**ansibleInventoryScanIngestIngestAnsibleInventoryScan**](AnsibleInventoryScanIngestApi.md#ansibleInventoryScanIngestIngestAnsibleInventoryScan) | **POST** /api/v{version}/Ingest/AnsibleInventoryScan |  |
 
 
-<a name="ingestAnsibleInventoryScan"></a>
-# **ingestAnsibleInventoryScan**
-> ingestAnsibleInventoryScan(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO)
+<a name="ansibleInventoryScanIngestIngestAnsibleInventoryScan"></a>
+# **ansibleInventoryScanIngestIngestAnsibleInventoryScan**
+> ansibleInventoryScanIngestIngestAnsibleInventoryScan(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO)
 
 
 
@@ -26,7 +26,7 @@ import org.openapitools.client.api.AnsibleInventoryScanIngestApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -42,9 +42,9 @@ public class Example {
     String version = "version_example"; // String | 
     AnsibleInventoryScanDTO ansibleInventoryScanDTO = new AnsibleInventoryScanDTO(); // AnsibleInventoryScanDTO | 
     try {
-      apiInstance.ingestAnsibleInventoryScan(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO);
+      apiInstance.ansibleInventoryScanIngestIngestAnsibleInventoryScan(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AnsibleInventoryScanIngestApi#ingestAnsibleInventoryScan");
+      System.err.println("Exception when calling AnsibleInventoryScanIngestApi#ansibleInventoryScanIngestIngestAnsibleInventoryScan");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -73,7 +73,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, application/json-patch+json, text/json, application/*+json
+ - **Content-Type**: application/json, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/xml, text/plain, text/json, application/*+json
  - **Accept**: Not defined
 
 ### HTTP response details

@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | **AttributeValueType** |  |  |
-|**isArray** | **Boolean** |  |  |
-|**values** | **List&lt;String&gt;** |  |  |
+|**type** | **AttributeValueType** |  |  [optional] |
+|**isArray** | **Boolean** |  |  [optional] |
+|**values** | **List&lt;String&gt;** |  |  [optional] |
 
 
 

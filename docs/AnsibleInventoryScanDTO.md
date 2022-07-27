@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**setupFacts** | **Map&lt;String, Object&gt;** |  |  |
-|**yumInstalled** | **Map&lt;String, Object&gt;** |  |  |
-|**yumRepos** | **Map&lt;String, Object&gt;** |  |  |
-|**yumUpdates** | **Map&lt;String, Object&gt;** |  |  |
+|**setupFacts** | **Map&lt;String, String&gt;** |  |  |
+|**yumInstalled** | **Map&lt;String, String&gt;** |  |  |
+|**yumRepos** | **Map&lt;String, String&gt;** |  |  |
+|**yumUpdates** | **Map&lt;String, String&gt;** |  |  |
 
 
 

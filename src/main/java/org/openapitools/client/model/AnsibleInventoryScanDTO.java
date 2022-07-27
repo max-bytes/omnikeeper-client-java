@@ -49,34 +49,34 @@ import org.openapitools.client.JSON;
 /**
  * AnsibleInventoryScanDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-21T11:24:27.761008Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T07:53:07.954815Z[Etc/UTC]")
 public class AnsibleInventoryScanDTO {
   public static final String SERIALIZED_NAME_SETUP_FACTS = "setupFacts";
   @SerializedName(SERIALIZED_NAME_SETUP_FACTS)
-  private Map<String, Object> setupFacts = new HashMap<>();
+  private Map<String, String> setupFacts = new HashMap<>();
 
   public static final String SERIALIZED_NAME_YUM_INSTALLED = "yumInstalled";
   @SerializedName(SERIALIZED_NAME_YUM_INSTALLED)
-  private Map<String, Object> yumInstalled = new HashMap<>();
+  private Map<String, String> yumInstalled = new HashMap<>();
 
   public static final String SERIALIZED_NAME_YUM_REPOS = "yumRepos";
   @SerializedName(SERIALIZED_NAME_YUM_REPOS)
-  private Map<String, Object> yumRepos = new HashMap<>();
+  private Map<String, String> yumRepos = new HashMap<>();
 
   public static final String SERIALIZED_NAME_YUM_UPDATES = "yumUpdates";
   @SerializedName(SERIALIZED_NAME_YUM_UPDATES)
-  private Map<String, Object> yumUpdates = new HashMap<>();
+  private Map<String, String> yumUpdates = new HashMap<>();
 
-  public AnsibleInventoryScanDTO() { 
+  public AnsibleInventoryScanDTO() {
   }
 
-  public AnsibleInventoryScanDTO setupFacts(Map<String, Object> setupFacts) {
+  public AnsibleInventoryScanDTO setupFacts(Map<String, String> setupFacts) {
     
     this.setupFacts = setupFacts;
     return this;
   }
 
-  public AnsibleInventoryScanDTO putSetupFactsItem(String key, Object setupFactsItem) {
+  public AnsibleInventoryScanDTO putSetupFactsItem(String key, String setupFactsItem) {
     this.setupFacts.put(key, setupFactsItem);
     return this;
   }
@@ -88,23 +88,23 @@ public class AnsibleInventoryScanDTO {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Map<String, Object> getSetupFacts() {
+  public Map<String, String> getSetupFacts() {
     return setupFacts;
   }
 
 
-  public void setSetupFacts(Map<String, Object> setupFacts) {
+  public void setSetupFacts(Map<String, String> setupFacts) {
     this.setupFacts = setupFacts;
   }
 
 
-  public AnsibleInventoryScanDTO yumInstalled(Map<String, Object> yumInstalled) {
+  public AnsibleInventoryScanDTO yumInstalled(Map<String, String> yumInstalled) {
     
     this.yumInstalled = yumInstalled;
     return this;
   }
 
-  public AnsibleInventoryScanDTO putYumInstalledItem(String key, Object yumInstalledItem) {
+  public AnsibleInventoryScanDTO putYumInstalledItem(String key, String yumInstalledItem) {
     this.yumInstalled.put(key, yumInstalledItem);
     return this;
   }
@@ -116,23 +116,23 @@ public class AnsibleInventoryScanDTO {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Map<String, Object> getYumInstalled() {
+  public Map<String, String> getYumInstalled() {
     return yumInstalled;
   }
 
 
-  public void setYumInstalled(Map<String, Object> yumInstalled) {
+  public void setYumInstalled(Map<String, String> yumInstalled) {
     this.yumInstalled = yumInstalled;
   }
 
 
-  public AnsibleInventoryScanDTO yumRepos(Map<String, Object> yumRepos) {
+  public AnsibleInventoryScanDTO yumRepos(Map<String, String> yumRepos) {
     
     this.yumRepos = yumRepos;
     return this;
   }
 
-  public AnsibleInventoryScanDTO putYumReposItem(String key, Object yumReposItem) {
+  public AnsibleInventoryScanDTO putYumReposItem(String key, String yumReposItem) {
     this.yumRepos.put(key, yumReposItem);
     return this;
   }
@@ -144,23 +144,23 @@ public class AnsibleInventoryScanDTO {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Map<String, Object> getYumRepos() {
+  public Map<String, String> getYumRepos() {
     return yumRepos;
   }
 
 
-  public void setYumRepos(Map<String, Object> yumRepos) {
+  public void setYumRepos(Map<String, String> yumRepos) {
     this.yumRepos = yumRepos;
   }
 
 
-  public AnsibleInventoryScanDTO yumUpdates(Map<String, Object> yumUpdates) {
+  public AnsibleInventoryScanDTO yumUpdates(Map<String, String> yumUpdates) {
     
     this.yumUpdates = yumUpdates;
     return this;
   }
 
-  public AnsibleInventoryScanDTO putYumUpdatesItem(String key, Object yumUpdatesItem) {
+  public AnsibleInventoryScanDTO putYumUpdatesItem(String key, String yumUpdatesItem) {
     this.yumUpdates.put(key, yumUpdatesItem);
     return this;
   }
@@ -172,12 +172,12 @@ public class AnsibleInventoryScanDTO {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Map<String, Object> getYumUpdates() {
+  public Map<String, String> getYumUpdates() {
     return yumUpdates;
   }
 
 
-  public void setYumUpdates(Map<String, Object> yumUpdates) {
+  public void setYumUpdates(Map<String, String> yumUpdates) {
     this.yumUpdates = yumUpdates;
   }
 

@@ -1,22 +1,22 @@
 # GridViewApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://localhost:44378*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**addContext**](GridViewApi.md#addContext) | **POST** /api/v{version}/GridView/context | Adds new context |
-| [**changeData**](GridViewApi.md#changeData) | **POST** /api/v{version}/GridView/contexts/{context}/change | Saves grid view row changes and returns change results |
-| [**deleteContext**](GridViewApi.md#deleteContext) | **DELETE** /api/v{version}/GridView/context/{name} | Deletes specific context |
-| [**editContext**](GridViewApi.md#editContext) | **PUT** /api/v{version}/GridView/context/{name} | Edits specific context |
-| [**getData**](GridViewApi.md#getData) | **GET** /api/v{version}/GridView/contexts/{context}/data | Returns grid view data for specific context |
-| [**getGridViewContext**](GridViewApi.md#getGridViewContext) | **GET** /api/v{version}/GridView/context/{name} | Returns a single context in full |
-| [**getGridViewContexts**](GridViewApi.md#getGridViewContexts) | **GET** /api/v{version}/GridView/contexts | Returns a list of contexts for grid view. |
-| [**getSchema**](GridViewApi.md#getSchema) | **GET** /api/v{version}/GridView/contexts/{context}/schema | Returns grid view schema for specific context |
+| [**gridViewAddContext**](GridViewApi.md#gridViewAddContext) | **POST** /api/v{version}/GridView/context | Adds new context |
+| [**gridViewChangeData**](GridViewApi.md#gridViewChangeData) | **POST** /api/v{version}/GridView/contexts/{context}/change | Saves grid view row changes and returns change results |
+| [**gridViewDeleteContext**](GridViewApi.md#gridViewDeleteContext) | **DELETE** /api/v{version}/GridView/context/{name} | Deletes specific context |
+| [**gridViewEditContext**](GridViewApi.md#gridViewEditContext) | **PUT** /api/v{version}/GridView/context/{name} | Edits specific context |
+| [**gridViewGetData**](GridViewApi.md#gridViewGetData) | **GET** /api/v{version}/GridView/contexts/{context}/data | Returns grid view data for specific context |
+| [**gridViewGetGridViewContext**](GridViewApi.md#gridViewGetGridViewContext) | **GET** /api/v{version}/GridView/context/{name} | Returns a single context in full |
+| [**gridViewGetGridViewContexts**](GridViewApi.md#gridViewGetGridViewContexts) | **GET** /api/v{version}/GridView/contexts | Returns a list of contexts for grid view. |
+| [**gridViewGetSchema**](GridViewApi.md#gridViewGetSchema) | **GET** /api/v{version}/GridView/contexts/{context}/schema | Returns grid view schema for specific context |
 
 
-<a name="addContext"></a>
-# **addContext**
-> addContext(version, addContextRequest)
+<a name="gridViewAddContext"></a>
+# **gridViewAddContext**
+> gridViewAddContext(version, addContextRequest)
 
 Adds new context
 
@@ -33,7 +33,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -47,9 +47,9 @@ public class Example {
     String version = "version_example"; // String | 
     AddContextRequest addContextRequest = new AddContextRequest(); // AddContextRequest | 
     try {
-      apiInstance.addContext(version, addContextRequest);
+      apiInstance.gridViewAddContext(version, addContextRequest);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#addContext");
+      System.err.println("Exception when calling GridViewApi#gridViewAddContext");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -76,8 +76,8 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, application/json-patch+json, text/json, application/*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, text/plain, text/json
+ - **Content-Type**: application/json, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/xml, text/plain, text/json, application/*+json
+ - **Accept**: application/json, application/xml, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, text/plain, application/octet-stream, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -85,9 +85,9 @@ null (empty response body)
 | **201** | Returns the newly created context |  -  |
 | **400** | If creating context fails |  -  |
 
-<a name="changeData"></a>
-# **changeData**
-> changeData(context, version, changeDataRequest)
+<a name="gridViewChangeData"></a>
+# **gridViewChangeData**
+> gridViewChangeData(context, version, changeDataRequest)
 
 Saves grid view row changes and returns change results
 
@@ -104,7 +104,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -119,9 +119,9 @@ public class Example {
     String version = "version_example"; // String | 
     ChangeDataRequest changeDataRequest = new ChangeDataRequest(); // ChangeDataRequest | 
     try {
-      apiInstance.changeData(context, version, changeDataRequest);
+      apiInstance.gridViewChangeData(context, version, changeDataRequest);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#changeData");
+      System.err.println("Exception when calling GridViewApi#gridViewChangeData");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -149,8 +149,8 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, application/json-patch+json, text/json, application/*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, text/plain, text/json
+ - **Content-Type**: application/json, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/xml, text/plain, text/json, application/*+json
+ - **Accept**: application/json, application/xml, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, text/plain, application/octet-stream, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -159,9 +159,9 @@ null (empty response body)
 | **400** | Bad Request |  -  |
 | **404** | If saving changes fails |  -  |
 
-<a name="deleteContext"></a>
-# **deleteContext**
-> deleteContext(name, version)
+<a name="gridViewDeleteContext"></a>
+# **gridViewDeleteContext**
+> gridViewDeleteContext(name, version)
 
 Deletes specific context
 
@@ -178,7 +178,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -192,9 +192,9 @@ public class Example {
     String name = "name_example"; // String | 
     String version = "version_example"; // String | 
     try {
-      apiInstance.deleteContext(name, version);
+      apiInstance.gridViewDeleteContext(name, version);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#deleteContext");
+      System.err.println("Exception when calling GridViewApi#gridViewDeleteContext");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -222,7 +222,7 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, text/plain, text/json
+ - **Accept**: application/json, application/xml, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, text/plain, application/octet-stream, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -230,9 +230,9 @@ null (empty response body)
 | **200** | If request is successful |  -  |
 | **400** | If editing the context fails |  -  |
 
-<a name="editContext"></a>
-# **editContext**
-> editContext(name, version, editContextRequest)
+<a name="gridViewEditContext"></a>
+# **gridViewEditContext**
+> gridViewEditContext(name, version, editContextRequest)
 
 Edits specific context
 
@@ -249,7 +249,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -264,9 +264,9 @@ public class Example {
     String version = "version_example"; // String | 
     EditContextRequest editContextRequest = new EditContextRequest(); // EditContextRequest | 
     try {
-      apiInstance.editContext(name, version, editContextRequest);
+      apiInstance.gridViewEditContext(name, version, editContextRequest);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#editContext");
+      System.err.println("Exception when calling GridViewApi#gridViewEditContext");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -294,8 +294,8 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, application/json-patch+json, text/json, application/*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/odata, text/plain, text/json
+ - **Content-Type**: application/json, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/xml, text/plain, text/json, application/*+json
+ - **Accept**: application/json, application/xml, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, text/plain, application/octet-stream, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -303,9 +303,9 @@ null (empty response body)
 | **200** | If request is successful |  -  |
 | **400** | If editing the context fails |  -  |
 
-<a name="getData"></a>
-# **getData**
-> getData(context, version)
+<a name="gridViewGetData"></a>
+# **gridViewGetData**
+> gridViewGetData(context, version)
 
 Returns grid view data for specific context
 
@@ -322,7 +322,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -336,9 +336,9 @@ public class Example {
     String context = "context_example"; // String | 
     String version = "version_example"; // String | 
     try {
-      apiInstance.getData(context, version);
+      apiInstance.gridViewGetData(context, version);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#getData");
+      System.err.println("Exception when calling GridViewApi#gridViewGetData");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -374,9 +374,9 @@ null (empty response body)
 | **200** | If request is successful |  -  |
 | **400** | If trait is not found |  -  |
 
-<a name="getGridViewContext"></a>
-# **getGridViewContext**
-> getGridViewContext(name, version)
+<a name="gridViewGetGridViewContext"></a>
+# **gridViewGetGridViewContext**
+> gridViewGetGridViewContext(name, version)
 
 Returns a single context in full
 
@@ -393,7 +393,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -407,9 +407,9 @@ public class Example {
     String name = "name_example"; // String | 
     String version = "version_example"; // String | 
     try {
-      apiInstance.getGridViewContext(name, version);
+      apiInstance.gridViewGetGridViewContext(name, version);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#getGridViewContext");
+      System.err.println("Exception when calling GridViewApi#gridViewGetGridViewContext");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -445,9 +445,9 @@ null (empty response body)
 | **200** | Success |  -  |
 | **400** | If the name was not found or any other error occurred |  -  |
 
-<a name="getGridViewContexts"></a>
-# **getGridViewContexts**
-> getGridViewContexts(version)
+<a name="gridViewGetGridViewContexts"></a>
+# **gridViewGetGridViewContexts**
+> gridViewGetGridViewContexts(version)
 
 Returns a list of contexts for grid view.
 
@@ -464,7 +464,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -477,9 +477,9 @@ public class Example {
     GridViewApi apiInstance = new GridViewApi(defaultClient);
     String version = "version_example"; // String | 
     try {
-      apiInstance.getGridViewContexts(version);
+      apiInstance.gridViewGetGridViewContexts(version);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#getGridViewContexts");
+      System.err.println("Exception when calling GridViewApi#gridViewGetGridViewContexts");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -513,9 +513,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="getSchema"></a>
-# **getSchema**
-> getSchema(context, version)
+<a name="gridViewGetSchema"></a>
+# **gridViewGetSchema**
+> gridViewGetSchema(context, version)
 
 Returns grid view schema for specific context
 
@@ -532,7 +532,7 @@ import org.openapitools.client.api.GridViewApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://localhost:44378");
     
     // Configure OAuth2 access token for authorization: oauth2
     OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
@@ -546,9 +546,9 @@ public class Example {
     String context = "context_example"; // String | 
     String version = "version_example"; // String | 
     try {
-      apiInstance.getSchema(context, version);
+      apiInstance.gridViewGetSchema(context, version);
     } catch (ApiException e) {
-      System.err.println("Exception when calling GridViewApi#getSchema");
+      System.err.println("Exception when calling GridViewApi#gridViewGetSchema");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

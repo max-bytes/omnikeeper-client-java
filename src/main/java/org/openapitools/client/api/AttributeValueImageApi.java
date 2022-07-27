@@ -76,7 +76,7 @@ public class AttributeValueImageApi {
     }
 
     /**
-     * Build call for get
+     * Build call for attributeValueImageGet
      * @param ciid  (required)
      * @param attributeName  (required)
      * @param layerIDs  (required)
@@ -92,7 +92,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call attributeValueImageGetCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -159,30 +159,30 @@ public class AttributeValueImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getValidateBeforeCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call attributeValueImageGetValidateBeforeCall(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciid' is set
         if (ciid == null) {
-            throw new ApiException("Missing the required parameter 'ciid' when calling get(Async)");
+            throw new ApiException("Missing the required parameter 'ciid' when calling attributeValueImageGet(Async)");
         }
         
         // verify the required parameter 'attributeName' is set
         if (attributeName == null) {
-            throw new ApiException("Missing the required parameter 'attributeName' when calling get(Async)");
+            throw new ApiException("Missing the required parameter 'attributeName' when calling attributeValueImageGet(Async)");
         }
         
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
-            throw new ApiException("Missing the required parameter 'layerIDs' when calling get(Async)");
+            throw new ApiException("Missing the required parameter 'layerIDs' when calling attributeValueImageGet(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling get(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling attributeValueImageGet(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getCall(ciid, attributeName, layerIDs, version, index, atTime, _callback);
+        okhttp3.Call localVarCall = attributeValueImageGetCall(ciid, attributeName, layerIDs, version, index, atTime, _callback);
         return localVarCall;
 
     }
@@ -203,8 +203,8 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void get(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
-        getWithHttpInfo(ciid, attributeName, layerIDs, version, index, atTime);
+    public void attributeValueImageGet(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
+        attributeValueImageGetWithHttpInfo(ciid, attributeName, layerIDs, version, index, atTime);
     }
 
     /**
@@ -224,8 +224,8 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getWithHttpInfo(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
-        okhttp3.Call localVarCall = getValidateBeforeCall(ciid, attributeName, layerIDs, version, index, atTime, null);
+    public ApiResponse<Void> attributeValueImageGetWithHttpInfo(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime) throws ApiException {
+        okhttp3.Call localVarCall = attributeValueImageGetValidateBeforeCall(ciid, attributeName, layerIDs, version, index, atTime, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -247,14 +247,14 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAsync(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call attributeValueImageGetAsync(UUID ciid, String attributeName, List<String> layerIDs, String version, Integer index, OffsetDateTime atTime, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getValidateBeforeCall(ciid, attributeName, layerIDs, version, index, atTime, _callback);
+        okhttp3.Call localVarCall = attributeValueImageGetValidateBeforeCall(ciid, attributeName, layerIDs, version, index, atTime, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for post
+     * Build call for attributeValueImagePost
      * @param ciid  (required)
      * @param attributeName  (required)
      * @param layerID  (required)
@@ -270,7 +270,7 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call attributeValueImagePostCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -337,35 +337,35 @@ public class AttributeValueImageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call postValidateBeforeCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call attributeValueImagePostValidateBeforeCall(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'ciid' is set
         if (ciid == null) {
-            throw new ApiException("Missing the required parameter 'ciid' when calling post(Async)");
+            throw new ApiException("Missing the required parameter 'ciid' when calling attributeValueImagePost(Async)");
         }
         
         // verify the required parameter 'attributeName' is set
         if (attributeName == null) {
-            throw new ApiException("Missing the required parameter 'attributeName' when calling post(Async)");
+            throw new ApiException("Missing the required parameter 'attributeName' when calling attributeValueImagePost(Async)");
         }
         
         // verify the required parameter 'layerID' is set
         if (layerID == null) {
-            throw new ApiException("Missing the required parameter 'layerID' when calling post(Async)");
+            throw new ApiException("Missing the required parameter 'layerID' when calling attributeValueImagePost(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling post(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling attributeValueImagePost(Async)");
         }
         
         // verify the required parameter 'files' is set
         if (files == null) {
-            throw new ApiException("Missing the required parameter 'files' when calling post(Async)");
+            throw new ApiException("Missing the required parameter 'files' when calling attributeValueImagePost(Async)");
         }
         
 
-        okhttp3.Call localVarCall = postCall(ciid, attributeName, layerID, version, files, forceArray, _callback);
+        okhttp3.Call localVarCall = attributeValueImagePostCall(ciid, attributeName, layerID, version, files, forceArray, _callback);
         return localVarCall;
 
     }
@@ -386,8 +386,8 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void post(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
-        postWithHttpInfo(ciid, attributeName, layerID, version, files, forceArray);
+    public void attributeValueImagePost(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
+        attributeValueImagePostWithHttpInfo(ciid, attributeName, layerID, version, files, forceArray);
     }
 
     /**
@@ -407,8 +407,8 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> postWithHttpInfo(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
-        okhttp3.Call localVarCall = postValidateBeforeCall(ciid, attributeName, layerID, version, files, forceArray, null);
+    public ApiResponse<Void> attributeValueImagePostWithHttpInfo(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray) throws ApiException {
+        okhttp3.Call localVarCall = attributeValueImagePostValidateBeforeCall(ciid, attributeName, layerID, version, files, forceArray, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -430,9 +430,9 @@ public class AttributeValueImageApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postAsync(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call attributeValueImagePostAsync(UUID ciid, String attributeName, String layerID, String version, List<File> files, Boolean forceArray, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = postValidateBeforeCall(ciid, attributeName, layerID, version, files, forceArray, _callback);
+        okhttp3.Call localVarCall = attributeValueImagePostValidateBeforeCall(ciid, attributeName, layerID, version, files, forceArray, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }

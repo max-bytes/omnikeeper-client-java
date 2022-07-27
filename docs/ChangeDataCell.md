@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  [optional] |
+|**id** | **String** |  |  [optional] |
 |**value** | [**AttributeValueDTO**](AttributeValueDTO.md) |  |  [optional] |
 |**changeable** | **Boolean** |  |  [optional] |
 

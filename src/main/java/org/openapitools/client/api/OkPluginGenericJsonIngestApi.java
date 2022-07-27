@@ -27,8 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.openapitools.client.model.Context;
 import java.io.File;
+import org.openapitools.client.model.GenericInboundData;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -75,7 +75,7 @@ public class OkPluginGenericJsonIngestApi {
     }
 
     /**
-     * Build call for getAllContexts
+     * Build call for manageContextGetAllContexts
      * @param version  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -86,7 +86,7 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllContextsCall(String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call manageContextGetAllContextsCall(String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -113,7 +113,7 @@ public class OkPluginGenericJsonIngestApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -133,15 +133,15 @@ public class OkPluginGenericJsonIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAllContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call manageContextGetAllContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getAllContexts(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling manageContextGetAllContexts(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getAllContextsCall(version, _callback);
+        okhttp3.Call localVarCall = manageContextGetAllContextsCall(version, _callback);
         return localVarCall;
 
     }
@@ -150,7 +150,7 @@ public class OkPluginGenericJsonIngestApi {
      * 
      * 
      * @param version  (required)
-     * @return List&lt;Context&gt;
+     * @return List&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -158,8 +158,8 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public List<Context> getAllContexts(String version) throws ApiException {
-        ApiResponse<List<Context>> localVarResp = getAllContextsWithHttpInfo(version);
+    public List<Object> manageContextGetAllContexts(String version) throws ApiException {
+        ApiResponse<List<Object>> localVarResp = manageContextGetAllContextsWithHttpInfo(version);
         return localVarResp.getData();
     }
 
@@ -167,7 +167,7 @@ public class OkPluginGenericJsonIngestApi {
      * 
      * 
      * @param version  (required)
-     * @return ApiResponse&lt;List&lt;Context&gt;&gt;
+     * @return ApiResponse&lt;List&lt;Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -175,9 +175,9 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Context>> getAllContextsWithHttpInfo(String version) throws ApiException {
-        okhttp3.Call localVarCall = getAllContextsValidateBeforeCall(version, null);
-        Type localVarReturnType = new TypeToken<List<Context>>(){}.getType();
+    public ApiResponse<List<Object>> manageContextGetAllContextsWithHttpInfo(String version) throws ApiException {
+        okhttp3.Call localVarCall = manageContextGetAllContextsValidateBeforeCall(version, null);
+        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -194,15 +194,15 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllContextsAsync(String version, final ApiCallback<List<Context>> _callback) throws ApiException {
+    public okhttp3.Call manageContextGetAllContextsAsync(String version, final ApiCallback<List<Object>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAllContextsValidateBeforeCall(version, _callback);
-        Type localVarReturnType = new TypeToken<List<Context>>(){}.getType();
+        okhttp3.Call localVarCall = manageContextGetAllContextsValidateBeforeCall(version, _callback);
+        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getContext
+     * Build call for manageContextGetContext
      * @param id  (required)
      * @param version  (required)
      * @param _callback Callback for upload/download progress
@@ -214,7 +214,7 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContextCall(String id, String version, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call manageContextGetContextCall(String id, String version, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -242,7 +242,7 @@ public class OkPluginGenericJsonIngestApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -262,20 +262,20 @@ public class OkPluginGenericJsonIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContextValidateBeforeCall(String id, String version, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call manageContextGetContextValidateBeforeCall(String id, String version, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling getContext(Async)");
+            throw new ApiException("Missing the required parameter 'id' when calling manageContextGetContext(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling getContext(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling manageContextGetContext(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getContextCall(id, version, _callback);
+        okhttp3.Call localVarCall = manageContextGetContextCall(id, version, _callback);
         return localVarCall;
 
     }
@@ -285,7 +285,7 @@ public class OkPluginGenericJsonIngestApi {
      * 
      * @param id  (required)
      * @param version  (required)
-     * @return Context
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -293,8 +293,8 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public Context getContext(String id, String version) throws ApiException {
-        ApiResponse<Context> localVarResp = getContextWithHttpInfo(id, version);
+    public Object manageContextGetContext(String id, String version) throws ApiException {
+        ApiResponse<Object> localVarResp = manageContextGetContextWithHttpInfo(id, version);
         return localVarResp.getData();
     }
 
@@ -303,7 +303,7 @@ public class OkPluginGenericJsonIngestApi {
      * 
      * @param id  (required)
      * @param version  (required)
-     * @return ApiResponse&lt;Context&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -311,9 +311,9 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Context> getContextWithHttpInfo(String id, String version) throws ApiException {
-        okhttp3.Call localVarCall = getContextValidateBeforeCall(id, version, null);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
+    public ApiResponse<Object> manageContextGetContextWithHttpInfo(String id, String version) throws ApiException {
+        okhttp3.Call localVarCall = manageContextGetContextValidateBeforeCall(id, version, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -331,15 +331,446 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContextAsync(String id, String version, final ApiCallback<Context> _callback) throws ApiException {
+    public okhttp3.Call manageContextGetContextAsync(String id, String version, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getContextValidateBeforeCall(id, version, _callback);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
+        okhttp3.Call localVarCall = manageContextGetContextValidateBeforeCall(id, version, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for ingest
+     * Build call for manageContextRemoveContext
+     * @param id  (required)
+     * @param version  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call manageContextRemoveContextCall(String id, String version, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context/{id}"
+            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()))
+            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call manageContextRemoveContextValidateBeforeCall(String id, String version, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling manageContextRemoveContext(Async)");
+        }
+        
+        // verify the required parameter 'version' is set
+        if (version == null) {
+            throw new ApiException("Missing the required parameter 'version' when calling manageContextRemoveContext(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = manageContextRemoveContextCall(id, version, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param id  (required)
+     * @param version  (required)
+     * @return Boolean
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public Boolean manageContextRemoveContext(String id, String version) throws ApiException {
+        ApiResponse<Boolean> localVarResp = manageContextRemoveContextWithHttpInfo(id, version);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param id  (required)
+     * @param version  (required)
+     * @return ApiResponse&lt;Boolean&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Boolean> manageContextRemoveContextWithHttpInfo(String id, String version) throws ApiException {
+        okhttp3.Call localVarCall = manageContextRemoveContextValidateBeforeCall(id, version, null);
+        Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param id  (required)
+     * @param version  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call manageContextRemoveContextAsync(String id, String version, final ApiCallback<Boolean> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = manageContextRemoveContextValidateBeforeCall(id, version, _callback);
+        Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for manageContextUpsertContext
+     * @param version  (required)
+     * @param body  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call manageContextUpsertContextCall(String version, Object body, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context"
+            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call manageContextUpsertContextValidateBeforeCall(String version, Object body, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'version' is set
+        if (version == null) {
+            throw new ApiException("Missing the required parameter 'version' when calling manageContextUpsertContext(Async)");
+        }
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling manageContextUpsertContext(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = manageContextUpsertContextCall(version, body, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param version  (required)
+     * @param body  (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public Object manageContextUpsertContext(String version, Object body) throws ApiException {
+        ApiResponse<Object> localVarResp = manageContextUpsertContextWithHttpInfo(version, body);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param version  (required)
+     * @param body  (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Object> manageContextUpsertContextWithHttpInfo(String version, Object body) throws ApiException {
+        okhttp3.Call localVarCall = manageContextUpsertContextValidateBeforeCall(version, body, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param version  (required)
+     * @param body  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call manageContextUpsertContextAsync(String version, Object body, final ApiCallback<Object> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = manageContextUpsertContextValidateBeforeCall(version, body, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for passiveDataIngest
+     * @param readLayerIDs  (required)
+     * @param writeLayerID  (required)
+     * @param version  (required)
+     * @param genericInboundData  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call passiveDataIngestCall(List<String> readLayerIDs, String writeLayerID, String version, GenericInboundData genericInboundData, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = genericInboundData;
+
+        // create path and map variables
+        String localVarPath = "/api/v{version}/ingest/genericJSON/data"
+            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (readLayerIDs != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "readLayerIDs", readLayerIDs));
+        }
+
+        if (writeLayerID != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("writeLayerID", writeLayerID));
+        }
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call passiveDataIngestValidateBeforeCall(List<String> readLayerIDs, String writeLayerID, String version, GenericInboundData genericInboundData, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'readLayerIDs' is set
+        if (readLayerIDs == null) {
+            throw new ApiException("Missing the required parameter 'readLayerIDs' when calling passiveDataIngest(Async)");
+        }
+        
+        // verify the required parameter 'writeLayerID' is set
+        if (writeLayerID == null) {
+            throw new ApiException("Missing the required parameter 'writeLayerID' when calling passiveDataIngest(Async)");
+        }
+        
+        // verify the required parameter 'version' is set
+        if (version == null) {
+            throw new ApiException("Missing the required parameter 'version' when calling passiveDataIngest(Async)");
+        }
+        
+        // verify the required parameter 'genericInboundData' is set
+        if (genericInboundData == null) {
+            throw new ApiException("Missing the required parameter 'genericInboundData' when calling passiveDataIngest(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = passiveDataIngestCall(readLayerIDs, writeLayerID, version, genericInboundData, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param readLayerIDs  (required)
+     * @param writeLayerID  (required)
+     * @param version  (required)
+     * @param genericInboundData  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public void passiveDataIngest(List<String> readLayerIDs, String writeLayerID, String version, GenericInboundData genericInboundData) throws ApiException {
+        passiveDataIngestWithHttpInfo(readLayerIDs, writeLayerID, version, genericInboundData);
+    }
+
+    /**
+     * 
+     * 
+     * @param readLayerIDs  (required)
+     * @param writeLayerID  (required)
+     * @param version  (required)
+     * @param genericInboundData  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> passiveDataIngestWithHttpInfo(List<String> readLayerIDs, String writeLayerID, String version, GenericInboundData genericInboundData) throws ApiException {
+        okhttp3.Call localVarCall = passiveDataIngestValidateBeforeCall(readLayerIDs, writeLayerID, version, genericInboundData, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param readLayerIDs  (required)
+     * @param writeLayerID  (required)
+     * @param version  (required)
+     * @param genericInboundData  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call passiveDataIngestAsync(List<String> readLayerIDs, String writeLayerID, String version, GenericInboundData genericInboundData, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = passiveDataIngestValidateBeforeCall(readLayerIDs, writeLayerID, version, genericInboundData, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for passiveFilesIngest
      * @param context  (required)
      * @param version  (required)
      * @param files  (required)
@@ -352,7 +783,7 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestCall(String context, String version, List<File> files, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call passiveFilesIngestCall(String context, String version, List<File> files, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -407,25 +838,25 @@ public class OkPluginGenericJsonIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ingestValidateBeforeCall(String context, String version, List<File> files, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call passiveFilesIngestValidateBeforeCall(String context, String version, List<File> files, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'context' is set
         if (context == null) {
-            throw new ApiException("Missing the required parameter 'context' when calling ingest(Async)");
+            throw new ApiException("Missing the required parameter 'context' when calling passiveFilesIngest(Async)");
         }
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling ingest(Async)");
+            throw new ApiException("Missing the required parameter 'version' when calling passiveFilesIngest(Async)");
         }
         
         // verify the required parameter 'files' is set
         if (files == null) {
-            throw new ApiException("Missing the required parameter 'files' when calling ingest(Async)");
+            throw new ApiException("Missing the required parameter 'files' when calling passiveFilesIngest(Async)");
         }
         
 
-        okhttp3.Call localVarCall = ingestCall(context, version, files, _callback);
+        okhttp3.Call localVarCall = passiveFilesIngestCall(context, version, files, _callback);
         return localVarCall;
 
     }
@@ -443,8 +874,8 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void ingest(String context, String version, List<File> files) throws ApiException {
-        ingestWithHttpInfo(context, version, files);
+    public void passiveFilesIngest(String context, String version, List<File> files) throws ApiException {
+        passiveFilesIngestWithHttpInfo(context, version, files);
     }
 
     /**
@@ -461,8 +892,8 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> ingestWithHttpInfo(String context, String version, List<File> files) throws ApiException {
-        okhttp3.Call localVarCall = ingestValidateBeforeCall(context, version, files, null);
+    public ApiResponse<Void> passiveFilesIngestWithHttpInfo(String context, String version, List<File> files) throws ApiException {
+        okhttp3.Call localVarCall = passiveFilesIngestValidateBeforeCall(context, version, files, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -481,283 +912,10 @@ public class OkPluginGenericJsonIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestAsync(String context, String version, List<File> files, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call passiveFilesIngestAsync(String context, String version, List<File> files, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ingestValidateBeforeCall(context, version, files, _callback);
+        okhttp3.Call localVarCall = passiveFilesIngestValidateBeforeCall(context, version, files, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for removeContext
-     * @param id  (required)
-     * @param version  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call removeContextCall(String id, String version, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeContextValidateBeforeCall(String id, String version, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling removeContext(Async)");
-        }
-        
-        // verify the required parameter 'version' is set
-        if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling removeContext(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = removeContextCall(id, version, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param id  (required)
-     * @param version  (required)
-     * @return Context
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public Context removeContext(String id, String version) throws ApiException {
-        ApiResponse<Context> localVarResp = removeContextWithHttpInfo(id, version);
-        return localVarResp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param id  (required)
-     * @param version  (required)
-     * @return ApiResponse&lt;Context&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Context> removeContextWithHttpInfo(String id, String version) throws ApiException {
-        okhttp3.Call localVarCall = removeContextValidateBeforeCall(id, version, null);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param id  (required)
-     * @param version  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call removeContextAsync(String id, String version, final ApiCallback<Context> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = removeContextValidateBeforeCall(id, version, _callback);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for upsertContext
-     * @param version  (required)
-     * @param context  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call upsertContextCall(String version, Context context, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = context;
-
-        // create path and map variables
-        String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "text/plain", "text/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/json", "application/xml", "application/odata", "application/json-patch+json", "text/json", "application/*+json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2", "oauth2" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call upsertContextValidateBeforeCall(String version, Context context, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'version' is set
-        if (version == null) {
-            throw new ApiException("Missing the required parameter 'version' when calling upsertContext(Async)");
-        }
-        
-        // verify the required parameter 'context' is set
-        if (context == null) {
-            throw new ApiException("Missing the required parameter 'context' when calling upsertContext(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = upsertContextCall(version, context, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param version  (required)
-     * @param context  (required)
-     * @return Context
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public Context upsertContext(String version, Context context) throws ApiException {
-        ApiResponse<Context> localVarResp = upsertContextWithHttpInfo(version, context);
-        return localVarResp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param version  (required)
-     * @param context  (required)
-     * @return ApiResponse&lt;Context&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<Context> upsertContextWithHttpInfo(String version, Context context) throws ApiException {
-        okhttp3.Call localVarCall = upsertContextValidateBeforeCall(version, context, null);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param version  (required)
-     * @param context  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call upsertContextAsync(String version, Context context, final ApiCallback<Context> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = upsertContextValidateBeforeCall(version, context, _callback);
-        Type localVarReturnType = new TypeToken<Context>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
 }
