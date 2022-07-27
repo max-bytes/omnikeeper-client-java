@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * AbstractInboundIDMethod
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:30:41.938404Z[Etc/UTC]")
 public class AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -170,6 +170,24 @@ public class AbstractInboundIDMethod {
           InboundIDMethodByRelatedTempID.validateJsonObject(jsonObj);
           break;
         case "InboundIDMethodByTemporaryCIID":
+          InboundIDMethodByTemporaryCIID.validateJsonObject(jsonObj);
+          break;
+        case "OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest":
+          InboundIDMethodByAttribute.validateJsonObject(jsonObj);
+          break;
+        case "OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest":
+          InboundIDMethodByByUnion.validateJsonObject(jsonObj);
+          break;
+        case "OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest":
+          InboundIDMethodByData.validateJsonObject(jsonObj);
+          break;
+        case "OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest":
+          InboundIDMethodByIntersect.validateJsonObject(jsonObj);
+          break;
+        case "OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest":
+          InboundIDMethodByRelatedTempID.validateJsonObject(jsonObj);
+          break;
+        case "OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest":
           InboundIDMethodByTemporaryCIID.validateJsonObject(jsonObj);
           break;
         default: 

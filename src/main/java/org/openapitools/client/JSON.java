@@ -68,6 +68,12 @@ public class JSON {
                         classByDiscriminatorValue.put("InboundIDMethodByIntersect", org.openapitools.client.model.InboundIDMethodByIntersect.class);
                         classByDiscriminatorValue.put("InboundIDMethodByRelatedTempID", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByTemporaryCIID", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("AbstractInboundIDMethod", org.openapitools.client.model.AbstractInboundIDMethod.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -77,6 +83,12 @@ public class JSON {
                     @Override
                     public Class<? extends org.openapitools.client.model.InboundIDMethodByAttribute> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByAttribute", org.openapitools.client.model.InboundIDMethodByAttribute.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -86,6 +98,12 @@ public class JSON {
                     @Override
                     public Class<? extends org.openapitools.client.model.InboundIDMethodByByUnion> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByByUnion", org.openapitools.client.model.InboundIDMethodByByUnion.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -95,6 +113,12 @@ public class JSON {
                     @Override
                     public Class<? extends org.openapitools.client.model.InboundIDMethodByData> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByData", org.openapitools.client.model.InboundIDMethodByData.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -104,6 +128,12 @@ public class JSON {
                     @Override
                     public Class<? extends org.openapitools.client.model.InboundIDMethodByIntersect> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByIntersect", org.openapitools.client.model.InboundIDMethodByIntersect.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -113,6 +143,12 @@ public class JSON {
                     @Override
                     public Class<? extends org.openapitools.client.model.InboundIDMethodByRelatedTempID> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByRelatedTempID", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -122,6 +158,12 @@ public class JSON {
                     @Override
                     public Class<? extends org.openapitools.client.model.InboundIDMethodByTemporaryCIID> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByAttribute.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByByUnion.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByData.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByIntersect.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByRelatedTempID.class);
+                        classByDiscriminatorValue.put("OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         classByDiscriminatorValue.put("InboundIDMethodByTemporaryCIID", org.openapitools.client.model.InboundIDMethodByTemporaryCIID.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));

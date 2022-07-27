@@ -25,7 +25,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.AbstractInboundIDMethod;
 import org.openapitools.client.model.GenericInboundAttribute;
+import org.openapitools.client.model.InboundIDMethodByAttribute;
 import org.openapitools.client.model.InboundIDMethodByAttributeModifiers;
+import org.openapitools.client.model.InboundIDMethodByByUnion;
+import org.openapitools.client.model.InboundIDMethodByData;
+import org.openapitools.client.model.InboundIDMethodByIntersect;
+import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
+import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByAttribute
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:25:32.187503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:30:41.938404Z[Etc/UTC]")
 public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)

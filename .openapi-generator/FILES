@@ -154,4 +154,3 @@ src/main/java/org/openapitools/client/model/ProblemDetails.java
 src/main/java/org/openapitools/client/model/SameTargetCIHandling.java
 src/main/java/org/openapitools/client/model/SameTempIDHandling.java
 src/main/java/org/openapitools/client/model/SparseRow.java
-src/test/java/org/openapitools/client/model/AbstractInboundIDMethodTest.java
