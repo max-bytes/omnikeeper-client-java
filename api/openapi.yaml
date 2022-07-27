@@ -2157,6 +2157,9 @@ components:
       example:
         name: name
         value:
+          values:
+          - values
+          - values
           isArray: true
           type: null
       properties:
@@ -2164,7 +2167,7 @@ components:
           nullable: true
           type: string
         value:
-          $ref: '#/components/schemas/IAttributeValue'
+          $ref: '#/components/schemas/AttributeValueDTO'
       type: object
     GenericInboundCI:
       additionalProperties: false
@@ -2174,10 +2177,16 @@ components:
         attributes:
         - name: name
           value:
+            values:
+            - values
+            - values
             isArray: true
             type: null
         - name: name
           value:
+            values:
+            - values
+            - values
             isArray: true
             type: null
         tempID: tempID
@@ -2210,10 +2219,16 @@ components:
           attributes:
           - name: name
             value:
+              values:
+              - values
+              - values
               isArray: true
               type: null
           - name: name
             value:
+              values:
+              - values
+              - values
               isArray: true
               type: null
           tempID: tempID
@@ -2224,10 +2239,16 @@ components:
           attributes:
           - name: name
             value:
+              values:
+              - values
+              - values
               isArray: true
               type: null
           - name: name
             value:
+              values:
+              - values
+              - values
               isArray: true
               type: null
           tempID: tempID
@@ -2360,18 +2381,6 @@ components:
         trait:
           nullable: true
           type: string
-      type: object
-    IAttributeValue:
-      additionalProperties: false
-      example:
-        isArray: true
-        type: null
-      properties:
-        type:
-          $ref: '#/components/schemas/AttributeValueType'
-        isArray:
-          readOnly: true
-          type: boolean
       type: object
     IEdmDirectValueAnnotationsManager:
       additionalProperties: false

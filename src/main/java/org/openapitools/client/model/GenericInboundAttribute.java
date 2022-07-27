@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.client.model.IAttributeValue;
+import org.openapitools.client.model.AttributeValueDTO;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundAttribute
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T12:23:40.249491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T12:24:44.894602Z[Etc/UTC]")
 public class GenericInboundAttribute {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -57,7 +57,7 @@ public class GenericInboundAttribute {
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
-  private IAttributeValue value;
+  private AttributeValueDTO value;
 
   public GenericInboundAttribute() {
   }
@@ -85,7 +85,7 @@ public class GenericInboundAttribute {
   }
 
 
-  public GenericInboundAttribute value(IAttributeValue value) {
+  public GenericInboundAttribute value(AttributeValueDTO value) {
     
     this.value = value;
     return this;
@@ -98,12 +98,12 @@ public class GenericInboundAttribute {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public IAttributeValue getValue() {
+  public AttributeValueDTO getValue() {
     return value;
   }
 
 
-  public void setValue(IAttributeValue value) {
+  public void setValue(AttributeValueDTO value) {
     this.value = value;
   }
 
@@ -200,7 +200,7 @@ public class GenericInboundAttribute {
       }
       // validate the optional field `value`
       if (jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) {
-        IAttributeValue.validateJsonObject(jsonObj.getAsJsonObject("value"));
+        AttributeValueDTO.validateJsonObject(jsonObj.getAsJsonObject("value"));
       }
   }
 

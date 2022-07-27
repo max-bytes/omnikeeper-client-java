@@ -31,7 +31,6 @@ docs/GraphvizDotApi.md
 docs/GridViewApi.md
 docs/GridViewColumn.md
 docs/GridViewConfiguration.md
-docs/IAttributeValue.md
 docs/IEdmEntityContainer.md
 docs/IEdmEntityContainerElement.md
 docs/IEdmExpression.md
@@ -128,7 +127,6 @@ src/main/java/org/openapitools/client/model/GenericInboundRelation.java
 src/main/java/org/openapitools/client/model/GraphQLQuery.java
 src/main/java/org/openapitools/client/model/GridViewColumn.java
 src/main/java/org/openapitools/client/model/GridViewConfiguration.java
-src/main/java/org/openapitools/client/model/IAttributeValue.java
 src/main/java/org/openapitools/client/model/IEdmEntityContainer.java
 src/main/java/org/openapitools/client/model/IEdmEntityContainerElement.java
 src/main/java/org/openapitools/client/model/IEdmExpression.java
