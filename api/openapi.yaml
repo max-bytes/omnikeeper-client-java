@@ -1880,7 +1880,6 @@ paths:
 components:
   schemas:
     AbstractInboundIDMethod:
-      additionalProperties: false
       discriminator:
         mapping:
           OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest: '#/components/schemas/InboundIDMethodByData'
@@ -1892,13 +1891,11 @@ components:
         propertyName: type
       properties:
         type:
-          nullable: true
           type: string
       required:
       - type
       type: object
     AddContextRequest:
-      additionalProperties: false
       example:
         configuration:
           writeLayer: writeLayer
@@ -1927,19 +1924,15 @@ components:
         speakingName: speakingName
       properties:
         id:
-          nullable: true
           type: string
         speakingName:
-          nullable: true
           type: string
         description:
-          nullable: true
           type: string
         configuration:
           $ref: '#/components/schemas/GridViewConfiguration'
       type: object
     AnsibleInventoryScanDTO:
-      additionalProperties: false
       example:
         yumUpdates:
           key: yumUpdates
@@ -1973,7 +1966,6 @@ components:
       - yumUpdates
       type: object
     AttributeValueDTO:
-      additionalProperties: false
       example:
         values:
         - values
@@ -1988,7 +1980,6 @@ components:
         values:
           items:
             type: string
-          nullable: true
           type: array
       type: object
     AttributeValueType:
@@ -2005,7 +1996,6 @@ components:
       - DateTimeWithOffset
       type: string
     ChangeDataCell:
-      additionalProperties: false
       example:
         changeable: true
         id: id
@@ -2017,7 +2007,6 @@ components:
           type: null
       properties:
         id:
-          nullable: true
           type: string
         value:
           $ref: '#/components/schemas/AttributeValueDTO'
@@ -2025,7 +2014,6 @@ components:
           type: boolean
       type: object
     ChangeDataRequest:
-      additionalProperties: false
       example:
         sparseRows:
         - cells:
@@ -2068,14 +2056,11 @@ components:
         sparseRows:
           items:
             $ref: '#/components/schemas/SparseRow'
-          nullable: true
           type: array
       type: object
     Context:
-      additionalProperties: false
       type: object
     EditContextRequest:
-      additionalProperties: false
       example:
         configuration:
           writeLayer: writeLayer
@@ -2103,10 +2088,8 @@ components:
         speakingName: speakingName
       properties:
         speakingName:
-          nullable: true
           type: string
         description:
-          nullable: true
           type: string
         configuration:
           $ref: '#/components/schemas/GridViewConfiguration'
@@ -2171,7 +2154,6 @@ components:
       - Path
       type: string
     GenericInboundAttribute:
-      additionalProperties: false
       example:
         name: name
         value:
@@ -2182,13 +2164,11 @@ components:
           type: null
       properties:
         name:
-          nullable: true
           type: string
         value:
           $ref: '#/components/schemas/AttributeValueDTO'
       type: object
     GenericInboundCI:
-      additionalProperties: false
       example:
         noFoundTargetCIHandling: null
         idMethod: null
@@ -2212,7 +2192,6 @@ components:
         sameTargetCIHandling: null
       properties:
         tempID:
-          nullable: true
           type: string
         idMethod:
           $ref: '#/components/schemas/GenericInboundCI_idMethod'
@@ -2225,11 +2204,9 @@ components:
         attributes:
           items:
             $ref: '#/components/schemas/GenericInboundAttribute'
-          nullable: true
           type: array
       type: object
     GenericInboundData:
-      additionalProperties: false
       example:
         cis:
         - noFoundTargetCIHandling: null
@@ -2283,33 +2260,26 @@ components:
         cis:
           items:
             $ref: '#/components/schemas/GenericInboundCI'
-          nullable: true
           type: array
         relations:
           items:
             $ref: '#/components/schemas/GenericInboundRelation'
-          nullable: true
           type: array
       type: object
     GenericInboundRelation:
-      additionalProperties: false
       example:
         predicate: predicate
         from: from
         to: to
       properties:
         from:
-          nullable: true
           type: string
         predicate:
-          nullable: true
           type: string
         to:
-          nullable: true
           type: string
       type: object
     GraphQLQuery:
-      additionalProperties: false
       example:
         variables:
           key: ""
@@ -2329,7 +2299,6 @@ components:
           type: object
       type: object
     GridViewColumn:
-      additionalProperties: false
       example:
         writeLayer: writeLayer
         sourceAttributeName: sourceAttributeName
@@ -2340,7 +2309,6 @@ components:
         - sourceAttributePath
       properties:
         sourceAttributeName:
-          nullable: true
           type: string
         sourceAttributePath:
           items:
@@ -2348,7 +2316,6 @@ components:
           nullable: true
           type: array
         columnDescription:
-          nullable: true
           type: string
         valueType:
           $ref: '#/components/schemas/AttributeValueType'
@@ -2357,7 +2324,6 @@ components:
           type: string
       type: object
     GridViewConfiguration:
-      additionalProperties: false
       example:
         writeLayer: writeLayer
         columns:
@@ -2384,27 +2350,21 @@ components:
         showCIIDColumn:
           type: boolean
         writeLayer:
-          nullable: true
           type: string
         readLayerset:
           items:
             type: string
-          nullable: true
           type: array
         columns:
           items:
             $ref: '#/components/schemas/GridViewColumn'
-          nullable: true
           type: array
         trait:
-          nullable: true
           type: string
       type: object
     IEdmDirectValueAnnotationsManager:
-      additionalProperties: false
       type: object
     IEdmEntityContainer:
-      additionalProperties: false
       example:
         elements:
         - container: null
@@ -2435,7 +2395,6 @@ components:
           type: string
       type: object
     IEdmEntityContainerElement:
-      additionalProperties: false
       example:
         container: null
         containerElementKind: null
@@ -2451,7 +2410,6 @@ components:
           type: string
       type: object
     IEdmExpression:
-      additionalProperties: false
       example:
         expressionKind: null
       properties:
@@ -2459,7 +2417,6 @@ components:
           $ref: '#/components/schemas/EdmExpressionKind'
       type: object
     IEdmModel:
-      additionalProperties: false
       example:
         declaredNamespaces:
         - declaredNamespaces
@@ -2541,13 +2498,11 @@ components:
           readOnly: true
           type: array
         directValueAnnotationsManager:
-          additionalProperties: false
           type: object
         entityContainer:
           $ref: '#/components/schemas/IEdmEntityContainer'
       type: object
     IEdmSchemaElement:
-      additionalProperties: false
       example:
         namespace: namespace
         name: name
@@ -2565,7 +2520,6 @@ components:
           type: string
       type: object
     IEdmTerm:
-      additionalProperties: false
       example:
         defaultValue: defaultValue
         namespace: namespace
@@ -2599,7 +2553,6 @@ components:
           type: string
       type: object
     IEdmType:
-      additionalProperties: false
       example:
         typeKind: null
       properties:
@@ -2607,7 +2560,6 @@ components:
           $ref: '#/components/schemas/EdmTypeKind'
       type: object
     IEdmTypeReference:
-      additionalProperties: false
       example:
         isNullable: true
         definition:
@@ -2620,10 +2572,8 @@ components:
           $ref: '#/components/schemas/IEdmType'
       type: object
     IEdmVocabularyAnnotatable:
-      additionalProperties: false
       type: object
     IEdmVocabularyAnnotation:
-      additionalProperties: false
       example:
         qualifier: qualifier
         term:
@@ -2647,13 +2597,11 @@ components:
         term:
           $ref: '#/components/schemas/IEdmTerm'
         target:
-          additionalProperties: false
           type: object
         value:
           $ref: '#/components/schemas/IEdmExpression'
       type: object
     InboundIDMethodByAttribute:
-      additionalProperties: false
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
@@ -2663,13 +2611,11 @@ components:
           $ref: '#/components/schemas/InboundIDMethodByAttributeModifiers'
       type: object
     InboundIDMethodByAttributeModifiers:
-      additionalProperties: false
       properties:
         caseInsensitive:
           type: boolean
       type: object
     InboundIDMethodByByUnion:
-      additionalProperties: false
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
@@ -2683,22 +2629,18 @@ components:
             - $ref: '#/components/schemas/InboundIDMethodByTemporaryCIID'
             - $ref: '#/components/schemas/InboundIDMethodByByUnion'
             - $ref: '#/components/schemas/InboundIDMethodByIntersect'
-          nullable: true
           type: array
       type: object
     InboundIDMethodByData:
-      additionalProperties: false
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
         attributes:
           items:
             type: string
-          nullable: true
           type: array
       type: object
     InboundIDMethodByIntersect:
-      additionalProperties: false
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
@@ -2712,30 +2654,24 @@ components:
             - $ref: '#/components/schemas/InboundIDMethodByTemporaryCIID'
             - $ref: '#/components/schemas/InboundIDMethodByByUnion'
             - $ref: '#/components/schemas/InboundIDMethodByIntersect'
-          nullable: true
           type: array
       type: object
     InboundIDMethodByRelatedTempID:
-      additionalProperties: false
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
         tempID:
-          nullable: true
           type: string
         outgoingRelation:
           type: boolean
         predicateID:
-          nullable: true
           type: string
       type: object
     InboundIDMethodByTemporaryCIID:
-      additionalProperties: false
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
       properties:
         tempID:
-          nullable: true
           type: string
       type: object
     NoFoundTargetCIHandling:
@@ -2745,7 +2681,6 @@ components:
       - Drop
       type: string
     ODataEntitySetInfo:
-      additionalProperties: false
       example:
         name: name
         typeAnnotation:
@@ -2767,7 +2702,6 @@ components:
           type: string
       type: object
     ODataFunctionImportInfo:
-      additionalProperties: false
       example:
         name: name
         typeAnnotation:
@@ -2789,7 +2723,6 @@ components:
           type: string
       type: object
     ODataServiceDocument:
-      additionalProperties: false
       example:
         functionImports:
         - name: name
@@ -2846,7 +2779,6 @@ components:
           type: array
       type: object
     ODataSingletonInfo:
-      additionalProperties: false
       example:
         name: name
         typeAnnotation:
@@ -2868,7 +2800,6 @@ components:
           type: string
       type: object
     ODataTypeAnnotation:
-      additionalProperties: false
       example:
         typeName: typeName
       properties:
@@ -2912,7 +2843,6 @@ components:
       - Drop
       type: string
     SparseRow:
-      additionalProperties: false
       example:
         cells:
         - changeable: true
@@ -2939,7 +2869,6 @@ components:
         cells:
           items:
             $ref: '#/components/schemas/ChangeDataCell'
-          nullable: true
           type: array
       type: object
     AttributeValueImage_Post_request:
@@ -2973,7 +2902,6 @@ components:
           type: string
       type: object
     GenericInboundCI_idMethod:
-      nullable: true
       oneOf:
       - $ref: '#/components/schemas/InboundIDMethodByData'
       - $ref: '#/components/schemas/InboundIDMethodByAttributeModifiers'
