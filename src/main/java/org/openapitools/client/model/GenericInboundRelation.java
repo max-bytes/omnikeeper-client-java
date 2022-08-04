@@ -47,7 +47,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundRelation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-03T13:09:11.748387Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-04T06:48:03.099865Z[Etc/UTC]")
 public class GenericInboundRelation {
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
