@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-05T11:03:27.768616Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-08T19:09:28.585546Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
