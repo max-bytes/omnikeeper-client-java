@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * SparseRow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-08T19:09:28.585546Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-10T08:23:13.202080Z[Etc/UTC]")
 public class SparseRow {
   public static final String SERIALIZED_NAME_CIID = "ciid";
   @SerializedName(SERIALIZED_NAME_CIID)
