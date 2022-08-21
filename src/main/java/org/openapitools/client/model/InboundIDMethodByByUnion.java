@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.AbstractInboundIDMethod;
 import org.openapitools.client.model.InboundIDMethodByAttribute;
-import org.openapitools.client.model.InboundIDMethodByAttributeModifiers;
 import org.openapitools.client.model.InboundIDMethodByByUnion;
 import org.openapitools.client.model.InboundIDMethodByData;
 import org.openapitools.client.model.InboundIDMethodByIntersect;
@@ -58,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByByUnion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-16T16:43:45.962841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-21T12:33:36.144114Z[Etc/UTC]")
 public class InboundIDMethodByByUnion extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_INNER = "inner";
   @SerializedName(SERIALIZED_NAME_INNER)
