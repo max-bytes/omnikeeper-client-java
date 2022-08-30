@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmTypeReference
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:25:22.650210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:44:40.867120Z[Etc/UTC]")
 public class IEdmTypeReference {
   public static final String SERIALIZED_NAME_IS_NULLABLE = "isNullable";
   @SerializedName(SERIALIZED_NAME_IS_NULLABLE)
