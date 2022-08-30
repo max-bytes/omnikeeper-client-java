@@ -48,7 +48,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmType
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T15:16:24.436398Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T07:41:09.881004Z[Etc/UTC]")
 public class IEdmType {
   public static final String SERIALIZED_NAME_TYPE_KIND = "typeKind";
   @SerializedName(SERIALIZED_NAME_TYPE_KIND)
