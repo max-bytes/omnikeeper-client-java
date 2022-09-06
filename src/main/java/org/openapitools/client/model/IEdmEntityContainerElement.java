@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmEntityContainerElement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T15:47:48.046039Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T15:55:05.657717Z[Etc/UTC]")
 public class IEdmEntityContainerElement {
   public static final String SERIALIZED_NAME_CONTAINER_ELEMENT_KIND = "containerElementKind";
   @SerializedName(SERIALIZED_NAME_CONTAINER_ELEMENT_KIND)
