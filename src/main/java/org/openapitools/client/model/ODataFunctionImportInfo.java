@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataFunctionImportInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T18:06:20.181754Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T06:18:08.328444Z[Etc/UTC]")
 public class ODataFunctionImportInfo {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
