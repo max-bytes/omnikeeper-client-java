@@ -56,7 +56,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByAttribute
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T08:44:47.447918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-13T10:23:31.956052Z[Etc/UTC]")
 public class InboundIDMethodByAttribute extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_ATTRIBUTE = "attribute";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTE)
