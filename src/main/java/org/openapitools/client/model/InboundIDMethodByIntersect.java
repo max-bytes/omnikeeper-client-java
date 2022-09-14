@@ -57,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByIntersect
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-13T12:49:03.878749Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-14T15:18:11.141090Z[Etc/UTC]")
 public class InboundIDMethodByIntersect extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_INNER = "inner";
   @SerializedName(SERIALIZED_NAME_INNER)
