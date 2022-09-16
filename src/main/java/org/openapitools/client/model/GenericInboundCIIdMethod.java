@@ -64,7 +64,7 @@ import com.google.gson.JsonParseException;
 
 import org.openapitools.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T12:19:48.409013Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T12:37:16.049239Z[Etc/UTC]")
 public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(GenericInboundCIIdMethod.class.getName());
 
