@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByRelatedTempID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T09:49:59.654201Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T12:19:48.409013Z[Etc/UTC]")
 public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
