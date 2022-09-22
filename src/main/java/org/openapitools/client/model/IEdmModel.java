@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class IEdmModel {
   public static final String SERIALIZED_NAME_SCHEMA_ELEMENTS = "schemaElements";
   @SerializedName(SERIALIZED_NAME_SCHEMA_ELEMENTS)
@@ -297,41 +297,47 @@ public class IEdmModel {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `IEdmModel` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArrayschemaElements = jsonObj.getAsJsonArray("schemaElements");
-      if (jsonArrayschemaElements != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("schemaElements").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `schemaElements` to be an array in the JSON string but got `%s`", jsonObj.get("schemaElements").toString()));
-        }
+      if (jsonObj.get("schemaElements") != null && !jsonObj.get("schemaElements").isJsonNull()) {
+        JsonArray jsonArrayschemaElements = jsonObj.getAsJsonArray("schemaElements");
+        if (jsonArrayschemaElements != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("schemaElements").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `schemaElements` to be an array in the JSON string but got `%s`", jsonObj.get("schemaElements").toString()));
+          }
 
-        // validate the optional field `schemaElements` (array)
-        for (int i = 0; i < jsonArrayschemaElements.size(); i++) {
-          IEdmSchemaElement.validateJsonObject(jsonArrayschemaElements.get(i).getAsJsonObject());
-        };
+          // validate the optional field `schemaElements` (array)
+          for (int i = 0; i < jsonArrayschemaElements.size(); i++) {
+            IEdmSchemaElement.validateJsonObject(jsonArrayschemaElements.get(i).getAsJsonObject());
+          };
+        }
       }
-      JsonArray jsonArrayvocabularyAnnotations = jsonObj.getAsJsonArray("vocabularyAnnotations");
-      if (jsonArrayvocabularyAnnotations != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("vocabularyAnnotations").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `vocabularyAnnotations` to be an array in the JSON string but got `%s`", jsonObj.get("vocabularyAnnotations").toString()));
-        }
+      if (jsonObj.get("vocabularyAnnotations") != null && !jsonObj.get("vocabularyAnnotations").isJsonNull()) {
+        JsonArray jsonArrayvocabularyAnnotations = jsonObj.getAsJsonArray("vocabularyAnnotations");
+        if (jsonArrayvocabularyAnnotations != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("vocabularyAnnotations").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `vocabularyAnnotations` to be an array in the JSON string but got `%s`", jsonObj.get("vocabularyAnnotations").toString()));
+          }
 
-        // validate the optional field `vocabularyAnnotations` (array)
-        for (int i = 0; i < jsonArrayvocabularyAnnotations.size(); i++) {
-          IEdmVocabularyAnnotation.validateJsonObject(jsonArrayvocabularyAnnotations.get(i).getAsJsonObject());
-        };
+          // validate the optional field `vocabularyAnnotations` (array)
+          for (int i = 0; i < jsonArrayvocabularyAnnotations.size(); i++) {
+            IEdmVocabularyAnnotation.validateJsonObject(jsonArrayvocabularyAnnotations.get(i).getAsJsonObject());
+          };
+        }
       }
-      JsonArray jsonArrayreferencedModels = jsonObj.getAsJsonArray("referencedModels");
-      if (jsonArrayreferencedModels != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("referencedModels").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `referencedModels` to be an array in the JSON string but got `%s`", jsonObj.get("referencedModels").toString()));
-        }
+      if (jsonObj.get("referencedModels") != null && !jsonObj.get("referencedModels").isJsonNull()) {
+        JsonArray jsonArrayreferencedModels = jsonObj.getAsJsonArray("referencedModels");
+        if (jsonArrayreferencedModels != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("referencedModels").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `referencedModels` to be an array in the JSON string but got `%s`", jsonObj.get("referencedModels").toString()));
+          }
 
-        // validate the optional field `referencedModels` (array)
-        for (int i = 0; i < jsonArrayreferencedModels.size(); i++) {
-          IEdmModel.validateJsonObject(jsonArrayreferencedModels.get(i).getAsJsonObject());
-        };
+          // validate the optional field `referencedModels` (array)
+          for (int i = 0; i < jsonArrayreferencedModels.size(); i++) {
+            IEdmModel.validateJsonObject(jsonArrayreferencedModels.get(i).getAsJsonObject());
+          };
+        }
       }
       // ensure the json data is an array
       if ((jsonObj.get("declaredNamespaces") != null && !jsonObj.get("declaredNamespaces").isJsonNull()) && !jsonObj.get("declaredNamespaces").isJsonArray()) {

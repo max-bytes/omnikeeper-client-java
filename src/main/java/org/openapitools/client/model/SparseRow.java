@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * SparseRow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class SparseRow {
   public static final String SERIALIZED_NAME_CIID = "ciid";
   @SerializedName(SERIALIZED_NAME_CIID)
@@ -197,17 +197,19 @@ public class SparseRow {
       if ((jsonObj.get("ciid") != null && !jsonObj.get("ciid").isJsonNull()) && !jsonObj.get("ciid").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `ciid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ciid").toString()));
       }
-      JsonArray jsonArraycells = jsonObj.getAsJsonArray("cells");
-      if (jsonArraycells != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("cells").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `cells` to be an array in the JSON string but got `%s`", jsonObj.get("cells").toString()));
-        }
+      if (jsonObj.get("cells") != null && !jsonObj.get("cells").isJsonNull()) {
+        JsonArray jsonArraycells = jsonObj.getAsJsonArray("cells");
+        if (jsonArraycells != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("cells").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `cells` to be an array in the JSON string but got `%s`", jsonObj.get("cells").toString()));
+          }
 
-        // validate the optional field `cells` (array)
-        for (int i = 0; i < jsonArraycells.size(); i++) {
-          ChangeDataCell.validateJsonObject(jsonArraycells.get(i).getAsJsonObject());
-        };
+          // validate the optional field `cells` (array)
+          for (int i = 0; i < jsonArraycells.size(); i++) {
+            ChangeDataCell.validateJsonObject(jsonArraycells.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 

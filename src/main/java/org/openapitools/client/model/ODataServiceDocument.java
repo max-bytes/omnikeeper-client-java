@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataServiceDocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class ODataServiceDocument {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -288,41 +288,47 @@ public class ODataServiceDocument {
       if (jsonObj.get("typeAnnotation") != null && !jsonObj.get("typeAnnotation").isJsonNull()) {
         ODataTypeAnnotation.validateJsonObject(jsonObj.getAsJsonObject("typeAnnotation"));
       }
-      JsonArray jsonArrayentitySets = jsonObj.getAsJsonArray("entitySets");
-      if (jsonArrayentitySets != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("entitySets").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `entitySets` to be an array in the JSON string but got `%s`", jsonObj.get("entitySets").toString()));
-        }
+      if (jsonObj.get("entitySets") != null && !jsonObj.get("entitySets").isJsonNull()) {
+        JsonArray jsonArrayentitySets = jsonObj.getAsJsonArray("entitySets");
+        if (jsonArrayentitySets != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("entitySets").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `entitySets` to be an array in the JSON string but got `%s`", jsonObj.get("entitySets").toString()));
+          }
 
-        // validate the optional field `entitySets` (array)
-        for (int i = 0; i < jsonArrayentitySets.size(); i++) {
-          ODataEntitySetInfo.validateJsonObject(jsonArrayentitySets.get(i).getAsJsonObject());
-        };
+          // validate the optional field `entitySets` (array)
+          for (int i = 0; i < jsonArrayentitySets.size(); i++) {
+            ODataEntitySetInfo.validateJsonObject(jsonArrayentitySets.get(i).getAsJsonObject());
+          };
+        }
       }
-      JsonArray jsonArraysingletons = jsonObj.getAsJsonArray("singletons");
-      if (jsonArraysingletons != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("singletons").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `singletons` to be an array in the JSON string but got `%s`", jsonObj.get("singletons").toString()));
-        }
+      if (jsonObj.get("singletons") != null && !jsonObj.get("singletons").isJsonNull()) {
+        JsonArray jsonArraysingletons = jsonObj.getAsJsonArray("singletons");
+        if (jsonArraysingletons != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("singletons").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `singletons` to be an array in the JSON string but got `%s`", jsonObj.get("singletons").toString()));
+          }
 
-        // validate the optional field `singletons` (array)
-        for (int i = 0; i < jsonArraysingletons.size(); i++) {
-          ODataSingletonInfo.validateJsonObject(jsonArraysingletons.get(i).getAsJsonObject());
-        };
+          // validate the optional field `singletons` (array)
+          for (int i = 0; i < jsonArraysingletons.size(); i++) {
+            ODataSingletonInfo.validateJsonObject(jsonArraysingletons.get(i).getAsJsonObject());
+          };
+        }
       }
-      JsonArray jsonArrayfunctionImports = jsonObj.getAsJsonArray("functionImports");
-      if (jsonArrayfunctionImports != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("functionImports").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `functionImports` to be an array in the JSON string but got `%s`", jsonObj.get("functionImports").toString()));
-        }
+      if (jsonObj.get("functionImports") != null && !jsonObj.get("functionImports").isJsonNull()) {
+        JsonArray jsonArrayfunctionImports = jsonObj.getAsJsonArray("functionImports");
+        if (jsonArrayfunctionImports != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("functionImports").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `functionImports` to be an array in the JSON string but got `%s`", jsonObj.get("functionImports").toString()));
+          }
 
-        // validate the optional field `functionImports` (array)
-        for (int i = 0; i < jsonArrayfunctionImports.size(); i++) {
-          ODataFunctionImportInfo.validateJsonObject(jsonArrayfunctionImports.get(i).getAsJsonObject());
-        };
+          // validate the optional field `functionImports` (array)
+          for (int i = 0; i < jsonArrayfunctionImports.size(); i++) {
+            ODataFunctionImportInfo.validateJsonObject(jsonArrayfunctionImports.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 

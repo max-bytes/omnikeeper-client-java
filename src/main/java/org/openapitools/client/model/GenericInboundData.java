@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class GenericInboundData {
   public static final String SERIALIZED_NAME_CIS = "cis";
   @SerializedName(SERIALIZED_NAME_CIS)
@@ -202,29 +202,33 @@ public class GenericInboundData {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GenericInboundData` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArraycis = jsonObj.getAsJsonArray("cis");
-      if (jsonArraycis != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("cis").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `cis` to be an array in the JSON string but got `%s`", jsonObj.get("cis").toString()));
-        }
+      if (jsonObj.get("cis") != null && !jsonObj.get("cis").isJsonNull()) {
+        JsonArray jsonArraycis = jsonObj.getAsJsonArray("cis");
+        if (jsonArraycis != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("cis").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `cis` to be an array in the JSON string but got `%s`", jsonObj.get("cis").toString()));
+          }
 
-        // validate the optional field `cis` (array)
-        for (int i = 0; i < jsonArraycis.size(); i++) {
-          GenericInboundCI.validateJsonObject(jsonArraycis.get(i).getAsJsonObject());
-        };
+          // validate the optional field `cis` (array)
+          for (int i = 0; i < jsonArraycis.size(); i++) {
+            GenericInboundCI.validateJsonObject(jsonArraycis.get(i).getAsJsonObject());
+          };
+        }
       }
-      JsonArray jsonArrayrelations = jsonObj.getAsJsonArray("relations");
-      if (jsonArrayrelations != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("relations").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `relations` to be an array in the JSON string but got `%s`", jsonObj.get("relations").toString()));
-        }
+      if (jsonObj.get("relations") != null && !jsonObj.get("relations").isJsonNull()) {
+        JsonArray jsonArrayrelations = jsonObj.getAsJsonArray("relations");
+        if (jsonArrayrelations != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("relations").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `relations` to be an array in the JSON string but got `%s`", jsonObj.get("relations").toString()));
+          }
 
-        // validate the optional field `relations` (array)
-        for (int i = 0; i < jsonArrayrelations.size(); i++) {
-          GenericInboundRelation.validateJsonObject(jsonArrayrelations.get(i).getAsJsonObject());
-        };
+          // validate the optional field `relations` (array)
+          for (int i = 0; i < jsonArrayrelations.size(); i++) {
+            GenericInboundRelation.validateJsonObject(jsonArrayrelations.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 

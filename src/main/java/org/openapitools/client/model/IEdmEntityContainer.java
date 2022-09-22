@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmEntityContainer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class IEdmEntityContainer {
   public static final String SERIALIZED_NAME_ELEMENTS = "elements";
   @SerializedName(SERIALIZED_NAME_ELEMENTS)
@@ -243,17 +243,19 @@ public class IEdmEntityContainer {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `IEdmEntityContainer` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArrayelements = jsonObj.getAsJsonArray("elements");
-      if (jsonArrayelements != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("elements").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `elements` to be an array in the JSON string but got `%s`", jsonObj.get("elements").toString()));
-        }
+      if (jsonObj.get("elements") != null && !jsonObj.get("elements").isJsonNull()) {
+        JsonArray jsonArrayelements = jsonObj.getAsJsonArray("elements");
+        if (jsonArrayelements != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("elements").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `elements` to be an array in the JSON string but got `%s`", jsonObj.get("elements").toString()));
+          }
 
-        // validate the optional field `elements` (array)
-        for (int i = 0; i < jsonArrayelements.size(); i++) {
-          IEdmEntityContainerElement.validateJsonObject(jsonArrayelements.get(i).getAsJsonObject());
-        };
+          // validate the optional field `elements` (array)
+          for (int i = 0; i < jsonArrayelements.size(); i++) {
+            IEdmEntityContainerElement.validateJsonObject(jsonArrayelements.get(i).getAsJsonObject());
+          };
+        }
       }
       if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull()) && !jsonObj.get("namespace").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `namespace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namespace").toString()));

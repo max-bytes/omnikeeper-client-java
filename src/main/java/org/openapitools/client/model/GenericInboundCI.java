@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -324,17 +324,19 @@ public class GenericInboundCI {
       if (jsonObj.get("idMethod") != null && !jsonObj.get("idMethod").isJsonNull()) {
         GenericInboundCIIdMethod.validateJsonObject(jsonObj.getAsJsonObject("idMethod"));
       }
-      JsonArray jsonArrayattributes = jsonObj.getAsJsonArray("attributes");
-      if (jsonArrayattributes != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("attributes").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
-        }
+      if (jsonObj.get("attributes") != null && !jsonObj.get("attributes").isJsonNull()) {
+        JsonArray jsonArrayattributes = jsonObj.getAsJsonArray("attributes");
+        if (jsonArrayattributes != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("attributes").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
+          }
 
-        // validate the optional field `attributes` (array)
-        for (int i = 0; i < jsonArrayattributes.size(); i++) {
-          GenericInboundAttribute.validateJsonObject(jsonArrayattributes.get(i).getAsJsonObject());
-        };
+          // validate the optional field `attributes` (array)
+          for (int i = 0; i < jsonArrayattributes.size(); i++) {
+            GenericInboundAttribute.validateJsonObject(jsonArrayattributes.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 

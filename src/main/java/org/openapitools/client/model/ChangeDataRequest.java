@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T13:16:11.731219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-22T08:05:42.451015Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
@@ -163,17 +163,19 @@ public class ChangeDataRequest {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ChangeDataRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArraysparseRows = jsonObj.getAsJsonArray("sparseRows");
-      if (jsonArraysparseRows != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("sparseRows").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `sparseRows` to be an array in the JSON string but got `%s`", jsonObj.get("sparseRows").toString()));
-        }
+      if (jsonObj.get("sparseRows") != null && !jsonObj.get("sparseRows").isJsonNull()) {
+        JsonArray jsonArraysparseRows = jsonObj.getAsJsonArray("sparseRows");
+        if (jsonArraysparseRows != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("sparseRows").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `sparseRows` to be an array in the JSON string but got `%s`", jsonObj.get("sparseRows").toString()));
+          }
 
-        // validate the optional field `sparseRows` (array)
-        for (int i = 0; i < jsonArraysparseRows.size(); i++) {
-          SparseRow.validateJsonObject(jsonArraysparseRows.get(i).getAsJsonObject());
-        };
+          // validate the optional field `sparseRows` (array)
+          for (int i = 0; i < jsonArraysparseRows.size(); i++) {
+            SparseRow.validateJsonObject(jsonArraysparseRows.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 
