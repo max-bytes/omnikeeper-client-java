@@ -2914,12 +2914,12 @@ components:
     oauth2:
       flows:
         authorizationCode:
-          authorizationUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/auth
-          refreshUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token
+          authorizationUrl: "https://[keycloak-url]/auth/realms/acme/protocol/openid-connect/auth"
+          refreshUrl: "https://[keycloak-url]/auth/realms/acme/protocol/openid-connect/token"
           scopes: {}
-          tokenUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token
+          tokenUrl: "https://[keycloak-url]/auth/realms/acme/protocol/openid-connect/token"
         clientCredentials:
           scopes: {}
-          tokenUrl: https://auth-dev.mhx.at/auth/realms/acme/protocol/openid-connect/token
+          tokenUrl: "https://[keycloak-url]/auth/realms/acme/protocol/openid-connect/token"
       type: oauth2
 
