@@ -57,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByIntersect
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:04:35.912355Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-10T15:48:02.931633Z[Etc/UTC]")
 public class InboundIDMethodByIntersect extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_INNER = "inner";
   @SerializedName(SERIALIZED_NAME_INNER)
@@ -160,9 +160,7 @@ public class InboundIDMethodByIntersect extends AbstractInboundIDMethod {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (InboundIDMethodByIntersect.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!InboundIDMethodByIntersect.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in InboundIDMethodByIntersect is not found in the empty JSON string", InboundIDMethodByIntersect.openapiRequiredFields.toString()));
         }
       }

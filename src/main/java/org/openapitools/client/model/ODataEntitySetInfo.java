@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataEntitySetInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:04:35.912355Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-10T15:48:02.931633Z[Etc/UTC]")
 public class ODataEntitySetInfo {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -242,9 +242,7 @@ public class ODataEntitySetInfo {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ODataEntitySetInfo.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ODataEntitySetInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ODataEntitySetInfo is not found in the empty JSON string", ODataEntitySetInfo.openapiRequiredFields.toString()));
         }
       }

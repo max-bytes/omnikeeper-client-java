@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:04:35.912355Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-10T15:48:02.931633Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -281,9 +281,7 @@ public class GridViewColumn {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (GridViewColumn.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!GridViewColumn.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GridViewColumn is not found in the empty JSON string", GridViewColumn.openapiRequiredFields.toString()));
         }
       }
@@ -299,7 +297,7 @@ public class GridViewColumn {
         throw new IllegalArgumentException(String.format("Expected the field `sourceAttributeName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sourceAttributeName").toString()));
       }
       // ensure the json data is an array
-      if ((jsonObj.get("sourceAttributePath") != null && !jsonObj.get("sourceAttributePath").isJsonNull()) && !jsonObj.get("sourceAttributePath").isJsonArray()) {
+      if (!jsonObj.get("sourceAttributePath").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `sourceAttributePath` to be an array in the JSON string but got `%s`", jsonObj.get("sourceAttributePath").toString()));
       }
       if ((jsonObj.get("columnDescription") != null && !jsonObj.get("columnDescription").isJsonNull()) && !jsonObj.get("columnDescription").isJsonPrimitive()) {

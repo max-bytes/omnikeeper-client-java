@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:04:35.912355Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-10T15:48:02.931633Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -277,9 +277,7 @@ public class GridViewConfiguration {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (GridViewConfiguration.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!GridViewConfiguration.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GridViewConfiguration is not found in the empty JSON string", GridViewConfiguration.openapiRequiredFields.toString()));
         }
       }
@@ -295,7 +293,7 @@ public class GridViewConfiguration {
         throw new IllegalArgumentException(String.format("Expected the field `writeLayer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("writeLayer").toString()));
       }
       // ensure the json data is an array
-      if ((jsonObj.get("readLayerset") != null && !jsonObj.get("readLayerset").isJsonNull()) && !jsonObj.get("readLayerset").isJsonArray()) {
+      if (!jsonObj.get("readLayerset").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `readLayerset` to be an array in the JSON string but got `%s`", jsonObj.get("readLayerset").toString()));
       }
       if (jsonObj.get("columns") != null && !jsonObj.get("columns").isJsonNull()) {
