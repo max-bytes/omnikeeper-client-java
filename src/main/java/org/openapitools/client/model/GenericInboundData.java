@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-11T10:10:41.935588Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-14T19:08:44.632433Z[Etc/UTC]")
 public class GenericInboundData {
   public static final String SERIALIZED_NAME_CIS = "cis";
   @SerializedName(SERIALIZED_NAME_CIS)
