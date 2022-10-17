@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmSchemaElement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T10:53:26.637948Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T11:45:08.843081Z[Etc/UTC]")
 public class IEdmSchemaElement {
   public static final String SERIALIZED_NAME_SCHEMA_ELEMENT_KIND = "schemaElementKind";
   @SerializedName(SERIALIZED_NAME_SCHEMA_ELEMENT_KIND)
