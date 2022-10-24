@@ -106,7 +106,7 @@ public class ImportExportLayerApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ImportExportLayer/exportLayer"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -123,7 +123,6 @@ public class ImportExportLayerApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -131,7 +130,6 @@ public class ImportExportLayerApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -144,20 +142,17 @@ public class ImportExportLayerApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call importExportLayerExportLayerValidateBeforeCall(String layerID, String version, List<UUID> ciids, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'layerID' is set
         if (layerID == null) {
             throw new ApiException("Missing the required parameter 'layerID' when calling importExportLayerExportLayer(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling importExportLayerExportLayer(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = importExportLayerExportLayerCall(layerID, version, ciids, _callback);
-        return localVarCall;
+        return importExportLayerExportLayerCall(layerID, version, ciids, _callback);
 
     }
 
@@ -250,7 +245,7 @@ public class ImportExportLayerApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ImportExportLayer/importLayer"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -267,7 +262,6 @@ public class ImportExportLayerApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -288,20 +282,17 @@ public class ImportExportLayerApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call importExportLayerImportLayerValidateBeforeCall(String version, List<File> files, String overwriteLayerID, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling importExportLayerImportLayer(Async)");
         }
-        
+
         // verify the required parameter 'files' is set
         if (files == null) {
             throw new ApiException("Missing the required parameter 'files' when calling importExportLayerImportLayer(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = importExportLayerImportLayerCall(version, files, overwriteLayerID, _callback);
-        return localVarCall;
+        return importExportLayerImportLayerCall(version, files, overwriteLayerID, _callback);
 
     }
 

@@ -109,7 +109,6 @@ public class AuthRedirectApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -117,7 +116,6 @@ public class AuthRedirectApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -130,10 +128,7 @@ public class AuthRedirectApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call authRedirectIndexValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = authRedirectIndexCall(_callback);
-        return localVarCall;
+        return authRedirectIndexCall(_callback);
 
     }
 

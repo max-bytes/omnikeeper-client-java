@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T12:21:24.634207Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T07:38:32.751094Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -297,8 +297,8 @@ public class GridViewColumn {
       if ((jsonObj.get("sourceAttributeName") != null && !jsonObj.get("sourceAttributeName").isJsonNull()) && !jsonObj.get("sourceAttributeName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sourceAttributeName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sourceAttributeName").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("sourceAttributePath").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("sourceAttributePath") != null && !jsonObj.get("sourceAttributePath").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `sourceAttributePath` to be an array in the JSON string but got `%s`", jsonObj.get("sourceAttributePath").toString()));
       }
       if ((jsonObj.get("columnDescription") != null && !jsonObj.get("columnDescription").isJsonNull()) && !jsonObj.get("columnDescription").isJsonPrimitive()) {

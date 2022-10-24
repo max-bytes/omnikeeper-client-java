@@ -106,7 +106,7 @@ public class AnsibleInventoryScanIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/Ingest/AnsibleInventoryScan"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -123,7 +123,6 @@ public class AnsibleInventoryScanIngestApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -131,7 +130,22 @@ public class AnsibleInventoryScanIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -144,30 +158,27 @@ public class AnsibleInventoryScanIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ansibleInventoryScanIngestIngestAnsibleInventoryScanValidateBeforeCall(String writeLayerID, List<String> searchLayerIDs, String version, AnsibleInventoryScanDTO ansibleInventoryScanDTO, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'writeLayerID' is set
         if (writeLayerID == null) {
             throw new ApiException("Missing the required parameter 'writeLayerID' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
-        
+
         // verify the required parameter 'searchLayerIDs' is set
         if (searchLayerIDs == null) {
             throw new ApiException("Missing the required parameter 'searchLayerIDs' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
-        
+
         // verify the required parameter 'ansibleInventoryScanDTO' is set
         if (ansibleInventoryScanDTO == null) {
             throw new ApiException("Missing the required parameter 'ansibleInventoryScanDTO' when calling ansibleInventoryScanIngestIngestAnsibleInventoryScan(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = ansibleInventoryScanIngestIngestAnsibleInventoryScanCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
-        return localVarCall;
+        return ansibleInventoryScanIngestIngestAnsibleInventoryScanCall(writeLayerID, searchLayerIDs, version, ansibleInventoryScanDTO, _callback);
 
     }
 

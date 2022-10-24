@@ -106,7 +106,7 @@ public class GraphvizDotApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GraphvizDot/layerCentric"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -127,7 +127,6 @@ public class GraphvizDotApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -135,7 +134,6 @@ public class GraphvizDotApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -148,30 +146,27 @@ public class GraphvizDotApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call graphvizDotLayerCentricValidateBeforeCall(List<String> layerIDs, OffsetDateTime from, OffsetDateTime to, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
             throw new ApiException("Missing the required parameter 'layerIDs' when calling graphvizDotLayerCentric(Async)");
         }
-        
+
         // verify the required parameter 'from' is set
         if (from == null) {
             throw new ApiException("Missing the required parameter 'from' when calling graphvizDotLayerCentric(Async)");
         }
-        
+
         // verify the required parameter 'to' is set
         if (to == null) {
             throw new ApiException("Missing the required parameter 'to' when calling graphvizDotLayerCentric(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling graphvizDotLayerCentric(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = graphvizDotLayerCentricCall(layerIDs, from, to, version, _callback);
-        return localVarCall;
+        return graphvizDotLayerCentricCall(layerIDs, from, to, version, _callback);
 
     }
 
@@ -268,7 +263,7 @@ public class GraphvizDotApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GraphvizDot/traitCentric"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -289,7 +284,6 @@ public class GraphvizDotApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -297,7 +291,6 @@ public class GraphvizDotApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -310,20 +303,17 @@ public class GraphvizDotApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call graphvizDotTraitCentricValidateBeforeCall(List<String> layerIDs, String version, List<String> traitIDs, String traitIDsRegex, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
             throw new ApiException("Missing the required parameter 'layerIDs' when calling graphvizDotTraitCentric(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling graphvizDotTraitCentric(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = graphvizDotTraitCentricCall(layerIDs, version, traitIDs, traitIDsRegex, _callback);
-        return localVarCall;
+        return graphvizDotTraitCentricCall(layerIDs, version, traitIDs, traitIDsRegex, _callback);
 
     }
 

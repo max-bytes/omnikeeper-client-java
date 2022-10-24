@@ -105,7 +105,7 @@ public class CytoscapeApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/Cytoscape/traitCentric"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -126,7 +126,6 @@ public class CytoscapeApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -134,7 +133,6 @@ public class CytoscapeApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -147,20 +145,17 @@ public class CytoscapeApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call cytoscapeTraitCentricValidateBeforeCall(List<String> layerIDs, String version, List<String> traitIDs, String traitIDsRegex, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'layerIDs' is set
         if (layerIDs == null) {
             throw new ApiException("Missing the required parameter 'layerIDs' when calling cytoscapeTraitCentric(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling cytoscapeTraitCentric(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = cytoscapeTraitCentricCall(layerIDs, version, traitIDs, traitIDsRegex, _callback);
-        return localVarCall;
+        return cytoscapeTraitCentricCall(layerIDs, version, traitIDs, traitIDsRegex, _callback);
 
     }
 

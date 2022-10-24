@@ -108,7 +108,7 @@ public class OkPluginInsightDiscoveryIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/insight-discovery/file"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -141,7 +141,6 @@ public class OkPluginInsightDiscoveryIngestApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -162,20 +161,17 @@ public class OkPluginInsightDiscoveryIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ingestFileIngestValidateBeforeCall(String context, String version, String contentType, String contentDisposition, Long length, String name, String fileName, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling ingestFileIngest(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling ingestFileIngest(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = ingestFileIngestCall(context, version, contentType, contentDisposition, length, name, fileName, _callback);
-        return localVarCall;
+        return ingestFileIngestCall(context, version, contentType, contentDisposition, length, name, fileName, _callback);
 
     }
 

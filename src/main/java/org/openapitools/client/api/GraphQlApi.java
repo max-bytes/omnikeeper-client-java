@@ -111,7 +111,6 @@ public class GraphQlApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -119,7 +118,22 @@ public class GraphQlApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -132,10 +146,7 @@ public class GraphQlApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call graphQLDebugValidateBeforeCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = graphQLDebugCall(graphQLQuery, _callback);
-        return localVarCall;
+        return graphQLDebugCall(graphQLQuery, _callback);
 
     }
 
@@ -242,7 +253,6 @@ public class GraphQlApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -250,7 +260,6 @@ public class GraphQlApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -263,10 +272,7 @@ public class GraphQlApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call graphQLGetValidateBeforeCall(String operationName, String query, Map<String, Object> variables, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = graphQLGetCall(operationName, query, variables, _callback);
-        return localVarCall;
+        return graphQLGetCall(operationName, query, variables, _callback);
 
     }
 
@@ -365,7 +371,6 @@ public class GraphQlApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -373,7 +378,22 @@ public class GraphQlApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -386,10 +406,7 @@ public class GraphQlApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call graphQLIndexValidateBeforeCall(GraphQLQuery graphQLQuery, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = graphQLIndexCall(graphQLQuery, _callback);
-        return localVarCall;
+        return graphQLIndexCall(graphQLQuery, _callback);
 
     }
 

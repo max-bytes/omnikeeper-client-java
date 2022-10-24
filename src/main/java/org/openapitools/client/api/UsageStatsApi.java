@@ -105,7 +105,7 @@ public class UsageStatsApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/UsageStats/fetch"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -122,7 +122,6 @@ public class UsageStatsApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -130,7 +129,6 @@ public class UsageStatsApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -143,25 +141,22 @@ public class UsageStatsApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call usageStatsFetchValidateBeforeCall(OffsetDateTime from, OffsetDateTime to, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'from' is set
         if (from == null) {
             throw new ApiException("Missing the required parameter 'from' when calling usageStatsFetch(Async)");
         }
-        
+
         // verify the required parameter 'to' is set
         if (to == null) {
             throw new ApiException("Missing the required parameter 'to' when calling usageStatsFetch(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling usageStatsFetch(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = usageStatsFetchCall(from, to, version, _callback);
-        return localVarCall;
+        return usageStatsFetchCall(from, to, version, _callback);
 
     }
 

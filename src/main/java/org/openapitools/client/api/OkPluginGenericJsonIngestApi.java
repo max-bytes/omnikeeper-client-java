@@ -104,7 +104,7 @@ public class OkPluginGenericJsonIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -113,7 +113,22 @@ public class OkPluginGenericJsonIngestApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -121,7 +136,6 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -134,15 +148,12 @@ public class OkPluginGenericJsonIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call manageContextGetAllContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling manageContextGetAllContexts(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = manageContextGetAllContextsCall(version, _callback);
-        return localVarCall;
+        return manageContextGetAllContextsCall(version, _callback);
 
     }
 
@@ -232,8 +243,8 @@ public class OkPluginGenericJsonIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -242,7 +253,22 @@ public class OkPluginGenericJsonIngestApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -250,7 +276,6 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -263,20 +288,17 @@ public class OkPluginGenericJsonIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call manageContextGetContextValidateBeforeCall(String id, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling manageContextGetContext(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling manageContextGetContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = manageContextGetContextCall(id, version, _callback);
-        return localVarCall;
+        return manageContextGetContextCall(id, version, _callback);
 
     }
 
@@ -369,8 +391,8 @@ public class OkPluginGenericJsonIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -379,7 +401,22 @@ public class OkPluginGenericJsonIngestApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -387,7 +424,6 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -400,20 +436,17 @@ public class OkPluginGenericJsonIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call manageContextRemoveContextValidateBeforeCall(String id, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling manageContextRemoveContext(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling manageContextRemoveContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = manageContextRemoveContextCall(id, version, _callback);
-        return localVarCall;
+        return manageContextRemoveContextCall(id, version, _callback);
 
     }
 
@@ -506,7 +539,7 @@ public class OkPluginGenericJsonIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/genericJSON/manage/context"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -515,7 +548,22 @@ public class OkPluginGenericJsonIngestApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -523,7 +571,22 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -536,20 +599,17 @@ public class OkPluginGenericJsonIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call manageContextUpsertContextValidateBeforeCall(String version, Object body, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling manageContextUpsertContext(Async)");
         }
-        
+
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling manageContextUpsertContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = manageContextUpsertContextCall(version, body, _callback);
-        return localVarCall;
+        return manageContextUpsertContextCall(version, body, _callback);
 
     }
 
@@ -644,7 +704,7 @@ public class OkPluginGenericJsonIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/genericJSON/data"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -661,7 +721,6 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -669,7 +728,22 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -682,30 +756,27 @@ public class OkPluginGenericJsonIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call passiveDataIngestValidateBeforeCall(List<String> readLayerIDs, String writeLayerID, String version, GenericInboundData genericInboundData, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'readLayerIDs' is set
         if (readLayerIDs == null) {
             throw new ApiException("Missing the required parameter 'readLayerIDs' when calling passiveDataIngest(Async)");
         }
-        
+
         // verify the required parameter 'writeLayerID' is set
         if (writeLayerID == null) {
             throw new ApiException("Missing the required parameter 'writeLayerID' when calling passiveDataIngest(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling passiveDataIngest(Async)");
         }
-        
+
         // verify the required parameter 'genericInboundData' is set
         if (genericInboundData == null) {
             throw new ApiException("Missing the required parameter 'genericInboundData' when calling passiveDataIngest(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = passiveDataIngestCall(readLayerIDs, writeLayerID, version, genericInboundData, _callback);
-        return localVarCall;
+        return passiveDataIngestCall(readLayerIDs, writeLayerID, version, genericInboundData, _callback);
 
     }
 
@@ -801,7 +872,7 @@ public class OkPluginGenericJsonIngestApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/ingest/genericJSON/files"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -818,7 +889,6 @@ public class OkPluginGenericJsonIngestApi {
         }
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -839,25 +909,22 @@ public class OkPluginGenericJsonIngestApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call passiveFilesIngestValidateBeforeCall(String context, String version, List<File> files, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling passiveFilesIngest(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling passiveFilesIngest(Async)");
         }
-        
+
         // verify the required parameter 'files' is set
         if (files == null) {
             throw new ApiException("Missing the required parameter 'files' when calling passiveFilesIngest(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = passiveFilesIngestCall(context, version, files, _callback);
-        return localVarCall;
+        return passiveFilesIngestCall(context, version, files, _callback);
 
     }
 

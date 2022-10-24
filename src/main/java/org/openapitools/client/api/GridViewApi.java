@@ -108,7 +108,7 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/context"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -117,7 +117,22 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -125,7 +140,22 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -138,15 +168,12 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewAddContextValidateBeforeCall(String version, AddContextRequest addContextRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewAddContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewAddContextCall(version, addContextRequest, _callback);
-        return localVarCall;
+        return gridViewAddContextCall(version, addContextRequest, _callback);
 
     }
 
@@ -241,8 +268,8 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/contexts/{context}/change"
-            .replaceAll("\\{" + "context" + "\\}", localVarApiClient.escapeString(context.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "context" + "}", localVarApiClient.escapeString(context.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -251,7 +278,22 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -259,7 +301,22 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -272,20 +329,17 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewChangeDataValidateBeforeCall(String context, String version, ChangeDataRequest changeDataRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling gridViewChangeData(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewChangeData(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewChangeDataCall(context, version, changeDataRequest, _callback);
-        return localVarCall;
+        return gridViewChangeDataCall(context, version, changeDataRequest, _callback);
 
     }
 
@@ -384,8 +438,8 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/context/{name}"
-            .replaceAll("\\{" + "name" + "\\}", localVarApiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "name" + "}", localVarApiClient.escapeString(name.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -394,7 +448,22 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -402,7 +471,6 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -415,20 +483,17 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewDeleteContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling gridViewDeleteContext(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewDeleteContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewDeleteContextCall(name, version, _callback);
-        return localVarCall;
+        return gridViewDeleteContextCall(name, version, _callback);
 
     }
 
@@ -522,8 +587,8 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/context/{name}"
-            .replaceAll("\\{" + "name" + "\\}", localVarApiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "name" + "}", localVarApiClient.escapeString(name.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -532,7 +597,22 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -540,7 +620,22 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "application/xml", "text/plain", "text/json", "application/*+json"
+            "application/json",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "application/xml",
+            "text/plain",
+            "text/json",
+            "application/*+json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -553,20 +648,17 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewEditContextValidateBeforeCall(String name, String version, EditContextRequest editContextRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling gridViewEditContext(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewEditContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewEditContextCall(name, version, editContextRequest, _callback);
-        return localVarCall;
+        return gridViewEditContextCall(name, version, editContextRequest, _callback);
 
     }
 
@@ -662,8 +754,8 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/contexts/{context}/data"
-            .replaceAll("\\{" + "context" + "\\}", localVarApiClient.escapeString(context.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "context" + "}", localVarApiClient.escapeString(context.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -672,7 +764,6 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -680,7 +771,6 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -693,20 +783,17 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewGetDataValidateBeforeCall(String context, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling gridViewGetData(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewGetData(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewGetDataCall(context, version, _callback);
-        return localVarCall;
+        return gridViewGetDataCall(context, version, _callback);
 
     }
 
@@ -799,8 +886,8 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/context/{name}"
-            .replaceAll("\\{" + "name" + "\\}", localVarApiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "name" + "}", localVarApiClient.escapeString(name.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -809,7 +896,6 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -817,7 +903,6 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -830,20 +915,17 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewGetGridViewContextValidateBeforeCall(String name, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling gridViewGetGridViewContext(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewGetGridViewContext(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewGetGridViewContextCall(name, version, _callback);
-        return localVarCall;
+        return gridViewGetGridViewContextCall(name, version, _callback);
 
     }
 
@@ -934,7 +1016,7 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/contexts"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -943,7 +1025,6 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -951,7 +1032,6 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -964,15 +1044,12 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewGetGridViewContextsValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewGetGridViewContexts(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewGetGridViewContextsCall(version, _callback);
-        return localVarCall;
+        return gridViewGetGridViewContextsCall(version, _callback);
 
     }
 
@@ -1058,8 +1135,8 @@ public class GridViewApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/GridView/contexts/{context}/schema"
-            .replaceAll("\\{" + "context" + "\\}", localVarApiClient.escapeString(context.toString()))
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "context" + "}", localVarApiClient.escapeString(context.toString()))
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1068,7 +1145,6 @@ public class GridViewApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1076,7 +1152,6 @@ public class GridViewApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1089,20 +1164,17 @@ public class GridViewApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call gridViewGetSchemaValidateBeforeCall(String context, String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling gridViewGetSchema(Async)");
         }
-        
+
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling gridViewGetSchema(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = gridViewGetSchemaCall(context, version, _callback);
-        return localVarCall;
+        return gridViewGetSchemaCall(context, version, _callback);
 
     }
 

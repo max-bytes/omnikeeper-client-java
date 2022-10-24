@@ -104,7 +104,7 @@ public class MetadataApi {
 
         // create path and map variables
         String localVarPath = "/api/odata/{context}/$metadata"
-            .replaceAll("\\{" + "context" + "\\}", localVarApiClient.escapeString(context.toString()));
+            .replace("{" + "context" + "}", localVarApiClient.escapeString(context.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -113,7 +113,22 @@ public class MetadataApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -121,7 +136,6 @@ public class MetadataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -134,15 +148,12 @@ public class MetadataApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call metadataGetMetadataValidateBeforeCall(String context, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling metadataGetMetadata(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = metadataGetMetadataCall(context, _callback);
-        return localVarCall;
+        return metadataGetMetadataCall(context, _callback);
 
     }
 
@@ -231,7 +242,7 @@ public class MetadataApi {
 
         // create path and map variables
         String localVarPath = "/api/odata/{context}"
-            .replaceAll("\\{" + "context" + "\\}", localVarApiClient.escapeString(context.toString()));
+            .replace("{" + "context" + "}", localVarApiClient.escapeString(context.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -240,7 +251,22 @@ public class MetadataApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json", "application/xml", "application/json;odata.metadata=minimal;odata.streaming=true", "application/json;odata.metadata=minimal;odata.streaming=false", "application/json;odata.metadata=minimal", "application/json;odata.metadata=full;odata.streaming=true", "application/json;odata.metadata=full;odata.streaming=false", "application/json;odata.metadata=full", "application/json;odata.metadata=none;odata.streaming=true", "application/json;odata.metadata=none;odata.streaming=false", "application/json;odata.metadata=none", "application/json;odata.streaming=true", "application/json;odata.streaming=false", "text/plain", "application/octet-stream", "text/json"
+            "application/json",
+            "application/xml",
+            "application/json;odata.metadata=minimal;odata.streaming=true",
+            "application/json;odata.metadata=minimal;odata.streaming=false",
+            "application/json;odata.metadata=minimal",
+            "application/json;odata.metadata=full;odata.streaming=true",
+            "application/json;odata.metadata=full;odata.streaming=false",
+            "application/json;odata.metadata=full",
+            "application/json;odata.metadata=none;odata.streaming=true",
+            "application/json;odata.metadata=none;odata.streaming=false",
+            "application/json;odata.metadata=none",
+            "application/json;odata.streaming=true",
+            "application/json;odata.streaming=false",
+            "text/plain",
+            "application/octet-stream",
+            "text/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -248,7 +274,6 @@ public class MetadataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -261,15 +286,12 @@ public class MetadataApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call metadataGetServiceDocumentValidateBeforeCall(String context, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling metadataGetServiceDocument(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = metadataGetServiceDocumentCall(context, _callback);
-        return localVarCall;
+        return metadataGetServiceDocumentCall(context, _callback);
 
     }
 

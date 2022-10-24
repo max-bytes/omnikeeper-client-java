@@ -102,7 +102,7 @@ public class RestartApplicationApi {
 
         // create path and map variables
         String localVarPath = "/api/v{version}/RestartApplication/restart"
-            .replaceAll("\\{" + "version" + "\\}", localVarApiClient.escapeString(version.toString()));
+            .replace("{" + "version" + "}", localVarApiClient.escapeString(version.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -111,7 +111,6 @@ public class RestartApplicationApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -119,7 +118,6 @@ public class RestartApplicationApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -132,15 +130,12 @@ public class RestartApplicationApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call restartApplicationRestartValidateBeforeCall(String version, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'version' is set
         if (version == null) {
             throw new ApiException("Missing the required parameter 'version' when calling restartApplicationRestart(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = restartApplicationRestartCall(version, _callback);
-        return localVarCall;
+        return restartApplicationRestartCall(version, _callback);
 
     }
 

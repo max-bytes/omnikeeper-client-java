@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * AttributeValueDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T12:21:24.634207Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T07:38:32.751094Z[Etc/UTC]")
 public class AttributeValueDTO {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -222,8 +222,8 @@ public class AttributeValueDTO {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AttributeValueDTO` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("values").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
       }
   }

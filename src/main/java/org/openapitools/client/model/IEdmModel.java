@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T12:21:24.634207Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T07:38:32.751094Z[Etc/UTC]")
 public class IEdmModel {
   public static final String SERIALIZED_NAME_SCHEMA_ELEMENTS = "schemaElements";
   @SerializedName(SERIALIZED_NAME_SCHEMA_ELEMENTS)
@@ -338,8 +338,8 @@ public class IEdmModel {
           };
         }
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("declaredNamespaces").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("declaredNamespaces") != null && !jsonObj.get("declaredNamespaces").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `declaredNamespaces` to be an array in the JSON string but got `%s`", jsonObj.get("declaredNamespaces").toString()));
       }
       // validate the optional field `entityContainer`
