@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataCell
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-27T14:14:42.327716Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T07:20:49.620546Z[Etc/UTC]")
 public class ChangeDataCell {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
