@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmVocabularyAnnotation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-01T20:28:13.534300Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-01T20:38:06.331406Z[Etc/UTC]")
 public class IEdmVocabularyAnnotation {
   public static final String SERIALIZED_NAME_QUALIFIER = "qualifier";
   @SerializedName(SERIALIZED_NAME_QUALIFIER)
