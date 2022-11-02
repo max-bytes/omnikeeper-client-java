@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-01T20:49:34.880943Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-02T08:19:37.392164Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
