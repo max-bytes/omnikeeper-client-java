@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
@@ -79,7 +77,6 @@ public class GraphQLQuery {
    * @return operationName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getOperationName() {
     return operationName;
@@ -102,7 +99,6 @@ public class GraphQLQuery {
    * @return query
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getQuery() {
     return query;
@@ -133,7 +129,6 @@ public class GraphQLQuery {
    * @return variables
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Map<String, Object> getVariables() {
     return variables;

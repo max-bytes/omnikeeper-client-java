@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -88,7 +86,6 @@ public class GridViewColumn {
    * @return sourceAttributeName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getSourceAttributeName() {
     return sourceAttributeName;
@@ -119,7 +116,6 @@ public class GridViewColumn {
    * @return sourceAttributePath
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<String> getSourceAttributePath() {
     return sourceAttributePath;
@@ -142,7 +138,6 @@ public class GridViewColumn {
    * @return columnDescription
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getColumnDescription() {
     return columnDescription;
@@ -165,7 +160,6 @@ public class GridViewColumn {
    * @return valueType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public AttributeValueType getValueType() {
     return valueType;
@@ -188,7 +182,6 @@ public class GridViewColumn {
    * @return writeLayer
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getWriteLayer() {
     return writeLayer;

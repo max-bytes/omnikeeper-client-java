@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,7 +46,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundRelation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class GenericInboundRelation {
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
@@ -76,7 +74,6 @@ public class GenericInboundRelation {
    * @return from
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getFrom() {
     return from;
@@ -99,7 +96,6 @@ public class GenericInboundRelation {
    * @return predicate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getPredicate() {
     return predicate;
@@ -122,7 +118,6 @@ public class GenericInboundRelation {
    * @return to
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTo() {
     return to;

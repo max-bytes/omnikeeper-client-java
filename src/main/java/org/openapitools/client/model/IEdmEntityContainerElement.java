@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.EdmContainerElementKind;
 import org.openapitools.client.model.IEdmEntityContainer;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmEntityContainerElement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class IEdmEntityContainerElement {
   public static final String SERIALIZED_NAME_CONTAINER_ELEMENT_KIND = "containerElementKind";
   @SerializedName(SERIALIZED_NAME_CONTAINER_ELEMENT_KIND)
@@ -87,7 +85,6 @@ public class IEdmEntityContainerElement {
    * @return containerElementKind
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EdmContainerElementKind getContainerElementKind() {
     return containerElementKind;
@@ -110,7 +107,6 @@ public class IEdmEntityContainerElement {
    * @return container
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public IEdmEntityContainer getContainer() {
     return container;
@@ -127,7 +123,6 @@ public class IEdmEntityContainerElement {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getName() {
     return name;

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -87,7 +85,6 @@ public class GridViewConfiguration {
    * @return showCIIDColumn
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public Boolean getShowCIIDColumn() {
     return showCIIDColumn;
@@ -110,7 +107,6 @@ public class GridViewConfiguration {
    * @return writeLayer
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getWriteLayer() {
     return writeLayer;
@@ -141,7 +137,6 @@ public class GridViewConfiguration {
    * @return readLayerset
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<String> getReadLayerset() {
     return readLayerset;
@@ -172,7 +167,6 @@ public class GridViewConfiguration {
    * @return columns
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<GridViewColumn> getColumns() {
     return columns;
@@ -195,7 +189,6 @@ public class GridViewConfiguration {
    * @return trait
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTrait() {
     return trait;

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -95,7 +93,6 @@ public class GenericInboundCI {
    * @return tempID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTempID() {
     return tempID;
@@ -118,7 +115,6 @@ public class GenericInboundCI {
    * @return idMethod
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public GenericInboundCIIdMethod getIdMethod() {
     return idMethod;
@@ -141,7 +137,6 @@ public class GenericInboundCI {
    * @return sameTempIDHandling
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public SameTempIDHandling getSameTempIDHandling() {
     return sameTempIDHandling;
@@ -164,7 +159,6 @@ public class GenericInboundCI {
    * @return sameTargetCIHandling
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public SameTargetCIHandling getSameTargetCIHandling() {
     return sameTargetCIHandling;
@@ -187,7 +181,6 @@ public class GenericInboundCI {
    * @return noFoundTargetCIHandling
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public NoFoundTargetCIHandling getNoFoundTargetCIHandling() {
     return noFoundTargetCIHandling;
@@ -218,7 +211,6 @@ public class GenericInboundCI {
    * @return attributes
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<GenericInboundAttribute> getAttributes() {
     return attributes;

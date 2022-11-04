@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.net.URI;
 import org.openapitools.client.model.ODataTypeAnnotation;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataEntitySetInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class ODataEntitySetInfo {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -83,7 +81,6 @@ public class ODataEntitySetInfo {
    * @return typeAnnotation
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ODataTypeAnnotation getTypeAnnotation() {
     return typeAnnotation;
@@ -106,7 +103,6 @@ public class ODataEntitySetInfo {
    * @return url
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public URI getUrl() {
     return url;
@@ -129,7 +125,6 @@ public class ODataEntitySetInfo {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getName() {
     return name;
@@ -152,7 +147,6 @@ public class ODataEntitySetInfo {
    * @return title
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getTitle() {
     return title;

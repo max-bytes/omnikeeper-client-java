@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.EdmSchemaElementKind;
 import org.openapitools.client.model.IEdmTypeReference;
@@ -51,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmTerm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class IEdmTerm {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -105,7 +103,6 @@ public class IEdmTerm {
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public IEdmTypeReference getType() {
     return type;
@@ -122,7 +119,6 @@ public class IEdmTerm {
    * @return appliesTo
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getAppliesTo() {
     return appliesTo;
@@ -136,7 +132,6 @@ public class IEdmTerm {
    * @return defaultValue
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getDefaultValue() {
     return defaultValue;
@@ -156,7 +151,6 @@ public class IEdmTerm {
    * @return schemaElementKind
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EdmSchemaElementKind getSchemaElementKind() {
     return schemaElementKind;
@@ -173,7 +167,6 @@ public class IEdmTerm {
    * @return namespace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getNamespace() {
     return namespace;
@@ -187,7 +180,6 @@ public class IEdmTerm {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getName() {
     return name;

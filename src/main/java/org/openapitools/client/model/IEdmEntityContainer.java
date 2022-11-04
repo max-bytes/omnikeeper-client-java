@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmEntityContainer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class IEdmEntityContainer {
   public static final String SERIALIZED_NAME_ELEMENTS = "elements";
   @SerializedName(SERIALIZED_NAME_ELEMENTS)
@@ -91,7 +89,6 @@ public class IEdmEntityContainer {
    * @return elements
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<IEdmEntityContainerElement> getElements() {
     return elements;
@@ -111,7 +108,6 @@ public class IEdmEntityContainer {
    * @return schemaElementKind
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EdmSchemaElementKind getSchemaElementKind() {
     return schemaElementKind;
@@ -128,7 +124,6 @@ public class IEdmEntityContainer {
    * @return namespace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getNamespace() {
     return namespace;
@@ -142,7 +137,6 @@ public class IEdmEntityContainer {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getName() {
     return name;

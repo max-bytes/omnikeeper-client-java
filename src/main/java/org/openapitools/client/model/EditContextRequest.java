@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.GridViewConfiguration;
 
@@ -49,7 +47,7 @@ import org.openapitools.client.JSON;
 /**
  * EditContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class EditContextRequest {
   public static final String SERIALIZED_NAME_SPEAKING_NAME = "speakingName";
   @SerializedName(SERIALIZED_NAME_SPEAKING_NAME)
@@ -77,7 +75,6 @@ public class EditContextRequest {
    * @return speakingName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getSpeakingName() {
     return speakingName;
@@ -100,7 +97,6 @@ public class EditContextRequest {
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public String getDescription() {
     return description;
@@ -123,7 +119,6 @@ public class EditContextRequest {
    * @return _configuration
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public GridViewConfiguration getConfiguration() {
     return _configuration;

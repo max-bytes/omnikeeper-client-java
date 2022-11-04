@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataServiceDocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T09:47:00.035406Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-04T10:58:38.266512Z[Etc/UTC]")
 public class ODataServiceDocument {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -87,7 +85,6 @@ public class ODataServiceDocument {
    * @return typeAnnotation
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ODataTypeAnnotation getTypeAnnotation() {
     return typeAnnotation;
@@ -118,7 +115,6 @@ public class ODataServiceDocument {
    * @return entitySets
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<ODataEntitySetInfo> getEntitySets() {
     return entitySets;
@@ -149,7 +145,6 @@ public class ODataServiceDocument {
    * @return singletons
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<ODataSingletonInfo> getSingletons() {
     return singletons;
@@ -180,7 +175,6 @@ public class ODataServiceDocument {
    * @return functionImports
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<ODataFunctionImportInfo> getFunctionImports() {
     return functionImports;
