@@ -47,7 +47,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmExpression
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-23T10:53:32.807716Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-28T09:01:44.211569Z[Etc/UTC]")
 public class IEdmExpression {
   public static final String SERIALIZED_NAME_EXPRESSION_KIND = "expressionKind";
   @SerializedName(SERIALIZED_NAME_EXPRESSION_KIND)
