@@ -46,7 +46,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByAttributeModifiers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-29T09:18:45.195767Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T10:37:37.896084Z[Etc/UTC]")
 public class InboundIDMethodByAttributeModifiers {
   public static final String SERIALIZED_NAME_CASE_INSENSITIVE = "caseInsensitive";
   @SerializedName(SERIALIZED_NAME_CASE_INSENSITIVE)
