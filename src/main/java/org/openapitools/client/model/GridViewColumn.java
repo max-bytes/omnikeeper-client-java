@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -58,7 +58,7 @@ public class GridViewColumn {
 
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_PATH = "sourceAttributePath";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_PATH)
-  private List<String> sourceAttributePath = null;
+  private List<String> sourceAttributePath;
 
   public static final String SERIALIZED_NAME_COLUMN_DESCRIPTION = "columnDescription";
   @SerializedName(SERIALIZED_NAME_COLUMN_DESCRIPTION)
@@ -104,9 +104,6 @@ public class GridViewColumn {
   }
 
   public GridViewColumn addSourceAttributePathItem(String sourceAttributePathItem) {
-    if (this.sourceAttributePath == null) {
-      this.sourceAttributePath = new ArrayList<>();
-    }
     this.sourceAttributePath.add(sourceAttributePathItem);
     return this;
   }

@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -77,7 +77,7 @@ public class GenericInboundCI {
 
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
-  private List<GenericInboundAttribute> attributes = null;
+  private List<GenericInboundAttribute> attributes = new ArrayList<>();
 
   public GenericInboundCI() {
   }

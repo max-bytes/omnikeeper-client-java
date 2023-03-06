@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
@@ -61,7 +61,7 @@ public class GraphQLQuery {
 
   public static final String SERIALIZED_NAME_VARIABLES = "variables";
   @SerializedName(SERIALIZED_NAME_VARIABLES)
-  private Map<String, Object> variables = null;
+  private Map<String, Object> variables;
 
   public GraphQLQuery() {
   }
@@ -117,9 +117,6 @@ public class GraphQLQuery {
   }
 
   public GraphQLQuery putVariablesItem(String key, Object variablesItem) {
-    if (this.variables == null) {
-      this.variables = new HashMap<>();
-    }
     this.variables.put(key, variablesItem);
     return this;
   }

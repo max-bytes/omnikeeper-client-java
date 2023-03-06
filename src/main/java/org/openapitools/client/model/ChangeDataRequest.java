@@ -49,11 +49,11 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
-  private List<SparseRow> sparseRows = null;
+  private List<SparseRow> sparseRows = new ArrayList<>();
 
   public ChangeDataRequest() {
   }

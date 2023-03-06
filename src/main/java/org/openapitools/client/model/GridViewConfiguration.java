@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -61,11 +61,11 @@ public class GridViewConfiguration {
 
   public static final String SERIALIZED_NAME_READ_LAYERSET = "readLayerset";
   @SerializedName(SERIALIZED_NAME_READ_LAYERSET)
-  private List<String> readLayerset = null;
+  private List<String> readLayerset = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
-  private List<GridViewColumn> columns = null;
+  private List<GridViewColumn> columns = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TRAIT = "trait";
   @SerializedName(SERIALIZED_NAME_TRAIT)

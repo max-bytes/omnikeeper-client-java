@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataServiceDocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class ODataServiceDocument {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -61,15 +61,15 @@ public class ODataServiceDocument {
 
   public static final String SERIALIZED_NAME_ENTITY_SETS = "entitySets";
   @SerializedName(SERIALIZED_NAME_ENTITY_SETS)
-  private List<ODataEntitySetInfo> entitySets = null;
+  private List<ODataEntitySetInfo> entitySets;
 
   public static final String SERIALIZED_NAME_SINGLETONS = "singletons";
   @SerializedName(SERIALIZED_NAME_SINGLETONS)
-  private List<ODataSingletonInfo> singletons = null;
+  private List<ODataSingletonInfo> singletons;
 
   public static final String SERIALIZED_NAME_FUNCTION_IMPORTS = "functionImports";
   @SerializedName(SERIALIZED_NAME_FUNCTION_IMPORTS)
-  private List<ODataFunctionImportInfo> functionImports = null;
+  private List<ODataFunctionImportInfo> functionImports;
 
   public ODataServiceDocument() {
   }
@@ -103,9 +103,6 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument addEntitySetsItem(ODataEntitySetInfo entitySetsItem) {
-    if (this.entitySets == null) {
-      this.entitySets = new ArrayList<>();
-    }
     this.entitySets.add(entitySetsItem);
     return this;
   }
@@ -133,9 +130,6 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument addSingletonsItem(ODataSingletonInfo singletonsItem) {
-    if (this.singletons == null) {
-      this.singletons = new ArrayList<>();
-    }
     this.singletons.add(singletonsItem);
     return this;
   }
@@ -163,9 +157,6 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument addFunctionImportsItem(ODataFunctionImportInfo functionImportsItem) {
-    if (this.functionImports == null) {
-      this.functionImports = new ArrayList<>();
-    }
     this.functionImports.add(functionImportsItem);
     return this;
   }

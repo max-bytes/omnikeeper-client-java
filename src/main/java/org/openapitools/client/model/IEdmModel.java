@@ -52,23 +52,23 @@ import org.openapitools.client.JSON;
 /**
  * IEdmModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-30T11:14:24.047622Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:37:31.063878Z[Etc/UTC]")
 public class IEdmModel {
   public static final String SERIALIZED_NAME_SCHEMA_ELEMENTS = "schemaElements";
   @SerializedName(SERIALIZED_NAME_SCHEMA_ELEMENTS)
-  private List<IEdmSchemaElement> schemaElements = null;
+  private List<IEdmSchemaElement> schemaElements;
 
   public static final String SERIALIZED_NAME_VOCABULARY_ANNOTATIONS = "vocabularyAnnotations";
   @SerializedName(SERIALIZED_NAME_VOCABULARY_ANNOTATIONS)
-  private List<IEdmVocabularyAnnotation> vocabularyAnnotations = null;
+  private List<IEdmVocabularyAnnotation> vocabularyAnnotations;
 
   public static final String SERIALIZED_NAME_REFERENCED_MODELS = "referencedModels";
   @SerializedName(SERIALIZED_NAME_REFERENCED_MODELS)
-  private List<IEdmModel> referencedModels = null;
+  private List<IEdmModel> referencedModels;
 
   public static final String SERIALIZED_NAME_DECLARED_NAMESPACES = "declaredNamespaces";
   @SerializedName(SERIALIZED_NAME_DECLARED_NAMESPACES)
-  private List<String> declaredNamespaces = null;
+  private List<String> declaredNamespaces;
 
   public static final String SERIALIZED_NAME_DIRECT_VALUE_ANNOTATIONS_MANAGER = "directValueAnnotationsManager";
   @SerializedName(SERIALIZED_NAME_DIRECT_VALUE_ANNOTATIONS_MANAGER)
