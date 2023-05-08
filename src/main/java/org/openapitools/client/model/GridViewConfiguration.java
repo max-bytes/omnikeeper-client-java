@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -61,11 +65,11 @@ public class GridViewConfiguration {
 
   public static final String SERIALIZED_NAME_READ_LAYERSET = "readLayerset";
   @SerializedName(SERIALIZED_NAME_READ_LAYERSET)
-  private List<String> readLayerset = new ArrayList<>();
+  private List<String> readLayerset;
 
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
-  private List<GridViewColumn> columns = new ArrayList<>();
+  private List<GridViewColumn> columns;
 
   public static final String SERIALIZED_NAME_TRAIT = "trait";
   @SerializedName(SERIALIZED_NAME_TRAIT)
@@ -85,7 +89,6 @@ public class GridViewConfiguration {
    * @return showCIIDColumn
   **/
   @javax.annotation.Nullable
-
   public Boolean getShowCIIDColumn() {
     return showCIIDColumn;
   }
@@ -107,7 +110,6 @@ public class GridViewConfiguration {
    * @return writeLayer
   **/
   @javax.annotation.Nullable
-
   public String getWriteLayer() {
     return writeLayer;
   }
@@ -137,7 +139,6 @@ public class GridViewConfiguration {
    * @return readLayerset
   **/
   @javax.annotation.Nullable
-
   public List<String> getReadLayerset() {
     return readLayerset;
   }
@@ -167,7 +168,6 @@ public class GridViewConfiguration {
    * @return columns
   **/
   @javax.annotation.Nullable
-
   public List<GridViewColumn> getColumns() {
     return columns;
   }
@@ -189,7 +189,6 @@ public class GridViewConfiguration {
    * @return trait
   **/
   @javax.annotation.Nullable
-
   public String getTrait() {
     return trait;
   }

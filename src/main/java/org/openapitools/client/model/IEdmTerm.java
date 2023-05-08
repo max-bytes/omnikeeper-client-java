@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmTerm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class IEdmTerm {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -103,7 +107,6 @@ public class IEdmTerm {
    * @return type
   **/
   @javax.annotation.Nullable
-
   public IEdmTypeReference getType() {
     return type;
   }
@@ -119,7 +122,6 @@ public class IEdmTerm {
    * @return appliesTo
   **/
   @javax.annotation.Nullable
-
   public String getAppliesTo() {
     return appliesTo;
   }
@@ -132,7 +134,6 @@ public class IEdmTerm {
    * @return defaultValue
   **/
   @javax.annotation.Nullable
-
   public String getDefaultValue() {
     return defaultValue;
   }
@@ -151,7 +152,6 @@ public class IEdmTerm {
    * @return schemaElementKind
   **/
   @javax.annotation.Nullable
-
   public EdmSchemaElementKind getSchemaElementKind() {
     return schemaElementKind;
   }
@@ -167,7 +167,6 @@ public class IEdmTerm {
    * @return namespace
   **/
   @javax.annotation.Nullable
-
   public String getNamespace() {
     return namespace;
   }
@@ -180,7 +179,6 @@ public class IEdmTerm {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }

@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByAttributeModifiers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class InboundIDMethodByAttributeModifiers {
   public static final String SERIALIZED_NAME_CASE_INSENSITIVE = "caseInsensitive";
   @SerializedName(SERIALIZED_NAME_CASE_INSENSITIVE)
@@ -66,7 +70,6 @@ public class InboundIDMethodByAttributeModifiers {
    * @return caseInsensitive
   **/
   @javax.annotation.Nullable
-
   public Boolean getCaseInsensitive() {
     return caseInsensitive;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * AnsibleInventoryScanDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class AnsibleInventoryScanDTO {
   public static final String SERIALIZED_NAME_SETUP_FACTS = "setupFacts";
   @SerializedName(SERIALIZED_NAME_SETUP_FACTS)
@@ -76,6 +80,9 @@ public class AnsibleInventoryScanDTO {
   }
 
   public AnsibleInventoryScanDTO putSetupFactsItem(String key, String setupFactsItem) {
+    if (this.setupFacts == null) {
+      this.setupFacts = new HashMap<>();
+    }
     this.setupFacts.put(key, setupFactsItem);
     return this;
   }
@@ -85,7 +92,6 @@ public class AnsibleInventoryScanDTO {
    * @return setupFacts
   **/
   @javax.annotation.Nonnull
-
   public Map<String, String> getSetupFacts() {
     return setupFacts;
   }
@@ -103,6 +109,9 @@ public class AnsibleInventoryScanDTO {
   }
 
   public AnsibleInventoryScanDTO putYumInstalledItem(String key, String yumInstalledItem) {
+    if (this.yumInstalled == null) {
+      this.yumInstalled = new HashMap<>();
+    }
     this.yumInstalled.put(key, yumInstalledItem);
     return this;
   }
@@ -112,7 +121,6 @@ public class AnsibleInventoryScanDTO {
    * @return yumInstalled
   **/
   @javax.annotation.Nonnull
-
   public Map<String, String> getYumInstalled() {
     return yumInstalled;
   }
@@ -130,6 +138,9 @@ public class AnsibleInventoryScanDTO {
   }
 
   public AnsibleInventoryScanDTO putYumReposItem(String key, String yumReposItem) {
+    if (this.yumRepos == null) {
+      this.yumRepos = new HashMap<>();
+    }
     this.yumRepos.put(key, yumReposItem);
     return this;
   }
@@ -139,7 +150,6 @@ public class AnsibleInventoryScanDTO {
    * @return yumRepos
   **/
   @javax.annotation.Nonnull
-
   public Map<String, String> getYumRepos() {
     return yumRepos;
   }
@@ -157,6 +167,9 @@ public class AnsibleInventoryScanDTO {
   }
 
   public AnsibleInventoryScanDTO putYumUpdatesItem(String key, String yumUpdatesItem) {
+    if (this.yumUpdates == null) {
+      this.yumUpdates = new HashMap<>();
+    }
     this.yumUpdates.put(key, yumUpdatesItem);
     return this;
   }
@@ -166,7 +179,6 @@ public class AnsibleInventoryScanDTO {
    * @return yumUpdates
   **/
   @javax.annotation.Nonnull
-
   public Map<String, String> getYumUpdates() {
     return yumUpdates;
   }

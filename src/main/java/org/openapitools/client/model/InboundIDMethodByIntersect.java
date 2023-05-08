@@ -24,12 +24,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.AbstractInboundIDMethod;
-import org.openapitools.client.model.InboundIDMethodByAttribute;
-import org.openapitools.client.model.InboundIDMethodByByUnion;
-import org.openapitools.client.model.InboundIDMethodByData;
-import org.openapitools.client.model.InboundIDMethodByIntersect;
-import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
-import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
 import org.openapitools.client.model.OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect;
 
 import com.google.gson.Gson;
@@ -42,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -56,11 +54,11 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByIntersect
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class InboundIDMethodByIntersect extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_INNER = "inner";
   @SerializedName(SERIALIZED_NAME_INNER)
-  private List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner = new ArrayList<>();
+  private List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> inner;
 
   public InboundIDMethodByIntersect() {
     this.type = this.getClass().getSimpleName();
@@ -85,7 +83,6 @@ public class InboundIDMethodByIntersect extends AbstractInboundIDMethod {
    * @return inner
   **/
   @javax.annotation.Nullable
-
   public List<OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect> getInner() {
     return inner;
   }

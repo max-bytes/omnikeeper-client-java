@@ -22,12 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import org.openapitools.client.model.AbstractInboundIDMethod;
-import org.openapitools.client.model.InboundIDMethodByAttribute;
-import org.openapitools.client.model.InboundIDMethodByByUnion;
-import org.openapitools.client.model.InboundIDMethodByData;
-import org.openapitools.client.model.InboundIDMethodByIntersect;
-import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
-import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -39,6 +33,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -53,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByRelatedTempID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -82,7 +80,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
    * @return tempID
   **/
   @javax.annotation.Nullable
-
   public String getTempID() {
     return tempID;
   }
@@ -104,7 +101,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
    * @return outgoingRelation
   **/
   @javax.annotation.Nullable
-
   public Boolean getOutgoingRelation() {
     return outgoingRelation;
   }
@@ -126,7 +122,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
    * @return predicateID
   **/
   @javax.annotation.Nullable
-
   public String getPredicateID() {
     return predicateID;
   }

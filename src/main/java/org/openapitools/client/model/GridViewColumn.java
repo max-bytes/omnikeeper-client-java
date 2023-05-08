@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -86,7 +90,6 @@ public class GridViewColumn {
    * @return sourceAttributeName
   **/
   @javax.annotation.Nullable
-
   public String getSourceAttributeName() {
     return sourceAttributeName;
   }
@@ -104,6 +107,9 @@ public class GridViewColumn {
   }
 
   public GridViewColumn addSourceAttributePathItem(String sourceAttributePathItem) {
+    if (this.sourceAttributePath == null) {
+      this.sourceAttributePath = new ArrayList<>();
+    }
     this.sourceAttributePath.add(sourceAttributePathItem);
     return this;
   }
@@ -113,7 +119,6 @@ public class GridViewColumn {
    * @return sourceAttributePath
   **/
   @javax.annotation.Nullable
-
   public List<String> getSourceAttributePath() {
     return sourceAttributePath;
   }
@@ -135,7 +140,6 @@ public class GridViewColumn {
    * @return columnDescription
   **/
   @javax.annotation.Nullable
-
   public String getColumnDescription() {
     return columnDescription;
   }
@@ -157,7 +161,6 @@ public class GridViewColumn {
    * @return valueType
   **/
   @javax.annotation.Nullable
-
   public AttributeValueType getValueType() {
     return valueType;
   }
@@ -179,7 +182,6 @@ public class GridViewColumn {
    * @return writeLayer
   **/
   @javax.annotation.Nullable
-
   public String getWriteLayer() {
     return writeLayer;
   }

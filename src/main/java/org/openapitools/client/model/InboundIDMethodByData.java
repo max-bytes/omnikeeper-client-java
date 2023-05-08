@@ -24,12 +24,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.AbstractInboundIDMethod;
-import org.openapitools.client.model.InboundIDMethodByAttribute;
-import org.openapitools.client.model.InboundIDMethodByByUnion;
-import org.openapitools.client.model.InboundIDMethodByData;
-import org.openapitools.client.model.InboundIDMethodByIntersect;
-import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
-import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -41,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -55,11 +53,11 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class InboundIDMethodByData extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
-  private List<String> attributes = new ArrayList<>();
+  private List<String> attributes;
 
   public InboundIDMethodByData() {
     this.type = this.getClass().getSimpleName();
@@ -84,7 +82,6 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
    * @return attributes
   **/
   @javax.annotation.Nullable
-
   public List<String> getAttributes() {
     return attributes;
   }

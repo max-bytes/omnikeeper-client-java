@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
@@ -77,7 +81,6 @@ public class GraphQLQuery {
    * @return operationName
   **/
   @javax.annotation.Nullable
-
   public String getOperationName() {
     return operationName;
   }
@@ -99,7 +102,6 @@ public class GraphQLQuery {
    * @return query
   **/
   @javax.annotation.Nullable
-
   public String getQuery() {
     return query;
   }
@@ -117,6 +119,9 @@ public class GraphQLQuery {
   }
 
   public GraphQLQuery putVariablesItem(String key, Object variablesItem) {
+    if (this.variables == null) {
+      this.variables = new HashMap<>();
+    }
     this.variables.put(key, variablesItem);
     return this;
   }
@@ -126,7 +131,6 @@ public class GraphQLQuery {
    * @return variables
   **/
   @javax.annotation.Nullable
-
   public Map<String, Object> getVariables() {
     return variables;
   }

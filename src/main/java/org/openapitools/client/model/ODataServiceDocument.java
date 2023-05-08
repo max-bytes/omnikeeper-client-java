@@ -39,6 +39,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -53,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataServiceDocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class ODataServiceDocument {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -85,7 +89,6 @@ public class ODataServiceDocument {
    * @return typeAnnotation
   **/
   @javax.annotation.Nullable
-
   public ODataTypeAnnotation getTypeAnnotation() {
     return typeAnnotation;
   }
@@ -103,6 +106,9 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument addEntitySetsItem(ODataEntitySetInfo entitySetsItem) {
+    if (this.entitySets == null) {
+      this.entitySets = new ArrayList<>();
+    }
     this.entitySets.add(entitySetsItem);
     return this;
   }
@@ -112,7 +118,6 @@ public class ODataServiceDocument {
    * @return entitySets
   **/
   @javax.annotation.Nullable
-
   public List<ODataEntitySetInfo> getEntitySets() {
     return entitySets;
   }
@@ -130,6 +135,9 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument addSingletonsItem(ODataSingletonInfo singletonsItem) {
+    if (this.singletons == null) {
+      this.singletons = new ArrayList<>();
+    }
     this.singletons.add(singletonsItem);
     return this;
   }
@@ -139,7 +147,6 @@ public class ODataServiceDocument {
    * @return singletons
   **/
   @javax.annotation.Nullable
-
   public List<ODataSingletonInfo> getSingletons() {
     return singletons;
   }
@@ -157,6 +164,9 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument addFunctionImportsItem(ODataFunctionImportInfo functionImportsItem) {
+    if (this.functionImports == null) {
+      this.functionImports = new ArrayList<>();
+    }
     this.functionImports.add(functionImportsItem);
     return this;
   }
@@ -166,7 +176,6 @@ public class ODataServiceDocument {
    * @return functionImports
   **/
   @javax.annotation.Nullable
-
   public List<ODataFunctionImportInfo> getFunctionImports() {
     return functionImports;
   }

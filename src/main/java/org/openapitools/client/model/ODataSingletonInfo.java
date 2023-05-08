@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataSingletonInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class ODataSingletonInfo {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -81,7 +85,6 @@ public class ODataSingletonInfo {
    * @return typeAnnotation
   **/
   @javax.annotation.Nullable
-
   public ODataTypeAnnotation getTypeAnnotation() {
     return typeAnnotation;
   }
@@ -103,7 +106,6 @@ public class ODataSingletonInfo {
    * @return url
   **/
   @javax.annotation.Nullable
-
   public URI getUrl() {
     return url;
   }
@@ -125,7 +127,6 @@ public class ODataSingletonInfo {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -147,7 +148,6 @@ public class ODataSingletonInfo {
    * @return title
   **/
   @javax.annotation.Nullable
-
   public String getTitle() {
     return title;
   }

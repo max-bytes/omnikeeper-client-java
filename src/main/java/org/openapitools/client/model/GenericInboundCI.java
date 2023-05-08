@@ -39,6 +39,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -53,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -77,7 +81,7 @@ public class GenericInboundCI {
 
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
-  private List<GenericInboundAttribute> attributes = new ArrayList<>();
+  private List<GenericInboundAttribute> attributes;
 
   public GenericInboundCI() {
   }
@@ -93,7 +97,6 @@ public class GenericInboundCI {
    * @return tempID
   **/
   @javax.annotation.Nullable
-
   public String getTempID() {
     return tempID;
   }
@@ -115,7 +118,6 @@ public class GenericInboundCI {
    * @return idMethod
   **/
   @javax.annotation.Nullable
-
   public GenericInboundCIIdMethod getIdMethod() {
     return idMethod;
   }
@@ -137,7 +139,6 @@ public class GenericInboundCI {
    * @return sameTempIDHandling
   **/
   @javax.annotation.Nullable
-
   public SameTempIDHandling getSameTempIDHandling() {
     return sameTempIDHandling;
   }
@@ -159,7 +160,6 @@ public class GenericInboundCI {
    * @return sameTargetCIHandling
   **/
   @javax.annotation.Nullable
-
   public SameTargetCIHandling getSameTargetCIHandling() {
     return sameTargetCIHandling;
   }
@@ -181,7 +181,6 @@ public class GenericInboundCI {
    * @return noFoundTargetCIHandling
   **/
   @javax.annotation.Nullable
-
   public NoFoundTargetCIHandling getNoFoundTargetCIHandling() {
     return noFoundTargetCIHandling;
   }
@@ -211,7 +210,6 @@ public class GenericInboundCI {
    * @return attributes
   **/
   @javax.annotation.Nullable
-
   public List<GenericInboundAttribute> getAttributes() {
     return attributes;
   }

@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * AttributeValueDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:42:39.268544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
 public class AttributeValueDTO {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -61,7 +65,7 @@ public class AttributeValueDTO {
 
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
-  private List<String> values = new ArrayList<>();
+  private List<String> values;
 
   public AttributeValueDTO() {
   }
@@ -77,7 +81,6 @@ public class AttributeValueDTO {
    * @return type
   **/
   @javax.annotation.Nullable
-
   public AttributeValueType getType() {
     return type;
   }
@@ -99,7 +102,6 @@ public class AttributeValueDTO {
    * @return isArray
   **/
   @javax.annotation.Nullable
-
   public Boolean getIsArray() {
     return isArray;
   }
@@ -129,7 +131,6 @@ public class AttributeValueDTO {
    * @return values
   **/
   @javax.annotation.Nullable
-
   public List<String> getValues() {
     return values;
   }
