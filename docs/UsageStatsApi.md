@@ -7,7 +7,7 @@ All URIs are relative to *http://localhost*
 | [**usageStatsFetch**](UsageStatsApi.md#usageStatsFetch) | **GET** /api/v{version}/UsageStats/fetch |  |
 
 
-<a name="usageStatsFetch"></a>
+<a id="usageStatsFetch"></a>
 # **usageStatsFetch**
 > usageStatsFetch(from, to, version)
 

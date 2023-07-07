@@ -7,7 +7,7 @@ All URIs are relative to *http://localhost*
 | [**cytoscapeTraitCentric**](CytoscapeApi.md#cytoscapeTraitCentric) | **GET** /api/v{version}/Cytoscape/traitCentric |  |
 
 
-<a name="cytoscapeTraitCentric"></a>
+<a id="cytoscapeTraitCentric"></a>
 # **cytoscapeTraitCentric**
 > cytoscapeTraitCentric(layerIDs, version, traitIDs, traitIDsRegex)
 

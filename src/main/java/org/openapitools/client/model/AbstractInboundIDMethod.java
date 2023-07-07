@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * AbstractInboundIDMethod
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-07T08:22:58.374923Z[Etc/UTC]")
 public class AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -134,39 +134,39 @@ public class AbstractInboundIDMethod {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AbstractInboundIDMethod
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AbstractInboundIDMethod
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!AbstractInboundIDMethod.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AbstractInboundIDMethod.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AbstractInboundIDMethod is not found in the empty JSON string", AbstractInboundIDMethod.openapiRequiredFields.toString()));
         }
       }
 
-      String discriminatorValue = jsonObj.get("type").getAsString();
+      String discriminatorValue = jsonElement.getAsJsonObject().get("type").getAsString();
       switch (discriminatorValue) {
         case "OKPluginGenericJSONIngest.InboundIDMethodByAttribute, OKPluginGenericJSONIngest":
-          InboundIDMethodByAttribute.validateJsonObject(jsonObj);
+          InboundIDMethodByAttribute.validateJsonElement(jsonElement);
           break;
         case "OKPluginGenericJSONIngest.InboundIDMethodByByUnion, OKPluginGenericJSONIngest":
-          InboundIDMethodByByUnion.validateJsonObject(jsonObj);
+          InboundIDMethodByByUnion.validateJsonElement(jsonElement);
           break;
         case "OKPluginGenericJSONIngest.InboundIDMethodByData, OKPluginGenericJSONIngest":
-          InboundIDMethodByData.validateJsonObject(jsonObj);
+          InboundIDMethodByData.validateJsonElement(jsonElement);
           break;
         case "OKPluginGenericJSONIngest.InboundIDMethodByIntersect, OKPluginGenericJSONIngest":
-          InboundIDMethodByIntersect.validateJsonObject(jsonObj);
+          InboundIDMethodByIntersect.validateJsonElement(jsonElement);
           break;
         case "OKPluginGenericJSONIngest.InboundIDMethodByRelatedTempID, OKPluginGenericJSONIngest":
-          InboundIDMethodByRelatedTempID.validateJsonObject(jsonObj);
+          InboundIDMethodByRelatedTempID.validateJsonElement(jsonElement);
           break;
         case "OKPluginGenericJSONIngest.InboundIDMethodByTemporaryCIID, OKPluginGenericJSONIngest":
-          InboundIDMethodByTemporaryCIID.validateJsonObject(jsonObj);
+          InboundIDMethodByTemporaryCIID.validateJsonElement(jsonElement);
           break;
-        default: 
+        default:
           throw new IllegalArgumentException(String.format("The value of the `type` field `%s` does not match any key defined in the discriminator's mapping.", discriminatorValue));
       }
   }

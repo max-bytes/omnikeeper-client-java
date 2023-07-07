@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 | [**graphvizDotTraitCentric**](GraphvizDotApi.md#graphvizDotTraitCentric) | **GET** /api/v{version}/GraphvizDot/traitCentric |  |
 
 
-<a name="graphvizDotLayerCentric"></a>
+<a id="graphvizDotLayerCentric"></a>
 # **graphvizDotLayerCentric**
 > graphvizDotLayerCentric(layerIDs, from, to, version)
 
@@ -82,7 +82,7 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="graphvizDotTraitCentric"></a>
+<a id="graphvizDotTraitCentric"></a>
 # **graphvizDotTraitCentric**
 > graphvizDotTraitCentric(layerIDs, version, traitIDs, traitIDsRegex)
 

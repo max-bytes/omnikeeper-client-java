@@ -7,7 +7,7 @@ All URIs are relative to *http://localhost*
 | [**ingestFileIngest**](OkPluginInsightDiscoveryIngestApi.md#ingestFileIngest) | **POST** /api/v{version}/ingest/insight-discovery/file |  |
 
 
-<a name="ingestFileIngest"></a>
+<a id="ingestFileIngest"></a>
 # **ingestFileIngest**
 > ingestFileIngest(context, version, contentType, contentDisposition, length, name, fileName)
 

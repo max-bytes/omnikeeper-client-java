@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 | [**attributeValueImagePost**](AttributeValueImageApi.md#attributeValueImagePost) | **POST** /api/v{version}/AttributeValueImage |  |
 
 
-<a name="attributeValueImageGet"></a>
+<a id="attributeValueImageGet"></a>
 # **attributeValueImageGet**
 > attributeValueImageGet(ciid, attributeName, layerIDs, version, index, atTime)
 
@@ -86,7 +86,7 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="attributeValueImagePost"></a>
+<a id="attributeValueImagePost"></a>
 # **attributeValueImagePost**
 > attributeValueImagePost(ciid, attributeName, layerID, version, files, forceArray)
 

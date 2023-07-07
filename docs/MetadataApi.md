@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 | [**metadataGetServiceDocument**](MetadataApi.md#metadataGetServiceDocument) | **GET** /api/odata/{context} |  |
 
 
-<a name="metadataGetMetadata"></a>
+<a id="metadataGetMetadata"></a>
 # **metadataGetMetadata**
 > IEdmModel metadataGetMetadata(context)
 
@@ -77,7 +77,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="metadataGetServiceDocument"></a>
+<a id="metadataGetServiceDocument"></a>
 # **metadataGetServiceDocument**
 > ODataServiceDocument metadataGetServiceDocument(context)
 

@@ -57,7 +57,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-08T14:38:25.106411Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-07T08:22:58.374923Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -287,31 +287,32 @@ public class GenericInboundCI {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GenericInboundCI
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to GenericInboundCI
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!GenericInboundCI.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!GenericInboundCI.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GenericInboundCI is not found in the empty JSON string", GenericInboundCI.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!GenericInboundCI.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GenericInboundCI` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GenericInboundCI` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("tempID") != null && !jsonObj.get("tempID").isJsonNull()) && !jsonObj.get("tempID").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tempID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tempID").toString()));
       }
       // validate the optional field `idMethod`
       if (jsonObj.get("idMethod") != null && !jsonObj.get("idMethod").isJsonNull()) {
-        GenericInboundCIIdMethod.validateJsonObject(jsonObj.getAsJsonObject("idMethod"));
+        GenericInboundCIIdMethod.validateJsonElement(jsonObj.get("idMethod"));
       }
       if (jsonObj.get("attributes") != null && !jsonObj.get("attributes").isJsonNull()) {
         JsonArray jsonArrayattributes = jsonObj.getAsJsonArray("attributes");
@@ -323,7 +324,7 @@ public class GenericInboundCI {
 
           // validate the optional field `attributes` (array)
           for (int i = 0; i < jsonArrayattributes.size(); i++) {
-            GenericInboundAttribute.validateJsonObject(jsonArrayattributes.get(i).getAsJsonObject());
+            GenericInboundAttribute.validateJsonElement(jsonArrayattributes.get(i));
           };
         }
       }
@@ -349,9 +350,9 @@ public class GenericInboundCI {
 
            @Override
            public GenericInboundCI read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

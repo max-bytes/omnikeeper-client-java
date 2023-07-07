@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 | [**gridViewGetSchema**](GridViewApi.md#gridViewGetSchema) | **GET** /api/v{version}/GridView/contexts/{context}/schema | Returns grid view schema for specific context |
 
 
-<a name="gridViewAddContext"></a>
+<a id="gridViewAddContext"></a>
 # **gridViewAddContext**
 > gridViewAddContext(version, addContextRequest)
 
@@ -85,7 +85,7 @@ null (empty response body)
 | **201** | Returns the newly created context |  -  |
 | **400** | If creating context fails |  -  |
 
-<a name="gridViewChangeData"></a>
+<a id="gridViewChangeData"></a>
 # **gridViewChangeData**
 > gridViewChangeData(context, version, changeDataRequest)
 
@@ -159,7 +159,7 @@ null (empty response body)
 | **400** | Bad Request |  -  |
 | **404** | If saving changes fails |  -  |
 
-<a name="gridViewDeleteContext"></a>
+<a id="gridViewDeleteContext"></a>
 # **gridViewDeleteContext**
 > gridViewDeleteContext(name, version)
 
@@ -230,7 +230,7 @@ null (empty response body)
 | **200** | If request is successful |  -  |
 | **400** | If editing the context fails |  -  |
 
-<a name="gridViewEditContext"></a>
+<a id="gridViewEditContext"></a>
 # **gridViewEditContext**
 > gridViewEditContext(name, version, editContextRequest)
 
@@ -303,7 +303,7 @@ null (empty response body)
 | **200** | If request is successful |  -  |
 | **400** | If editing the context fails |  -  |
 
-<a name="gridViewGetData"></a>
+<a id="gridViewGetData"></a>
 # **gridViewGetData**
 > gridViewGetData(context, version)
 
@@ -374,7 +374,7 @@ null (empty response body)
 | **200** | If request is successful |  -  |
 | **400** | If trait is not found |  -  |
 
-<a name="gridViewGetGridViewContext"></a>
+<a id="gridViewGetGridViewContext"></a>
 # **gridViewGetGridViewContext**
 > gridViewGetGridViewContext(name, version)
 
@@ -445,7 +445,7 @@ null (empty response body)
 | **200** | Success |  -  |
 | **400** | If the name was not found or any other error occurred |  -  |
 
-<a name="gridViewGetGridViewContexts"></a>
+<a id="gridViewGetGridViewContexts"></a>
 # **gridViewGetGridViewContexts**
 > gridViewGetGridViewContexts(version)
 
@@ -513,7 +513,7 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="gridViewGetSchema"></a>
+<a id="gridViewGetSchema"></a>
 # **gridViewGetSchema**
 > gridViewGetSchema(context, version)
 

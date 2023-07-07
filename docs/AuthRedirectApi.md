@@ -7,7 +7,7 @@ All URIs are relative to *http://localhost*
 | [**authRedirectIndex**](AuthRedirectApi.md#authRedirectIndex) | **GET** /.well-known/openid-configuration |  |
 
 
-<a name="authRedirectIndex"></a>
+<a id="authRedirectIndex"></a>
 # **authRedirectIndex**
 > authRedirectIndex()
 

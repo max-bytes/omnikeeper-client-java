@@ -7,7 +7,7 @@ All URIs are relative to *http://localhost*
 | [**restartApplicationRestart**](RestartApplicationApi.md#restartApplicationRestart) | **GET** /api/v{version}/RestartApplication/restart |  |
 
 
-<a name="restartApplicationRestart"></a>
+<a id="restartApplicationRestart"></a>
 # **restartApplicationRestart**
 > restartApplicationRestart(version)
 

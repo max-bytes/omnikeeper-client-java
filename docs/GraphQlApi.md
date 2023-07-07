@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 | [**graphQLIndex**](GraphQlApi.md#graphQLIndex) | **POST** /graphql |  |
 
 
-<a name="graphQLDebug"></a>
+<a id="graphQLDebug"></a>
 # **graphQLDebug**
 > graphQLDebug(graphQLQuery)
 
@@ -77,7 +77,7 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="graphQLGet"></a>
+<a id="graphQLGet"></a>
 # **graphQLGet**
 > graphQLGet(operationName, query, variables)
 
@@ -149,7 +149,7 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="graphQLIndex"></a>
+<a id="graphQLIndex"></a>
 # **graphQLIndex**
 > graphQLIndex(graphQLQuery)
 

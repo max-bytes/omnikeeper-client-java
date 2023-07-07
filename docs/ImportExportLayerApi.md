@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 | [**importExportLayerImportLayer**](ImportExportLayerApi.md#importExportLayerImportLayer) | **POST** /api/v{version}/ImportExportLayer/importLayer |  |
 
 
-<a name="importExportLayerExportLayer"></a>
+<a id="importExportLayerExportLayer"></a>
 # **importExportLayerExportLayer**
 > importExportLayerExportLayer(layerID, version, ciids)
 
@@ -80,7 +80,7 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
-<a name="importExportLayerImportLayer"></a>
+<a id="importExportLayerImportLayer"></a>
 # **importExportLayerImportLayer**
 > importExportLayerImportLayer(version, files, overwriteLayerID)
 
