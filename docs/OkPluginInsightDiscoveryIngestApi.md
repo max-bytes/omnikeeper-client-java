@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a id="ingestFileIngest"></a>
 # **ingestFileIngest**
-> ingestFileIngest(context, version, contentType, contentDisposition, length, name, fileName)
+> ingestFileIngest(context, version, contentType, contentDisposition, headers, length, name, fileName)
 
 
 
@@ -41,11 +41,12 @@ public class Example {
     String version = "version_example"; // String | 
     String contentType = "contentType_example"; // String | 
     String contentDisposition = "contentDisposition_example"; // String | 
+    Map<String, List<String>> headers = new HashMap(); // Map<String, List<String>> | 
     Long length = 56L; // Long | 
     String name = "name_example"; // String | 
     String fileName = "fileName_example"; // String | 
     try {
-      apiInstance.ingestFileIngest(context, version, contentType, contentDisposition, length, name, fileName);
+      apiInstance.ingestFileIngest(context, version, contentType, contentDisposition, headers, length, name, fileName);
     } catch (ApiException e) {
       System.err.println("Exception when calling OkPluginInsightDiscoveryIngestApi#ingestFileIngest");
       System.err.println("Status code: " + e.getCode());
@@ -65,6 +66,7 @@ public class Example {
 | **version** | **String**|  | |
 | **contentType** | **String**|  | [optional] |
 | **contentDisposition** | **String**|  | [optional] |
+| **headers** | [**Map&lt;String, List&lt;String&gt;&gt;**](Map.md)|  | [optional] |
 | **length** | **Long**|  | [optional] |
 | **name** | **String**|  | [optional] |
 | **fileName** | **String**|  | [optional] |

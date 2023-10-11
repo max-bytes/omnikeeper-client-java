@@ -77,6 +77,7 @@ public class OkPluginInsightDiscoveryIngestApi {
      * @param version  (required)
      * @param contentType  (optional)
      * @param contentDisposition  (optional)
+     * @param headers  (optional)
      * @param length  (optional)
      * @param name  (optional)
      * @param fileName  (optional)
@@ -89,7 +90,7 @@ public class OkPluginInsightDiscoveryIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestFileIngestCall(String context, String version, String contentType, String contentDisposition, Long length, String name, String fileName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ingestFileIngestCall(String context, String version, String contentType, String contentDisposition, Map<String, List<String>> headers, Long length, String name, String fileName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -121,6 +122,10 @@ public class OkPluginInsightDiscoveryIngestApi {
 
         if (contentDisposition != null) {
             localVarFormParams.put("ContentDisposition", contentDisposition);
+        }
+
+        if (headers != null) {
+            localVarFormParams.put("Headers", headers);
         }
 
         if (length != null) {
@@ -159,7 +164,7 @@ public class OkPluginInsightDiscoveryIngestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ingestFileIngestValidateBeforeCall(String context, String version, String contentType, String contentDisposition, Long length, String name, String fileName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ingestFileIngestValidateBeforeCall(String context, String version, String contentType, String contentDisposition, Map<String, List<String>> headers, Long length, String name, String fileName, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'context' is set
         if (context == null) {
             throw new ApiException("Missing the required parameter 'context' when calling ingestFileIngest(Async)");
@@ -170,7 +175,7 @@ public class OkPluginInsightDiscoveryIngestApi {
             throw new ApiException("Missing the required parameter 'version' when calling ingestFileIngest(Async)");
         }
 
-        return ingestFileIngestCall(context, version, contentType, contentDisposition, length, name, fileName, _callback);
+        return ingestFileIngestCall(context, version, contentType, contentDisposition, headers, length, name, fileName, _callback);
 
     }
 
@@ -181,6 +186,7 @@ public class OkPluginInsightDiscoveryIngestApi {
      * @param version  (required)
      * @param contentType  (optional)
      * @param contentDisposition  (optional)
+     * @param headers  (optional)
      * @param length  (optional)
      * @param name  (optional)
      * @param fileName  (optional)
@@ -191,8 +197,8 @@ public class OkPluginInsightDiscoveryIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void ingestFileIngest(String context, String version, String contentType, String contentDisposition, Long length, String name, String fileName) throws ApiException {
-        ingestFileIngestWithHttpInfo(context, version, contentType, contentDisposition, length, name, fileName);
+    public void ingestFileIngest(String context, String version, String contentType, String contentDisposition, Map<String, List<String>> headers, Long length, String name, String fileName) throws ApiException {
+        ingestFileIngestWithHttpInfo(context, version, contentType, contentDisposition, headers, length, name, fileName);
     }
 
     /**
@@ -202,6 +208,7 @@ public class OkPluginInsightDiscoveryIngestApi {
      * @param version  (required)
      * @param contentType  (optional)
      * @param contentDisposition  (optional)
+     * @param headers  (optional)
      * @param length  (optional)
      * @param name  (optional)
      * @param fileName  (optional)
@@ -213,8 +220,8 @@ public class OkPluginInsightDiscoveryIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> ingestFileIngestWithHttpInfo(String context, String version, String contentType, String contentDisposition, Long length, String name, String fileName) throws ApiException {
-        okhttp3.Call localVarCall = ingestFileIngestValidateBeforeCall(context, version, contentType, contentDisposition, length, name, fileName, null);
+    public ApiResponse<Void> ingestFileIngestWithHttpInfo(String context, String version, String contentType, String contentDisposition, Map<String, List<String>> headers, Long length, String name, String fileName) throws ApiException {
+        okhttp3.Call localVarCall = ingestFileIngestValidateBeforeCall(context, version, contentType, contentDisposition, headers, length, name, fileName, null);
         return localVarApiClient.execute(localVarCall);
     }
 
@@ -225,6 +232,7 @@ public class OkPluginInsightDiscoveryIngestApi {
      * @param version  (required)
      * @param contentType  (optional)
      * @param contentDisposition  (optional)
+     * @param headers  (optional)
      * @param length  (optional)
      * @param name  (optional)
      * @param fileName  (optional)
@@ -237,9 +245,9 @@ public class OkPluginInsightDiscoveryIngestApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ingestFileIngestAsync(String context, String version, String contentType, String contentDisposition, Long length, String name, String fileName, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call ingestFileIngestAsync(String context, String version, String contentType, String contentDisposition, Map<String, List<String>> headers, Long length, String name, String fileName, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ingestFileIngestValidateBeforeCall(context, version, contentType, contentDisposition, length, name, fileName, _callback);
+        okhttp3.Call localVarCall = ingestFileIngestValidateBeforeCall(context, version, contentType, contentDisposition, headers, length, name, fileName, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
