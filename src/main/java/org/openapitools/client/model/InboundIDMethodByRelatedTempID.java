@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByRelatedTempID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -69,7 +69,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   }
 
   public InboundIDMethodByRelatedTempID tempID(String tempID) {
-    
     this.tempID = tempID;
     return this;
   }
@@ -83,14 +82,12 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
     return tempID;
   }
 
-
   public void setTempID(String tempID) {
     this.tempID = tempID;
   }
 
 
   public InboundIDMethodByRelatedTempID outgoingRelation(Boolean outgoingRelation) {
-    
     this.outgoingRelation = outgoingRelation;
     return this;
   }
@@ -104,14 +101,12 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
     return outgoingRelation;
   }
 
-
   public void setOutgoingRelation(Boolean outgoingRelation) {
     this.outgoingRelation = outgoingRelation;
   }
 
 
   public InboundIDMethodByRelatedTempID predicateID(String predicateID) {
-    
     this.predicateID = predicateID;
     return this;
   }
@@ -124,7 +119,6 @@ public class InboundIDMethodByRelatedTempID extends AbstractInboundIDMethod {
   public String getPredicateID() {
     return predicateID;
   }
-
 
   public void setPredicateID(String predicateID) {
     this.predicateID = predicateID;

@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * AddContextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class AddContextRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -72,7 +72,6 @@ public class AddContextRequest {
   }
 
   public AddContextRequest id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -86,14 +85,12 @@ public class AddContextRequest {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public AddContextRequest speakingName(String speakingName) {
-    
     this.speakingName = speakingName;
     return this;
   }
@@ -107,14 +104,12 @@ public class AddContextRequest {
     return speakingName;
   }
 
-
   public void setSpeakingName(String speakingName) {
     this.speakingName = speakingName;
   }
 
 
   public AddContextRequest description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -128,14 +123,12 @@ public class AddContextRequest {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public AddContextRequest _configuration(GridViewConfiguration _configuration) {
-    
     this._configuration = _configuration;
     return this;
   }
@@ -148,7 +141,6 @@ public class AddContextRequest {
   public GridViewConfiguration getConfiguration() {
     return _configuration;
   }
-
 
   public void setConfiguration(GridViewConfiguration _configuration) {
     this._configuration = _configuration;

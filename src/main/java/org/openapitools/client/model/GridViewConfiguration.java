@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)
@@ -78,7 +78,6 @@ public class GridViewConfiguration {
   }
 
   public GridViewConfiguration showCIIDColumn(Boolean showCIIDColumn) {
-    
     this.showCIIDColumn = showCIIDColumn;
     return this;
   }
@@ -92,14 +91,12 @@ public class GridViewConfiguration {
     return showCIIDColumn;
   }
 
-
   public void setShowCIIDColumn(Boolean showCIIDColumn) {
     this.showCIIDColumn = showCIIDColumn;
   }
 
 
   public GridViewConfiguration writeLayer(String writeLayer) {
-    
     this.writeLayer = writeLayer;
     return this;
   }
@@ -113,14 +110,12 @@ public class GridViewConfiguration {
     return writeLayer;
   }
 
-
   public void setWriteLayer(String writeLayer) {
     this.writeLayer = writeLayer;
   }
 
 
   public GridViewConfiguration readLayerset(List<String> readLayerset) {
-    
     this.readLayerset = readLayerset;
     return this;
   }
@@ -142,14 +137,12 @@ public class GridViewConfiguration {
     return readLayerset;
   }
 
-
   public void setReadLayerset(List<String> readLayerset) {
     this.readLayerset = readLayerset;
   }
 
 
   public GridViewConfiguration columns(List<GridViewColumn> columns) {
-    
     this.columns = columns;
     return this;
   }
@@ -171,14 +164,12 @@ public class GridViewConfiguration {
     return columns;
   }
 
-
   public void setColumns(List<GridViewColumn> columns) {
     this.columns = columns;
   }
 
 
   public GridViewConfiguration trait(String trait) {
-    
     this.trait = trait;
     return this;
   }
@@ -191,7 +182,6 @@ public class GridViewConfiguration {
   public String getTrait() {
     return trait;
   }
-
 
   public void setTrait(String trait) {
     this.trait = trait;

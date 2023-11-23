@@ -55,7 +55,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmModel {
   public static final String SERIALIZED_NAME_SCHEMA_ELEMENTS = "schemaElements";
   @SerializedName(SERIALIZED_NAME_SCHEMA_ELEMENTS)
@@ -84,7 +84,6 @@ public class IEdmModel {
   public IEdmModel() {
   }
 
-  
   public IEdmModel(
      List<IEdmSchemaElement> schemaElements, 
      List<IEdmVocabularyAnnotation> vocabularyAnnotations, 
@@ -109,7 +108,6 @@ public class IEdmModel {
 
 
 
-
    /**
    * Get vocabularyAnnotations
    * @return vocabularyAnnotations
@@ -118,7 +116,6 @@ public class IEdmModel {
   public List<IEdmVocabularyAnnotation> getVocabularyAnnotations() {
     return vocabularyAnnotations;
   }
-
 
 
 
@@ -133,7 +130,6 @@ public class IEdmModel {
 
 
 
-
    /**
    * Get declaredNamespaces
    * @return declaredNamespaces
@@ -145,9 +141,7 @@ public class IEdmModel {
 
 
 
-
   public IEdmModel directValueAnnotationsManager(Object directValueAnnotationsManager) {
-    
     this.directValueAnnotationsManager = directValueAnnotationsManager;
     return this;
   }
@@ -161,14 +155,12 @@ public class IEdmModel {
     return directValueAnnotationsManager;
   }
 
-
   public void setDirectValueAnnotationsManager(Object directValueAnnotationsManager) {
     this.directValueAnnotationsManager = directValueAnnotationsManager;
   }
 
 
   public IEdmModel entityContainer(IEdmEntityContainer entityContainer) {
-    
     this.entityContainer = entityContainer;
     return this;
   }
@@ -181,7 +173,6 @@ public class IEdmModel {
   public IEdmEntityContainer getEntityContainer() {
     return entityContainer;
   }
-
 
   public void setEntityContainer(IEdmEntityContainer entityContainer) {
     this.entityContainer = entityContainer;

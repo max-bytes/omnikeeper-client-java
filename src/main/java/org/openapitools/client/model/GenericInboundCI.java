@@ -56,7 +56,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundCI
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class GenericInboundCI {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -86,7 +86,6 @@ public class GenericInboundCI {
   }
 
   public GenericInboundCI tempID(String tempID) {
-    
     this.tempID = tempID;
     return this;
   }
@@ -100,14 +99,12 @@ public class GenericInboundCI {
     return tempID;
   }
 
-
   public void setTempID(String tempID) {
     this.tempID = tempID;
   }
 
 
   public GenericInboundCI idMethod(GenericInboundCIIdMethod idMethod) {
-    
     this.idMethod = idMethod;
     return this;
   }
@@ -121,14 +118,12 @@ public class GenericInboundCI {
     return idMethod;
   }
 
-
   public void setIdMethod(GenericInboundCIIdMethod idMethod) {
     this.idMethod = idMethod;
   }
 
 
   public GenericInboundCI sameTempIDHandling(SameTempIDHandling sameTempIDHandling) {
-    
     this.sameTempIDHandling = sameTempIDHandling;
     return this;
   }
@@ -142,14 +137,12 @@ public class GenericInboundCI {
     return sameTempIDHandling;
   }
 
-
   public void setSameTempIDHandling(SameTempIDHandling sameTempIDHandling) {
     this.sameTempIDHandling = sameTempIDHandling;
   }
 
 
   public GenericInboundCI sameTargetCIHandling(SameTargetCIHandling sameTargetCIHandling) {
-    
     this.sameTargetCIHandling = sameTargetCIHandling;
     return this;
   }
@@ -163,14 +156,12 @@ public class GenericInboundCI {
     return sameTargetCIHandling;
   }
 
-
   public void setSameTargetCIHandling(SameTargetCIHandling sameTargetCIHandling) {
     this.sameTargetCIHandling = sameTargetCIHandling;
   }
 
 
   public GenericInboundCI noFoundTargetCIHandling(NoFoundTargetCIHandling noFoundTargetCIHandling) {
-    
     this.noFoundTargetCIHandling = noFoundTargetCIHandling;
     return this;
   }
@@ -184,14 +175,12 @@ public class GenericInboundCI {
     return noFoundTargetCIHandling;
   }
 
-
   public void setNoFoundTargetCIHandling(NoFoundTargetCIHandling noFoundTargetCIHandling) {
     this.noFoundTargetCIHandling = noFoundTargetCIHandling;
   }
 
 
   public GenericInboundCI attributes(List<GenericInboundAttribute> attributes) {
-    
     this.attributes = attributes;
     return this;
   }
@@ -212,7 +201,6 @@ public class GenericInboundCI {
   public List<GenericInboundAttribute> getAttributes() {
     return attributes;
   }
-
 
   public void setAttributes(List<GenericInboundAttribute> attributes) {
     this.attributes = attributes;
@@ -312,6 +300,18 @@ public class GenericInboundCI {
       // validate the optional field `idMethod`
       if (jsonObj.get("idMethod") != null && !jsonObj.get("idMethod").isJsonNull()) {
         GenericInboundCIIdMethod.validateJsonElement(jsonObj.get("idMethod"));
+      }
+      // validate the optional field `sameTempIDHandling`
+      if (jsonObj.get("sameTempIDHandling") != null && !jsonObj.get("sameTempIDHandling").isJsonNull()) {
+        SameTempIDHandling.validateJsonElement(jsonObj.get("sameTempIDHandling"));
+      }
+      // validate the optional field `sameTargetCIHandling`
+      if (jsonObj.get("sameTargetCIHandling") != null && !jsonObj.get("sameTargetCIHandling").isJsonNull()) {
+        SameTargetCIHandling.validateJsonElement(jsonObj.get("sameTargetCIHandling"));
+      }
+      // validate the optional field `noFoundTargetCIHandling`
+      if (jsonObj.get("noFoundTargetCIHandling") != null && !jsonObj.get("noFoundTargetCIHandling").isJsonNull()) {
+        NoFoundTargetCIHandling.validateJsonElement(jsonObj.get("noFoundTargetCIHandling"));
       }
       if (jsonObj.get("attributes") != null && !jsonObj.get("attributes").isJsonNull()) {
         JsonArray jsonArrayattributes = jsonObj.getAsJsonArray("attributes");

@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class InboundIDMethodByData extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
@@ -63,7 +63,6 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
   }
 
   public InboundIDMethodByData attributes(List<String> attributes) {
-    
     this.attributes = attributes;
     return this;
   }
@@ -84,7 +83,6 @@ public class InboundIDMethodByData extends AbstractInboundIDMethod {
   public List<String> getAttributes() {
     return attributes;
   }
-
 
   public void setAttributes(List<String> attributes) {
     this.attributes = attributes;

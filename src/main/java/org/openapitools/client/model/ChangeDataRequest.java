@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class ChangeDataRequest {
   public static final String SERIALIZED_NAME_SPARSE_ROWS = "sparseRows";
   @SerializedName(SERIALIZED_NAME_SPARSE_ROWS)
@@ -62,7 +62,6 @@ public class ChangeDataRequest {
   }
 
   public ChangeDataRequest sparseRows(List<SparseRow> sparseRows) {
-    
     this.sparseRows = sparseRows;
     return this;
   }
@@ -83,7 +82,6 @@ public class ChangeDataRequest {
   public List<SparseRow> getSparseRows() {
     return sparseRows;
   }
-
 
   public void setSparseRows(List<SparseRow> sparseRows) {
     this.sparseRows = sparseRows;

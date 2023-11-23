@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * InboundIDMethodByTemporaryCIID
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class InboundIDMethodByTemporaryCIID extends AbstractInboundIDMethod {
   public static final String SERIALIZED_NAME_TEMP_I_D = "tempID";
   @SerializedName(SERIALIZED_NAME_TEMP_I_D)
@@ -61,7 +61,6 @@ public class InboundIDMethodByTemporaryCIID extends AbstractInboundIDMethod {
   }
 
   public InboundIDMethodByTemporaryCIID tempID(String tempID) {
-    
     this.tempID = tempID;
     return this;
   }
@@ -74,7 +73,6 @@ public class InboundIDMethodByTemporaryCIID extends AbstractInboundIDMethod {
   public String getTempID() {
     return tempID;
   }
-
 
   public void setTempID(String tempID) {
     this.tempID = tempID;

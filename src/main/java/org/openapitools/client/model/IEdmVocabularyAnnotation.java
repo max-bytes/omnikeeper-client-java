@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmVocabularyAnnotation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmVocabularyAnnotation {
   public static final String SERIALIZED_NAME_QUALIFIER = "qualifier";
   @SerializedName(SERIALIZED_NAME_QUALIFIER)
@@ -73,7 +73,6 @@ public class IEdmVocabularyAnnotation {
   public IEdmVocabularyAnnotation() {
   }
 
-  
   public IEdmVocabularyAnnotation(
      String qualifier
   ) {
@@ -92,9 +91,7 @@ public class IEdmVocabularyAnnotation {
 
 
 
-
   public IEdmVocabularyAnnotation term(IEdmTerm term) {
-    
     this.term = term;
     return this;
   }
@@ -108,14 +105,12 @@ public class IEdmVocabularyAnnotation {
     return term;
   }
 
-
   public void setTerm(IEdmTerm term) {
     this.term = term;
   }
 
 
   public IEdmVocabularyAnnotation target(Object target) {
-    
     this.target = target;
     return this;
   }
@@ -129,14 +124,12 @@ public class IEdmVocabularyAnnotation {
     return target;
   }
 
-
   public void setTarget(Object target) {
     this.target = target;
   }
 
 
   public IEdmVocabularyAnnotation value(IEdmExpression value) {
-    
     this.value = value;
     return this;
   }
@@ -149,7 +142,6 @@ public class IEdmVocabularyAnnotation {
   public IEdmExpression getValue() {
     return value;
   }
-
 
   public void setValue(IEdmExpression value) {
     this.value = value;

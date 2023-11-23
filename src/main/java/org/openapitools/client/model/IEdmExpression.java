@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmExpression
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmExpression {
   public static final String SERIALIZED_NAME_EXPRESSION_KIND = "expressionKind";
   @SerializedName(SERIALIZED_NAME_EXPRESSION_KIND)
@@ -60,7 +60,6 @@ public class IEdmExpression {
   }
 
   public IEdmExpression expressionKind(EdmExpressionKind expressionKind) {
-    
     this.expressionKind = expressionKind;
     return this;
   }
@@ -73,7 +72,6 @@ public class IEdmExpression {
   public EdmExpressionKind getExpressionKind() {
     return expressionKind;
   }
-
 
   public void setExpressionKind(EdmExpressionKind expressionKind) {
     this.expressionKind = expressionKind;
@@ -152,6 +150,10 @@ public class IEdmExpression {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `expressionKind`
+      if (jsonObj.get("expressionKind") != null && !jsonObj.get("expressionKind").isJsonNull()) {
+        EdmExpressionKind.validateJsonElement(jsonObj.get("expressionKind"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

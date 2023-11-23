@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundRelation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class GenericInboundRelation {
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
@@ -67,7 +67,6 @@ public class GenericInboundRelation {
   }
 
   public GenericInboundRelation from(String from) {
-    
     this.from = from;
     return this;
   }
@@ -81,14 +80,12 @@ public class GenericInboundRelation {
     return from;
   }
 
-
   public void setFrom(String from) {
     this.from = from;
   }
 
 
   public GenericInboundRelation predicate(String predicate) {
-    
     this.predicate = predicate;
     return this;
   }
@@ -102,14 +99,12 @@ public class GenericInboundRelation {
     return predicate;
   }
 
-
   public void setPredicate(String predicate) {
     this.predicate = predicate;
   }
 
 
   public GenericInboundRelation to(String to) {
-    
     this.to = to;
     return this;
   }
@@ -122,7 +117,6 @@ public class GenericInboundRelation {
   public String getTo() {
     return to;
   }
-
 
   public void setTo(String to) {
     this.to = to;

@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmTypeReference
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmTypeReference {
   public static final String SERIALIZED_NAME_IS_NULLABLE = "isNullable";
   @SerializedName(SERIALIZED_NAME_IS_NULLABLE)
@@ -63,7 +63,6 @@ public class IEdmTypeReference {
   public IEdmTypeReference() {
   }
 
-  
   public IEdmTypeReference(
      Boolean isNullable
   ) {
@@ -82,9 +81,7 @@ public class IEdmTypeReference {
 
 
 
-
   public IEdmTypeReference definition(IEdmType definition) {
-    
     this.definition = definition;
     return this;
   }
@@ -97,7 +94,6 @@ public class IEdmTypeReference {
   public IEdmType getDefinition() {
     return definition;
   }
-
 
   public void setDefinition(IEdmType definition) {
     this.definition = definition;

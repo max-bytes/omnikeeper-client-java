@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * AnsibleInventoryScanDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class AnsibleInventoryScanDTO {
   public static final String SERIALIZED_NAME_SETUP_FACTS = "setupFacts";
   @SerializedName(SERIALIZED_NAME_SETUP_FACTS)
@@ -73,7 +73,6 @@ public class AnsibleInventoryScanDTO {
   }
 
   public AnsibleInventoryScanDTO setupFacts(Map<String, String> setupFacts) {
-    
     this.setupFacts = setupFacts;
     return this;
   }
@@ -95,14 +94,12 @@ public class AnsibleInventoryScanDTO {
     return setupFacts;
   }
 
-
   public void setSetupFacts(Map<String, String> setupFacts) {
     this.setupFacts = setupFacts;
   }
 
 
   public AnsibleInventoryScanDTO yumInstalled(Map<String, String> yumInstalled) {
-    
     this.yumInstalled = yumInstalled;
     return this;
   }
@@ -124,14 +121,12 @@ public class AnsibleInventoryScanDTO {
     return yumInstalled;
   }
 
-
   public void setYumInstalled(Map<String, String> yumInstalled) {
     this.yumInstalled = yumInstalled;
   }
 
 
   public AnsibleInventoryScanDTO yumRepos(Map<String, String> yumRepos) {
-    
     this.yumRepos = yumRepos;
     return this;
   }
@@ -153,14 +148,12 @@ public class AnsibleInventoryScanDTO {
     return yumRepos;
   }
 
-
   public void setYumRepos(Map<String, String> yumRepos) {
     this.yumRepos = yumRepos;
   }
 
 
   public AnsibleInventoryScanDTO yumUpdates(Map<String, String> yumUpdates) {
-    
     this.yumUpdates = yumUpdates;
     return this;
   }
@@ -181,7 +174,6 @@ public class AnsibleInventoryScanDTO {
   public Map<String, String> getYumUpdates() {
     return yumUpdates;
   }
-
 
   public void setYumUpdates(Map<String, String> yumUpdates) {
     this.yumUpdates = yumUpdates;

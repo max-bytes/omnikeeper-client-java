@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * GenericInboundData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class GenericInboundData {
   public static final String SERIALIZED_NAME_CIS = "cis";
   @SerializedName(SERIALIZED_NAME_CIS)
@@ -67,7 +67,6 @@ public class GenericInboundData {
   }
 
   public GenericInboundData cis(List<GenericInboundCI> cis) {
-    
     this.cis = cis;
     return this;
   }
@@ -89,14 +88,12 @@ public class GenericInboundData {
     return cis;
   }
 
-
   public void setCis(List<GenericInboundCI> cis) {
     this.cis = cis;
   }
 
 
   public GenericInboundData relations(List<GenericInboundRelation> relations) {
-    
     this.relations = relations;
     return this;
   }
@@ -117,7 +114,6 @@ public class GenericInboundData {
   public List<GenericInboundRelation> getRelations() {
     return relations;
   }
-
 
   public void setRelations(List<GenericInboundRelation> relations) {
     this.relations = relations;

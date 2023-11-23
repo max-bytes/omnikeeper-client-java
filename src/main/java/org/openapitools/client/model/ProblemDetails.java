@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ProblemDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class ProblemDetails {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -76,7 +76,6 @@ public class ProblemDetails {
   }
 
   public ProblemDetails type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -90,14 +89,12 @@ public class ProblemDetails {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
 
   public ProblemDetails title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -111,14 +108,12 @@ public class ProblemDetails {
     return title;
   }
 
-
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public ProblemDetails status(Integer status) {
-    
     this.status = status;
     return this;
   }
@@ -132,14 +127,12 @@ public class ProblemDetails {
     return status;
   }
 
-
   public void setStatus(Integer status) {
     this.status = status;
   }
 
 
   public ProblemDetails detail(String detail) {
-    
     this.detail = detail;
     return this;
   }
@@ -153,14 +146,12 @@ public class ProblemDetails {
     return detail;
   }
 
-
   public void setDetail(String detail) {
     this.detail = detail;
   }
 
 
   public ProblemDetails instance(String instance) {
-    
     this.instance = instance;
     return this;
   }
@@ -173,7 +164,6 @@ public class ProblemDetails {
   public String getInstance() {
     return instance;
   }
-
 
   public void setInstance(String instance) {
     this.instance = instance;

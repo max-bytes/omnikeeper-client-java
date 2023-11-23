@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class GridViewColumn {
   public static final String SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME = "sourceAttributeName";
   @SerializedName(SERIALIZED_NAME_SOURCE_ATTRIBUTE_NAME)
@@ -79,7 +79,6 @@ public class GridViewColumn {
   }
 
   public GridViewColumn sourceAttributeName(String sourceAttributeName) {
-    
     this.sourceAttributeName = sourceAttributeName;
     return this;
   }
@@ -93,14 +92,12 @@ public class GridViewColumn {
     return sourceAttributeName;
   }
 
-
   public void setSourceAttributeName(String sourceAttributeName) {
     this.sourceAttributeName = sourceAttributeName;
   }
 
 
   public GridViewColumn sourceAttributePath(List<String> sourceAttributePath) {
-    
     this.sourceAttributePath = sourceAttributePath;
     return this;
   }
@@ -122,14 +119,12 @@ public class GridViewColumn {
     return sourceAttributePath;
   }
 
-
   public void setSourceAttributePath(List<String> sourceAttributePath) {
     this.sourceAttributePath = sourceAttributePath;
   }
 
 
   public GridViewColumn columnDescription(String columnDescription) {
-    
     this.columnDescription = columnDescription;
     return this;
   }
@@ -143,14 +138,12 @@ public class GridViewColumn {
     return columnDescription;
   }
 
-
   public void setColumnDescription(String columnDescription) {
     this.columnDescription = columnDescription;
   }
 
 
   public GridViewColumn valueType(AttributeValueType valueType) {
-    
     this.valueType = valueType;
     return this;
   }
@@ -164,14 +157,12 @@ public class GridViewColumn {
     return valueType;
   }
 
-
   public void setValueType(AttributeValueType valueType) {
     this.valueType = valueType;
   }
 
 
   public GridViewColumn writeLayer(String writeLayer) {
-    
     this.writeLayer = writeLayer;
     return this;
   }
@@ -184,7 +175,6 @@ public class GridViewColumn {
   public String getWriteLayer() {
     return writeLayer;
   }
-
 
   public void setWriteLayer(String writeLayer) {
     this.writeLayer = writeLayer;
@@ -295,6 +285,10 @@ public class GridViewColumn {
       }
       if ((jsonObj.get("columnDescription") != null && !jsonObj.get("columnDescription").isJsonNull()) && !jsonObj.get("columnDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `columnDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("columnDescription").toString()));
+      }
+      // validate the optional field `valueType`
+      if (jsonObj.get("valueType") != null && !jsonObj.get("valueType").isJsonNull()) {
+        AttributeValueType.validateJsonElement(jsonObj.get("valueType"));
       }
       if ((jsonObj.get("writeLayer") != null && !jsonObj.get("writeLayer").isJsonNull()) && !jsonObj.get("writeLayer").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `writeLayer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("writeLayer").toString()));

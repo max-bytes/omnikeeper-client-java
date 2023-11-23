@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmEntityContainer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmEntityContainer {
   public static final String SERIALIZED_NAME_ELEMENTS = "elements";
   @SerializedName(SERIALIZED_NAME_ELEMENTS)
@@ -75,7 +75,6 @@ public class IEdmEntityContainer {
   public IEdmEntityContainer() {
   }
 
-  
   public IEdmEntityContainer(
      List<IEdmEntityContainerElement> elements, 
      String namespace, 
@@ -98,9 +97,7 @@ public class IEdmEntityContainer {
 
 
 
-
   public IEdmEntityContainer schemaElementKind(EdmSchemaElementKind schemaElementKind) {
-    
     this.schemaElementKind = schemaElementKind;
     return this;
   }
@@ -113,7 +110,6 @@ public class IEdmEntityContainer {
   public EdmSchemaElementKind getSchemaElementKind() {
     return schemaElementKind;
   }
-
 
   public void setSchemaElementKind(EdmSchemaElementKind schemaElementKind) {
     this.schemaElementKind = schemaElementKind;
@@ -131,7 +127,6 @@ public class IEdmEntityContainer {
 
 
 
-
    /**
    * Get name
    * @return name
@@ -140,7 +135,6 @@ public class IEdmEntityContainer {
   public String getName() {
     return name;
   }
-
 
 
 
@@ -249,6 +243,10 @@ public class IEdmEntityContainer {
             IEdmEntityContainerElement.validateJsonElement(jsonArrayelements.get(i));
           };
         }
+      }
+      // validate the optional field `schemaElementKind`
+      if (jsonObj.get("schemaElementKind") != null && !jsonObj.get("schemaElementKind").isJsonNull()) {
+        EdmSchemaElementKind.validateJsonElement(jsonObj.get("schemaElementKind"));
       }
       if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull()) && !jsonObj.get("namespace").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `namespace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namespace").toString()));

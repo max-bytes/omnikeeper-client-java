@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmEntityContainerElement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmEntityContainerElement {
   public static final String SERIALIZED_NAME_CONTAINER_ELEMENT_KIND = "containerElementKind";
   @SerializedName(SERIALIZED_NAME_CONTAINER_ELEMENT_KIND)
@@ -69,7 +69,6 @@ public class IEdmEntityContainerElement {
   public IEdmEntityContainerElement() {
   }
 
-  
   public IEdmEntityContainerElement(
      String name
   ) {
@@ -78,7 +77,6 @@ public class IEdmEntityContainerElement {
   }
 
   public IEdmEntityContainerElement containerElementKind(EdmContainerElementKind containerElementKind) {
-    
     this.containerElementKind = containerElementKind;
     return this;
   }
@@ -92,14 +90,12 @@ public class IEdmEntityContainerElement {
     return containerElementKind;
   }
 
-
   public void setContainerElementKind(EdmContainerElementKind containerElementKind) {
     this.containerElementKind = containerElementKind;
   }
 
 
   public IEdmEntityContainerElement container(IEdmEntityContainer container) {
-    
     this.container = container;
     return this;
   }
@@ -112,7 +108,6 @@ public class IEdmEntityContainerElement {
   public IEdmEntityContainer getContainer() {
     return container;
   }
-
 
   public void setContainer(IEdmEntityContainer container) {
     this.container = container;
@@ -127,7 +122,6 @@ public class IEdmEntityContainerElement {
   public String getName() {
     return name;
   }
-
 
 
 
@@ -220,6 +214,10 @@ public class IEdmEntityContainerElement {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `containerElementKind`
+      if (jsonObj.get("containerElementKind") != null && !jsonObj.get("containerElementKind").isJsonNull()) {
+        EdmContainerElementKind.validateJsonElement(jsonObj.get("containerElementKind"));
+      }
       // validate the optional field `container`
       if (jsonObj.get("container") != null && !jsonObj.get("container").isJsonNull()) {
         IEdmEntityContainer.validateJsonElement(jsonObj.get("container"));

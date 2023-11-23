@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * ChangeDataCell
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class ChangeDataCell {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,7 +68,6 @@ public class ChangeDataCell {
   }
 
   public ChangeDataCell id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -82,14 +81,12 @@ public class ChangeDataCell {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ChangeDataCell value(AttributeValueDTO value) {
-    
     this.value = value;
     return this;
   }
@@ -103,14 +100,12 @@ public class ChangeDataCell {
     return value;
   }
 
-
   public void setValue(AttributeValueDTO value) {
     this.value = value;
   }
 
 
   public ChangeDataCell changeable(Boolean changeable) {
-    
     this.changeable = changeable;
     return this;
   }
@@ -123,7 +118,6 @@ public class ChangeDataCell {
   public Boolean getChangeable() {
     return changeable;
   }
-
 
   public void setChangeable(Boolean changeable) {
     this.changeable = changeable;

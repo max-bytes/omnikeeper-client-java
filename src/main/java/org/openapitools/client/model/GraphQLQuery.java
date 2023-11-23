@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * GraphQLQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class GraphQLQuery {
   public static final String SERIALIZED_NAME_OPERATION_NAME = "operationName";
   @SerializedName(SERIALIZED_NAME_OPERATION_NAME)
@@ -70,7 +70,6 @@ public class GraphQLQuery {
   }
 
   public GraphQLQuery operationName(String operationName) {
-    
     this.operationName = operationName;
     return this;
   }
@@ -84,14 +83,12 @@ public class GraphQLQuery {
     return operationName;
   }
 
-
   public void setOperationName(String operationName) {
     this.operationName = operationName;
   }
 
 
   public GraphQLQuery query(String query) {
-    
     this.query = query;
     return this;
   }
@@ -105,14 +102,12 @@ public class GraphQLQuery {
     return query;
   }
 
-
   public void setQuery(String query) {
     this.query = query;
   }
 
 
   public GraphQLQuery variables(Map<String, Object> variables) {
-    
     this.variables = variables;
     return this;
   }
@@ -133,7 +128,6 @@ public class GraphQLQuery {
   public Map<String, Object> getVariables() {
     return variables;
   }
-
 
   public void setVariables(Map<String, Object> variables) {
     this.variables = variables;

@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmType
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmType {
   public static final String SERIALIZED_NAME_TYPE_KIND = "typeKind";
   @SerializedName(SERIALIZED_NAME_TYPE_KIND)
@@ -60,7 +60,6 @@ public class IEdmType {
   }
 
   public IEdmType typeKind(EdmTypeKind typeKind) {
-    
     this.typeKind = typeKind;
     return this;
   }
@@ -73,7 +72,6 @@ public class IEdmType {
   public EdmTypeKind getTypeKind() {
     return typeKind;
   }
-
 
   public void setTypeKind(EdmTypeKind typeKind) {
     this.typeKind = typeKind;
@@ -152,6 +150,10 @@ public class IEdmType {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `typeKind`
+      if (jsonObj.get("typeKind") != null && !jsonObj.get("typeKind").isJsonNull()) {
+        EdmTypeKind.validateJsonElement(jsonObj.get("typeKind"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

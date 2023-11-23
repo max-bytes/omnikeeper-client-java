@@ -56,7 +56,7 @@ import org.openapitools.client.JSON;
 /**
  * ODataServiceDocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class ODataServiceDocument {
   public static final String SERIALIZED_NAME_TYPE_ANNOTATION = "typeAnnotation";
   @SerializedName(SERIALIZED_NAME_TYPE_ANNOTATION)
@@ -78,7 +78,6 @@ public class ODataServiceDocument {
   }
 
   public ODataServiceDocument typeAnnotation(ODataTypeAnnotation typeAnnotation) {
-    
     this.typeAnnotation = typeAnnotation;
     return this;
   }
@@ -92,14 +91,12 @@ public class ODataServiceDocument {
     return typeAnnotation;
   }
 
-
   public void setTypeAnnotation(ODataTypeAnnotation typeAnnotation) {
     this.typeAnnotation = typeAnnotation;
   }
 
 
   public ODataServiceDocument entitySets(List<ODataEntitySetInfo> entitySets) {
-    
     this.entitySets = entitySets;
     return this;
   }
@@ -121,14 +118,12 @@ public class ODataServiceDocument {
     return entitySets;
   }
 
-
   public void setEntitySets(List<ODataEntitySetInfo> entitySets) {
     this.entitySets = entitySets;
   }
 
 
   public ODataServiceDocument singletons(List<ODataSingletonInfo> singletons) {
-    
     this.singletons = singletons;
     return this;
   }
@@ -150,14 +145,12 @@ public class ODataServiceDocument {
     return singletons;
   }
 
-
   public void setSingletons(List<ODataSingletonInfo> singletons) {
     this.singletons = singletons;
   }
 
 
   public ODataServiceDocument functionImports(List<ODataFunctionImportInfo> functionImports) {
-    
     this.functionImports = functionImports;
     return this;
   }
@@ -178,7 +171,6 @@ public class ODataServiceDocument {
   public List<ODataFunctionImportInfo> getFunctionImports() {
     return functionImports;
   }
-
 
   public void setFunctionImports(List<ODataFunctionImportInfo> functionImports) {
     this.functionImports = functionImports;

@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * AttributeValueDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class AttributeValueDTO {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -70,7 +70,6 @@ public class AttributeValueDTO {
   }
 
   public AttributeValueDTO type(AttributeValueType type) {
-    
     this.type = type;
     return this;
   }
@@ -84,14 +83,12 @@ public class AttributeValueDTO {
     return type;
   }
 
-
   public void setType(AttributeValueType type) {
     this.type = type;
   }
 
 
   public AttributeValueDTO isArray(Boolean isArray) {
-    
     this.isArray = isArray;
     return this;
   }
@@ -105,14 +102,12 @@ public class AttributeValueDTO {
     return isArray;
   }
 
-
   public void setIsArray(Boolean isArray) {
     this.isArray = isArray;
   }
 
 
   public AttributeValueDTO values(List<String> values) {
-    
     this.values = values;
     return this;
   }
@@ -133,7 +128,6 @@ public class AttributeValueDTO {
   public List<String> getValues() {
     return values;
   }
-
 
   public void setValues(List<String> values) {
     this.values = values;
@@ -218,6 +212,10 @@ public class AttributeValueDTO {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `type`
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
+        AttributeValueType.validateJsonElement(jsonObj.get("type"));
+      }
       // ensure the optional json data is an array if present
       if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonNull() && !jsonObj.get("values").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));

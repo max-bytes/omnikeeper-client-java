@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * SparseRow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class SparseRow {
   public static final String SERIALIZED_NAME_CIID = "ciid";
   @SerializedName(SERIALIZED_NAME_CIID)
@@ -67,7 +67,6 @@ public class SparseRow {
   }
 
   public SparseRow ciid(UUID ciid) {
-    
     this.ciid = ciid;
     return this;
   }
@@ -81,14 +80,12 @@ public class SparseRow {
     return ciid;
   }
 
-
   public void setCiid(UUID ciid) {
     this.ciid = ciid;
   }
 
 
   public SparseRow cells(List<ChangeDataCell> cells) {
-    
     this.cells = cells;
     return this;
   }
@@ -109,7 +106,6 @@ public class SparseRow {
   public List<ChangeDataCell> getCells() {
     return cells;
   }
-
 
   public void setCells(List<ChangeDataCell> cells) {
     this.cells = cells;

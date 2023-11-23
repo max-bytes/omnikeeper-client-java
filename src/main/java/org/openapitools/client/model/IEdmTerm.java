@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * IEdmTerm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:31:14.792868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
 public class IEdmTerm {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -81,7 +81,6 @@ public class IEdmTerm {
   public IEdmTerm() {
   }
 
-  
   public IEdmTerm(
      String appliesTo, 
      String defaultValue, 
@@ -96,7 +95,6 @@ public class IEdmTerm {
   }
 
   public IEdmTerm type(IEdmTypeReference type) {
-    
     this.type = type;
     return this;
   }
@@ -109,7 +107,6 @@ public class IEdmTerm {
   public IEdmTypeReference getType() {
     return type;
   }
-
 
   public void setType(IEdmTypeReference type) {
     this.type = type;
@@ -127,7 +124,6 @@ public class IEdmTerm {
 
 
 
-
    /**
    * Get defaultValue
    * @return defaultValue
@@ -139,9 +135,7 @@ public class IEdmTerm {
 
 
 
-
   public IEdmTerm schemaElementKind(EdmSchemaElementKind schemaElementKind) {
-    
     this.schemaElementKind = schemaElementKind;
     return this;
   }
@@ -154,7 +148,6 @@ public class IEdmTerm {
   public EdmSchemaElementKind getSchemaElementKind() {
     return schemaElementKind;
   }
-
 
   public void setSchemaElementKind(EdmSchemaElementKind schemaElementKind) {
     this.schemaElementKind = schemaElementKind;
@@ -172,7 +165,6 @@ public class IEdmTerm {
 
 
 
-
    /**
    * Get name
    * @return name
@@ -181,7 +173,6 @@ public class IEdmTerm {
   public String getName() {
     return name;
   }
-
 
 
 
@@ -292,6 +283,10 @@ public class IEdmTerm {
       }
       if ((jsonObj.get("defaultValue") != null && !jsonObj.get("defaultValue").isJsonNull()) && !jsonObj.get("defaultValue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `defaultValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("defaultValue").toString()));
+      }
+      // validate the optional field `schemaElementKind`
+      if (jsonObj.get("schemaElementKind") != null && !jsonObj.get("schemaElementKind").isJsonNull()) {
+        EdmSchemaElementKind.validateJsonElement(jsonObj.get("schemaElementKind"));
       }
       if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull()) && !jsonObj.get("namespace").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `namespace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namespace").toString()));
