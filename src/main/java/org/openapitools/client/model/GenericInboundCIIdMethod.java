@@ -20,7 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import org.openapitools.client.model.GenericInboundAttribute;
 import org.openapitools.client.model.InboundIDMethodByAttribute;
 import org.openapitools.client.model.InboundIDMethodByAttributeModifiers;
 import org.openapitools.client.model.InboundIDMethodByByUnion;
@@ -28,6 +31,7 @@ import org.openapitools.client.model.InboundIDMethodByData;
 import org.openapitools.client.model.InboundIDMethodByIntersect;
 import org.openapitools.client.model.InboundIDMethodByRelatedTempID;
 import org.openapitools.client.model.InboundIDMethodByTemporaryCIID;
+import org.openapitools.client.model.OneOfInboundIDMethodByDataInboundIDMethodByAttributeModifiersInboundIDMethodByAttributeInboundIDMethodByRelatedTempIDInboundIDMethodByTemporaryCIIDInboundIDMethodByByUnionInboundIDMethodByIntersect;
 
 
 
@@ -64,7 +68,7 @@ import com.google.gson.JsonParseException;
 
 import org.openapitools.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T11:16:48.996705719Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-12T13:43:46.303951737Z[Etc/UTC]", comments = "Generator version: 7.5.0-SNAPSHOT")
 public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(GenericInboundCIIdMethod.class.getName());
 

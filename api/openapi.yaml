@@ -608,7 +608,7 @@ paths:
       summary: Deletes specific context
       tags:
       - GridView
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
     get:
       operationId: GridView_GetGridViewContext
       parameters:
@@ -766,7 +766,7 @@ paths:
       tags:
       - GridView
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/v{version}/GridView/context:
     post:
       operationId: GridView_AddContext
@@ -889,7 +889,7 @@ paths:
       tags:
       - GridView
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/v{version}/GridView/contexts/{context}/schema:
     get:
       operationId: GridView_GetSchema
@@ -1080,7 +1080,7 @@ paths:
       tags:
       - GridView
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/v{version}/ImportExportLayer/exportLayer:
     get:
       operationId: ImportExportLayer_ExportLayer
@@ -1219,7 +1219,7 @@ paths:
       - oauth2: []
       tags:
       - Metadata
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/odata/{context}:
     get:
       operationId: Metadata_GetServiceDocument
@@ -1287,7 +1287,7 @@ paths:
       - oauth2: []
       tags:
       - Metadata
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/v{version}/ingest/genericJSON/data:
     post:
       operationId: PassiveData_Ingest
@@ -1509,7 +1509,7 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
     post:
       operationId: ManageContext_UpsertContext
       parameters:
@@ -1628,7 +1628,7 @@ paths:
       tags:
       - OKPluginGenericJSONIngest
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/v{version}/ingest/genericJSON/manage/context/{id}:
     delete:
       operationId: ManageContext_RemoveContext
@@ -1703,7 +1703,7 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
     get:
       operationId: ManageContext_GetContext
       parameters:
@@ -1777,7 +1777,7 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-accepts: application/json
+      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
   /api/v{version}/ingest/insight-discovery/file:
     post:
       operationId: IngestFile_Ingest
@@ -2171,7 +2171,10 @@ components:
     GenericInboundCI:
       example:
         noFoundTargetCIHandling: null
-        idMethod: null
+        idMethod:
+          attributes:
+          - attributes
+          - attributes
         attributes:
         - name: name
           value:
@@ -2210,7 +2213,10 @@ components:
       example:
         cis:
         - noFoundTargetCIHandling: null
-          idMethod: null
+          idMethod:
+            attributes:
+            - attributes
+            - attributes
           attributes:
           - name: name
             value:
@@ -2230,7 +2236,10 @@ components:
           sameTempIDHandling: null
           sameTargetCIHandling: null
         - noFoundTargetCIHandling: null
-          idMethod: null
+          idMethod:
+            attributes:
+            - attributes
+            - attributes
           attributes:
           - name: name
             value:
@@ -2634,6 +2643,10 @@ components:
     InboundIDMethodByData:
       allOf:
       - $ref: '#/components/schemas/AbstractInboundIDMethod'
+      example:
+        attributes:
+        - attributes
+        - attributes
       properties:
         attributes:
           items:
@@ -2810,6 +2823,12 @@ components:
       type: object
     ProblemDetails:
       additionalProperties: {}
+      example:
+        instance: instance
+        detail: detail
+        type: type
+        title: title
+        status: 0
       properties:
         type:
           nullable: true
