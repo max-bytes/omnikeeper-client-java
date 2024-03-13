@@ -20,7 +20,7 @@ import java.net.URI;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-12T17:55:20.583339702Z[Etc/UTC]", comments = "Generator version: 7.5.0-SNAPSHOT")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-13T12:48:26.560608368Z[Etc/UTC]", comments = "Generator version: 7.5.0-SNAPSHOT")
 public class OAuth implements Authentication {
   private String accessToken;
 
