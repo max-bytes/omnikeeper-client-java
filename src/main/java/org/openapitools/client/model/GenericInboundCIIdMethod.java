@@ -68,7 +68,7 @@ import com.google.gson.JsonParseException;
 
 import org.openapitools.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-13T12:48:26.560608368Z[Etc/UTC]", comments = "Generator version: 7.5.0-SNAPSHOT")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-07T14:29:09.050375405Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(GenericInboundCIIdMethod.class.getName());
 
@@ -98,45 +98,45 @@ public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
 
                     // check if the actual instance is of the type `InboundIDMethodByData`
                     if (value.getActualInstance() instanceof InboundIDMethodByData) {
-                      JsonElement element = adapterInboundIDMethodByData.toJsonTree((InboundIDMethodByData)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByData.toJsonTree((InboundIDMethodByData)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     // check if the actual instance is of the type `InboundIDMethodByAttributeModifiers`
                     if (value.getActualInstance() instanceof InboundIDMethodByAttributeModifiers) {
-                      JsonElement element = adapterInboundIDMethodByAttributeModifiers.toJsonTree((InboundIDMethodByAttributeModifiers)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByAttributeModifiers.toJsonTree((InboundIDMethodByAttributeModifiers)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     // check if the actual instance is of the type `InboundIDMethodByAttribute`
                     if (value.getActualInstance() instanceof InboundIDMethodByAttribute) {
-                      JsonElement element = adapterInboundIDMethodByAttribute.toJsonTree((InboundIDMethodByAttribute)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByAttribute.toJsonTree((InboundIDMethodByAttribute)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     // check if the actual instance is of the type `InboundIDMethodByRelatedTempID`
                     if (value.getActualInstance() instanceof InboundIDMethodByRelatedTempID) {
-                      JsonElement element = adapterInboundIDMethodByRelatedTempID.toJsonTree((InboundIDMethodByRelatedTempID)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByRelatedTempID.toJsonTree((InboundIDMethodByRelatedTempID)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     // check if the actual instance is of the type `InboundIDMethodByTemporaryCIID`
                     if (value.getActualInstance() instanceof InboundIDMethodByTemporaryCIID) {
-                      JsonElement element = adapterInboundIDMethodByTemporaryCIID.toJsonTree((InboundIDMethodByTemporaryCIID)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByTemporaryCIID.toJsonTree((InboundIDMethodByTemporaryCIID)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     // check if the actual instance is of the type `InboundIDMethodByByUnion`
                     if (value.getActualInstance() instanceof InboundIDMethodByByUnion) {
-                      JsonElement element = adapterInboundIDMethodByByUnion.toJsonTree((InboundIDMethodByByUnion)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByByUnion.toJsonTree((InboundIDMethodByByUnion)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     // check if the actual instance is of the type `InboundIDMethodByIntersect`
                     if (value.getActualInstance() instanceof InboundIDMethodByIntersect) {
-                      JsonElement element = adapterInboundIDMethodByIntersect.toJsonTree((InboundIDMethodByIntersect)value.getActualInstance());
-                      elementAdapter.write(out, element);
-                      return;
+                        JsonElement element = adapterInboundIDMethodByIntersect.toJsonTree((InboundIDMethodByIntersect)value.getActualInstance());
+                        elementAdapter.write(out, element);
+                        return;
                     }
                     throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: InboundIDMethodByAttribute, InboundIDMethodByAttributeModifiers, InboundIDMethodByByUnion, InboundIDMethodByData, InboundIDMethodByIntersect, InboundIDMethodByRelatedTempID, InboundIDMethodByTemporaryCIID");
                 }
@@ -152,87 +152,87 @@ public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
 
                     // deserialize InboundIDMethodByData
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByData.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByData;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByData'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByData.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByData;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByData'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByData failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByData'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByData failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByData'", e);
                     }
                     // deserialize InboundIDMethodByAttributeModifiers
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByAttributeModifiers.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByAttributeModifiers;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByAttributeModifiers'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByAttributeModifiers.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByAttributeModifiers;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByAttributeModifiers'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByAttributeModifiers failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByAttributeModifiers'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByAttributeModifiers failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByAttributeModifiers'", e);
                     }
                     // deserialize InboundIDMethodByAttribute
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByAttribute.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByAttribute;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByAttribute'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByAttribute.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByAttribute;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByAttribute'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByAttribute failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByAttribute'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByAttribute failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByAttribute'", e);
                     }
                     // deserialize InboundIDMethodByRelatedTempID
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByRelatedTempID.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByRelatedTempID;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByRelatedTempID'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByRelatedTempID.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByRelatedTempID;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByRelatedTempID'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByRelatedTempID failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByRelatedTempID'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByRelatedTempID failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByRelatedTempID'", e);
                     }
                     // deserialize InboundIDMethodByTemporaryCIID
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByTemporaryCIID.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByTemporaryCIID;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByTemporaryCIID'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByTemporaryCIID.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByTemporaryCIID;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByTemporaryCIID'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByTemporaryCIID failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByTemporaryCIID'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByTemporaryCIID failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByTemporaryCIID'", e);
                     }
                     // deserialize InboundIDMethodByByUnion
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByByUnion.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByByUnion;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByByUnion'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByByUnion.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByByUnion;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByByUnion'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByByUnion failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByByUnion'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByByUnion failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByByUnion'", e);
                     }
                     // deserialize InboundIDMethodByIntersect
                     try {
-                      // validate the JSON object to see if any exception is thrown
-                      InboundIDMethodByIntersect.validateJsonElement(jsonElement);
-                      actualAdapter = adapterInboundIDMethodByIntersect;
-                      match++;
-                      log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByIntersect'");
+                        // validate the JSON object to see if any exception is thrown
+                        InboundIDMethodByIntersect.validateJsonElement(jsonElement);
+                        actualAdapter = adapterInboundIDMethodByIntersect;
+                        match++;
+                        log.log(Level.FINER, "Input data matches schema 'InboundIDMethodByIntersect'");
                     } catch (Exception e) {
-                      // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for InboundIDMethodByIntersect failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByIntersect'", e);
+                        // deserialization failed, continue
+                        errorMessages.add(String.format("Deserialization for InboundIDMethodByIntersect failed with `%s`.", e.getMessage()));
+                        log.log(Level.FINER, "Input data does not match schema 'InboundIDMethodByIntersect'", e);
                     }
 
                     if (match == 1) {
@@ -357,6 +357,7 @@ public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
      *
      * @return The actual instance (InboundIDMethodByAttribute, InboundIDMethodByAttributeModifiers, InboundIDMethodByByUnion, InboundIDMethodByData, InboundIDMethodByIntersect, InboundIDMethodByRelatedTempID, InboundIDMethodByTemporaryCIID)
      */
+    @SuppressWarnings("unchecked")
     @Override
     public Object getActualInstance() {
         return super.getActualInstance();
@@ -433,95 +434,95 @@ public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
         return (InboundIDMethodByIntersect)super.getActualInstance();
     }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GenericInboundCIIdMethod
-  */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-    // validate oneOf schemas one by one
-    int validCount = 0;
-    ArrayList<String> errorMessages = new ArrayList<>();
-    // validate the json string with InboundIDMethodByData
-    try {
-      InboundIDMethodByData.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByData failed with `%s`.", e.getMessage()));
-      // continue to the next one
+    /**
+     * Validates the JSON Element and throws an exception if issues found
+     *
+     * @param jsonElement JSON Element
+     * @throws IOException if the JSON Element is invalid with respect to GenericInboundCIIdMethod
+     */
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        // validate oneOf schemas one by one
+        int validCount = 0;
+        ArrayList<String> errorMessages = new ArrayList<>();
+        // validate the json string with InboundIDMethodByData
+        try {
+            InboundIDMethodByData.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByData failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        // validate the json string with InboundIDMethodByAttributeModifiers
+        try {
+            InboundIDMethodByAttributeModifiers.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByAttributeModifiers failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        // validate the json string with InboundIDMethodByAttribute
+        try {
+            InboundIDMethodByAttribute.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByAttribute failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        // validate the json string with InboundIDMethodByRelatedTempID
+        try {
+            InboundIDMethodByRelatedTempID.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByRelatedTempID failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        // validate the json string with InboundIDMethodByTemporaryCIID
+        try {
+            InboundIDMethodByTemporaryCIID.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByTemporaryCIID failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        // validate the json string with InboundIDMethodByByUnion
+        try {
+            InboundIDMethodByByUnion.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByByUnion failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        // validate the json string with InboundIDMethodByIntersect
+        try {
+            InboundIDMethodByIntersect.validateJsonElement(jsonElement);
+            validCount++;
+        } catch (Exception e) {
+            errorMessages.add(String.format("Deserialization for InboundIDMethodByIntersect failed with `%s`.", e.getMessage()));
+            // continue to the next one
+        }
+        if (validCount != 1) {
+            throw new IOException(String.format("The JSON string is invalid for GenericInboundCIIdMethod with oneOf schemas: InboundIDMethodByAttribute, InboundIDMethodByAttributeModifiers, InboundIDMethodByByUnion, InboundIDMethodByData, InboundIDMethodByIntersect, InboundIDMethodByRelatedTempID, InboundIDMethodByTemporaryCIID. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+        }
     }
-    // validate the json string with InboundIDMethodByAttributeModifiers
-    try {
-      InboundIDMethodByAttributeModifiers.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByAttributeModifiers failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with InboundIDMethodByAttribute
-    try {
-      InboundIDMethodByAttribute.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByAttribute failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with InboundIDMethodByRelatedTempID
-    try {
-      InboundIDMethodByRelatedTempID.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByRelatedTempID failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with InboundIDMethodByTemporaryCIID
-    try {
-      InboundIDMethodByTemporaryCIID.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByTemporaryCIID failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with InboundIDMethodByByUnion
-    try {
-      InboundIDMethodByByUnion.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByByUnion failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with InboundIDMethodByIntersect
-    try {
-      InboundIDMethodByIntersect.validateJsonElement(jsonElement);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for InboundIDMethodByIntersect failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for GenericInboundCIIdMethod with oneOf schemas: InboundIDMethodByAttribute, InboundIDMethodByAttributeModifiers, InboundIDMethodByByUnion, InboundIDMethodByData, InboundIDMethodByIntersect, InboundIDMethodByRelatedTempID, InboundIDMethodByTemporaryCIID. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
-    }
-  }
 
- /**
-  * Create an instance of GenericInboundCIIdMethod given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GenericInboundCIIdMethod
-  * @throws IOException if the JSON string is invalid with respect to GenericInboundCIIdMethod
-  */
-  public static GenericInboundCIIdMethod fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, GenericInboundCIIdMethod.class);
-  }
+    /**
+     * Create an instance of GenericInboundCIIdMethod given an JSON string
+     *
+     * @param jsonString JSON string
+     * @return An instance of GenericInboundCIIdMethod
+     * @throws IOException if the JSON string is invalid with respect to GenericInboundCIIdMethod
+     */
+    public static GenericInboundCIIdMethod fromJson(String jsonString) throws IOException {
+        return JSON.getGson().fromJson(jsonString, GenericInboundCIIdMethod.class);
+    }
 
- /**
-  * Convert an instance of GenericInboundCIIdMethod to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
+    /**
+     * Convert an instance of GenericInboundCIIdMethod to an JSON string
+     *
+     * @return JSON string
+     */
+    public String toJson() {
+        return JSON.getGson().toJson(this);
+    }
 }
 

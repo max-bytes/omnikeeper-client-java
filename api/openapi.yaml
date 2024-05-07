@@ -91,7 +91,8 @@ paths:
       tags:
       - AnsibleInventoryScanIngest
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/AttributeValueImage:
     get:
       operationId: AttributeValueImage_Get
@@ -151,7 +152,8 @@ paths:
       - oauth2: []
       tags:
       - AttributeValueImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: AttributeValueImage_Post
       parameters:
@@ -208,7 +210,8 @@ paths:
       tags:
       - AttributeValueImage
       x-content-type: multipart/form-data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /.well-known/openid-configuration:
     get:
       operationId: AuthRedirect_Index
@@ -219,7 +222,8 @@ paths:
       - oauth2: []
       tags:
       - AuthRedirect
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/Cytoscape/traitCentric:
     get:
       operationId: Cytoscape_TraitCentric
@@ -263,7 +267,8 @@ paths:
       - oauth2: []
       tags:
       - Cytoscape
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /graphql:
     get:
       operationId: GraphQL_Get
@@ -298,7 +303,8 @@ paths:
       - oauth2: []
       tags:
       - GraphQL
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: GraphQL_Index
       requestBody:
@@ -359,7 +365,8 @@ paths:
       tags:
       - GraphQL
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /graphql-debug:
     post:
       operationId: GraphQL_Debug
@@ -421,7 +428,8 @@ paths:
       tags:
       - GraphQL
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/GraphvizDot/traitCentric:
     get:
       operationId: GraphvizDot_TraitCentric
@@ -465,7 +473,8 @@ paths:
       - oauth2: []
       tags:
       - GraphvizDot
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/GraphvizDot/layerCentric:
     get:
       operationId: GraphvizDot_LayerCentric
@@ -509,7 +518,8 @@ paths:
       - oauth2: []
       tags:
       - GraphvizDot
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/GridView/contexts:
     get:
       operationId: GridView_GetGridViewContexts
@@ -529,7 +539,8 @@ paths:
       summary: Returns a list of contexts for grid view.
       tags:
       - GridView
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/GridView/context/{name}:
     delete:
       operationId: GridView_DeleteContext
@@ -608,7 +619,23 @@ paths:
       summary: Deletes specific context
       tags:
       - GridView
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
     get:
       operationId: GridView_GetGridViewContext
       parameters:
@@ -636,7 +663,8 @@ paths:
       summary: Returns a single context in full
       tags:
       - GridView
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     put:
       operationId: GridView_EditContext
       parameters:
@@ -766,7 +794,23 @@ paths:
       tags:
       - GridView
       x-content-type: application/json
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/v{version}/GridView/context:
     post:
       operationId: GridView_AddContext
@@ -889,7 +933,23 @@ paths:
       tags:
       - GridView
       x-content-type: application/json
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/v{version}/GridView/contexts/{context}/schema:
     get:
       operationId: GridView_GetSchema
@@ -917,7 +977,8 @@ paths:
       summary: Returns grid view schema for specific context
       tags:
       - GridView
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/GridView/contexts/{context}/data:
     get:
       operationId: GridView_GetData
@@ -947,7 +1008,8 @@ paths:
       summary: Returns grid view data for specific context
       tags:
       - GridView
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/GridView/contexts/{context}/change:
     post:
       operationId: GridView_ChangeData
@@ -1080,7 +1142,23 @@ paths:
       tags:
       - GridView
       x-content-type: application/json
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/v{version}/ImportExportLayer/exportLayer:
     get:
       operationId: ImportExportLayer_ExportLayer
@@ -1116,7 +1194,8 @@ paths:
       - oauth2: []
       tags:
       - ImportExportLayer
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/ImportExportLayer/importLayer:
     post:
       operationId: ImportExportLayer_ImportLayer
@@ -1151,7 +1230,8 @@ paths:
       tags:
       - ImportExportLayer
       x-content-type: multipart/form-data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/odata/{context}/$metadata:
     get:
       operationId: Metadata_GetMetadata
@@ -1219,7 +1299,23 @@ paths:
       - oauth2: []
       tags:
       - Metadata
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/odata/{context}:
     get:
       operationId: Metadata_GetServiceDocument
@@ -1287,7 +1383,23 @@ paths:
       - oauth2: []
       tags:
       - Metadata
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/v{version}/ingest/genericJSON/data:
     post:
       operationId: PassiveData_Ingest
@@ -1374,7 +1486,8 @@ paths:
       tags:
       - OKPluginGenericJSONIngest
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/ingest/genericJSON/files:
     post:
       operationId: PassiveFiles_Ingest
@@ -1409,7 +1522,8 @@ paths:
       tags:
       - OKPluginGenericJSONIngest
       x-content-type: multipart/form-data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/ingest/genericJSON/manage/context:
     get:
       operationId: ManageContext_GetAllContexts
@@ -1509,7 +1623,23 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
     post:
       operationId: ManageContext_UpsertContext
       parameters:
@@ -1628,7 +1758,23 @@ paths:
       tags:
       - OKPluginGenericJSONIngest
       x-content-type: application/json
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/v{version}/ingest/genericJSON/manage/context/{id}:
     delete:
       operationId: ManageContext_RemoveContext
@@ -1703,7 +1849,23 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
     get:
       operationId: ManageContext_GetContext
       parameters:
@@ -1777,7 +1939,23 @@ paths:
       - oauth2: []
       tags:
       - OKPluginGenericJSONIngest
-      x-accepts: "application/json,application/json;odata.metadata=full,application/json;odata.metadata=full;odata.streaming=false,application/json;odata.metadata=full;odata.streaming=true,application/json;odata.metadata=minimal,application/json;odata.metadata=minimal;odata.streaming=false,application/json;odata.metadata=minimal;odata.streaming=true,application/json;odata.metadata=none,application/json;odata.metadata=none;odata.streaming=false,application/json;odata.metadata=none;odata.streaming=true,application/json;odata.streaming=false,application/json;odata.streaming=true,application/octet-stream,application/xml,text/json,text/plain"
+      x-accepts:
+      - application/json
+      - application/json;odata.metadata=full
+      - application/json;odata.metadata=full;odata.streaming=false
+      - application/json;odata.metadata=full;odata.streaming=true
+      - application/json;odata.metadata=minimal
+      - application/json;odata.metadata=minimal;odata.streaming=false
+      - application/json;odata.metadata=minimal;odata.streaming=true
+      - application/json;odata.metadata=none
+      - application/json;odata.metadata=none;odata.streaming=false
+      - application/json;odata.metadata=none;odata.streaming=true
+      - application/json;odata.streaming=false
+      - application/json;odata.streaming=true
+      - application/octet-stream
+      - application/xml
+      - text/json
+      - text/plain
   /api/v{version}/ingest/insight-discovery/file:
     post:
       operationId: IngestFile_Ingest
@@ -1822,7 +2000,8 @@ paths:
       tags:
       - OKPluginInsightDiscoveryIngest
       x-content-type: multipart/form-data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/RestartApplication/restart:
     get:
       operationId: RestartApplication_Restart
@@ -1841,7 +2020,8 @@ paths:
       - oauth2: []
       tags:
       - RestartApplication
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /api/v{version}/UsageStats/fetch:
     get:
       operationId: UsageStats_Fetch
@@ -1876,7 +2056,8 @@ paths:
       - oauth2: []
       tags:
       - UsageStats
-      x-accepts: application/json
+      x-accepts:
+      - application/json
 components:
   schemas:
     AbstractInboundIDMethod:
