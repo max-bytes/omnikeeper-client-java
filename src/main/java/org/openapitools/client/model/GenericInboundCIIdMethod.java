@@ -68,7 +68,7 @@ import com.google.gson.JsonParseException;
 
 import org.openapitools.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-10T21:51:56.217664042Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T10:10:37.799465574Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(GenericInboundCIIdMethod.class.getName());
 
@@ -254,37 +254,7 @@ public class GenericInboundCIIdMethod extends AbstractOpenApiSchema {
         super("oneOf", Boolean.FALSE);
     }
 
-    public GenericInboundCIIdMethod(InboundIDMethodByAttribute o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public GenericInboundCIIdMethod(InboundIDMethodByAttributeModifiers o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public GenericInboundCIIdMethod(InboundIDMethodByByUnion o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public GenericInboundCIIdMethod(InboundIDMethodByData o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public GenericInboundCIIdMethod(InboundIDMethodByIntersect o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public GenericInboundCIIdMethod(InboundIDMethodByRelatedTempID o) {
-        super("oneOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public GenericInboundCIIdMethod(InboundIDMethodByTemporaryCIID o) {
+    public GenericInboundCIIdMethod(Object o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }

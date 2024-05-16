@@ -52,7 +52,7 @@ import org.openapitools.client.JSON;
 /**
  * GridViewConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-10T21:51:56.217664042Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T10:10:37.799465574Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class GridViewConfiguration {
   public static final String SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN = "showCIIDColumn";
   @SerializedName(SERIALIZED_NAME_SHOW_C_I_I_D_COLUMN)

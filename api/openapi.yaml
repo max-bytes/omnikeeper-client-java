@@ -2083,14 +2083,14 @@ components:
           columns:
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
-            valueType: null
+            valueType: Text
             columnDescription: columnDescription
             sourceAttributePath:
             - sourceAttributePath
             - sourceAttributePath
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
-            valueType: null
+            valueType: Text
             columnDescription: columnDescription
             sourceAttributePath:
             - sourceAttributePath
@@ -2152,7 +2152,7 @@ components:
         - values
         - values
         isArray: true
-        type: null
+        type: Text
       properties:
         type:
           $ref: '#/components/schemas/AttributeValueType'
@@ -2185,7 +2185,7 @@ components:
           - values
           - values
           isArray: true
-          type: null
+          type: Text
       properties:
         id:
           type: string
@@ -2205,7 +2205,7 @@ components:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           - changeable: true
             id: id
             value:
@@ -2213,7 +2213,7 @@ components:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         - cells:
           - changeable: true
@@ -2223,7 +2223,7 @@ components:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           - changeable: true
             id: id
             value:
@@ -2231,7 +2231,7 @@ components:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         sparseRows:
@@ -2248,14 +2248,14 @@ components:
           columns:
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
-            valueType: null
+            valueType: Text
             columnDescription: columnDescription
             sourceAttributePath:
             - sourceAttributePath
             - sourceAttributePath
           - writeLayer: writeLayer
             sourceAttributeName: sourceAttributeName
-            valueType: null
+            valueType: Text
             columnDescription: columnDescription
             sourceAttributePath:
             - sourceAttributePath
@@ -2342,7 +2342,7 @@ components:
           - values
           - values
           isArray: true
-          type: null
+          type: Text
       properties:
         name:
           type: string
@@ -2351,7 +2351,7 @@ components:
       type: object
     GenericInboundCI:
       example:
-        noFoundTargetCIHandling: null
+        noFoundTargetCIHandling: CreateNew
         idMethod:
           attributes:
           - attributes
@@ -2363,17 +2363,17 @@ components:
             - values
             - values
             isArray: true
-            type: null
+            type: Text
         - name: name
           value:
             values:
             - values
             - values
             isArray: true
-            type: null
+            type: Text
         tempID: tempID
-        sameTempIDHandling: null
-        sameTargetCIHandling: null
+        sameTempIDHandling: DropAndWarn
+        sameTargetCIHandling: Error
       properties:
         tempID:
           type: string
@@ -2393,7 +2393,7 @@ components:
     GenericInboundData:
       example:
         cis:
-        - noFoundTargetCIHandling: null
+        - noFoundTargetCIHandling: CreateNew
           idMethod:
             attributes:
             - attributes
@@ -2405,18 +2405,18 @@ components:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           - name: name
             value:
               values:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           tempID: tempID
-          sameTempIDHandling: null
-          sameTargetCIHandling: null
-        - noFoundTargetCIHandling: null
+          sameTempIDHandling: DropAndWarn
+          sameTargetCIHandling: Error
+        - noFoundTargetCIHandling: CreateNew
           idMethod:
             attributes:
             - attributes
@@ -2428,17 +2428,17 @@ components:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           - name: name
             value:
               values:
               - values
               - values
               isArray: true
-              type: null
+              type: Text
           tempID: tempID
-          sameTempIDHandling: null
-          sameTargetCIHandling: null
+          sameTempIDHandling: DropAndWarn
+          sameTargetCIHandling: Error
         relations:
         - predicate: predicate
           from: from
@@ -2492,7 +2492,7 @@ components:
       example:
         writeLayer: writeLayer
         sourceAttributeName: sourceAttributeName
-        valueType: null
+        valueType: Text
         columnDescription: columnDescription
         sourceAttributePath:
         - sourceAttributePath
@@ -2519,14 +2519,14 @@ components:
         columns:
         - writeLayer: writeLayer
           sourceAttributeName: sourceAttributeName
-          valueType: null
+          valueType: Text
           columnDescription: columnDescription
           sourceAttributePath:
           - sourceAttributePath
           - sourceAttributePath
         - writeLayer: writeLayer
           sourceAttributeName: sourceAttributeName
-          valueType: null
+          valueType: Text
           columnDescription: columnDescription
           sourceAttributePath:
           - sourceAttributePath
@@ -2558,10 +2558,10 @@ components:
       example:
         elements:
         - container: null
-          containerElementKind: null
+          containerElementKind: None
           name: name
         - container: null
-          containerElementKind: null
+          containerElementKind: None
           name: name
         namespace: namespace
         name: name
@@ -2587,7 +2587,7 @@ components:
     IEdmEntityContainerElement:
       example:
         container: null
-        containerElementKind: null
+        containerElementKind: None
         name: name
       properties:
         containerElementKind:
@@ -2601,7 +2601,7 @@ components:
       type: object
     IEdmExpression:
       example:
-        expressionKind: null
+        expressionKind: None
       properties:
         expressionKind:
           $ref: '#/components/schemas/EdmExpressionKind'
@@ -2622,9 +2622,9 @@ components:
             type:
               isNullable: true
               definition:
-                typeKind: null
+                typeKind: None
           value:
-            expressionKind: null
+            expressionKind: None
           target: "{}"
         - qualifier: qualifier
           term:
@@ -2636,9 +2636,9 @@ components:
             type:
               isNullable: true
               definition:
-                typeKind: null
+                typeKind: None
           value:
-            expressionKind: null
+            expressionKind: None
           target: "{}"
         referencedModels:
         - null
@@ -2647,17 +2647,17 @@ components:
         schemaElements:
         - namespace: namespace
           name: name
-          schemaElementKind: null
+          schemaElementKind: None
         - namespace: namespace
           name: name
-          schemaElementKind: null
+          schemaElementKind: None
         entityContainer:
           elements:
           - container: null
-            containerElementKind: null
+            containerElementKind: None
             name: name
           - container: null
-            containerElementKind: null
+            containerElementKind: None
             name: name
           namespace: namespace
           name: name
@@ -2696,7 +2696,7 @@ components:
       example:
         namespace: namespace
         name: name
-        schemaElementKind: null
+        schemaElementKind: None
       properties:
         schemaElementKind:
           $ref: '#/components/schemas/EdmSchemaElementKind'
@@ -2719,7 +2719,7 @@ components:
         type:
           isNullable: true
           definition:
-            typeKind: null
+            typeKind: None
       properties:
         type:
           $ref: '#/components/schemas/IEdmTypeReference'
@@ -2744,7 +2744,7 @@ components:
       type: object
     IEdmType:
       example:
-        typeKind: null
+        typeKind: None
       properties:
         typeKind:
           $ref: '#/components/schemas/EdmTypeKind'
@@ -2753,7 +2753,7 @@ components:
       example:
         isNullable: true
         definition:
-          typeKind: null
+          typeKind: None
       properties:
         isNullable:
           readOnly: true
@@ -2775,9 +2775,9 @@ components:
           type:
             isNullable: true
             definition:
-              typeKind: null
+              typeKind: None
         value:
-          expressionKind: null
+          expressionKind: None
         target: "{}"
       properties:
         qualifier:
@@ -3052,7 +3052,7 @@ components:
             - values
             - values
             isArray: true
-            type: null
+            type: Text
         - changeable: true
           id: id
           value:
@@ -3060,7 +3060,7 @@ components:
             - values
             - values
             isArray: true
-            type: null
+            type: Text
         ciid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         ciid:

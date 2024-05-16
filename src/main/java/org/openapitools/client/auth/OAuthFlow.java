@@ -16,7 +16,7 @@ package org.openapitools.client.auth;
 /**
  * OAuth flows that are supported by this client
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-10T21:51:56.217664042Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T10:10:37.799465574Z[Etc/UTC]", comments = "Generator version: 7.6.0-SNAPSHOT")
 public enum OAuthFlow {
     ACCESS_CODE, //called authorizationCode  in OpenAPI 3.0
     IMPLICIT,
