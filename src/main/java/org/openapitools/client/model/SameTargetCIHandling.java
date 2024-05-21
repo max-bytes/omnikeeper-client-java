@@ -33,11 +33,11 @@ public enum SameTargetCIHandling {
   
   DROP("Drop"),
   
-  DROPANDWARN("DropAndWarn"),
+  DROP_AND_WARN("DropAndWarn"),
   
   EVADE("Evade"),
   
-  EVADEANDWARN("EvadeAndWarn"),
+  EVADE_AND_WARN("EvadeAndWarn"),
   
   MERGE("Merge");
 

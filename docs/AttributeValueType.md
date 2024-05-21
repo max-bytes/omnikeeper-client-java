@@ -7,7 +7,7 @@
 
 * `TEXT` (value: `"Text"`)
 
-* `MULTILINETEXT` (value: `"MultilineText"`)
+* `MULTILINE_TEXT` (value: `"MultilineText"`)
 
 * `INTEGER` (value: `"Integer"`)
 
@@ -23,7 +23,7 @@
 
 * `BOOLEAN` (value: `"Boolean"`)
 
-* `DATETIMEWITHOFFSET` (value: `"DateTimeWithOffset"`)
+* `DATE_TIME_WITH_OFFSET` (value: `"DateTimeWithOffset"`)
 
 
 

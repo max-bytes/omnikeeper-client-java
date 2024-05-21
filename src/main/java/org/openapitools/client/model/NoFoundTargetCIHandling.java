@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(NoFoundTargetCIHandling.Adapter.class)
 public enum NoFoundTargetCIHandling {
   
-  CREATENEW("CreateNew"),
+  CREATE_NEW("CreateNew"),
   
-  CREATENEWANDWARN("CreateNewAndWarn"),
+  CREATE_NEW_AND_WARN("CreateNewAndWarn"),
   
   DROP("Drop");
 

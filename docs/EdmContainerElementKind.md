@@ -7,11 +7,11 @@
 
 * `NONE` (value: `"None"`)
 
-* `ENTITYSET` (value: `"EntitySet"`)
+* `ENTITY_SET` (value: `"EntitySet"`)
 
-* `ACTIONIMPORT` (value: `"ActionImport"`)
+* `ACTION_IMPORT` (value: `"ActionImport"`)
 
-* `FUNCTIONIMPORT` (value: `"FunctionImport"`)
+* `FUNCTION_IMPORT` (value: `"FunctionImport"`)
 
 * `SINGLETON` (value: `"Singleton"`)
 

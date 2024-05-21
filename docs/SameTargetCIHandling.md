@@ -9,11 +9,11 @@
 
 * `DROP` (value: `"Drop"`)
 
-* `DROPANDWARN` (value: `"DropAndWarn"`)
+* `DROP_AND_WARN` (value: `"DropAndWarn"`)
 
 * `EVADE` (value: `"Evade"`)
 
-* `EVADEANDWARN` (value: `"EvadeAndWarn"`)
+* `EVADE_AND_WARN` (value: `"EvadeAndWarn"`)
 
 * `MERGE` (value: `"Merge"`)
 

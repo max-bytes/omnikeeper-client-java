@@ -31,11 +31,11 @@ public enum EdmContainerElementKind {
   
   NONE("None"),
   
-  ENTITYSET("EntitySet"),
+  ENTITY_SET("EntitySet"),
   
-  ACTIONIMPORT("ActionImport"),
+  ACTION_IMPORT("ActionImport"),
   
-  FUNCTIONIMPORT("FunctionImport"),
+  FUNCTION_IMPORT("FunctionImport"),
   
   SINGLETON("Singleton");
 

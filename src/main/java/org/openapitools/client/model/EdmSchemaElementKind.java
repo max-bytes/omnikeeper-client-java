@@ -31,13 +31,13 @@ public enum EdmSchemaElementKind {
   
   NONE("None"),
   
-  TYPEDEFINITION("TypeDefinition"),
+  TYPE_DEFINITION("TypeDefinition"),
   
   TERM("Term"),
   
   ACTION("Action"),
   
-  ENTITYCONTAINER("EntityContainer"),
+  ENTITY_CONTAINER("EntityContainer"),
   
   FUNCTION("Function");
 

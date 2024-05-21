@@ -29,7 +29,7 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(SameTempIDHandling.Adapter.class)
 public enum SameTempIDHandling {
   
-  DROPANDWARN("DropAndWarn"),
+  DROP_AND_WARN("DropAndWarn"),
   
   DROP("Drop");
 

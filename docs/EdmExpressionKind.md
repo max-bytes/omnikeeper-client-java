@@ -7,23 +7,23 @@
 
 * `NONE` (value: `"None"`)
 
-* `BINARYCONSTANT` (value: `"BinaryConstant"`)
+* `BINARY_CONSTANT` (value: `"BinaryConstant"`)
 
-* `BOOLEANCONSTANT` (value: `"BooleanConstant"`)
+* `BOOLEAN_CONSTANT` (value: `"BooleanConstant"`)
 
-* `DATETIMEOFFSETCONSTANT` (value: `"DateTimeOffsetConstant"`)
+* `DATE_TIME_OFFSET_CONSTANT` (value: `"DateTimeOffsetConstant"`)
 
-* `DECIMALCONSTANT` (value: `"DecimalConstant"`)
+* `DECIMAL_CONSTANT` (value: `"DecimalConstant"`)
 
-* `FLOATINGCONSTANT` (value: `"FloatingConstant"`)
+* `FLOATING_CONSTANT` (value: `"FloatingConstant"`)
 
-* `GUIDCONSTANT` (value: `"GuidConstant"`)
+* `GUID_CONSTANT` (value: `"GuidConstant"`)
 
-* `INTEGERCONSTANT` (value: `"IntegerConstant"`)
+* `INTEGER_CONSTANT` (value: `"IntegerConstant"`)
 
-* `STRINGCONSTANT` (value: `"StringConstant"`)
+* `STRING_CONSTANT` (value: `"StringConstant"`)
 
-* `DURATIONCONSTANT` (value: `"DurationConstant"`)
+* `DURATION_CONSTANT` (value: `"DurationConstant"`)
 
 * `NULL` (value: `"Null"`)
 
@@ -37,25 +37,25 @@
 
 * `CAST` (value: `"Cast"`)
 
-* `ISTYPE` (value: `"IsType"`)
+* `IS_TYPE` (value: `"IsType"`)
 
-* `FUNCTIONAPPLICATION` (value: `"FunctionApplication"`)
+* `FUNCTION_APPLICATION` (value: `"FunctionApplication"`)
 
-* `LABELEDEXPRESSIONREFERENCE` (value: `"LabeledExpressionReference"`)
+* `LABELED_EXPRESSION_REFERENCE` (value: `"LabeledExpressionReference"`)
 
 * `LABELED` (value: `"Labeled"`)
 
-* `PROPERTYPATH` (value: `"PropertyPath"`)
+* `PROPERTY_PATH` (value: `"PropertyPath"`)
 
-* `NAVIGATIONPROPERTYPATH` (value: `"NavigationPropertyPath"`)
+* `NAVIGATION_PROPERTY_PATH` (value: `"NavigationPropertyPath"`)
 
-* `DATECONSTANT` (value: `"DateConstant"`)
+* `DATE_CONSTANT` (value: `"DateConstant"`)
 
-* `TIMEOFDAYCONSTANT` (value: `"TimeOfDayConstant"`)
+* `TIME_OF_DAY_CONSTANT` (value: `"TimeOfDayConstant"`)
 
-* `ENUMMEMBER` (value: `"EnumMember"`)
+* `ENUM_MEMBER` (value: `"EnumMember"`)
 
-* `ANNOTATIONPATH` (value: `"AnnotationPath"`)
+* `ANNOTATION_PATH` (value: `"AnnotationPath"`)
 
 
 

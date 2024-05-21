@@ -5,7 +5,7 @@
 ## Enum
 
 
-* `DROPANDWARN` (value: `"DropAndWarn"`)
+* `DROP_AND_WARN` (value: `"DropAndWarn"`)
 
 * `DROP` (value: `"Drop"`)
 

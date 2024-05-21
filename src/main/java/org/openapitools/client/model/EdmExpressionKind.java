@@ -31,23 +31,23 @@ public enum EdmExpressionKind {
   
   NONE("None"),
   
-  BINARYCONSTANT("BinaryConstant"),
+  BINARY_CONSTANT("BinaryConstant"),
   
-  BOOLEANCONSTANT("BooleanConstant"),
+  BOOLEAN_CONSTANT("BooleanConstant"),
   
-  DATETIMEOFFSETCONSTANT("DateTimeOffsetConstant"),
+  DATE_TIME_OFFSET_CONSTANT("DateTimeOffsetConstant"),
   
-  DECIMALCONSTANT("DecimalConstant"),
+  DECIMAL_CONSTANT("DecimalConstant"),
   
-  FLOATINGCONSTANT("FloatingConstant"),
+  FLOATING_CONSTANT("FloatingConstant"),
   
-  GUIDCONSTANT("GuidConstant"),
+  GUID_CONSTANT("GuidConstant"),
   
-  INTEGERCONSTANT("IntegerConstant"),
+  INTEGER_CONSTANT("IntegerConstant"),
   
-  STRINGCONSTANT("StringConstant"),
+  STRING_CONSTANT("StringConstant"),
   
-  DURATIONCONSTANT("DurationConstant"),
+  DURATION_CONSTANT("DurationConstant"),
   
   NULL("Null"),
   
@@ -61,25 +61,25 @@ public enum EdmExpressionKind {
   
   CAST("Cast"),
   
-  ISTYPE("IsType"),
+  IS_TYPE("IsType"),
   
-  FUNCTIONAPPLICATION("FunctionApplication"),
+  FUNCTION_APPLICATION("FunctionApplication"),
   
-  LABELEDEXPRESSIONREFERENCE("LabeledExpressionReference"),
+  LABELED_EXPRESSION_REFERENCE("LabeledExpressionReference"),
   
   LABELED("Labeled"),
   
-  PROPERTYPATH("PropertyPath"),
+  PROPERTY_PATH("PropertyPath"),
   
-  NAVIGATIONPROPERTYPATH("NavigationPropertyPath"),
+  NAVIGATION_PROPERTY_PATH("NavigationPropertyPath"),
   
-  DATECONSTANT("DateConstant"),
+  DATE_CONSTANT("DateConstant"),
   
-  TIMEOFDAYCONSTANT("TimeOfDayConstant"),
+  TIME_OF_DAY_CONSTANT("TimeOfDayConstant"),
   
-  ENUMMEMBER("EnumMember"),
+  ENUM_MEMBER("EnumMember"),
   
-  ANNOTATIONPATH("AnnotationPath");
+  ANNOTATION_PATH("AnnotationPath");
 
   private String value;
 

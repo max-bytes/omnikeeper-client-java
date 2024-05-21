@@ -7,13 +7,13 @@
 
 * `NONE` (value: `"None"`)
 
-* `TYPEDEFINITION` (value: `"TypeDefinition"`)
+* `TYPE_DEFINITION` (value: `"TypeDefinition"`)
 
 * `TERM` (value: `"Term"`)
 
 * `ACTION` (value: `"Action"`)
 
-* `ENTITYCONTAINER` (value: `"EntityContainer"`)
+* `ENTITY_CONTAINER` (value: `"EntityContainer"`)
 
 * `FUNCTION` (value: `"Function"`)
 

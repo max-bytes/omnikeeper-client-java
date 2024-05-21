@@ -31,7 +31,7 @@ public enum AttributeValueType {
   
   TEXT("Text"),
   
-  MULTILINETEXT("MultilineText"),
+  MULTILINE_TEXT("MultilineText"),
   
   INTEGER("Integer"),
   
@@ -47,7 +47,7 @@ public enum AttributeValueType {
   
   BOOLEAN("Boolean"),
   
-  DATETIMEWITHOFFSET("DateTimeWithOffset");
+  DATE_TIME_WITH_OFFSET("DateTimeWithOffset");
 
   private String value;
 

@@ -39,11 +39,11 @@ public enum EdmTypeKind {
   
   COLLECTION("Collection"),
   
-  ENTITYREFERENCE("EntityReference"),
+  ENTITY_REFERENCE("EntityReference"),
   
   ENUM("Enum"),
   
-  TYPEDEFINITION("TypeDefinition"),
+  TYPE_DEFINITION("TypeDefinition"),
   
   UNTYPED("Untyped"),
   

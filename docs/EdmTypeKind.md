@@ -15,11 +15,11 @@
 
 * `COLLECTION` (value: `"Collection"`)
 
-* `ENTITYREFERENCE` (value: `"EntityReference"`)
+* `ENTITY_REFERENCE` (value: `"EntityReference"`)
 
 * `ENUM` (value: `"Enum"`)
 
-* `TYPEDEFINITION` (value: `"TypeDefinition"`)
+* `TYPE_DEFINITION` (value: `"TypeDefinition"`)
 
 * `UNTYPED` (value: `"Untyped"`)
 
